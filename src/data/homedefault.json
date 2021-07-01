@@ -1,0 +1,147 @@
+[
+  {
+      "id": "main-banner",
+      "title": "Hi. <span class='color-primary'>We Need To Talk.</span>",
+      "subtitle": "It's about your brand and marketing again... It's been... frightening.",
+      "bgImage": "../assets/images/bg/wallpaper.png",
+      "image": "./images/illustrations/runawaylittlegirl.png",
+      "mainbanner": "./images/illustrations/runawaylittlegirl.png"
+  },
+
+  {
+      "id": "about",
+      "title": "About OAKwave",
+      "subtitle": "Creative and Brand Growth Consulting Firm",
+      "description": "We call ourselves confounding creative composers, symphony strategic seers, marketing de-spaghettification experts, and problem-solving superheroes.",
+      "description2": "We offer branding, creative infusion, growth consulting, marketing strategy, and design services unlike any agency or strategy you've ever seen. In less than eight weeks, we dissect every inch of your organization's marketing, come up with an unprecedented killer plan to change the world for your company, and provide you with the roadmap, creative (design/content/etc), branding, messaging, measurements, and goals you need to steer the ship in the right direction. We boost the ROI from your existing marketing team/agency/infrastructure. Basically, we fix problems and make you kick more 🍑.",
+      "downloadButton": "Schedule A Call",
+      "linkBUtton": "Send Message",
+      "aboutData": [
+          {
+              "id": "aboutinfo-1",
+              "iconName": "FiArrowRightCircle",
+              "label": "Birthday",
+              "value": "01.07.1990"
+          },
+          {
+              "id": "aboutinfo-2",
+              "iconName": "icon",
+              "label": "Age",
+              "value": "29"
+          },
+          {
+              "id": "aboutinfo-3",
+              "iconName": "icon",
+              "label": "Location",
+              "value": "Ave 11, New York, USA"
+          },
+          {
+              "id": "aboutinfo-3",
+              "iconName": "icon",
+              "label": "Interests",
+              "value": "PlayStation, Reading"
+          },
+          {
+              "id": "aboutinfo-3",
+              "iconName": "icon",
+              "label": "Study",
+              "value": "University of Chicago"
+          },
+          {
+              "id": "aboutinfo-4",
+              "iconName": "icon",
+              "label": "Degree",
+              "value": "Master"
+          },
+          {
+              "id": "aboutinfo-5",
+              "iconName": "icon",
+              "label": "Mail",
+              "value": "mymail@gmail.com"
+          },
+          {
+              "id": "aboutinfo-6",
+              "iconName": "icon",
+              "label": "Phone",
+              "value": "+77 022 177 05 05"
+          }
+      ]
+  },
+
+  {
+      "id": "skill",
+      "title": "In a <span class='theme-color'>short time</span>, I have been able to achieve excellence in all areas of development.",
+      "description": "I provide cost-effective and high quality products to meet our Clients’ needs of timely We provide cost-effective and high quality products to meet our Clients’ needs of timely."
+  },
+  {
+      "id": "portfolio",
+      "title": "Featured Works",
+      "description": "In other words, the best marketing decision you can make is to have a product or business that fulfills a real and compelling need for a real and defined group of people — no matter how much tweaking and refining this takes.(c)"
+  },
+  {
+      "id": "chooseus",
+      "imagegroup": [
+          {
+              "image": "./images/others/why-1.jpg"
+          },
+          {
+              "image": "./images/others/why-2.jpg"
+          }
+      ]
+  },
+
+  {
+      "id": "skillTwo",
+      "title": "My Skills in <span class='theme-color'>Years</span>",
+      "description": "When the past gets its teeth into our daily life, it may get to grips with an astringent reality and adjust our timeline. By recognizing ourselves in the light of our history, we become aware of what we are.(c)"
+  },
+  {
+      "id": "testimonial",
+      "title": "Steve Lehman",
+      "subtitle": "CEO of Hiday Motors.",
+      "description": "We were looking for a logo with a touch of modernism. Arlo grasped our needs and produced a stunning design. Awesome to work with Arlo. Incredibly organized, easy to communicate with, responsive with next iterations.",
+      "bgImage": "./images/banner/bg-image-03.jpg"
+  },
+  {
+      "id": "brand",
+      "brandGroup": [
+          {
+              "id": "brand-01",
+              "image": "./images/brand/1.png"
+          },
+          {
+              "id": "brand-02",
+              "image": "./images/brand/2.png"
+          },
+          {
+              "id": "brand-03",
+              "image": "./images/brand/3.png"
+          },
+          {
+              "id": "brand-04",
+              "image": "./images/brand/4.png"
+          },
+          {
+              "id": "brand-01",
+              "image": "./images/brand/5.png"
+          },
+          {
+              "id": "brand-02",
+              "image": "./images/brand/6.png"
+          },
+          {
+              "id": "brand-03",
+              "image": "./images/brand/3.png"
+          },
+          {
+              "id": "brand-04",
+              "image": "./images/brand/4.png"
+          }
+      ]
+  },
+  {
+      "id": "contactus",
+      "title": "Case Studies",
+      "subtitle": "Sign Up To Receive Instant Email Access To Our Case Studies"
+  }
+]

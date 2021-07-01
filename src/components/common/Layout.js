@@ -1,3 +1,15 @@
+/**
+    * @description      :
+    * @author           :
+    * @group            :
+    * @created          : 01/07/2021 - 14:24:44
+    *
+    * MODIFICATION LOG
+    * - Version         : 1.0.0
+    * - Date            : 01/07/2021
+    * - Author          :
+    * - Modification    :
+**/
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
@@ -6,6 +18,10 @@ import Img from 'gatsby-image'
 
 import { Navigation } from '.'
 import config from '../../utils/siteConfig'
+import Nav from "../header/nav";
+import Footer from "../footer/footer";
+import '../../scss/style.scss';
+import '../../styles/base.css';
 
 // Styles
 import '../../styles/app.css'
@@ -30,13 +46,15 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                 <style type="text/css">{`${site.codeinjection_styles}`}</style>
                 <body className={bodyClass} />
             </Helmet>
+            <Nav />
 
             <div className="viewport">
 
                 <div className="viewport-top">
+
                     {/* The main header section on top of the screen */}
                     <header className="site-head" style={{ ...site.cover_image && { backgroundImage: `url(${site.cover_image})` } }}>
-                        <div className="container">
+                        <div className="">
                             <div className="site-mast">
                                 <div className="site-mast-left">
                                     <Link to="/">
@@ -78,9 +96,10 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                 </div>
 
                 <div className="viewport-bottom">
+                    <Footer />
                     {/* The footer at the very bottom of the screen */}
                     <footer className="site-foot">
-                        <div className="site-foot-nav container">
+                        <div className="container site-foot-nav">
                             <div className="site-foot-nav-left">
                                 <Link to="/">{site.title}</Link> © 2021 &mdash; Published with <a className="site-foot-nav-item" href="https://ghost.org" target="_blank" rel="noopener noreferrer">Ghost</a>
                             </div>
