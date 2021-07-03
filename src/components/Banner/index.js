@@ -47,7 +47,7 @@ const Banner = () => {
                                 data-wow-duration="1000ms"
 
                         >
-                            <div className="rn_surface story-image">
+                            <div className="story-image">
                                 <div className="trigger" id="trigger" />
                                 <RunAwayLittleGirl className="banner" />{' '}
                             </div>

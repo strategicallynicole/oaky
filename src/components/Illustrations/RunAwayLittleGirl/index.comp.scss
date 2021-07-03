@@ -1,6 +1,6 @@
 .runawaylittlegirl {
     display: block;
-   
+
   opacity: 0;
   transform: translate(25px, 0);
   min-width: 500px;
@@ -22,5 +22,87 @@
 
   .gatsby-image-wrapper img.banner {
       height: auto;
- 
+
   }
+  .running img {
+    overflow: visible !important;
+    z-index: 1000;
+      transform: rotate(0px);
+      -webkit-animation: runner 12s linear infinite;
+              animation: runner 12s linear infinite;
+
+  }
+
+  @-webkit-keyframes runner {
+    0% {
+      transform: rotate(0deg);
+    }
+    20% {
+      transform: rotate(-20deg);
+    }
+
+    40% {
+        transform: rotate(0deg);
+      }
+
+      60% {
+        transform: rotate(20deg);
+      }
+
+      40% {
+        transform: rotate(0deg);
+      }
+    100% {
+      transform: rotate(-20deg);
+    }
+  }
+
+  @keyframes runner {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: rotate(0deg);
+      }
+      20% {
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+        transform: rotate(-20deg);
+      }
+
+      30% {
+          box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+          transform: rotate(0deg);
+        }
+
+        40% {
+          box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+          transform: rotate(20deg);
+        }
+
+        50% {
+          box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+          transform: rotate(0deg);
+        }
+      60% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: rotate(-20deg);
+      }
+      70% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: rotate(0deg);
+      }
+
+      80% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: rotate(20deg);
+      }
+
+      90% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: rotate(0deg);
+      }
+
+      100% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: rotate(0deg);
+      }
+    }
+

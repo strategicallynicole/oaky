@@ -20,7 +20,7 @@ export default function RunAwayLittleGirl() {
             src="./runawaylittlegirl.svg"
             alt="Run Away Little Girl"
             layout="fullWidth"
-            className="overflow-visible banner runawaylittlegirl animate-enter"
+            className="overflow-visible banner runawaylittlegirl animate-enter running"
         />
     )
 }
