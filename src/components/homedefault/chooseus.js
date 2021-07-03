@@ -12,7 +12,6 @@
 **/
 import React from 'react';
 import { FiArrowRightCircle, FiLayers , FiDatabase} from "react-icons/fi";
-import { StaticImage } from 'gatsby-plugin-image'
 
 
 
@@ -31,12 +30,6 @@ const Chooseus = () => {
 
                                 <div className="single-image" key="1">
 
-        <StaticImage
-            src="../../images/Illustrations/welcome.svg"
-            alt="Run Away Little Girl"
-            layout="fullWidth"
-            className="overflow-visible banner floater meditateimg animate-enter"
-        />
                                   </div>
                         </div>
                     <div className="col-lg-4 col-md-12 col-sm-12 mt_sm--30">
@@ -75,12 +68,7 @@ const Chooseus = () => {
 
                                 <div className="single-image" key="1">
 
-        <StaticImage
-            src="../../images/Illustrations/welcome.svg"
-            alt="Run Away Little Girl"
-            layout="fullWidth"
-            className="overflow-visible banner floater meditateimg animate-enter"
-        />
+    
                                   </div>
                         </div>
                     </div>
@@ -119,12 +107,7 @@ const Chooseus = () => {
 
                                 <div className="single-image" key="3">
 
-        <StaticImage
-            src="../../images/Illustrations/welcome.svg"
-            alt="Run Away Little Girl"
-            layout="fullWidth"
-            className="overflow-visible banner floater meditateimg animate-enter"
-        />
+       
                                   </div>
                         </div>
                     </div>
