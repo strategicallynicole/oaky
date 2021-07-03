@@ -1,8 +1,20 @@
+/**
+    * @description      :
+    * @author           :
+    * @group            :
+    * @created          : 02/07/2021 - 18:57:09
+    *
+    * MODIFICATION LOG
+    * - Version         : 1.0.0
+    * - Date            : 02/07/2021
+    * - Author          :
+    * - Modification    :
+**/
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-
-import { Layout, PostCard, Pagination } from '../components/common'
+import Layout from '../components/layout'
+import { PostCard, Pagination } from '../components/common'
 import { MetaData } from '../components/common/meta'
 
 /**

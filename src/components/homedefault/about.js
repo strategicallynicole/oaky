@@ -20,11 +20,11 @@ const About = () => {
         <>
 
 <div
-            className="relative z-20 px-10 mx-auto my-0 rb-about-area about-style rn-section-gap bg-color-white"
+            className="relative z-20 px-10 mx-auto my-0 bg-transparent rb-about-area about-style"
             id="about"
         >
 
-<div className="flex flex-col-reverse items-center justify-between h-screen px-10 lg:flex-row lg:mt-24">
+<div className="flex flex-col-reverse items-center justify-between h-screen px-10 lg:flex-row">
                 <div className="pt-8 lg:w-1/2 lg:pt-0">
                <div className="thumbnail">
                           <div className="trigger" id="trigger2" />

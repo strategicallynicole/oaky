@@ -45,6 +45,7 @@ body {
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
 
 $border-color: linear-gradient(90deg, #6633FF 18.59%, #3366FF 68.36%, #0099FF 105%);
+
 /**************************************
     Default Styles
 ***************************************/
@@ -108,3 +109,20 @@ $border-color: linear-gradient(90deg, #6633FF 18.59%, #3366FF 68.36%, #0099FF 10
 @import 'footer/new';
 @import 'footer/responsive';
 @import 'footer/dark';
+
+
+.post-card-footer-left>span {
+    color: #ffffff;
+}
+.post-card-footer-right>div {
+    color: #ffffff;
+}
+
+
+.post-card-tags>span {
+    color: #ffffff;
+}
+
+.pagination-location {
+    color: #ffffff !important;
+}

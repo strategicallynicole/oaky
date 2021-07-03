@@ -17,12 +17,15 @@ import Nav from "../components/header/nav";
 import Footer from "../components/footer/footer";
 import '../scss/style.scss';
 import '../styles/base.css';
+import '../styles/app.css';
 
 const Layout = ({ children }) => {
   return (
+
     <div className="main-wrapper active-dark bg-black-gradient">
         <Client />
         <Nav />
+
         <main>{children}</main>
         <Footer />
     </div>

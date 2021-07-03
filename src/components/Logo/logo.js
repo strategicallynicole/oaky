@@ -1,19 +1,32 @@
+/**
+    * @description      :
+    * @author           :
+    * @group            :
+    * @created          : 02/07/2021 - 15:38:12
+    *
+    * MODIFICATION LOG
+    * - Version         : 1.0.0
+    * - Date            : 02/07/2021
+    * - Author          :
+    * - Modification    :
+**/
 import React, { Component } from 'react'
 import { array, oneOf, PropTypes } from 'prop-types'
 import { StaticImage } from 'gatsby-plugin-image'
 
 function LogoComponent(props) {
     const { type } = props
+    const { classes } = props
     switch (type) {
         case 'standard':
             return (
                 <>
                     <StaticImage
-                        src="../../images/logos/logo/horizontal/white@1x.webp"
+                        src="../../images/logo/darkbgwhitelogo.webp"
                         alt="White Logo"
                         placeholder="blurred"
-                        layout="constrained"
-                        width={150}
+                         layout="constrained"
+                        width={125}                       className={classes}
                     />
                 </>
             )
@@ -21,12 +34,13 @@ function LogoComponent(props) {
             return (
                 <>
                     <StaticImage
-                        src="../../images/logos/logo/horizontal/black.webp"
+                        src="../../images/logo/lightbglogo.webp"
                         alt="Black Logo"
                         placeholder="blurred"
-                        layout="fullWidth"
-                        layout="constrained"
-                        width={150}
+                         layout="constrained"
+                        width={125}
+                        className={classes}
+
                     />
                 </>
             )
@@ -35,12 +49,11 @@ function LogoComponent(props) {
             return (
                 <>
                     <StaticImage
-                        src="../../images/logos/logo/stacked/white.webp"
-                        alt="White Logor"
+                        src="../../images/logo/stackedonwhitebg.webp"
+                        alt="White Logo"
                         placeholder="blurred"
-                        layout="fullWidth"
-                        layout="constrained"
-                        width={150}
+                         layout="constrained"
+                        width={50}                      className={classes}
                     />
                 </>
             )
@@ -48,11 +61,12 @@ function LogoComponent(props) {
             return (
                 <>
                     <StaticImage
-                        src="../../images/logos/logo/stacked/black.webp"
+                        src="../../images/logo/verticalondark.webp"
                         alt="BlackLogo"
                         placeholder="blurred"
-                        layout="constrained"
-                        width={150}
+                         layout="constrained"
+                        width={125}
+                        className={classes}
                     />
                 </>
             )
@@ -60,11 +74,12 @@ function LogoComponent(props) {
             return (
                 <>
                     <StaticImage
-                        src="../../images/logos/symbol.svg"
+                        src="../../images/logo/symbol.svg"
                         alt="Symbol"
                         placeholder="blurred"
-                        layout="constrained"
-                        width={52}
+                         layout="constrained"
+                        width={50}
+                        className={classes}
                     />
                 </>
             )
@@ -72,11 +87,11 @@ function LogoComponent(props) {
             return (
                 <>
                     <StaticImage
-                        src="../../images/logos/logo/abbreviation.webp"
+                        src="../../images/logo/abbreviation.webp"
                         alt="Abbreviation"
                         placeholder="blurred"
-                        layout="constrained"
-                        width={150}
+                         layout="constrained"
+                        width={40}                      className={classes}
                     />
                 </>
             )
@@ -84,11 +99,12 @@ function LogoComponent(props) {
             return (
                 <>
                     <StaticImage
-                        src="../../images/logos/horizontal/white.webp"
+                        src="../../images/logo/stackedonwhitebg.webp"
                         alt="Placeholder"
                         placeholder="blurred"
                         layout="constrained"
-                        width={150}
+                        width={400}
+                        className={classes}
                     />
                 </>
             )
@@ -96,6 +112,8 @@ function LogoComponent(props) {
 }
 
 LogoComponent.propTypes = {
+    classes: PropTypes.string,
+
     type: PropTypes.oneOf([
         'standard',
         'darkversion',
@@ -103,10 +121,14 @@ LogoComponent.propTypes = {
         'stackeddark',
         'symbol',
         'abbreviation',
+        'abbreviationwhite',
+
     ]),
 }
 LogoComponent.defaultProps = {
     type: 'standard',
+    classes: '',
+
 }
 
 export default LogoComponent

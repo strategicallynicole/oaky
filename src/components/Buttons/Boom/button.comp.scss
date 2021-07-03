@@ -1,0 +1,157 @@
+@import "../../../styles/globals.scss";
+
+
+  @keyframes animate {
+    0% {
+      background-position: 0%;
+    }
+    50% {
+      background-position: 400%;
+    }
+    100% {
+      background-position: 0%;
+    }
+  }
+
+
+
+
+
+
+a ,
+button {
+    &.boom-button {
+        text-decoration: none;
+        background: $gradient;
+        z-index:1;
+
+        background-size:400%;
+        display: inline-block;
+        padding: 3px 30px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        outline: none;
+        height: auto;
+        line-height: 30px;
+        border-radius: 500px;
+        color: #fff !important;
+        letter-spacing: .8px;
+        font-size: 15px;
+        @extend %transition !optional;
+        span {
+            position: relative;
+            z-index: 2;
+        }
+        &:hover {
+            animation: animate 8s infinite;
+
+        }
+            &:before {
+                content:'';
+                position:absolute;
+                top:-5px;
+                right:-5px;
+                bottom:-5px;
+                left:-5px;
+                z-index:-1;
+                background: $gradient;
+                background-size:400%;
+                border-radius:40px;
+                opacity:0;
+                transition:0.5s;
+              }
+              &:hover:before {
+                filter:blur(20px);
+                opacity:1;
+                animation: animate 8s infinite;
+              }
+        }
+
+        &.btn-white {
+            background-color: var(--color-white);
+            color: var(--color-extra03);
+            span {
+                color: var(--color-extra03);
+            }
+            &:hover {
+                color: var(--color-extra04);
+                span {
+                    color: var(--color-extra04);
+                }
+            }
+        }
+
+    }
+
+
+
+
+
+/*-----------------
+    Link Button
+-------------------*/
+a {
+    &.link-button {
+        padding: 0;
+        padding-top: 9px;
+        padding-bottom: 9px;
+        display: inline-block;
+        font-family: var(--font-secondary);
+        @extend %transition !optional;
+        span {
+            position: relative;
+            display: inline-block;
+            &::after {
+                background: var(--color-extra02);
+                position: absolute;
+                content: "";
+                left: 0;
+                bottom: 0;
+                height: 1px;
+                width: 100%;
+                @extend %transition !optional;
+            }
+        }
+        &:hover {
+            span {
+                &::after {
+                    background: var(--color-primary);
+                }
+            }
+        }
+    }
+}
+
+/* Button Group  */
+.button-group {
+    margin: 0 -25px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    a ,
+    button {
+        margin: 0 25px;
+        display: inline-block;
+    }
+}
+
+/*----------------------
+    Read More Button
+-----------------------*/
+a {
+    &.readmore-btn {
+        border-bottom: 1px solid transparent;
+        transition: all .3s ease;
+        font-size: 16px;
+        color: var(--color-primary);
+        letter-spacing: 0;
+        &:hover {
+            border-bottom-color: var(--color-primary);
+        }
+    }
+}
+
+

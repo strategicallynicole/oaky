@@ -18,11 +18,9 @@ const Banner = () => {
 
 
     return (
-        <div
-            className="relative z-20 px-20 mx-auto mb-0 rn-slide slider-style-01 rn-slider-area"
-            id="home"
-        >
-            <div className="flex flex-col-reverse items-center justify-between h-screen lg:flex-row lg:mt-24">
+        <div className="relative px-20 mx-auto mb-0 rn-slide slider-style-01 rn-slider-area"
+            id="home">
+            <div className="flex flex-col-reverse items-center justify-between h-screen lg:flex-row ">
                 <div className="pt-8 lg:w-1/2 lg:pt-0">
                     <div className="inner">
                         <div className="content">

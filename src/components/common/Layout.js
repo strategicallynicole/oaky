@@ -20,11 +20,11 @@ import { Navigation } from '.'
 import config from '../../utils/siteConfig'
 import Nav from "../header/nav";
 import Footer from "../footer/footer";
+import '../../styles/app.css';
 import '../../scss/style.scss';
 import '../../styles/base.css';
 
 // Styles
-import '../../styles/app.css'
 
 /**
 * Main layout component
