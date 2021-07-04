@@ -60,9 +60,9 @@ export default function Nav () {
                   </Disclosure.Button>
                 </div>
                 <div className='flex items-center flex-shrink-0'>
-                  <Logo type='abbreviation' classes='block w-auto lg:hidden'  />
+                  <Logo type='abbreviation' classes='block w-auto md:hidden'  />
 
-                  <Logo type='standard' classes='hidden w-auto lg:block'  />
+                  <Logo type='standard' classes='hidden w-auto md:block'  />
                 </div>
                 <div className='hidden md:ml-6 md:flex md:items-center md:space-x-4'>
                   {navigation.map((item) => (
