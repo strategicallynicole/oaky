@@ -16,7 +16,7 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { PlusIcon } from '@heroicons/react/solid'
-import Button from '../Buttons/Boom/button'
+import Button from '../Buttons/Metal'
 import Logo from '../Logo/logo.js'
 const user = {
   name: 'Tom Cook',
@@ -83,7 +83,7 @@ export default function Nav () {
               <div className='flex items-center'>
                 <div className='flex-shrink-0'>
 
-                  <Button />
+                  <Button btntext="Schedule A Call" btnlink="hhh" />
                 </div>
                 <div className='hidden md:ml-4 md:flex-shrink-0 md:flex md:items-center'>
 

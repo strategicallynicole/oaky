@@ -15,15 +15,15 @@ import PropTypes from "prop-types";
 import Client from "./client";
 import Nav from "./header/nav";
 import Footer from "./footer/footer";
-import '../styles/app.css';
 import '../scss/style.scss';
 import '../styles/base.css';
+import '../styles/app.css';
 
 
 const Layout = ({ children }) => {
   return (
-
-    <div className="main-wrapper active-dark bg-black-gradient">
+      <>
+    <div className="relative z-0 main-wrapper active-dark bg-black-gradient">
 
             <Nav />
 
@@ -32,6 +32,7 @@ const Layout = ({ children }) => {
         <main>{children}</main>
         <Footer />
     </div>
+    </>
   )
 }
 

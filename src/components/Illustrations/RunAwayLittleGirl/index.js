@@ -12,15 +12,17 @@
  **/
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
-import './index.comp.scss'
+import * as styles from "./index.module.scss"
 
 export default function RunAwayLittleGirl() {
     return (
+        <div className={styles.imgholder}>
         <StaticImage
             src="./runawaylittlegirl.svg"
             alt="Run Away Little Girl"
             layout="fullWidth"
-            className="overflow-visible banner runawaylittlegirl animate-enter running"
+            className={styles.runawaylittlegirl, styles.animateEnter, styles.running}
         />
+        </div>
     )
 }

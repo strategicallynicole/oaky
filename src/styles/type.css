@@ -27,19 +27,30 @@
     font-family: 'DIN Condensed';
 }
 .prose blockquote {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Esteban, Georgia, 'Times New Roman', serif;
     font-weight: 400;
     font-style: italic;
     color: #ffffff !important;
 
   }
+.esteban {
+  font-family: Esteban, Georgia, 'Times New Roman', serif;
+font-style: normal;
+font-weight: normal;
+}
+.figcaption {
+    @apply esteban text-sm text-center bg-gray-300;
+}
 .prose h3 {
     color: #ffffff !important;
+    font-family: Esteban, Georgia, 'Times New Roman', serif;
 }
   .prose blockquote::first-letter {
     initial-letter: 4;
     -webkit-initial-letter: 4;
   }
+
+  
   .mulish {
   font-family:  "Mulish", sans-serif;
   }
@@ -47,15 +58,15 @@
     font-family:  "Montserrat", sans-serif;
     }
 .h1, .h2, h2, h1 {
-    @apply leading-loose mulish bold;
+    @apply leading-loose montserrat bold;
 }
 
-p, .p, body, section {
-    @apply montserrat;
+p, .p, body, section, .description {
+    @apply mulish;
 }
 
 h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-@apply leading-loose mulish;
+@apply leading-loose montserrat;
 }
 
 

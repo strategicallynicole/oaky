@@ -20,7 +20,7 @@ const About = () => {
         <>
 
 <div
-            className="relative z-20 px-10 mx-auto my-0 bg-transparent rb-about-area about-style"
+            className="rb-about-area about-style"
             id="about"
         >
 

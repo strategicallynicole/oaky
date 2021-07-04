@@ -13,23 +13,19 @@
 import React from 'react'
 import { Controller, Scene } from 'react-scrollmagic'
 import RunAwayLittleGirl from '../Illustrations/RunAwayLittleGirl'
+import Title from '../Titles/home.js'
 import './banner.component.scss'
 const Banner = () => {
 
 
     return (
-        <div className="relative px-20 mx-auto mb-0 rn-slide slider-style-01 rn-slider-area"
+        <div className="relative px-20 mx-auto mt-0 mb-0 rn-slide slider-style-01 rn-slider-area"
             id="home">
             <div className="flex flex-col-reverse items-center justify-between h-screen lg:flex-row ">
                 <div className="pt-8 lg:w-1/2 lg:pt-0">
                     <div className="inner">
                         <div className="content">
-                            <h1
-                                className="title wow fadeInLeft"
-                                data-wow-delay="200ms"
-                                data-wow-duration="1000ms"
-                            >Hi. <span className="primary-color">We Need To Talk.</span></h1>
-
+                         <Title titletext="We Need To Talk." bgtext="Hi." />
                             <h4
                                 className="subtitle wow fadeInLeft"
                                 data-wow-delay="300ms"
@@ -40,19 +36,13 @@ const Banner = () => {
                     </div>
                 </div>
                 <div className="pt-6 mt-96 lg:mt-6 lg:w-1/2 lg:pt-0">
-                    <Controller>
-                        <Scene
-                            classToggle="animated"
-                            data-wow-delay="300ms"
-                                data-wow-duration="1000ms"
 
-                        >
-                            <div className="story-image">
-                                <div className="trigger" id="trigger" />
-                                <RunAwayLittleGirl className="banner" />{' '}
+                            <div  className="subtitle wow fadeInLeft story-image"
+                                data-wow-delay="300ms"
+                                data-wow-duration="1000ms">
+                                <RunAwayLittleGirl className="banner" />
                             </div>
-                        </Scene>
-                    </Controller>{' '}
+
                 </div>
             </div>
             {/* Hero */}

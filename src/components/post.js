@@ -4,7 +4,7 @@ import Thumbnail from "./post-media/thumbnail";
 import Authorname from "./post-media/thumbnail/authorname";
 import Linked from "./post-media/linked";
 import { slugify } from "../utils/utilityFunctions";
-
+import Title from "./Titles/h1.js";
 const Post = ({content, column}) => {
     const {
         slug, date, title, tags, author, excerpt , format , image , link, category
@@ -35,7 +35,7 @@ const Post = ({content, column}) => {
                         }
                     </div>
 
-                    {title && <h3 className="title"><Link to={`/${slug}`}>{title}</Link></h3>}
+                    {title &&<Link to={`/${slug}`}>{title}</Link></h3>}
                     {excerpt && <p className="description">{excerpt}</p>}
                     <div className="read-more">
                         <Link to={`/${slug}`}>

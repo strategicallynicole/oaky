@@ -17,6 +17,7 @@ import About from "../components/About";
 import Service from "../components/homedefault/service";
 import Brand from "../components/Brand";
 import Blogs from "../components/blogPost";
+import Loader from '../components/Loader/pacman.js';
 
 //import Project from "../components/homedefault/project";
 //import Testimonial from "../components/homedefault/testimonial";
@@ -24,12 +25,14 @@ import Blogs from "../components/blogPost";
 
 
 const IndexPage = () => (
-  <Layout>
-    <Banner />
+<>
+<Layout>
+<Banner />
     <About />
     <Service />
 <Brand />
 <Blogs />
   </Layout>
+  </>
 )
 export default IndexPage;

@@ -16,6 +16,7 @@ import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
 import { MetaData } from '../components/common/meta'
+import Title from "../components/Titles/h1.js";
 
 /**
 * Single post view (/:slug)
@@ -44,8 +45,7 @@ const Post = ({ data, location }) => {
                                 <img src={ post.feature_image } alt={ post.title } />
                             </figure> : null }
                         <section className="post-full-content">
-                            <h1 className="content-title">{post.title}</h1>
-
+                            <Title bgtext={ post.title } titletext={ post.title } />
                             {/* The main post content */ }
                             <section
                                 className="content-body load-external-scripts"

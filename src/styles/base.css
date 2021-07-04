@@ -103,3 +103,6 @@ rgba(255, 255, 255, 1);
 }
 
 
+.gatsby-image-wrapper {
+  overflow: visible;
+}

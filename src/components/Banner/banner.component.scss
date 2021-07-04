@@ -3,7 +3,15 @@
     Banner Styles
 ---------------------------*/
 @import "../../scss/default/_variables.scss";
-
+.needtotalk {
+    position: relative;
+    font-size: 5rem;
+}
+.hello { 
+    position: absolute;
+    left: 10%;
+    font-size: 20rem;
+}
 @-webkit-keyframes scroll-down {
     0% {
         height: 0;

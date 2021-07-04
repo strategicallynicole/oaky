@@ -1,0 +1,49 @@
+@import "../../../styles/globals.scss";
+.box {
+	background: linear-gradient(90deg, #6633FF 18.59%, #3366FF 68.36%, #0099FF 105%);
+	color: #ffffff !important;
+font-weight: bold;
+letter-spacing: .08em;
+font-family: 'Mulish';
+padding-left: 40px;
+padding-right: 40px;
+line-height: 40px;
+
+	text-align: center;
+	font-size: 1em;
+	border-radius: 2em;
+	transform: perspective(500px) rotateY(-15deg);
+	text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.1);
+	box-shadow: 2px 0 0 5px rgba(0, 0, 0, 0.2);
+	transition: 0.5s;
+	position: relative;
+	overflow: hidden;
+      @extend wow !optional;
+      @extend fadeInLeft !optional;
+
+}
+.boxgroup {
+margin-right: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.box:hover {
+	transform: perspective(500px) rotateY(15deg);
+	text-shadow: -6px 3px 2px rgba(0, 0, 0, 0.2);
+	box-shadow: -2px 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.box::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to right, transparent, white, transparent);
+	left: -100%;
+	transition: 0.5s;
+}
+
+.box:hover::before {
+	left: 100%;
+}

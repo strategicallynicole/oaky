@@ -2,13 +2,21 @@
     display: block;
 
   opacity: 0;
-  transform: translate(25px, 0);
+  transform: translate(10px, 0);
   min-width: 500px;
   width: 100%;
+  height: auto;
+  overflow: visible !important;
+  margin-top: -10px;
+  }
+  .imgholder {
+    overflow: visible !important;
   }
   .runawaylittlegirl.animate-enter {
     animation: animate-enter-frames 1.60s ease-in-out 0.00s 1 normal forwards;
     display: block;
+      overflow: visible !important;
+
   opacity: 0;
   transform: translate(25px, 0);
   }
@@ -19,6 +27,9 @@
   to{opacity: 1;
   transform: translate(0,0);}
   }
+  .gatsby-image-wrapper {
+    overflow: visible !important;
+  }
 
   .gatsby-image-wrapper img.banner {
       height: auto;
@@ -27,6 +38,8 @@
   .running img {
     overflow: visible !important;
     z-index: 1000;
+      overflow: visible !important;
+
       transform: rotate(0px);
       -webkit-animation: runner 12s linear infinite;
               animation: runner 12s linear infinite;
@@ -38,7 +51,7 @@
       transform: rotate(0deg);
     }
     20% {
-      transform: rotate(-20deg);
+      transform: rotate(-3deg);
     }
 
     40% {
@@ -46,62 +59,52 @@
       }
 
       60% {
-        transform: rotate(20deg);
+        transform: rotate(3deg);
       }
 
       40% {
         transform: rotate(0deg);
       }
     100% {
-      transform: rotate(-20deg);
+      transform: rotate(-3deg);
     }
   }
 
   @keyframes runner {
     0% {
-        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
         transform: rotate(0deg);
       }
       20% {
-        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
-        transform: rotate(-20deg);
+        transform: rotate(-3deg);
       }
 
       30% {
-          box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
           transform: rotate(0deg);
         }
 
         40% {
-          box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
-          transform: rotate(20deg);
+          transform: rotate(3deg);
         }
 
         50% {
-          box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
           transform: rotate(0deg);
         }
       60% {
-        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-        transform: rotate(-20deg);
+        transform: rotate(-3deg);
       }
       70% {
-        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
         transform: rotate(0deg);
       }
 
       80% {
-        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-        transform: rotate(20deg);
+        transform: rotate(3deg);
       }
 
       90% {
-        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
         transform: rotate(0deg);
       }
 
       100% {
-        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
         transform: rotate(0deg);
       }
     }
