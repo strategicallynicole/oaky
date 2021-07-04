@@ -45,10 +45,10 @@ export default function Nav () {
     <Disclosure as='nav' className='fixed z-50 w-full bg-black-gradient'>
       {({ open }) => (
         <>
-          <div className='px-20 py-6 mx-auto sm:px-6 lg:px-8'>
+          <div className='px-20 py-6 mx-auto sm:px-6 lg:px-8 '>
             <div className='flex justify-between h-16'>
               <div className='flex'>
-                <div className='flex items-center mr-2 -ml-2 md:hidden'>
+                <div className='flex items-center mr-2 -ml-2 md:hidden bg-black-gradient'>
                   {/* Mobile menu button */}
                   <Disclosure.Button className='inline-flex items-center justify-center p-2 rounded-md text-gray-50 hover:text-white hover:bg-gradient focus:outline-none'>
                     <span className='sr-only'>Open main menu</span>
@@ -70,7 +70,7 @@ export default function Nav () {
                       key={item.name}
                       href={item.href}
                       className={classNames(
-                        item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                        item.current ? 'text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                         'px-3 py-2 rounded-md text-sm font-medium'
                       )}
                       aria-current={item.current ? 'page' : undefined}
@@ -94,14 +94,14 @@ export default function Nav () {
             </div>
           </div>
 
-          <Disclosure.Panel className='md:hidden'>
+          <Disclosure.Panel className='md:hidden bg-black-gradient'>
             <div className='px-2 pt-2 pb-3 space-y-1 sm:px-3'>
               {navigation.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                    item.current ? 'text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                     'block px-3 py-2 rounded-md text-base font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}
