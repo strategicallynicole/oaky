@@ -14,7 +14,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Client from "./client";
 import Nav from "./header/nav";
-import Footer from "./footer/footer";
+import Footer from "./footer";
 import '../scss/style.scss';
 import '../styles/base.css';
 import '../styles/app.css';
