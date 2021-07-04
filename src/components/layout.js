@@ -13,8 +13,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Client from "./client";
-import Nav from "../components/header/nav";
-import Footer from "../components/footer/footer";
+import Nav from "./header/nav";
+import Footer from "./footer/footer";
 import '../styles/app.css';
 import '../scss/style.scss';
 import '../styles/base.css';
@@ -24,8 +24,10 @@ const Layout = ({ children }) => {
   return (
 
     <div className="main-wrapper active-dark bg-black-gradient">
+
+            <Nav />
+
         <Client />
-        <Nav />
 
         <main>{children}</main>
         <Footer />
