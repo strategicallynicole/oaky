@@ -16,8 +16,8 @@ import Client from "./client";
 import Nav from "../components/header/nav";
 import Footer from "../components/footer/footer";
 import '../styles/app.css';
-import '../styles/base.css';
 import '../scss/style.scss';
+import '../styles/base.css';
 
 
 const Layout = ({ children }) => {
