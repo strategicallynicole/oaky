@@ -113,12 +113,12 @@ const navigation = {
         <h2 id="footer-heading" className="sr-only">
           Footer
         </h2>
-        <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-16 lg:px-8">
-          <div className="xl:grid xl:grid-cols-3 xl:gap-8">
+        <div className="max-w-full px-4 py-12 mx-auto sm:px-6 lg:py-16 ">
+          <div className="lg:px-20 xl:grid xl:grid-cols-3 xl:gap-8">
             <div className="grid grid-cols-2 gap-8 xl:col-span-2">
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
-                  <h3 className="text-sm font-semibold tracking-wider text-gray-400 uppercase">Solutions</h3>
+                  <h3 className="text-xl font-bold uppercase text-fill-transparent montserrat text-stroke-white">Solutions</h3>
                   <ul className="mt-4 space-y-4">
                     {navigation.solutions.map((item) => (
                       <li key={item.name}>
@@ -170,7 +170,7 @@ const navigation = {
               </div>
             </div>
             <div className="mt-8 xl:mt-0">
-              <h3 className="text-sm font-semibold tracking-wider text-gray-400 uppercase">
+              <h3 className="text-sm font-semibold tracking-wider text-gray-200">
                 Subscribe to our newsletter
               </h3>
 
@@ -186,7 +186,7 @@ const navigation = {
           <div className="pt-8 mt-8 border-t border-gray-700 md:flex md:items-center md:justify-between">
             <div className="flex space-x-6 md:order-2">
               {navigation.social.map((item) => (
-                <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-300">
+                <a key={item.name} href={item.href} className="text-gray-200 hover:text-gray-50">
                   <span className="sr-only">{item.name}</span>
                   <item.icon className="w-6 h-6" aria-hidden="true" />
                 </a>

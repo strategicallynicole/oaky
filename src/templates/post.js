@@ -24,6 +24,9 @@ import Title from "../components/Titles/h1.js";
 * This file renders a single post and loads all the content.
 *
 */
+
+
+
 const Post = ({ data, location }) => {
     const post = data.ghostPost
 
@@ -39,16 +42,16 @@ const Post = ({ data, location }) => {
             </Helmet>
             <Layout>
                 <div className="container">
-                    <article className="content">
+                    <article className="content max-w-prose">
                         { post.feature_image ?
                             <figure className="post-feature-image">
                                 <img src={ post.feature_image } alt={ post.title } />
                             </figure> : null }
-                        <section className="post-full-content">
+                        <section className="content-body">
                             <Title bgtext={ post.title } titletext={ post.title } />
                             {/* The main post content */ }
                             <section
-                                className="content-body load-external-scripts"
+                                className="h-screen prose prose-lg post-full-content prose-indigo load-external-scripts"
                                 dangerouslySetInnerHTML={{ __html: post.html }}
                             />
                         </section>

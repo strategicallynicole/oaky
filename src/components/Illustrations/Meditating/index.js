@@ -21,7 +21,7 @@ export default function RunAwayLittleGirl() {
             src="./femalemeditation.svg"
             alt="Run Away Little Girl"
             layout="fullWidth"
-            className="overflow-visible banner floater meditateimg animate-enter"
+            className="overflow-visible banner floater meditate meditateimg animate-enter"
         />
         </>
     )

@@ -2,15 +2,13 @@
 .box {
 	background: linear-gradient(90deg, #6633FF 18.59%, #3366FF 68.36%, #0099FF 105%);
 	color: #ffffff !important;
-font-weight: bold;
+font-weight: semibold;
 letter-spacing: .08em;
 font-family: 'Mulish';
-padding-left: 40px;
-padding-right: 40px;
+
 line-height: 40px;
 
 	text-align: center;
-	font-size: 1em;
 	border-radius: 2em;
 	transform: perspective(500px) rotateY(-15deg);
 	text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.1);
@@ -23,7 +21,6 @@ line-height: 40px;
 
 }
 .boxgroup {
-margin-right: 40px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;

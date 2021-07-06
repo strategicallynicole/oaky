@@ -26,7 +26,7 @@ const Button = (props) => {
           data-wow-delay="100ms"
           data-wow-duration="1000ms"
      href={btnlink}>
-        <span>{btntext}</span>
+        <span className="pl-4 pr-4 md:text-xs md:pl-2 md:pr-2 lg:pl-4 lg:pr-4 lg:text-lg xl:text-xl">{btntext}</span>
       </a>
       </div>
       </>

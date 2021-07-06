@@ -14,16 +14,20 @@ import React from 'react'
 import { Controller, Scene } from 'react-scrollmagic'
 import Meditating from '../Illustrations/Meditating'
 import Title from '../Titles/h2.js'
-
+import Button from '../Buttons/Standard/button'
 import * as styles from './about.module.scss'
 
 const About = () => {
     return (
         <>
-            <div className={styles.aboutArea} id="about">
-                <div className="flex flex-col-reverse items-center justify-between h-screen px-10 lg:flex-row">
-                    <div className="pt-8 lg:w-1/2 lg:pt-0">
-                        <div
+
+
+
+<div class="flex flex-wrap -mx-1 overflow-hidden sm:-mx-1 md:-mx-1 lg:-mx-1 xl:-mx-1 mb-20">
+
+<div class="my-1 px-1 w-full overflow-hidden sm:my-1 sm:px-1 sm:w-full md:my-1 md:px-1 md:w-1/2 lg:my-1 lg:px-1 lg:w-1/2 xl:my-1 xl:px-1 xl:w-1/2">
+<div className={styles.aboutArea} id="about">
+<div
                             className="title wow fadeInLeft thumbnail"
                             data-wow-delay="100ms"
                             data-wow-duration="1000ms"
@@ -32,11 +36,9 @@ const About = () => {
                                 <Meditating />
                             </div>
                         </div>
-                    </div>
-
-                    <div className="pt-6 pl-10 ml-10 mt-96 lg:mt-6 lg:w-1/2 lg:pt-0">
-                        <div className="inner">
-                            <div className={styles.aboutContent}>
+</div></div>
+<div class="my-1 px-6 w-full overflow-hidden sm:my-1 sm:px-1 sm:w-full md:my-1 md:px-1 md:w-1/2 lg:my-1 lg:px-5 lg:w-1/2 xl:my-1 xl:px-5 xl:w-1/2">
+<div className={styles.aboutContent}>
                                 <div className="section-title">
                                     <div className="title-wrap">
                                         <div
@@ -52,7 +54,7 @@ const About = () => {
                                         <h4
                                             className="text-2xl subtitle wow fadeInLeft montserrat bold"
                                             data-wow-delay="100ms"
-                                            data-wow-duration="1000ms"
+                                            data-wow-duration="500ms"
                                         >
                                             Creative and Brand Growth Consulting
                                             Firm
@@ -75,7 +77,7 @@ const About = () => {
                                     <p
                                         className="text-lg description wow fadeInLeft"
                                         data-wow-delay="100ms"
-                                        data-wow-duration="1000ms"
+                                        data-wow-duration="2000ms"
                                     >                                <div className={styles.aboutDescription}>
 
                                         We offer branding, creative infusion,
@@ -97,23 +99,14 @@ const About = () => {
                                         🍑.</div>
                                     </p>
                                 </div>
-                                <div className="button-group mt--30">
-                                    <a
-                                        className="rn-button wow fadeInLeft"
-                                        data-wow-delay="100ms"
-                                        data-wow-duration="1000ms"
-                                        href="#downloadbutton"
-                                    >
-                                        <div className={styles.defaultBtn}>
-                                            <span>Hello</span>
-                                        </div>
-                                    </a>
-                                </div>
+                               <Button btntext="yes" btnlink="3" />
                             </div>
-                        </div>
-                    </div>
-                </div>
-        </>
+
+</div>
+
+
+
+            </>
     )
 }
 

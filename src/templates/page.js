@@ -14,9 +14,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
+
 import Layout from '../components/layout'
 import { MetaData } from '../components/common/meta'
-
+import Title from '../components/Titles/h1'
 /**
 * Single page (/:slug)
 *
@@ -39,7 +40,7 @@ const Page = ({ data, location }) => {
             <Layout>
                 <div className="container">
                     <article className="content">
-                        <h1 className="content-title">{page.title}</h1>
+                        <Title titletext={page.title} bgtext={page.title} />
 
                         {/* The main page content */}
                         <section

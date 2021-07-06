@@ -13,7 +13,9 @@
 import React from 'react'
 import "./button.comp.scss"
 
-const Button = () => {
+const Button = (props) => {
+    const { btntext } = props
+    const { btnlink } = props
     return (
 <>
 <div className="button-group mt--30">
@@ -22,9 +24,9 @@ const Button = () => {
           className="rn-button wow fadeInLeft"
           data-wow-delay="100ms"
           data-wow-duration="1000ms"
-          href="#downloadbutton"
+          href={btnlink}
       >
-        <span>Hello</span>
+        <span>{btntext}</span>
       </a>
       </div>
       </>

@@ -36,13 +36,21 @@
 
   }
   .running img {
+
     overflow: visible !important;
     z-index: 1000;
       overflow: visible !important;
-
+        max-height: 900px;
+        min-height: 400px;
+        max-width: 1500px;
+        min-width: 200px;
       transform: rotate(0px);
       -webkit-animation: runner 12s linear infinite;
               animation: runner 12s linear infinite;
+
+  }
+  .mobileimageholder {
+      position: relative;
 
   }
 

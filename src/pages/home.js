@@ -14,11 +14,9 @@ import React from "react";
 import Layout from "../components/layout";
 import Banner from "../components/Banner";
 import About from "../components/About";
-import Service from "../components/homedefault/service";
-import Brand from "../components/Brand";
+import PartnerLogos from "../components/PartnerLogos";
 import Blogs from "../components/blogPost";
-import Loader from '../components/Loader/pacman.js';
-
+import Services from "../components/Services";
 //import Project from "../components/homedefault/project";
 //import Testimonial from "../components/homedefault/testimonial";
 
@@ -29,8 +27,8 @@ const IndexPage = () => (
 <Layout>
 <Banner />
     <About />
-    <Service />
-<Brand />
+    <Services />
+<PartnerLogos />
 <Blogs />
   </Layout>
   </>

@@ -1,0 +1,106 @@
+@import "../../../styles/globals.scss";
+a ,
+button {
+    &.thatbutton {
+        text-decoration: none;
+        background: $black-gradient;
+        display: inline-block;
+        padding: 0px 40px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        outline: none;
+        border: 1px solid #fff;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        line-height: 2em;
+        border-radius: 3px;
+        color: #ffffff !important;
+        letter-spacing: .8px;
+        font-size: 1em;
+        @extend %transition !optional;
+        transition: 2s all ease-in-out;
+        span {
+            color: #ffffff !important;
+
+            position: relative;
+            z-index: 2;
+        }
+
+
+        &:hover {
+            color: #ffffff !important;
+            background: $gradient;
+
+        }
+    }
+}
+
+
+
+
+/*-----------------
+    Link Button
+-------------------*/
+a {
+    &.link-button {
+        padding: 0;
+        padding-top: 9px;
+        padding-bottom: 9px;
+        display: inline-block;
+        font-family: var(--font-secondary);
+        @extend %transition !optional;
+        span {
+            position: relative;
+            display: inline-block;
+            &::after {
+                background: var(--color-extra02);
+                position: absolute;
+                content: "";
+                left: 0;
+                bottom: 0;
+                height: 1px;
+                width: 100%;
+                @extend %transition !optional;
+            }
+        }
+        &:hover {
+            span {
+                &::after {
+                    background: var(--color-primary);
+                }
+            }
+        }
+    }
+}
+
+/* Button Group  */
+.button-group {
+    margin: 0 -25px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    a ,
+    button {
+        margin: 0 25px;
+        display: inline-block;
+    }
+}
+
+/*----------------------
+    Read More Button
+-----------------------*/
+a {
+    &.readmore-btn {
+        border-bottom: 1px solid transparent;
+        transition: all .3s ease;
+        font-size: 16px;
+        color: var(--color-primary);
+        letter-spacing: 0;
+        &:hover {
+            border-bottom-color: var(--color-primary);
+        }
+    }
+}
+
+
