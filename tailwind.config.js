@@ -14,6 +14,22 @@ module.exports = {
     purge: ['./public/**/*.{js,jsx,ts,tsx}'],
     darkMode: 'media',
     theme: {
+        extend: {
+            typography: {
+                DEFAULT: {
+                    css: {
+                        maxWidth: '85ch',
+                        color: '#bbbbbb',
+                        strong: {
+                        color: '#6633FF',
+                        '&:hover': {
+                          color: '#3366FF',
+                        },
+                      },
+                    },
+                  },
+                },
+          },
         borderColor: (theme) => ({
             DEFAULT: theme('colors.indigo.500', 'currentColor'),
             purple: theme('colors.purple.500'),

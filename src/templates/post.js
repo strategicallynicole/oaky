@@ -41,21 +41,28 @@ const Post = ({ data, location }) => {
                 <style type="text/css">{`${post.codeinjection_styles}`}</style>
             </Helmet>
             <Layout>
-                <div className="container">
-                    <article className="content max-w-prose">
+            <div className="relative py-16 overflow-hidden">
+        <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
+          <div className="relative h-full mx-auto text-lg max-w-prose" aria-hidden="true">
+
+
+          </div>
+        </div>
+        <div className="relative px-4 sm:px-6 lg:px-8">
+          <article className="max-w-full mx-auto text-lg content">
+
                         { post.feature_image ?
                             <figure className="post-feature-image">
                                 <img src={ post.feature_image } alt={ post.title } />
                             </figure> : null }
-                        <section className="content-body">
                             <Title bgtext={ post.title } titletext={ post.title } />
                             {/* The main post content */ }
                             <section
-                                className="h-screen prose prose-lg post-full-content prose-indigo load-external-scripts"
+                                className="mx-auto prose prose-xl text-gray-50 hmt-6 prose-indigo load-external-scripts"
                                 dangerouslySetInnerHTML={{ __html: post.html }}
-                            />
-                        </section>
-                    </article>
+                            ></section>
+                        </article>
+                    </div>
                 </div>
             </Layout>
         </>
@@ -83,3 +90,5 @@ export const postQuery = graphql`
         }
     }
 `
+
+
