@@ -18,18 +18,15 @@ module.exports = {
             typography: {
                 DEFAULT: {
                     css: {
-                        maxWidth: '85ch',
+                        'max-width': '85ch',
                         color: '#bbbbbb',
                         strong: {
                         color: '#6633FF',
-                        '&:hover': {
-                          color: '#3366FF',
+                                },
                         },
-                      },
-                    },
-                  },
+                        },
+                        },
                 },
-          },
         borderColor: (theme) => ({
             DEFAULT: theme('colors.indigo.500', 'currentColor'),
             purple: theme('colors.purple.500'),

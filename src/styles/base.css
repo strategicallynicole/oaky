@@ -106,3 +106,12 @@ rgba(255, 255, 255, 1);
 .gatsby-image-wrapper {
   overflow: visible;
 }
+
+.prose {
+    max-width: 85ch;
+    color: #fffffff;
+}
+
+.prose strong {
+    color: #fffffff
+}
