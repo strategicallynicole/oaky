@@ -35,6 +35,8 @@ const Page = ({ data, location }) => {
                 type="website"
             />
             <Helmet>
+            {page.codeinjection_head}
+
                 <style type="text/css">{`${page.codeinjection_styles}`}</style>
             </Helmet>
             <Layout>

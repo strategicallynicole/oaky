@@ -12,16 +12,16 @@
  **/
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
-import './pointing.component.scss'
+import './pointing.comp.scss'
+import img from './pointing.svg'
 
 export default function Pointing() {
     return (
         <>
-        <StaticImage
-            src="./pointing.webp"
+        <img
+            src={img}
             alt="Pointing"
-            layout="fullWidth"
-            className="overflow-visible banner floater meditate meditateimg animate-enter"
+            className="overflow-visible point banner animate-enter md:relative lg:absolute"
         />
         </>
     )

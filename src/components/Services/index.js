@@ -6,23 +6,47 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
      faBullhorn,
      faPaintbrushPencil,
  } from '@fortawesome/pro-thin-svg-icons'
-
+import Pointing from '../Illustrations/Pointing/index'
  import Title from '../Titles/h2.js'
 
 function Services() {
     return (
         <>
-<section className="mt-40 c-section"><div className="pl-20">
-  <h2 className="ml-10 c-section__title">  <div
-                                            className="pl-10 mt-20 title wow fadeInLeft"
+<section className="pt-40 mt-80 c-section"><div className="mt-40 mb-60">
+
+
+
+
+<div className="flex flex-wrap -mx-1 overflow-hidden sm:-mx-1 md:-mx-1 lg:-mx-1 xl:-mx-1">
+
+<div className="w-full px-1 my-1 overflow-hidden sm:my-1 sm:px-1 md:my-1 md:px-1 md:w-1/2 lg:my-1 lg:px-1 lg:w-1/2 xl:my-1 xl:px-1 xl:w-1/2">
+
+<div
+                                            className="pb-20 pl-10 mt-20 mb-20 title wow fadeInLeft"
                                             data-wow-delay="100ms"
                                             data-wow-duration="1000ms"
                                         >
                                             <Title
-                                                bgtext="Services"
-                                                titletext="Services"
+                                                bgtext='Services'
+                                                titletext='Services'
                                             />
-                                        </div></h2></div>
+                                        </div>
+                                        </div>
+
+<div className="w-full px-1 my-1 overflow-hidden sm:my-1 sm:px-1 md:my-1 md:px-1 md:w-1/2 lg:my-1 lg:px-1 lg:w-1/2 xl:my-1 xl:px-1 xl:w-1/2">
+<Pointing />
+</div>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
   <ul className="c-services">
     <li className="c-services__item">
       <h3 className="text-3xl font-black mulish">Branding, Strategy, Creative+</h3>

@@ -21,7 +21,6 @@ import Services from "../components/Services";
 //import Testimonial from "../components/homedefault/testimonial";
 
 
-
 const IndexPage = () => (
 <>
 <Layout>

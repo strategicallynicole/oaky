@@ -137,7 +137,6 @@ ul {
     }
 
     &:after {
-      content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae accusamus eaque necessitatibus modi facilis aspernatur ut natus saepe!";
       display: block;
       font-size: 1.4rem; @include bp-sm {
       font-size: 23%; }
@@ -163,7 +162,6 @@ ul {
 
   display: grid;
   grid-gap: var(--s2);
-  margin: 0 calc(var(--s3) * -1);
   padding: var(--s6) var(--s3); @include bp-sm {
   padding: 0 var(--s3); }
   position: relative;
@@ -180,8 +178,7 @@ ul {
     transform: skew(0deg, 10deg);
     background-size: contain;
     background-repeat: no-repeat;
-   /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23333333' fill-opacity='1' d='M0,192L34.3,197.3C68.6,203,137,213,206,181.3C274.3,149,343,75,411,64C480,53,549,107,617,128C685.7,149,754,139,823,128C891.4,117,960,107,1029,122.7C1097.1,139,1166,181,1234,165.3C1302.9,149,1371,75,1406,37.3L1440,0L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z'%3E%3C/path%3E%3C/svg%3E%0A");
-  */}
+   }
 
   &__item {
     background: #fff;
