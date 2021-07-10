@@ -6,13 +6,7 @@ const { paginate } = require(`gatsby-awesome-pagination`)
  * posts, tags, pages and authors that we fetched from the Ghost site.
  */
 
-
- Copygatsby-node.js: copy code to clipboard
  exports.onCreateWebpackConfig = ({
-   stage,
-   rules,
-   loaders,
-   plugins,
    actions,
  }) => {
    actions.setWebpackConfig({

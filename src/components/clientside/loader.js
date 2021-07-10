@@ -380,7 +380,8 @@ const one = [`
     </z-view>\``
     ];
 
-    new Vue({
+  const vueapp= [
+    `  new Vue({
       el: 'fap',
       components: {
         one,
@@ -405,4 +406,4 @@ const one = [`
         this.$zircle.setView('one')
       }
 
-    })
+    })`]

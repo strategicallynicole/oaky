@@ -2,22 +2,19 @@
 import React, { Component } from "react"
 import { Helmet } from "react-helmet"
 
-const MyModel = () => {
-
 const htmltwo = require("../../static/demo.html");
 
 const ClientSideOnlyLazy = React.lazy(() =>
-import({htmltwo})
+import(htmltwo)
 )
-const isSSR = typeof window === "undefined"
-
+const MyModel = () => {
     return (
       <>
 
-      <Helmet>
+<Helmet>
 
-      <script type="text/javascript" src="https://unpkg.com/vue"></script>
-      <script type="text/javascript" src="https://unpkg.com/zircle"></script></Helmet>
+<script type="text/javascript" src="https://unpkg.com/vue"></script>
+<script type="text/javascript" src="https://unpkg.com/zircle"></script></Helmet>
         <section dangerouslySetInnerHTML={ {__html: htmltwo} } />
 
         {!isSSR && (

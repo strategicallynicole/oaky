@@ -12,22 +12,15 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         {props.headComponents}
-        <script type="text/javascript" src="https://unpkg.com/vue"></script>
-
- <script type="text/javascript" src="https://unpkg.com/zircle"></script>
- <link href="https://unpkg.com/zircle/dist/zircle.css" rel="stylesheet" />
-
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
-
         <div
           key={`body`}
           id="___gatsby"
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-      <script src="/js/test.js"></script>
       </body>
     </html>
   )
