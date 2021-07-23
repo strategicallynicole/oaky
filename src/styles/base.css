@@ -2,10 +2,16 @@
 @import "./bits.css";
 @import './layers.css';
 @import './mixins.css';
+@import './linkstyles.css';
 @import './type.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+main {
+    max-width: 100%;
+}
 .logoholder {
      display: grid;
     place-items: center;
@@ -127,3 +133,10 @@ rgba(255, 255, 255, 1);
         color: $blue;
     }
 }
+.centerparent {
+    display: grid;
+    place-items: center;
+  }
+  .relative.z-0.main-wrapper.active-dark.bg-black-gradient {
+    min-height: 100vh;
+  }

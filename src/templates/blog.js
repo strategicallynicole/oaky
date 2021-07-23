@@ -16,7 +16,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import { PostCard, Pagination } from '../components/common'
 import { MetaData } from '../components/common/meta'
-
+import '../styles/ghost.scss'
 /**
 * Main index page (home page)
 *

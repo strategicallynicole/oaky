@@ -1,24 +1,13 @@
 const path = require(`path`)
 const { postsPerPage } = require(`./src/utils/siteConfig`)
 const { paginate } = require(`gatsby-awesome-pagination`)
+const { VueLoaderPlugin } = require('vue-loader')
+
 /**
  * Here is the place where Gatsby creates the URLs for all the
  * posts, tags, pages and authors that we fetched from the Ghost site.
  */
 
- exports.onCreateWebpackConfig = ({
-   actions,
- }) => {
-   actions.setWebpackConfig({
-     module: {
-       rules: [
-        { test: /\.html$/, loader: 'html-loader' },
-
-       ],
-     },
-
-   })
- }
 
 
 exports.createPages = async ({ graphql, actions }) => {
@@ -73,11 +62,11 @@ exports.createPages = async ({ graphql, actions }) => {
     const posts = result.data.allGhostPost.edges
 
     // Load templates
-    const blogTemplate = path.resolve(`./src/templates/blog.js`)
-    const tagsTemplate = path.resolve(`./src/templates/tag.js`)
-    const authorTemplate = path.resolve(`./src/templates/author.js`)
-    const pageTemplate = path.resolve(`./src/templates/page.js`)
-    const postTemplate = path.resolve(`./src/templates/post.js`)
+    const blogTemplate = path.resolve(`src/templates/blog.js`)
+    const tagsTemplate = path.resolve(`src/templates/tag.js`)
+    const authorTemplate = path.resolve(`src/templates/author.js`)
+    const pageTemplate = path.resolve(`src/templates/page.js`)
+    const postTemplate = path.resolve(`src/templates/post.js`)
 
     // Create tag pages
     tags.forEach(({ node }) => {
@@ -169,7 +158,7 @@ exports.createPages = async ({ graphql, actions }) => {
         component: blogTemplate,
         pathPrefix: ({ pageNumber }) => {
             if (pageNumber === 0) {
-                return `/`
+                return `/blog`
             } else {
                 return `/page`
             }

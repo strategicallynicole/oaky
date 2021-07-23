@@ -12,7 +12,8 @@ import Pointing from '../Illustrations/Pointing/index'
 function Services() {
     return (
         <>
-<section className="pt-40 mt-80 c-section"><div className="mt-40 mb-60">
+        <a name="services" id="services"></a>
+<section className="pt-40 c-section"><div className="mt-40 mb-60">
 
 
 
@@ -77,4 +78,3 @@ function Services() {
 </section></>)}
 
 export default Services;
-<FontAwesomeIcon icon={faChess} />

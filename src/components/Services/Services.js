@@ -20,7 +20,7 @@ class ProblemsWeSolve extends Component {
     render() {
         return (
 
-            <section className="problems-we-solve-area ptb-100">
+            <section className="problems-we-solve-area ">
 
                 <div className="container">
 

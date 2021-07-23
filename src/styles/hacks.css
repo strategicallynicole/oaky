@@ -1,0 +1,85 @@
+.z-canvas { background-color: transparent !important;
+    position: relative !important;
+    height: 700px !important;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    }
+    .z-view {
+    border: 1px solid white;  color: white; font-size: .9em; line-height: 20px; font-family: 'Montserrat';
+    }
+.z-content {
+width: 90%;
+height: 98%;
+line-height: 1em;
+font-size: 1.2em;
+padding: 30px;
+
+}
+.z-outer-circle {
+border-width: 0px !important;
+border-style: transparent;
+opacity: 1;
+}
+
+
+.z-spot {
+    border: solid 3px transparent;
+
+font-weight: 300;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%); font-size: 16px; color: white; font-family: 'Mulish';
+}
+.rounded-corners-gradient-borders{
+border: solid 3px transparent;
+}
+.rounded-corners-gradient-borders::after, .rounded-corners-gradient-borders:after, .rounded-corners-gradient-borders::before, .rounded-corners-gradient-borders:before {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(90deg, #6633FF 18.59%, #3366FF 68.36%, #0099FF 105%);
+
+  }
+
+
+
+.z-shape{
+    border: solid 6px transparent !important;
+    opacity: 1 !important;
+    display: flex;
+      align-items: center;
+      width: 90%;
+      margin: auto;
+      max-width: 22em;
+
+      position: relative;
+      padding: 30% 2em;
+      box-sizing: border-box;
+
+      $border: 5px;
+      color: #FFF;
+      background-clip: padding-box; /* !importanté */
+      border-radius: 1em;
+    &::before {
+        content: '';
+
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        z-index: 9 !important;
+        margin: -$border; /* !importanté */
+        border-radius: inherit; /* !importanté */
+        background: linear-gradient(90deg, #6633FF 18.59%, #3366FF 68.36%, #0099FF 105%) !important;
+      }
+
+    }
+
+    .z-shape:before, .z-shape:after, {
+
+        content: '';
+
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        z-index: 9 !important;
+        margin: -3px; /* !importanté */
+        border-radius: inherit; /* !importanté */
+        background: linear-gradient(90deg, #6633FF 18.59%, #3366FF 68.36%, #0099FF 105%) !important;
+    }

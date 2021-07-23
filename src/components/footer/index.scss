@@ -1,0 +1,101 @@
+@import "../../styles/globals.scss";
+main {
+    position: relative;
+  min-height: 100vh;
+  }
+  main {
+    min-height: 100vh;
+
+    /* Equal to height of footer */
+    /* But also accounting for potential margin-bottom of last child */
+    padding-bottom: 2.5rem;    /* Footer height */
+}
+  footer, .rn-footer-area
+  .push {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;   }
+
+
+    /*===========================
+    Start Footer Area
+=============================*/
+.rn-footer-area {
+    .ft-info {
+        p {
+            display: block;
+            @media #{$sm-layout} {
+                font-size: 18px;
+            }
+        }
+    }
+}
+.rn-footer-area {
+    position: relative;
+    .copyright-text {
+        color: #bbb;
+    }
+
+    .social-share {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li {
+            margin-right: 20px;
+            a {
+                display: inline-block;
+                svg {
+                    width: 20px;
+                    height: 20px;
+                    fill: #fff;
+                    transition: 0.5s;
+                }
+            }
+            &:hover {
+                a {
+                    svg {
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.back-to-top {
+    position: fixed;
+    right: 50px;
+    bottom: 100px;
+    @media #{$md-layout} {
+        right: 30px;
+        bottom: 50px;
+    }
+    @media #{$sm-layout} {
+        right: 30px;
+        bottom: 50px;
+    }
+}
+
+
+/*------------------------
+    New Css Here
+--------------------------*/
+
+.wp-block-gallery .blocks-gallery-grid .blocks-gallery-item a img {
+    border-radius: 10px;
+}
+.tags-cloud a {
+    border-radius: 10px;
+}
+
+.mt_dec--30 {
+    margin-top: -30px !important;
+}
+
+@media #{$sm-layout} {
+    .section-title .title span.bg {
+        display: none !important;
+    }
+}

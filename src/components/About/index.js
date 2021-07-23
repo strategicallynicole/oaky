@@ -23,7 +23,7 @@ const About = () => {
 
 
 
-<div class="flex flex-wrap -mx-1 overflow-hidden sm:-mx-1 md:-mx-1 lg:-mx-1 xl:-mx-1 mb-20">
+<div class="flex flex-wrap  overflow-hidden pt-60">
 
 <div class="my-1 px-1 w-full overflow-hidden sm:my-1 sm:px-1 sm:w-full md:my-1 md:px-1 md:w-1/2 lg:my-1 lg:px-1 lg:w-1/2 xl:my-1 xl:px-1 xl:w-1/2">
 <div className={styles.aboutArea} id="about">
@@ -99,7 +99,7 @@ const About = () => {
                                         🍑.</div>
                                     </p>
                                 </div>
-                               <Button btntext="yes" btnlink="3" />
+                               <Button btntext="Get To Know Us" btnlink="about" />
                             </div>
 
 </div>

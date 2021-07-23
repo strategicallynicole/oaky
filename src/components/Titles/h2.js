@@ -14,7 +14,7 @@
 import { Controller, Scene } from 'react-scrollmagic'
 import { array, oneOf, PropTypes } from 'prop-types'
 
-import * as styles from "./h2.module.scss"
+import "./h2.scss"
 
 const Title = (props) => {
     const { titletext } = props
@@ -25,7 +25,7 @@ const Title = (props) => {
 
 
 <div className="section-title mb--40">
-                            <h2 className="title" data-wow-delay="100ms" data-wow-duration="1000ms"> {titletext}<span data-wow-delay="100ms" data-wow-duration="1000ms" className="bg">{bgtext}</span></h2>
+                            <h2 className="title" data-wow-delay="100ms" data-wow-duration="1000ms"> {titletext}<span data-wow-delay="100ms" data-wow-duration="1000ms" className="bgtext">{bgtext}</span></h2>
                         </div>
 
 

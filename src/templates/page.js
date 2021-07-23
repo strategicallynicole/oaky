@@ -18,6 +18,7 @@ import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
 import { MetaData } from '../components/common/meta'
 import Title from '../components/Titles/h1'
+
 /**
 * Single page (/:slug)
 *
@@ -35,14 +36,12 @@ const Page = ({ data, location }) => {
                 type="website"
             />
             <Helmet>
-            {page.codeinjection_head}
-
                 <style type="text/css">{`${page.codeinjection_styles}`}</style>
             </Helmet>
             <Layout>
                 <div className="container">
                     <article className="content">
-                        <Title titletext={page.title} bgtext={page.title} />
+                    <Title titletext={page.title} bgtext={page.title} />
 
                         {/* The main page content */}
                         <section

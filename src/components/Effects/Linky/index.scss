@@ -1,3 +1,6 @@
+
+@import "../../../styles/globals.scss";
+
 .linky {
 font-family: 'Montserrat', sans-serif;
 font-size: 25px;
@@ -13,8 +16,11 @@ background-position: 0% 0%;
 -webkit-background-clip: text;
 -webkit-text-fill: none;
 
-transition: all .75s ease;
+transition: all 1.75s ease-in-out;
 
 &:hover {
+    background-image: $gradient;
+    -webkit-text-stroke: .5px none;
+
   background-position: 0% 100%;
 }}

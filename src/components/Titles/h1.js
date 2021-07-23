@@ -14,7 +14,7 @@
 import { Controller, Scene } from 'react-scrollmagic'
 import { array, oneOf, PropTypes } from 'prop-types'
 
-import * as styles from "./h1.module.scss"
+import "./h1.scss"
 
 const Title = (props) => {
     const { titletext } = props
@@ -22,8 +22,8 @@ const Title = (props) => {
 
     return (
         <>
-<div className={styles.bgtext}>{bgtext}</div>
-  <h1 className={styles.title} data-wow-delay="100ms" data-wow-duration="1000ms">
+<div className="bgtext">{bgtext}</div>
+  <h1 className="title text-stroke-black" data-wow-delay="100ms" data-wow-duration="1000ms">
  {titletext}</h1>
 
 </>

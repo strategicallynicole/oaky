@@ -23,9 +23,9 @@ const Banner = () => {
 
 
 
-        <div class="container flex flex-wrap  h-screen overflow-hidden ">
+        <div class="container flex flex-wrap  overflow-hidden ">
 
-  <div class="my-1 px-10 py-10 w-full  overflow-hidden sm:my-1 sm:px-1 sm:w-full md:my-1 md:px-1 md:w-1/2 lg:my-1 lg:px-1 lg:w-1/2 xl:my-1 xl:px-1 xl:w-1/2">
+  <div class="my-1 px-10 py-20 w-full  sm:order-last xs:order-last overflow-hidden sm:my-1 sm:px-1 sm:w-full md:my-1 md:px-1 md:w-1/2 lg:my-1 lg:px-1 lg:w-1/2 xl:my-1 xl:px-1 xl:w-1/2">
                  <div className="lg:mt-20 title wow fadeInLeft"
                                 data-wow-delay="300ms"
                                 data-wow-duration="1000ms"

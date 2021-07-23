@@ -26,7 +26,7 @@ function LogoComponent(props) {
                         alt="White Logo"
                         placeholder="blurred"
                          layout="constrained"
-                        width={125}                       className={classes}
+                        width={200}                       className={classes}
                     />
                 </>
             )
@@ -38,7 +38,7 @@ function LogoComponent(props) {
                         alt="Black Logo"
                         placeholder="blurred"
                          layout="constrained"
-                        width={125}
+                        width={200}
                         className={classes}
 
                     />
@@ -53,7 +53,7 @@ function LogoComponent(props) {
                         alt="White Logo"
                         placeholder="blurred"
                          layout="constrained"
-                        width={50}                      className={classes}
+                        width={100}                      className={classes}
                     />
                 </>
             )
@@ -65,7 +65,7 @@ function LogoComponent(props) {
                         alt="BlackLogo"
                         placeholder="blurred"
                          layout="constrained"
-                        width={125}
+                        width={200}
                         className={classes}
                     />
                 </>
@@ -78,7 +78,7 @@ function LogoComponent(props) {
                         alt="Symbol"
                         placeholder="blurred"
                          layout="constrained"
-                        width={50}
+                        width={200}
                         className={classes}
                     />
                 </>
@@ -91,7 +91,7 @@ function LogoComponent(props) {
                         alt="Abbreviation"
                         placeholder="blurred"
                          layout="constrained"
-                        width={40}                      className={classes}
+                        width={75}                      className={classes}
                     />
                 </>
             )

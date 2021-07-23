@@ -1,5 +1,9 @@
 @import url("https://use.typekit.net/aek5xfr.css");
 
+
+.prose a {
+    @apply link link--iocaste;
+}
 .superbigheadlines{
     font-family: 'DIN Condensed';
     font-size: 350px;
@@ -50,7 +54,7 @@ font-weight: normal;
     -webkit-initial-letter: 4;
   }
 
-  
+
   .mulish {
   font-family:  "Mulish", sans-serif;
   }

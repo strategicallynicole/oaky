@@ -5,7 +5,8 @@ import { slugify } from "../src/utils/utilityFunctions";
 import { DiscussionEmbed } from 'disqus-react';
 import Layout from "../src/components/layout";
 
-const BlogDetails = ({data, pageContext}) => {
+const BlogDetails = ({data, pageContext }) => {
+
     const {
         title , image, tags, category
     } = data.markdownRemark.frontmatter;
@@ -46,7 +47,7 @@ const BlogDetails = ({data, pageContext}) => {
                     <div className="row">
                         <div className="col-lg-8 offset-lg-2">
                             <div className="blog-contact-form">
-                                <div className="social-share-inner text-center pt--50">
+                                <div className="text-center social-share-inner pt--50">
                                     <h3>Share This Post</h3>
                                     <ul className="social-share-links liststyle d-flex justify-content-center">
                                         <li>
@@ -104,35 +105,3 @@ const BlogDetails = ({data, pageContext}) => {
     )
 }
 
-export const blogDetailsData = graphql`
-query blogDetailsQuery ($slug: String!) {
-    markdownRemark (fields: { slug: { eq: $slug } }) {
-        id
-        html
-        fields {
-            slug
-        }
-        frontmatter {
-            author {
-                name
-            }
-            category
-            title
-            date(formatString: "MMM Do, YYYY")
-            format
-            tags
-            image {
-                    childImageSharp {
-                        fluid(quality: 100, maxHeight: 350, maxWidth: 510) {
-                        ...GatsbyImageSharpFluid_withWebp
-                        presentationHeight
-                        presentationWidth
-                    }
-                }
-            }
-        }
-    }
-}
-`
-
-export default BlogDetails;

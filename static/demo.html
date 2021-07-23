@@ -1,8 +1,19 @@
+<html><head><script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/zircle"></script>
+<link href="https://unpkg.com/zircle/dist/zircle.css" rel="stylesheet">
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 
+<link href="/styles/hacks.css" rel="stylesheet" /></head><body>
+<img src="images/pyramid.svg" class="hidden xl:visible lg:visible animate__animated animate__rubberBand animate rubberBand pyramid" />
+<div id="app">
+  <z-canvas :views='$options.components'>
+  </z-canvas>
+</div>    <script>
 
-    <script>
-
-const one = [
+const one = {
     template: `
     <z-view style="border-color: #8F6AFA; font-family: 'Montserrat', sans-serif; font-weight: bold; color: #ffffff; border-width: 1px; background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%)">
     OAKwave Strategic Growth Model
@@ -61,7 +72,7 @@ const one = [
 
 
     </z-view>`
-    ];
+    };
     const context = {
     template: `
     <z-view style="border: 1px #0099EE solid;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%); font-size: 32px; color: white;">
@@ -123,9 +134,9 @@ const one = [
     Mission
         </z-spot>
     </z-view>`
-    ];
+    };
 
-    const market = [
+    const market = {
     template: `
     <z-view style="border: 1px #0099EE solid;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%); font-size: 32px; color: white;">
      Market
@@ -169,9 +180,9 @@ const one = [
         </z-spot>
 
     `
-    ];
+    };
 
-    const brand = [
+    const brand = {
     template: `
     <z-view style="border: 1px #0099EE solid;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%); font-size: 32px; color: white;">
      Brand
@@ -214,9 +225,9 @@ const one = [
         </z-view>
 
     `
-    ];
+    };
 
-    const growth = [
+    const growth = {
     template: `
     <z-view style="border: 1px #0099EE solid;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%); font-size: 32px; color: white;">
      Growth
@@ -240,10 +251,10 @@ const one = [
     </z-view>
 
     `
-    ];
+    };
 
 
-    const techstack = [
+    const techstack = {
     template: `
     <z-view style="border: 1px #0099EE solid;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%); font-size: 32px; color: white;">
      Tech Stack
@@ -276,8 +287,8 @@ const one = [
     </z-view>
 
     `
-    ];
-    const action = [
+    };
+    const action = {
     template: `
     <z-view style="border: 1px #0099EE solid;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%); font-size: 32px; color: white;">
      Action
@@ -288,82 +299,85 @@ const one = [
         color="#8F6AFA"
         :angle="0"
         size="large"
-        style="border: 1px solid white;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%);  font-size: 12px; color: white;">
+                class="rounded-corners-gradient-borders"
+
+        style="background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%);  font-size: 14px; color: white;">
     Demolition      </z-spot>
     <z-spot
         slot="extension"
         color="black"
         :angle="60"
         size="large"
-       sstyle="border: 1px solid white;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%);  font-size: 12px; color: white;">
+        class="rounded-corners-gradient-borders"
+       style="background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%);  font-size: 14px; color: white; ">
     Roadmap      </z-spot>
 
 
      </z-view>
     `
-    ];
+    };
 
-    const personas = [
+    const personas = {
     template: `
     <z-view style="border: 1px solid white;  color: white;">
     Personas  </z-view>`
-    ];
+    };
 
-    const buyers = [
+    const buyers = {
     template: `
     <z-view style="border: 1px solid white;  color: white;">
     Buyer Base
     </z-view>`
-    ];
+    };
 
-    const industry = [
+    const industry = {
     template: `
     <z-view style="border: 1px solid white;  color: white;">
     Industry Analysis
     </z-view>`
-    ];
-    const research = [
+    };
+    const research = {
     template: `
     <z-view style="border: 1px solid white;  color: white;">
     Research Studies
     </z-view>`
-    ];
-    const roadblocks = [
+    };
+    const roadblocks = {
     template: `
     <z-view style="border: 1px solid white;  color: white;">
     Roadblocks
     </z-view>`
-    ]
-    const roots = [
+    }
+    const roots = {
     template: `
     <z-view style="border: 1px solid white;  color: white;">
     Roots
     </z-view>`
-    ];
-    const constraints = [
+    };
+    const constraints = {
     template: `
     <z-view style="border: 1px solid white;  color: white;">
     Constraints
     </z-view>`
-    ];
-    const history = [
+    };
+    const history = {
     template: `
     <z-view style="border: 1px solid white;  color: white;">
     History
     </z-view>`
-    ];
-    const vision = [
+    };
+    const vision = {
     template: `
     <z-view style="border: 1px solid white;  color: white; font-size: 16px;">
     A vision serves as your company's north star.
     </z-view>`
-    ];
-    const mission = [
+    };
+    const mission = {
     template: `
     <z-view style="border: 1px solid white;  color: white; font-size: 16px; line-height: 16px;">
     A mission statement is what you are doing today to get to tomorrow.
     </z-view>`
-    ];
+    };
 
 
 new Vue({
@@ -388,7 +402,12 @@ new Vue({
     growth
   },
   mounted () {
+    this.$zircle.config({
+      style: {
+        theme: 'black'
+      }
+    })
     this.$zircle.setView('one')
   }
-})</script>
-
+})
+</script>

@@ -12,9 +12,8 @@
 **/
 module.exports = (api) => {
   api.cache(false)
-
   return {
-    presets: ['babel-preset-gatsby', 'babel-preset-vue', '@babel/preset-react', '@babel/preset-typescript'],
+    presets: ['babel-preset-gatsby', '@babel/preset-react', '@babel/preset-typescript'],
     plugins: [
     ]
   }

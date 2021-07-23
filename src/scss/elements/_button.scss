@@ -1,55 +1,13 @@
 /*-----------------
  * Button
 -------------------*/
-a ,
-button {
-    &.rn-button {
-        text-decoration: none;
-        background-color: var(--color-primary);
-        display: inline-block;
-        padding: 0px 50px;
-        overflow: hidden;
-        position: relative;
-        z-index: 1;
-        outline: none;
-        border: 2px solid #000;
-        height: 60px;
-        line-height: 57px;
-        border-radius: 500px;
-        color: #fff;
-        letter-spacing: .8px;
-        font-size: 15px;
-        @extend %transition;
-        span {
-            position: relative;
-            z-index: 2;
-        }
-       
-        &.btn-white {
-            background-color: var(--color-white);
-            color: var(--color-extra03);
-            span {
-                color: var(--color-extra03);
-            }
-            &:hover {
-                color: var(--color-extra04);
-                span {
-                    color: var(--color-extra04);
-                }
-            }
-        }
-        &:hover {
-            color: var(--color-primary);
-            background-color: transparent;
-        }
-    }
-}
+
 
 
 
 
 /*-----------------
-    Link Button  
+    Link Button
 -------------------*/
 a {
     &.link-button {
@@ -85,19 +43,17 @@ a {
 
 /* Button Group  */
 .button-group {
-    margin: 0 -25px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     a ,
     button {
-        margin: 0 25px;
         display: inline-block;
     }
 }
 
 /*----------------------
-    Read More Button  
+    Read More Button
 -----------------------*/
 a {
     &.readmore-btn {

@@ -37,28 +37,10 @@
 
 ***************************************************************/
 
-body {
-    background: #000000 !important;
-}
+@import '../styles/globals.scss';
 
 // Bootstrap Scss
-@import '../../node_modules/bootstrap/scss/bootstrap.scss';
-
-$border-color: linear-gradient(90deg, #6633FF 18.59%, #3366FF 68.36%, #0099FF 105%);
-
-/**************************************
-    Default Styles
-***************************************/
-@import 'default/variables';
-@import 'default/mixins';
-@import 'default/reset';
-@import 'default/typography';
-@import 'default/extend';
-@import 'default/animations';
-@import 'default/animation-text';
-@import 'default/shortcode';
-@import 'default/spacing';
-
+//@import '../../node_modules/bootstrap/scss/bootstrap.scss';
 
 /**************************************
 	Header Styles
@@ -105,10 +87,7 @@ $border-color: linear-gradient(90deg, #6633FF 18.59%, #3366FF 68.36%, #0099FF 10
 /**************************************
 	Footer Styles
 ***************************************/
-@import 'footer/footer';
-@import 'footer/new';
-@import 'footer/responsive';
-@import 'footer/dark';
+
 
 
 .post-card-footer-left>span {

@@ -11,9 +11,18 @@
  * - Modification    :
  **/
 module.exports = {
+
     purge: ['./public/**/*.{js,jsx,ts,tsx}'],
     darkMode: 'media',
     theme: {
+        colors: {
+            transparent: 'transparent',
+            current: 'currentColor',
+            white: '#efefef',
+            gray: '#bbbbbbb',
+            indigo: '#3366FF',
+            purple: '#6633FF'
+        },
         extend: {
             typography: {
                 DEFAULT: {
@@ -86,7 +95,7 @@ module.exports = {
             backgroundImage: (theme) => ({
                 waves: "url('../images/waves.svg')",
                 gradient:
-                    'linear-gradient(90deg, #8F6AFA 0%, #375CDC 47.03%, #0099EE 105%)',
+                    'linear-gradient(90deg, #6633FF 40.47%, #3366FF 78.75%, #0099FF 105%)',
                 wallpaper: "url('../images/wallpaper.svg')",
                 'black-gradient':
                     'linear-gradient(90deg, #292929 2.11%, #000000 104.85%)',
@@ -193,7 +202,6 @@ module.exports = {
         },
     },
     variants: {
-        extend: {},
     },
     plugins: [
         require('@tailwindcss/typography'),
@@ -201,5 +209,7 @@ module.exports = {
         require('@tailwindcss/forms'),
         require('@tailwindcss/line-clamp'),
         require('@tailwindcss/aspect-ratio'),
+        require('tailwindcss-text-fill-stroke') // no options to configure
+
     ],
 }

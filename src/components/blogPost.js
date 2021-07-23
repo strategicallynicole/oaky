@@ -68,7 +68,7 @@ const BlogPost = ({pageQuery, location, pageContext}) => {
 
 const blogs = data.allGhostPost.edges
     return (
-        <div className="rn-post-area rn-section-gapBottom pt--200 bg-color-grey" id="news">
+        <div className="bg-transparent rn-post-area rn-section-gapBottom pt--200" id="news">
             <div className="px-20">
                 <div className="row">
                     <div className="col-lg-12">
