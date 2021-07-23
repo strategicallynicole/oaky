@@ -119,10 +119,11 @@ module.exports = {
               `,
             },
         },
-        {
+     /*    {
             resolve: 'gatsby-plugin-feed-generator',
             options: {
             generator: `GatsbyJS`,
+            name: 'myfeed',
             rss: true, // Set to true to enable rss generation
             json: true, // Set to true to enable json feed generation
             siteQuery: `{
@@ -137,7 +138,7 @@ module.exports = {
             }`,
             feeds: [
                 {
-                  name: 'feed', // This determines the name of your feed file => feed.json & feed.xml
+                  name: 'myfeed', // This determines the name of your feed file => feed.json & feed.xml
                   query: `
                   {
                     allGhostPost {
@@ -172,7 +173,7 @@ module.exports = {
 
             },
         },
-
+ */
 
         {
             resolve: `gatsby-plugin-advanced-sitemap`,
