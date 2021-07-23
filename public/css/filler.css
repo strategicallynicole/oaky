@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  .world{
+    width: 250px;
+    height: 250px;
+    top: -5px
+  }
+  .o {
+    border: 3px solid #ffcc00
+  }
+  .hello {
+    font-size: 4em;
+    text-align: center;
+    font-family: arial;
+    font-weight: bold;
+     width: 400px;
+    height: 200px;
+  }

@@ -1,0 +1,43 @@
+<html>
+<head><script src="https://unpkg.com/vue"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/zumly@0.9.9/dist/zumly.css">
+
+<script src="https://unpkg.com/zumly" async></script>
+</head>
+<body>
+
+<div class="example zumly-canvas"></div>
+
+
+
+    <script defer>
+const hello = `
+<div class="z-view">
+H E L L O <br>
+W <span class="zoom-me" data-to="world">O</span> R L D!
+</div>
+`;
+
+const world = `
+<div class="z-view">
+<img src="https://raw.githubusercontent.com/zumly/website/gh-pages/images/world.png"/>
+</div>
+`;
+
+// Zumly instance
+const app = new Zumly({
+  mount: '.example',
+  initialView: 'hello',
+  views: {
+    hello,
+    world
+  }
+})
+
+app.init()
+
+
+</script>
+</body>
+</html>
