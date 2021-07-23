@@ -120,23 +120,60 @@ module.exports = {
             },
         },
         {
-            resolve: `gatsby-plugin-feed`,
+            resolve: 'gatsby-plugin-feed-generator',
             options: {
-                query: `
-                {
-                    allGhostSettings {
-                        edges {
-                            node {
-                                title
-                                description
-                            }
+            generator: `GatsbyJS`,
+            rss: true, // Set to true to enable rss generation
+            json: true, // Set to true to enable json feed generation
+            siteQuery: `{
+                allGhostSettings {
+                    edges {
+                        node {
+                            title
+                            description
                         }
                     }
                 }
-              `,
-                feeds: [generateRSSFeed(config)],
+            }`,
+            feeds: [
+                {
+                  name: 'feed', // This determines the name of your feed file => feed.json & feed.xml
+                  query: `
+                  {
+                    allGhostPost {
+                        edges {
+                            node {
+                                id
+                                slug
+                                updated_at
+                                created_at
+                                feature_image
+                                path
+                                title
+                                html
+                            }
+                        }
+
+                    }
+
+                  `,
+                  normalize: ({ query: { site } }) => {
+                    return allGhostPost.edges.node.map(edges => {
+                      return {
+                        title: edges.node.title,
+                        date: edges.node.date,
+                        url: site.siteMetadata.siteUrl + edges.node.path,
+                        html: edges.node.html,
+                      }
+                    })
+                  },
+                },
+              ],
+
             },
         },
+
+
         {
             resolve: `gatsby-plugin-advanced-sitemap`,
             options: {
