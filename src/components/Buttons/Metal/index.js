@@ -18,29 +18,28 @@ const Button = (props) => {
     const { btntext } = props
     const { btnlink } = props
     return (
-<>
-<div className={styles.boxgroup}>
+        <>
+            <div className={styles.boxgroup}>
 
-<a
-          className={styles.box}
-          data-wow-delay="100ms"
-          data-wow-duration="1000ms"
-     href={btnlink}>
-        <span className="pl-4 pr-4 md:text-xs md:pl-2 md:pr-2 lg:pl-4 lg:pr-4 lg:text-lg xl:text-xl">{btntext}</span>
-      </a>
-      </div>
-      </>
+                <a
+                    className={styles.box}
+                    data-wow-delay="100ms"
+                    data-wow-duration="1000ms"
+                    href={btnlink}>
+                    <span className="pl-4 pr-4 md:text-xs md:pl-2 md:pr-2 lg:pl-4 lg:pr-4 lg:text-lg xl:text-xl">{btntext}</span>
+                </a>
+            </div>
+        </>
     )
-};
+}
 
 Button.propTypes = {
     btntext: PropTypes.string,
-    btnlink: PropTypes.string
+    btnlink: PropTypes.string,
 }
 Button.defaultProps = {
-    btntext: '',
-    btnlink: ''
-
+    btntext: ``,
+    btnlink: ``,
 
 }
-export default Button;
+export default Button

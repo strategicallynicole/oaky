@@ -10,13 +10,12 @@
     * - Author          :
     * - Modification    :
 **/
-import React from 'react';
+import React from 'react'
 import { Layout, PostCard, Pagination } from '../components/common'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from "gatsby"
 
-
-const BlogPost = ({pageQuery, location, pageContext}) => {
+const BlogPost = ({ pageQuery, location, pageContext }) => {
     const data = useStaticQuery(graphql`
     {
       allGhostPost(sort: {fields: published_at, order: DESC}, skip: 0, limit: 3) {
@@ -66,7 +65,7 @@ const BlogPost = ({pageQuery, location, pageContext}) => {
     }
   `)
 
-const blogs = data.allGhostPost.edges
+    const blogs = data.allGhostPost.edges
     return (
         <div className="bg-transparent rn-post-area rn-section-gapBottom pt--200" id="news">
             <div className="px-20">
@@ -80,30 +79,24 @@ const blogs = data.allGhostPost.edges
                 <section className="post-feed">
 
                     {blogs.map(blog => (
-                     <div className="row row--45 holderbox">
+                        <div className="row row--45 holderbox">
 
-                                <div className="wow fadeInDown" data-wow-delay="200ms" data-wow-duration="0.8s" key={blog.node.slug}>
-                        {[blog].map(({ node }) => (
-                            <PostCard key={node.id} post={node} />
-                            ))}
+                            <div className="wow fadeInDown" data-wow-delay="200ms" data-wow-duration="0.8s" key={blog.node.slug}>
+                                {[blog].map(({ node }) => (
+                                    <PostCard key={node.id} post={node} />
+                                ))}
+
+                            </div>
 
                         </div>
+                    ))}
 
-</div>
-  ))}
+                </section>
 
-
-
-                    </section>
-
-
-                </div>
             </div>
+        </div>
     )
 }
-
-
-
 
 BlogPost.propTypes = {
     data: PropTypes.shape({

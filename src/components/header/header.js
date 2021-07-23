@@ -11,26 +11,23 @@
     * - Modification    :
 **/
 import React, { useState, useEffect, Fragment } from "react"
-import PropTypes from "prop-types";
-import { Link} from 'gatsby';
-import Scrollspy from 'react-scrollspy';
-import Logo from '../Logo/logo';
+import PropTypes from "prop-types"
+import { Link } from 'gatsby'
+import Scrollspy from 'react-scrollspy'
+import Logo from '../Logo/logo'
 
 // Start Header Area
 const Header = () => {
-
-
     const [scroll, setScroll] = useState(false)
     useEffect(() => {
-        window.addEventListener("scroll", () => {
-        setScroll(window.scrollY > 10)
+        window.addEventListener(`scroll`, () => {
+            setScroll(window.scrollY > 10)
         })
     }, [])
 
-
     return (
         <Fragment>
-            <header className={scroll ? "rn-header header-default header-transparent scrolled d-none d-xl-block" : "rn-header header-default header-transparent d-none d-xl-block"}>
+            <header className={scroll ? `rn-header header-default header-transparent scrolled d-none d-xl-block` : `rn-header header-default header-transparent d-none d-xl-block`}>
                 <div className="header-inner">
                     <div className="container">
                         <div className="row align-items-center">
@@ -40,7 +37,7 @@ const Header = () => {
                                 <div className="header-left">
                                     <div className="logo">
                                         <Link to="/">
-<Logo logotype="standard" type="standard" />                                       </Link>
+                                            <Logo logotype="standard" type="standard" />                                       </Link>
                                     </div>
                                 </div>
                             </div>
@@ -49,7 +46,7 @@ const Header = () => {
                             {/* Start Mainmenu Area  */}
                             <div className="col-lg-9">
                                 <div className="menu_wrapper">
-                                    <Scrollspy className="mainmenuwrapper" items={['home','about', 'portfolio',  'news' , 'contact']} currentClassName="is-current" offset={-200}>
+                                    <Scrollspy className="mainmenuwrapper" items={[`home`,`about`, `portfolio`, `news` , `contact`]} currentClassName="is-current" offset={-200}>
                                         <li>
                                             <a className="menu-hover-link" href="/#home">
                                                 <span className="hover-item">
@@ -97,9 +94,6 @@ const Header = () => {
                         </div>
                     </div>
 
-
-
-
                 </div>
             </header>
 
@@ -109,11 +103,11 @@ const Header = () => {
 // End Header Area
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+    siteTitle: PropTypes.string,
 }
 
 Header.defaultProps = {
-  siteTitle: `OAKwave`,
+    siteTitle: `OAKwave`,
 }
 
-export default Header;
+export default Header

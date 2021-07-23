@@ -1,33 +1,30 @@
 import React from 'react'
 import BaffleText from 'components/baffle-text'
 import AnimationContainer from 'components/animation-container'
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from 'styled-components'
 
 class PageRevealer extends React.Component {
-
     constructor(props) {
         super(props)
         this.state = {
-            animation : false,
+            animation: false,
             complete: false,
-            hide: false
+            hide: false,
         }
         this.reveal = this.reveal.bind(this)
     }
 
     reveal() {
         if (!this.state.complete) {
-            this.setState({animation: true, complete: true})
+            this.setState({ animation: true, complete: true })
             setTimeout(() => { 
-                document.getElementById("reveal_container").style.backgroundColor = "transparent"
+                document.getElementById(`reveal_container`).style.backgroundColor = `transparent`
                 setTimeout(() => { 
-                    this.setState({animation: false, hide: true})
-                }, 500);
-            }, 400);
+                    this.setState({ animation: false, hide: true })
+                }, 500)
+            }, 400)
         }
     }
-
-
 
     baffle() {
         if (!this.state.complete) {
@@ -67,7 +64,7 @@ class PageRevealer extends React.Component {
             @media (max-width: 500px) {
                 font-size: 30px;
             }
-        `;
+        `
 
         const RevealAnimation = keyframes`
             0% {
@@ -92,9 +89,9 @@ class PageRevealer extends React.Component {
             }
         `
         return (
-            <RevealContainer id="reveal_container" style={{display: this.state.hide ? "none" : "flex"}}>
+            <RevealContainer id="reveal_container" style={{ display: this.state.hide ? `none` : `flex` }}>
                 {this.baffle()}
-                <Reveal id="revealer" className={this.state.animation ? "animate" : ""} />
+                <Reveal id="revealer" className={this.state.animation ? `animate` : ``} />
             </RevealContainer>
         )
     }

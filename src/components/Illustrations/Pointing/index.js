@@ -18,11 +18,11 @@ import img from './pointing.svg'
 export default function Pointing() {
     return (
         <>
-        <img
-            src={img}
-            alt="Pointing"
-            className="overflow-visible point banner animate-enter md:relative lg:absolute"
-        />
+            <img
+                src={img}
+                alt="Pointing"
+                className="overflow-visible point banner animate-enter md:relative lg:absolute"
+            />
         </>
     )
 }

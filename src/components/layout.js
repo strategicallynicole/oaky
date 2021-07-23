@@ -10,43 +10,31 @@
     * - Author          :
     * - Modification    :
 **/
-import React from "react";
-import PropTypes from "prop-types";
-import Client from "./client";
-import Nav from "./header/nav";
-import Footer from "./footer/temporary";
-import Helmet from 'react-helmet';
-import '../styles/app.css';
-import '../scss/style.scss';
-import '../styles/base.css';
-import ReactDOM from 'react-dom';
+import React from "react"
+import PropTypes from "prop-types"
+import Client from "./client"
+import Nav from "./header/nav"
+import Footer from "./footer/temporary"
+import '../scss/style.scss'
+import '../styles/base.css'
 
-const Layout = ({ children }) => {
+const Layout = ({ children }) => (
 
-  return (
-
-      <>
-    <div className="relative z-0 main-wrapper active-dark bg-black-gradient">
-
-
-
-
-
+    <>
+        <div className="relative z-0 main-wrapper active-dark bg-black-gradient">
 
             <Nav />
 
-        <Client />
+            <Client />
 
-        <main>{children}</main>
-        <Footer />
-    </div>
+            <main>{children}</main>
+            <Footer />
+        </div>
     </>
-  )
-}
-
+)
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+    children: PropTypes.node.isRequired,
 }
 
 export default Layout

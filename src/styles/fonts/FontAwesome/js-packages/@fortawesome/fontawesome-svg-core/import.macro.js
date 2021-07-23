@@ -1,23 +1,23 @@
-const { createMacro, MacroError } = require('babel-plugin-macros')
-const { addNamed } = require('@babel/helper-module-imports')
+const { createMacro, MacroError } = require(`babel-plugin-macros`)
+const { addNamed } = require(`@babel/helper-module-imports`)
 
 module.exports = createMacro(importer, {
-    configName: 'fontawesome-svg-core',
+    configName: `fontawesome-svg-core`,
 })
 
-const styles = ['solid', 'regular', 'light', 'thin', 'duotone', 'brands']
+const styles = [`solid`, `regular`, `light`, `thin`, `duotone`, `brands`]
 
 function importer({ references, state, babel, source, config }) {
-    const license = config !== undefined ? config.license : 'free'
+    const license = config !== undefined ? config.license : `free`
 
-    if (!['free', 'pro'].includes(license)) {
-        throw new Error("config license must be either 'free' or 'pro'")
+    if (![`free`, `pro`].includes(license)) {
+        throw new Error(`config license must be either 'free' or 'pro'`)
     }
 
     Object.keys(references).forEach((key) => {
         replace({
             style: key,
-            license: key === 'brands' ? 'free' : license,
+            license: key === `brands` ? `free` : license,
             references: references[key],
             state,
             babel,
@@ -46,7 +46,7 @@ function canBeReplaced({ nodePath, babel, state, style }) {
 
     if (!styles.includes(style)) {
         throw parentPath.buildCodeFrameError(
-            `${style} is not a valid style. Use one of ${styles.join(', ')}`,
+            `${style} is not a valid style. Use one of ${styles.join(`, `)}`,
             MacroError
         )
     }
@@ -61,7 +61,7 @@ function canBeReplaced({ nodePath, babel, state, style }) {
     if (
         parentPath.node.arguments.length === 1 &&
         t.isStringLiteral(parentPath.node.arguments[0]) &&
-        nodePath.parentPath.node.arguments[0].value.startsWith('fa-')
+        nodePath.parentPath.node.arguments[0].value.startsWith(`fa-`)
     ) {
         throw parentPath.buildCodeFrameError(
             `Don't begin the icon name with fa-, just use ${nodePath.parentPath.node.arguments[0].value.slice(
@@ -76,7 +76,7 @@ function canBeReplaced({ nodePath, babel, state, style }) {
         !t.isStringLiteral(parentPath.node.arguments[0])
     ) {
         throw parentPath.buildCodeFrameError(
-            'Only string literals are supported when referencing icons (use a string here instead)',
+            `Only string literals are supported when referencing icons (use a string here instead)`,
             MacroError
         )
     }
@@ -90,12 +90,10 @@ function capitalize(str) {
 
 function camelCase(str) {
     return str
-        .split('-')
-        .map((s, index) => {
-            return (
-                (index === 0 ? s[0].toLowerCase() : s[0].toUpperCase()) +
+        .split(`-`)
+        .map((s, index) => (
+            (index === 0 ? s[0].toLowerCase() : s[0].toUpperCase()) +
                 s.slice(1).toLowerCase()
-            )
-        })
-        .join('')
+        ))
+        .join(``)
 }

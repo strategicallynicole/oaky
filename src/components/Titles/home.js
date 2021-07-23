@@ -10,7 +10,7 @@
  * - Author          :
  * - Modification    :
  **/
- import React from 'react'
+import React from 'react'
 import { Controller, Scene } from 'react-scrollmagic'
 import { array, oneOf, PropTypes } from 'prop-types'
 
@@ -22,11 +22,11 @@ const Title = (props) => {
 
     return (
         <>
-<div className={styles.bgtext}>{bgtext}</div>
-  <h1 className={styles.title} data-wow-delay="100ms" data-wow-duration="1000ms">
- {titletext}</h1>
+            <div className={styles.bgtext}>{bgtext}</div>
+            <h1 className={styles.title} data-wow-delay="100ms" data-wow-duration="1000ms">
+                {titletext}</h1>
 
-</>
+        </>
     )
 }
 
@@ -34,11 +34,9 @@ Title.propTypes = {
     titletext: PropTypes.string,
 }
 Title.defaultProps = {
-    titletext: '',
+    titletext: ``,
 
 }
 
-
 export default Title
-
 

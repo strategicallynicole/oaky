@@ -1,5 +1,5 @@
 import React from 'react'
-import Baffle from "baffle-react";
+import Baffle from "baffle-react"
 import handleViewport from 'react-in-viewport'
 
 class Baffle_Text extends React.Component {
@@ -10,15 +10,15 @@ class Baffle_Text extends React.Component {
             inViewport: false,
             animation_complete: false,
             obfuscate: true,
-            force: false
+            force: false,
         }
     }
 
     componentDidUpdate() {
         if (this.state.inViewport !== this.props.inViewport && (!this.state.animation_complete)) {
-            this.setState({inViewport: this.props.inViewport})
-            this.setState({animation_complete: true})
-            this.setState({obfuscate: false})
+            this.setState({ inViewport: this.props.inViewport })
+            this.setState({ animation_complete: true })
+            this.setState({ obfuscate: false })
             this.forceUpdate()
             if (this.props.callMethodTime) {
                 this.parentMethod()
@@ -29,15 +29,15 @@ class Baffle_Text extends React.Component {
     forceUpdate() {
         const { revealDuration, revealDelay } = this.props
         setTimeout(() => { 
-            this.setState({force:true})
-        }, revealDuration+revealDelay);
+            this.setState({ force: true })
+        }, revealDuration + revealDelay)
     }
 
     parentMethod() {
         const { callMethodTime } = this.props
         setTimeout(() => { 
             this.props.parentMethod()
-        }, callMethodTime);
+        }, callMethodTime)
     }
 
     shouldComponentUpdate(nextProps, nextState) {
@@ -49,7 +49,7 @@ class Baffle_Text extends React.Component {
     }
 
     render() {
-        return(
+        return (
             <span className="baffle_text">
                 {this.text()}
             </span>
@@ -62,7 +62,7 @@ class Baffle_Text extends React.Component {
             return (
                 <Baffle
                     speed={50}
-                    characters={this.props.characters ? this.props.characters : "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*"}
+                    characters={this.props.characters ? this.props.characters : `ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*`}
                     obfuscate={this.state.obfuscate}
                     update={true}
                     revealDuration={revealDuration}
@@ -76,6 +76,6 @@ class Baffle_Text extends React.Component {
         }
     }
 }
-const BaffleText = handleViewport(Baffle_Text);
+const BaffleText = handleViewport(Baffle_Text)
 
 export default BaffleText

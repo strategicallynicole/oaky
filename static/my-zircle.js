@@ -1,154 +1,169 @@
 import 'vue';
-/******/ (function(modules) { // webpackBootstrap
+/******/ (function (modules) { // webpackBootstrap
 /******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "5a74");
+/******/ 	let installedModules = {}
+    /******/
+    /******/ 	// The require function
+    /******/ 	function __webpack_require__(moduleId) {
+        /******/
+        /******/ 		// Check if module is in cache
+        /******/ 		if (installedModules[moduleId]) {
+            /******/ 			return installedModules[moduleId].exports
+            /******/ 		}
+        /******/ 		// Create a new module (and put it into the cache)
+        /******/ 		let module = installedModules[moduleId] = {
+            /******/ 			i: moduleId,
+            /******/ 			l: false,
+            /******/ 			exports: {},
+            /******/ 		}
+        /******/
+        /******/ 		// Execute the module function
+        /******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__)
+        /******/
+        /******/ 		// Flag the module as loaded
+        /******/ 		module.l = true
+        /******/
+        /******/ 		// Return the exports of the module
+        /******/ 		return module.exports
+        /******/ 	}
+    /******/
+    /******/
+    /******/ 	// expose the modules object (__webpack_modules__)
+    /******/ 	__webpack_require__.m = modules
+    /******/
+    /******/ 	// expose the module cache
+    /******/ 	__webpack_require__.c = installedModules
+    /******/
+    /******/ 	// define getter function for harmony exports
+    /******/ 	__webpack_require__.d = function (exports, name, getter) {
+        /******/ 		if (!__webpack_require__.o(exports, name)) {
+            /******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter })
+            /******/ 		}
+        /******/ 	}
+    /******/
+    /******/ 	// define __esModule on exports
+    /******/ 	__webpack_require__.r = function (exports) {
+        /******/ 		if (typeof Symbol !== `undefined` && Symbol.toStringTag) {
+            /******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: `Module` })
+            /******/ 		}
+        /******/ 		Object.defineProperty(exports, `__esModule`, { value: true })
+        /******/ 	}
+    /******/
+    /******/ 	// create a fake namespace object
+    /******/ 	// mode & 1: value is a module id, require it
+    /******/ 	// mode & 2: merge all properties of value into the ns
+    /******/ 	// mode & 4: return value when already ns object
+    /******/ 	// mode & 8|1: behave like require
+    /******/ 	__webpack_require__.t = function (value, mode) {
+        /******/ 		if (mode & 1) {
+            value = __webpack_require__(value)
+        }
+        /******/ 		if (mode & 8) {
+            return value
+        }
+        /******/ 		if ((mode & 4) && typeof value === `object` && value && value.__esModule) {
+            return value
+        }
+        /******/ 		let ns = Object.create(null)
+        /******/ 		__webpack_require__.r(ns)
+        /******/ 		Object.defineProperty(ns, `default`, { enumerable: true, value: value })
+        /******/ 		if (mode & 2 && typeof value !== `string`) {
+            for (let key in value) {
+                __webpack_require__.d(ns, key, function (key) {
+                    return value[key] 
+                }.bind(null, key))
+            }
+        }
+        /******/ 		return ns
+        /******/ 	}
+    /******/
+    /******/ 	// getDefaultExport function for compatibility with non-harmony modules
+    /******/ 	__webpack_require__.n = function (module) {
+        /******/ 		let getter = module && module.__esModule ?
+        /******/ 			function getDefault() {
+                return module.default 
+            } :
+        /******/ 			function getModuleExports() {
+                return module 
+            }
+        /******/ 		__webpack_require__.d(getter, `a`, getter)
+        /******/ 		return getter
+        /******/ 	}
+    /******/
+    /******/ 	// Object.prototype.hasOwnProperty.call
+    /******/ 	__webpack_require__.o = function (object, property) {
+        return Object.prototype.hasOwnProperty.call(object, property) 
+    }
+    /******/
+    /******/ 	// __webpack_public_path__
+    /******/ 	__webpack_require__.p = ``
+    /******/
+    /******/
+    /******/ 	// Load entry module and return exports
+    /******/ 	return __webpack_require__(__webpack_require__.s = `5a74`)
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "03a0":
-/***/ (function(module, exports, __webpack_require__) {
+    /***/ "03a0":
+    /***/ (function (module, exports, __webpack_require__) {
+        // Imports
+        let ___CSS_LOADER_API_IMPORT___ = __webpack_require__(`4bad`)
+        exports = ___CSS_LOADER_API_IMPORT___(false)
+        // Module
+        exports.push([module.i, `:root{--success-color:green;--warning-color:#ff0;--danger-color:red}.theme-white{--shade-color:#000;--primary-color:#fff;--accent-color:grey}.theme-light-blue{--shade-color:#f1f1f1;--primary-color:#5fc9f3;--accent-color:#0d7fac}.theme-black{--shade-color:#859ba6;--primary-color:#283237;--accent-color:#000}.theme-purple{--shade-color:#fdecf0;--primary-color:#ee305a;--accent-color:#7b0a23}.theme-orange{--shade-color:#fff8f3;--primary-color:#f7892f;--accent-color:#884005}.theme-yellow{--shade-color:#fffcf2;--primary-color:#ffca26;--accent-color:#8c6a00}.theme-blue{--shade-color:#d4e1f1;--primary-color:#3e78bb;--accent-color:#182e48}.theme-green{--shade-color:#f6fbf6;--primary-color:#69bf66;--accent-color:#2b6329}.theme-red{--shade-color:#fef8f8;--primary-color:#ef3c3b;--accent-color:#860c0b}.theme-gray{--shade-color:#e4e4e5;--primary-color:#7c7e81;--accent-color:#313233}.mode-light{--main-text-color:var(--primary-color);--main-color:var(--shade-color)}.mode-light,.mode-light-filled{--background-color:var(--shade-color);--accent-text-color:var(--accent-color)}.mode-light-filled{--main-text-color:var(--accent-color);--main-color:var(--primary-color)}.mode-dark{--main-text-color:var(--shade-color);--main-color:var(--primary-color);--accent-text-color:var(--accent-color)}.mode-dark,.mode-dark-filled{--background-color:var(--primary-color)}.mode-dark-filled{--main-text-color:var(--accent-color);--main-color:var(--shade-color);--accent-text-color:var(--shade-color)}.primary{border-color:var(--main-text-color);color:var(--main-text-color);background-color:var(--main-color)}.accent{border-color:var(--accent-color);background-color:var(--accent-color);color:var(--primary-text-color)}.success{background-color:var(--success-color);border-color:var(--success-color)}.warning{background-color:var(--warning-color);border-color:var(--warning-color)}.z-outer-circle{border-color:var(--main-text-color)}.danger{background-color:var(--danger-color);border-color:var(--danger-color)}.transparent{background-color:transparent;border-color:transparent}.z-range-bar,.z-range-bar-handlebar,.z-scroll,.z-scroll-handlebar,.z-slider{stroke:var(--accent-color)}.z-shape.active{background-color:var(--accent-color)}.z-shape.active,.z-shape.deactive{border-width:1px;border-color:var(--accent-color)}.z-shape.deactive{background-color:transparent}*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:rgba(0,0,0,0)}.z-next-enter{opacity:0}.z-prev-leave{opacity:1}.z-next-enter-active{opacity:0;-webkit-animation-name:appear;animation-name:appear;-webkit-animation-duration:2s;animation-duration:2s;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards}.z-prev-leave-active{opacity:1;-webkit-animation-name:disappear;animation-name:disappear;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards}.z-input{font:inherit;margin-top:20px;width:100%;background:none;-webkit-appearance:none;-moz-appearance:none;appearance:none;box-shadow:none;border:none;color:inherit;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:inherit;background:inherit;outline:none;text-align:center}.z-canvas,.z-input{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}.z-canvas{font-family:Source Sans Pro,sans-serif;background-color:var(--background-color);color:var(--foreground-color);transition:background-color .5s;overflow:hidden}.z-canvas.is-full-mode{position:fixed;width:100%;height:100%;font-size:calc(13px + 1vmax)}.z-canvas.is-mixed-mode{position:absolute;width:100%;height:100%;font-size:13px}#z-zoomable-layer{text-decoration:none;will-change:transform;perspective:1000px}#z-zoomable-layer,.z-shape{position:absolute;top:50%;left:50%}.z-shape{overflow:visible;display:block;border-radius:50%;border-width:3px;border-style:solid;text-align:center}.z-shape.z-view{z-index:40;will-change:transform,opacity;transition:background-color .8s}.z-shape.is-extension{z-index:80}.z-shape.is-extension.z-spot{cursor:zoom-in}.z-shape.is-extension.z-spot:hover{z-index:400}.z-shape.is-extension.z-spot[role=button]{cursor:pointer}.z-shape.is-extension.z-spot[role=button]:hover{border-color:var(--accent-text-and-border-color)!important;transition:border-color .3s}.z-shape.is-extension.z-dialog{z-index:500}.z-shape.is-extension.z-range,.z-shape.is-extension.z-scale,.z-shape.is-extension.z-spot{will-change:transform,opacity;transition:background-color 1s}.z-shape.is-extension.z-pagination:hover{cursor:-webkit-grab;cursor:grab;border-color:var(--main-text-and-border-color)!important;transition:border-color .3s}.z-shape.is-extension.z-pagination:active{cursor:-webkit-grabbing;cursor:grabbing}.z-shape.is-extension.z-range,.z-shape.is-extension.z-range:hover,.z-shape.is-extension.z-scroll,.z-shape.is-extension.z-scroll:hover{cursor:pointer}.z-shape.is-extension.z-range:active,.z-shape.is-extension.z-scroll:active{cursor:-webkit-grabbing;cursor:grabbing}.z-scroll,.z-scroll:hover{cursor:pointer}.z-scroll:active{cursor:-webkit-grabbing;cursor:grabbing}.z-content{position:absolute;z-index:0;top:1%;left:1%;right:1%;bottom:1%;width:98%;height:98%;display:flex;background:none;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;border-radius:50%}.z-content.maincontent{cursor:default;z-index:50}.z-content.maincontent.long-content{overflow-y:scroll;display:block}.z-content.maincontent.long-content:before{display:block;padding-top:80px;content:""}.z-content.maincontent.long-content:after{top:0;display:block;padding-bottom:80px;content:""}.z-content.maincontent.z-scroll-disabled-for-firefox{overflow-y:hidden}.z-label{font-size:calc(8px + 1vw);position:absolute;height:25px;background:none;white-space:nowrap}.z-label.bottom{width:100%;top:115%;display:flex;flex-direction:column;align-items:center}.z-label.bottom>.inside{border-radius:25px;padding-left:5px;padding-right:5px;background-color:var(--background-color);border:1px solid transparent}.z-label.top{width:100%;top:calc(-15% - 25px);display:flex;flex-direction:column;align-items:center}.z-label.top>.inside{border-radius:25px;padding-left:5px;padding-right:5px;background-color:var(--background-color)}.z-label.left{width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;margin-top:calc(50% - 12.5px);margin-right:8px;right:115%}.z-label.left>.inside{border-radius:25px;padding-left:5px;padding-right:5px;background-color:var(--background-color)}.z-label.right{width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;margin-top:calc(50% - 12.5px);margin-left:8px;left:115%}.z-label.right>.inside{border-radius:25px;padding-left:5px;padding-right:5px;background-color:var(--background-color)}.overflow{overflow:visible}.z-zoom-in-cursor{cursor:zoom-in}.z-range-bar,.z-scroll,.z-slider{position:absolute;overflow:visible;display:block;z-index:40;fill:none;stroke-linecap:round;stroke-opacity:1}.z-range-bar-bar,.z-scroll-bar{position:absolute;border-radius:50%;display:block;width:40px;height:40px;top:50%;left:50%;margin:-20px 0 0 -20px;z-index:70}.z-range-bar-bar:hover,.z-scroll-bar:hover{cursor:-webkit-grab;cursor:grab}.z-range-bar-bar:active,.z-scroll-bar:active{cursor:-webkit-grabbing;cursor:grabbing}.is-past-view{filter:blur(2px) opacity(20%);z-index:0}.is-past-view,.is-previous-view{pointer-events:none;cursor:zoom-out;overflow:hidden}.is-previous-view{filter:blur(2px) opacity(40%);z-index:50}.is-previous-view section.z-list{pointer-events:none}.is-previous-view div{cursor:zoom-out}.is-current-view{pointer-events:auto;will-change:opacity;z-index:100}.z-outer-circle,.z-outer-spot{position:absolute;z-index:0;top:50%;left:50%;border-radius:50%;overflow:hidden}.z-outer-circle{border-width:1px;border-style:dashed;opacity:.2}.z-outer-spot{border-width:3px;border-style:solid;border-color:var(--accent-text-and-border-color)!important;opacity:0}.z-outer-point{position:absolute;z-index:90;top:50%;left:50%;border-radius:50%;opacity:1;overflow:hidden}.z-dialog-transition-enter-active,.z-dialog-transition-leave-active{transition:transform .3s;position:absolute;top:50%;left:50%;z-index:500}.z-dialog-transition-enter,.z-dialog-transition-leave-to,.z-pulse{transform:scale(0)}.z-pulse{opacity:0;background-color:hsla(0,0%,100%,.1);width:100%;height:100%;margin:-50% 0 0 -50%;position:absolute;z-index:0;top:50%;left:50%;border-radius:50%}.pulse-animation{-webkit-animation:pulse .35s ease-out;animation:pulse .35s ease-out}.spot-animation{-webkit-animation:spot .7s ease-in;animation:spot .7s ease-in}@-webkit-keyframes pulse{0%{opacity:0;transform:scale(0)}to{opacity:1;transform:scale(1.4)}}@keyframes pulse{0%{opacity:0;transform:scale(0)}to{opacity:1;transform:scale(1.4)}}@-webkit-keyframes appear{0%{opacity:0}to{opacity:1}}@keyframes appear{0%{opacity:0}to{opacity:1}}@-webkit-keyframes disappear{0%{opacity:1}to{opacity:0}}@keyframes disappear{0%{opacity:1}to{opacity:0}}@-webkit-keyframes spot{0%{opacity:0;transform:scale(1)}45%{opacity:.2;transform:scale(1)}85%{opacity:0;transform:scale(1.3)}to{opacity:0;transform:scale(1.4)}}@keyframes spot{0%{opacity:0;transform:scale(1)}45%{opacity:.2;transform:scale(1)}85%{opacity:0;transform:scale(1.3)}to{opacity:0;transform:scale(1.4)}}`, ``])
+        // Exports
+        module.exports = exports
+        /***/ }),
 
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__("4bad");
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, ":root{--success-color:green;--warning-color:#ff0;--danger-color:red}.theme-white{--shade-color:#000;--primary-color:#fff;--accent-color:grey}.theme-light-blue{--shade-color:#f1f1f1;--primary-color:#5fc9f3;--accent-color:#0d7fac}.theme-black{--shade-color:#859ba6;--primary-color:#283237;--accent-color:#000}.theme-purple{--shade-color:#fdecf0;--primary-color:#ee305a;--accent-color:#7b0a23}.theme-orange{--shade-color:#fff8f3;--primary-color:#f7892f;--accent-color:#884005}.theme-yellow{--shade-color:#fffcf2;--primary-color:#ffca26;--accent-color:#8c6a00}.theme-blue{--shade-color:#d4e1f1;--primary-color:#3e78bb;--accent-color:#182e48}.theme-green{--shade-color:#f6fbf6;--primary-color:#69bf66;--accent-color:#2b6329}.theme-red{--shade-color:#fef8f8;--primary-color:#ef3c3b;--accent-color:#860c0b}.theme-gray{--shade-color:#e4e4e5;--primary-color:#7c7e81;--accent-color:#313233}.mode-light{--main-text-color:var(--primary-color);--main-color:var(--shade-color)}.mode-light,.mode-light-filled{--background-color:var(--shade-color);--accent-text-color:var(--accent-color)}.mode-light-filled{--main-text-color:var(--accent-color);--main-color:var(--primary-color)}.mode-dark{--main-text-color:var(--shade-color);--main-color:var(--primary-color);--accent-text-color:var(--accent-color)}.mode-dark,.mode-dark-filled{--background-color:var(--primary-color)}.mode-dark-filled{--main-text-color:var(--accent-color);--main-color:var(--shade-color);--accent-text-color:var(--shade-color)}.primary{border-color:var(--main-text-color);color:var(--main-text-color);background-color:var(--main-color)}.accent{border-color:var(--accent-color);background-color:var(--accent-color);color:var(--primary-text-color)}.success{background-color:var(--success-color);border-color:var(--success-color)}.warning{background-color:var(--warning-color);border-color:var(--warning-color)}.z-outer-circle{border-color:var(--main-text-color)}.danger{background-color:var(--danger-color);border-color:var(--danger-color)}.transparent{background-color:transparent;border-color:transparent}.z-range-bar,.z-range-bar-handlebar,.z-scroll,.z-scroll-handlebar,.z-slider{stroke:var(--accent-color)}.z-shape.active{background-color:var(--accent-color)}.z-shape.active,.z-shape.deactive{border-width:1px;border-color:var(--accent-color)}.z-shape.deactive{background-color:transparent}*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:rgba(0,0,0,0)}.z-next-enter{opacity:0}.z-prev-leave{opacity:1}.z-next-enter-active{opacity:0;-webkit-animation-name:appear;animation-name:appear;-webkit-animation-duration:2s;animation-duration:2s;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards}.z-prev-leave-active{opacity:1;-webkit-animation-name:disappear;animation-name:disappear;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards}.z-input{font:inherit;margin-top:20px;width:100%;background:none;-webkit-appearance:none;-moz-appearance:none;appearance:none;box-shadow:none;border:none;color:inherit;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:inherit;background:inherit;outline:none;text-align:center}.z-canvas,.z-input{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}.z-canvas{font-family:Source Sans Pro,sans-serif;background-color:var(--background-color);color:var(--foreground-color);transition:background-color .5s;overflow:hidden}.z-canvas.is-full-mode{position:fixed;width:100%;height:100%;font-size:calc(13px + 1vmax)}.z-canvas.is-mixed-mode{position:absolute;width:100%;height:100%;font-size:13px}#z-zoomable-layer{text-decoration:none;will-change:transform;perspective:1000px}#z-zoomable-layer,.z-shape{position:absolute;top:50%;left:50%}.z-shape{overflow:visible;display:block;border-radius:50%;border-width:3px;border-style:solid;text-align:center}.z-shape.z-view{z-index:40;will-change:transform,opacity;transition:background-color .8s}.z-shape.is-extension{z-index:80}.z-shape.is-extension.z-spot{cursor:zoom-in}.z-shape.is-extension.z-spot:hover{z-index:400}.z-shape.is-extension.z-spot[role=button]{cursor:pointer}.z-shape.is-extension.z-spot[role=button]:hover{border-color:var(--accent-text-and-border-color)!important;transition:border-color .3s}.z-shape.is-extension.z-dialog{z-index:500}.z-shape.is-extension.z-range,.z-shape.is-extension.z-scale,.z-shape.is-extension.z-spot{will-change:transform,opacity;transition:background-color 1s}.z-shape.is-extension.z-pagination:hover{cursor:-webkit-grab;cursor:grab;border-color:var(--main-text-and-border-color)!important;transition:border-color .3s}.z-shape.is-extension.z-pagination:active{cursor:-webkit-grabbing;cursor:grabbing}.z-shape.is-extension.z-range,.z-shape.is-extension.z-range:hover,.z-shape.is-extension.z-scroll,.z-shape.is-extension.z-scroll:hover{cursor:pointer}.z-shape.is-extension.z-range:active,.z-shape.is-extension.z-scroll:active{cursor:-webkit-grabbing;cursor:grabbing}.z-scroll,.z-scroll:hover{cursor:pointer}.z-scroll:active{cursor:-webkit-grabbing;cursor:grabbing}.z-content{position:absolute;z-index:0;top:1%;left:1%;right:1%;bottom:1%;width:98%;height:98%;display:flex;background:none;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;border-radius:50%}.z-content.maincontent{cursor:default;z-index:50}.z-content.maincontent.long-content{overflow-y:scroll;display:block}.z-content.maincontent.long-content:before{display:block;padding-top:80px;content:\"\"}.z-content.maincontent.long-content:after{top:0;display:block;padding-bottom:80px;content:\"\"}.z-content.maincontent.z-scroll-disabled-for-firefox{overflow-y:hidden}.z-label{font-size:calc(8px + 1vw);position:absolute;height:25px;background:none;white-space:nowrap}.z-label.bottom{width:100%;top:115%;display:flex;flex-direction:column;align-items:center}.z-label.bottom>.inside{border-radius:25px;padding-left:5px;padding-right:5px;background-color:var(--background-color);border:1px solid transparent}.z-label.top{width:100%;top:calc(-15% - 25px);display:flex;flex-direction:column;align-items:center}.z-label.top>.inside{border-radius:25px;padding-left:5px;padding-right:5px;background-color:var(--background-color)}.z-label.left{width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;margin-top:calc(50% - 12.5px);margin-right:8px;right:115%}.z-label.left>.inside{border-radius:25px;padding-left:5px;padding-right:5px;background-color:var(--background-color)}.z-label.right{width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;margin-top:calc(50% - 12.5px);margin-left:8px;left:115%}.z-label.right>.inside{border-radius:25px;padding-left:5px;padding-right:5px;background-color:var(--background-color)}.overflow{overflow:visible}.z-zoom-in-cursor{cursor:zoom-in}.z-range-bar,.z-scroll,.z-slider{position:absolute;overflow:visible;display:block;z-index:40;fill:none;stroke-linecap:round;stroke-opacity:1}.z-range-bar-bar,.z-scroll-bar{position:absolute;border-radius:50%;display:block;width:40px;height:40px;top:50%;left:50%;margin:-20px 0 0 -20px;z-index:70}.z-range-bar-bar:hover,.z-scroll-bar:hover{cursor:-webkit-grab;cursor:grab}.z-range-bar-bar:active,.z-scroll-bar:active{cursor:-webkit-grabbing;cursor:grabbing}.is-past-view{filter:blur(2px) opacity(20%);z-index:0}.is-past-view,.is-previous-view{pointer-events:none;cursor:zoom-out;overflow:hidden}.is-previous-view{filter:blur(2px) opacity(40%);z-index:50}.is-previous-view section.z-list{pointer-events:none}.is-previous-view div{cursor:zoom-out}.is-current-view{pointer-events:auto;will-change:opacity;z-index:100}.z-outer-circle,.z-outer-spot{position:absolute;z-index:0;top:50%;left:50%;border-radius:50%;overflow:hidden}.z-outer-circle{border-width:1px;border-style:dashed;opacity:.2}.z-outer-spot{border-width:3px;border-style:solid;border-color:var(--accent-text-and-border-color)!important;opacity:0}.z-outer-point{position:absolute;z-index:90;top:50%;left:50%;border-radius:50%;opacity:1;overflow:hidden}.z-dialog-transition-enter-active,.z-dialog-transition-leave-active{transition:transform .3s;position:absolute;top:50%;left:50%;z-index:500}.z-dialog-transition-enter,.z-dialog-transition-leave-to,.z-pulse{transform:scale(0)}.z-pulse{opacity:0;background-color:hsla(0,0%,100%,.1);width:100%;height:100%;margin:-50% 0 0 -50%;position:absolute;z-index:0;top:50%;left:50%;border-radius:50%}.pulse-animation{-webkit-animation:pulse .35s ease-out;animation:pulse .35s ease-out}.spot-animation{-webkit-animation:spot .7s ease-in;animation:spot .7s ease-in}@-webkit-keyframes pulse{0%{opacity:0;transform:scale(0)}to{opacity:1;transform:scale(1.4)}}@keyframes pulse{0%{opacity:0;transform:scale(0)}to{opacity:1;transform:scale(1.4)}}@-webkit-keyframes appear{0%{opacity:0}to{opacity:1}}@keyframes appear{0%{opacity:0}to{opacity:1}}@-webkit-keyframes disappear{0%{opacity:1}to{opacity:0}}@keyframes disappear{0%{opacity:1}to{opacity:0}}@-webkit-keyframes spot{0%{opacity:0;transform:scale(1)}45%{opacity:.2;transform:scale(1)}85%{opacity:0;transform:scale(1.3)}to{opacity:0;transform:scale(1.4)}}@keyframes spot{0%{opacity:0;transform:scale(1)}45%{opacity:.2;transform:scale(1)}85%{opacity:0;transform:scale(1.3)}to{opacity:0;transform:scale(1.4)}}", ""]);
-// Exports
-module.exports = exports;
+    /***/ "35d6":
+    /***/ (function (module, __webpack_exports__, __webpack_require__) {
+        "use strict"
+        // ESM COMPAT FLAG
+        __webpack_require__.r(__webpack_exports__)
 
+        // EXPORTS
+        __webpack_require__.d(__webpack_exports__, `default`, function () {
+            return /* binding */ addStylesToShadowDOM 
+        })
 
-/***/ }),
-
-/***/ "35d6":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, "default", function() { return /* binding */ addStylesToShadowDOM; });
-
-// CONCATENATED MODULE: ./node_modules/vue-style-loader/lib/listToStyles.js
-/**
+        // CONCATENATED MODULE: ./node_modules/vue-style-loader/lib/listToStyles.js
+        /**
  * Translates the list format produced by css-loader into something
  * easier to manipulate.
  */
-function listToStyles (parentId, list) {
-  var styles = []
-  var newStyles = {}
-  for (var i = 0; i < list.length; i++) {
-    var item = list[i]
-    var id = item[0]
-    var css = item[1]
-    var media = item[2]
-    var sourceMap = item[3]
-    var part = {
-      id: parentId + ':' + i,
-      css: css,
-      media: media,
-      sourceMap: sourceMap
-    }
-    if (!newStyles[id]) {
-      styles.push(newStyles[id] = { id: id, parts: [part] })
-    } else {
-      newStyles[id].parts.push(part)
-    }
-  }
-  return styles
-}
+        function listToStyles(parentId, list) {
+            let styles = []
+            let newStyles = {}
+            for (let i = 0; i < list.length; i++) {
+                let item = list[i]
+                let id = item[0]
+                let css = item[1]
+                let media = item[2]
+                let sourceMap = item[3]
+                let part = {
+                    id: parentId + `:` + i,
+                    css: css,
+                    media: media,
+                    sourceMap: sourceMap,
+                }
+                if (!newStyles[id]) {
+                    styles.push(newStyles[id] = { id: id, parts: [part] })
+                } else {
+                    newStyles[id].parts.push(part)
+                }
+            }
+            return styles
+        }
 
-// CONCATENATED MODULE: ./node_modules/vue-style-loader/lib/addStylesShadow.js
+        // CONCATENATED MODULE: ./node_modules/vue-style-loader/lib/addStylesShadow.js
 
+        function addStylesToShadowDOM(parentId, list, shadowRoot) {
+            let styles = listToStyles(parentId, list)
+            addStyles(styles, shadowRoot)
+        }
 
-function addStylesToShadowDOM (parentId, list, shadowRoot) {
-  var styles = listToStyles(parentId, list)
-  addStyles(styles, shadowRoot)
-}
-
-/*
+        /*
 type StyleObject = {
   id: number;
   parts: Array<StyleObjectPart>
@@ -161,702 +176,784 @@ type StyleObjectPart = {
 }
 */
 
-function addStyles (styles /* Array<StyleObject> */, shadowRoot) {
-  const injectedStyles =
+        function addStyles(styles /* Array<StyleObject> */, shadowRoot) {
+            const injectedStyles =
     shadowRoot._injectedStyles ||
     (shadowRoot._injectedStyles = {})
-  for (var i = 0; i < styles.length; i++) {
-    var item = styles[i]
-    var style = injectedStyles[item.id]
-    if (!style) {
-      for (var j = 0; j < item.parts.length; j++) {
-        addStyle(item.parts[j], shadowRoot)
-      }
-      injectedStyles[item.id] = true
-    }
-  }
-}
+            for (let i = 0; i < styles.length; i++) {
+                let item = styles[i]
+                let style = injectedStyles[item.id]
+                if (!style) {
+                    for (let j = 0; j < item.parts.length; j++) {
+                        addStyle(item.parts[j], shadowRoot)
+                    }
+                    injectedStyles[item.id] = true
+                }
+            }
+        }
 
-function createStyleElement (shadowRoot) {
-  var styleElement = document.createElement('style')
-  styleElement.type = 'text/css'
-  shadowRoot.appendChild(styleElement)
-  return styleElement
-}
+        function createStyleElement(shadowRoot) {
+            let styleElement = document.createElement(`style`)
+            styleElement.type = `text/css`
+            shadowRoot.appendChild(styleElement)
+            return styleElement
+        }
 
-function addStyle (obj /* StyleObjectPart */, shadowRoot) {
-  var styleElement = createStyleElement(shadowRoot)
-  var css = obj.css
-  var media = obj.media
-  var sourceMap = obj.sourceMap
+        function addStyle(obj /* StyleObjectPart */, shadowRoot) {
+            let styleElement = createStyleElement(shadowRoot)
+            let css = obj.css
+            let media = obj.media
+            let sourceMap = obj.sourceMap
 
-  if (media) {
-    styleElement.setAttribute('media', media)
-  }
+            if (media) {
+                styleElement.setAttribute(`media`, media)
+            }
 
-  if (sourceMap) {
-    // https://developer.chrome.com/devtools/docs/javascript-debugging
-    // this makes source maps inside style tags work properly in Chrome
-    css += '\n/*# sourceURL=' + sourceMap.sources[0] + ' */'
-    // http://stackoverflow.com/a/26603875
-    css += '\n/*# sourceMappingURL=data:application/json;base64,' + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + ' */'
-  }
+            if (sourceMap) {
+                // https://developer.chrome.com/devtools/docs/javascript-debugging
+                // this makes source maps inside style tags work properly in Chrome
+                css += `\n/*# sourceURL=` + sourceMap.sources[0] + ` */`
+                // http://stackoverflow.com/a/26603875
+                css += `\n/*# sourceMappingURL=data:application/json;base64,` + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + ` */`
+            }
 
-  if (styleElement.styleSheet) {
-    styleElement.styleSheet.cssText = css
-  } else {
-    while (styleElement.firstChild) {
-      styleElement.removeChild(styleElement.firstChild)
-    }
-    styleElement.appendChild(document.createTextNode(css))
-  }
-}
+            if (styleElement.styleSheet) {
+                styleElement.styleSheet.cssText = css
+            } else {
+                while (styleElement.firstChild) {
+                    styleElement.removeChild(styleElement.firstChild)
+                }
+                styleElement.appendChild(document.createTextNode(css))
+            }
+        }
+        /***/ }),
 
+    /***/ "45d3":
+    /***/ (function (module, exports, __webpack_require__) {
+        // style-loader: Adds some css to the DOM by adding a <style> tag
 
-/***/ }),
+        // load the styles
+        let content = __webpack_require__(`03a0`)
+        if (content.__esModule) {
+            content = content.default
+        }
+        if (typeof content === `string`) {
+            content = [[module.i, content, ``]]
+        }
+        if (content.locals) {
+            module.exports = content.locals
+        }
+        // add CSS to Shadow Root
+        let add = __webpack_require__(`35d6`).default
+        module.exports.__inject__ = function (shadowRoot) {
+            add(`6c666d29`, content, shadowRoot)
+        }
+        /***/ }),
 
-/***/ "45d3":
-/***/ (function(module, exports, __webpack_require__) {
+    /***/ "4bad":
+    /***/ (function (module, exports, __webpack_require__) {
+        "use strict"
 
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("03a0");
-if(content.__esModule) content = content.default;
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add CSS to Shadow Root
-var add = __webpack_require__("35d6").default
-module.exports.__inject__ = function (shadowRoot) {
-  add("6c666d29", content, shadowRoot)
-};
-
-/***/ }),
-
-/***/ "4bad":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/*
+        /*
   MIT License http://www.opensource.org/licenses/mit-license.php
   Author Tobias Koppers @sokra
 */
-// css base code, injected by the css-loader
-// eslint-disable-next-line func-names
-module.exports = function (useSourceMap) {
-  var list = []; // return the list of modules as css string
+        // css base code, injected by the css-loader
+        // eslint-disable-next-line func-names
+        module.exports = function (useSourceMap) {
+            let list = [] // return the list of modules as css string
 
-  list.toString = function toString() {
-    return this.map(function (item) {
-      var content = cssWithMappingToString(item, useSourceMap);
+            list.toString = function toString() {
+                return this.map(function (item) {
+                    let content = cssWithMappingToString(item, useSourceMap)
 
-      if (item[2]) {
-        return "@media ".concat(item[2], " {").concat(content, "}");
-      }
+                    if (item[2]) {
+                        return `@media `.concat(item[2], ` {`).concat(content, `}`)
+                    }
 
-      return content;
-    }).join('');
-  }; // import a list of modules into the list
-  // eslint-disable-next-line func-names
+                    return content
+                }).join(``)
+            } // import a list of modules into the list
+            // eslint-disable-next-line func-names
 
+            list.i = function (modules, mediaQuery, dedupe) {
+                if (typeof modules === `string`) {
+                    // eslint-disable-next-line no-param-reassign
+                    modules = [[null, modules, ``]]
+                }
 
-  list.i = function (modules, mediaQuery, dedupe) {
-    if (typeof modules === 'string') {
-      // eslint-disable-next-line no-param-reassign
-      modules = [[null, modules, '']];
-    }
+                let alreadyImportedModules = {}
 
-    var alreadyImportedModules = {};
+                if (dedupe) {
+                    for (let i = 0; i < this.length; i++) {
+                        // eslint-disable-next-line prefer-destructuring
+                        let id = this[i][0]
 
-    if (dedupe) {
-      for (var i = 0; i < this.length; i++) {
-        // eslint-disable-next-line prefer-destructuring
-        var id = this[i][0];
+                        if (id != null) {
+                            alreadyImportedModules[id] = true
+                        }
+                    }
+                }
 
-        if (id != null) {
-          alreadyImportedModules[id] = true;
+                for (let _i = 0; _i < modules.length; _i++) {
+                    let item = [].concat(modules[_i])
+
+                    if (dedupe && alreadyImportedModules[item[0]]) {
+                        // eslint-disable-next-line no-continue
+                        continue
+                    }
+
+                    if (mediaQuery) {
+                        if (!item[2]) {
+                            item[2] = mediaQuery
+                        } else {
+                            item[2] = ``.concat(mediaQuery, ` and `).concat(item[2])
+                        }
+                    }
+
+                    list.push(item)
+                }
+            }
+
+            return list
         }
-      }
-    }
 
-    for (var _i = 0; _i < modules.length; _i++) {
-      var item = [].concat(modules[_i]);
+        function cssWithMappingToString(item, useSourceMap) {
+            let content = item[1] || `` // eslint-disable-next-line prefer-destructuring
 
-      if (dedupe && alreadyImportedModules[item[0]]) {
-        // eslint-disable-next-line no-continue
-        continue;
-      }
+            let cssMapping = item[3]
 
-      if (mediaQuery) {
-        if (!item[2]) {
-          item[2] = mediaQuery;
-        } else {
-          item[2] = "".concat(mediaQuery, " and ").concat(item[2]);
+            if (!cssMapping) {
+                return content
+            }
+
+            if (useSourceMap && typeof btoa === `function`) {
+                let sourceMapping = toComment(cssMapping)
+                let sourceURLs = cssMapping.sources.map(function (source) {
+                    return `/*# sourceURL=`.concat(cssMapping.sourceRoot || ``).concat(source, ` */`)
+                })
+                return [content].concat(sourceURLs).concat([sourceMapping]).join(`\n`)
+            }
+
+            return [content].join(`\n`)
+        } // Adapted from convert-source-map (MIT)
+
+        function toComment(sourceMap) {
+            // eslint-disable-next-line no-undef
+            let base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))))
+            let data = `sourceMappingURL=data:application/json;charset=utf-8;base64,`.concat(base64)
+            return `/*# `.concat(data, ` */`)
         }
-      }
-
-      list.push(item);
-    }
-  };
-
-  return list;
-};
-
-function cssWithMappingToString(item, useSourceMap) {
-  var content = item[1] || ''; // eslint-disable-next-line prefer-destructuring
-
-  var cssMapping = item[3];
-
-  if (!cssMapping) {
-    return content;
-  }
-
-  if (useSourceMap && typeof btoa === 'function') {
-    var sourceMapping = toComment(cssMapping);
-    var sourceURLs = cssMapping.sources.map(function (source) {
-      return "/*# sourceURL=".concat(cssMapping.sourceRoot || '').concat(source, " */");
-    });
-    return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
-  }
-
-  return [content].join('\n');
-} // Adapted from convert-source-map (MIT)
-
-
-function toComment(sourceMap) {
-  // eslint-disable-next-line no-undef
-  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
-  var data = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(base64);
-  return "/*# ".concat(data, " */");
-}
-
-/***/ }),
-
-/***/ "55fa":
-/***/ (function(module, exports, __webpack_require__) {
-
-(function webpackUniversalModuleDefinition(root, factory) {
-	if(true)
-		module.exports = factory(__webpack_require__("8bbf"));
-	else {}
-})((typeof self !== 'undefined' ? self : this), function(__WEBPACK_EXTERNAL_MODULE__8bbf__) {
-return /******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "fb15");
-/******/ })
-/************************************************************************/
-/******/ ({
-
-/***/ "014b":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-// ECMAScript 6 symbols shim
-var global = __webpack_require__("e53d");
-var has = __webpack_require__("07e3");
-var DESCRIPTORS = __webpack_require__("8e60");
-var $export = __webpack_require__("63b6");
-var redefine = __webpack_require__("9138");
-var META = __webpack_require__("ebfd").KEY;
-var $fails = __webpack_require__("294c");
-var shared = __webpack_require__("dbdb");
-var setToStringTag = __webpack_require__("45f2");
-var uid = __webpack_require__("62a0");
-var wks = __webpack_require__("5168");
-var wksExt = __webpack_require__("ccb9");
-var wksDefine = __webpack_require__("6718");
-var enumKeys = __webpack_require__("47ee");
-var isArray = __webpack_require__("9003");
-var anObject = __webpack_require__("e4ae");
-var isObject = __webpack_require__("f772");
-var toIObject = __webpack_require__("36c3");
-var toPrimitive = __webpack_require__("1bc3");
-var createDesc = __webpack_require__("aebd");
-var _create = __webpack_require__("a159");
-var gOPNExt = __webpack_require__("0395");
-var $GOPD = __webpack_require__("bf0b");
-var $DP = __webpack_require__("d9f6");
-var $keys = __webpack_require__("c3a1");
-var gOPD = $GOPD.f;
-var dP = $DP.f;
-var gOPN = gOPNExt.f;
-var $Symbol = global.Symbol;
-var $JSON = global.JSON;
-var _stringify = $JSON && $JSON.stringify;
-var PROTOTYPE = 'prototype';
-var HIDDEN = wks('_hidden');
-var TO_PRIMITIVE = wks('toPrimitive');
-var isEnum = {}.propertyIsEnumerable;
-var SymbolRegistry = shared('symbol-registry');
-var AllSymbols = shared('symbols');
-var OPSymbols = shared('op-symbols');
-var ObjectProto = Object[PROTOTYPE];
-var USE_NATIVE = typeof $Symbol == 'function';
-var QObject = global.QObject;
-// Don't use setters in Qt Script, https://github.com/zloirock/core-js/issues/173
-var setter = !QObject || !QObject[PROTOTYPE] || !QObject[PROTOTYPE].findChild;
-
-// fallback for old Android, https://code.google.com/p/v8/issues/detail?id=687
-var setSymbolDesc = DESCRIPTORS && $fails(function () {
-  return _create(dP({}, 'a', {
-    get: function () { return dP(this, 'a', { value: 7 }).a; }
-  })).a != 7;
-}) ? function (it, key, D) {
-  var protoDesc = gOPD(ObjectProto, key);
-  if (protoDesc) delete ObjectProto[key];
-  dP(it, key, D);
-  if (protoDesc && it !== ObjectProto) dP(ObjectProto, key, protoDesc);
-} : dP;
-
-var wrap = function (tag) {
-  var sym = AllSymbols[tag] = _create($Symbol[PROTOTYPE]);
-  sym._k = tag;
-  return sym;
-};
-
-var isSymbol = USE_NATIVE && typeof $Symbol.iterator == 'symbol' ? function (it) {
-  return typeof it == 'symbol';
-} : function (it) {
-  return it instanceof $Symbol;
-};
-
-var $defineProperty = function defineProperty(it, key, D) {
-  if (it === ObjectProto) $defineProperty(OPSymbols, key, D);
-  anObject(it);
-  key = toPrimitive(key, true);
-  anObject(D);
-  if (has(AllSymbols, key)) {
-    if (!D.enumerable) {
-      if (!has(it, HIDDEN)) dP(it, HIDDEN, createDesc(1, {}));
-      it[HIDDEN][key] = true;
-    } else {
-      if (has(it, HIDDEN) && it[HIDDEN][key]) it[HIDDEN][key] = false;
-      D = _create(D, { enumerable: createDesc(0, false) });
-    } return setSymbolDesc(it, key, D);
-  } return dP(it, key, D);
-};
-var $defineProperties = function defineProperties(it, P) {
-  anObject(it);
-  var keys = enumKeys(P = toIObject(P));
-  var i = 0;
-  var l = keys.length;
-  var key;
-  while (l > i) $defineProperty(it, key = keys[i++], P[key]);
-  return it;
-};
-var $create = function create(it, P) {
-  return P === undefined ? _create(it) : $defineProperties(_create(it), P);
-};
-var $propertyIsEnumerable = function propertyIsEnumerable(key) {
-  var E = isEnum.call(this, key = toPrimitive(key, true));
-  if (this === ObjectProto && has(AllSymbols, key) && !has(OPSymbols, key)) return false;
-  return E || !has(this, key) || !has(AllSymbols, key) || has(this, HIDDEN) && this[HIDDEN][key] ? E : true;
-};
-var $getOwnPropertyDescriptor = function getOwnPropertyDescriptor(it, key) {
-  it = toIObject(it);
-  key = toPrimitive(key, true);
-  if (it === ObjectProto && has(AllSymbols, key) && !has(OPSymbols, key)) return;
-  var D = gOPD(it, key);
-  if (D && has(AllSymbols, key) && !(has(it, HIDDEN) && it[HIDDEN][key])) D.enumerable = true;
-  return D;
-};
-var $getOwnPropertyNames = function getOwnPropertyNames(it) {
-  var names = gOPN(toIObject(it));
-  var result = [];
-  var i = 0;
-  var key;
-  while (names.length > i) {
-    if (!has(AllSymbols, key = names[i++]) && key != HIDDEN && key != META) result.push(key);
-  } return result;
-};
-var $getOwnPropertySymbols = function getOwnPropertySymbols(it) {
-  var IS_OP = it === ObjectProto;
-  var names = gOPN(IS_OP ? OPSymbols : toIObject(it));
-  var result = [];
-  var i = 0;
-  var key;
-  while (names.length > i) {
-    if (has(AllSymbols, key = names[i++]) && (IS_OP ? has(ObjectProto, key) : true)) result.push(AllSymbols[key]);
-  } return result;
-};
-
-// 19.4.1.1 Symbol([description])
-if (!USE_NATIVE) {
-  $Symbol = function Symbol() {
-    if (this instanceof $Symbol) throw TypeError('Symbol is not a constructor!');
-    var tag = uid(arguments.length > 0 ? arguments[0] : undefined);
-    var $set = function (value) {
-      if (this === ObjectProto) $set.call(OPSymbols, value);
-      if (has(this, HIDDEN) && has(this[HIDDEN], tag)) this[HIDDEN][tag] = false;
-      setSymbolDesc(this, tag, createDesc(1, value));
-    };
-    if (DESCRIPTORS && setter) setSymbolDesc(ObjectProto, tag, { configurable: true, set: $set });
-    return wrap(tag);
-  };
-  redefine($Symbol[PROTOTYPE], 'toString', function toString() {
-    return this._k;
-  });
-
-  $GOPD.f = $getOwnPropertyDescriptor;
-  $DP.f = $defineProperty;
-  __webpack_require__("6abf").f = gOPNExt.f = $getOwnPropertyNames;
-  __webpack_require__("355d").f = $propertyIsEnumerable;
-  __webpack_require__("9aa9").f = $getOwnPropertySymbols;
-
-  if (DESCRIPTORS && !__webpack_require__("b8e3")) {
-    redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
-  }
-
-  wksExt.f = function (name) {
-    return wrap(wks(name));
-  };
-}
-
-$export($export.G + $export.W + $export.F * !USE_NATIVE, { Symbol: $Symbol });
-
-for (var es6Symbols = (
-  // 19.4.2.2, 19.4.2.3, 19.4.2.4, 19.4.2.6, 19.4.2.8, 19.4.2.9, 19.4.2.10, 19.4.2.11, 19.4.2.12, 19.4.2.13, 19.4.2.14
-  'hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables'
-).split(','), j = 0; es6Symbols.length > j;)wks(es6Symbols[j++]);
-
-for (var wellKnownSymbols = $keys(wks.store), k = 0; wellKnownSymbols.length > k;) wksDefine(wellKnownSymbols[k++]);
-
-$export($export.S + $export.F * !USE_NATIVE, 'Symbol', {
-  // 19.4.2.1 Symbol.for(key)
-  'for': function (key) {
-    return has(SymbolRegistry, key += '')
-      ? SymbolRegistry[key]
-      : SymbolRegistry[key] = $Symbol(key);
-  },
-  // 19.4.2.5 Symbol.keyFor(sym)
-  keyFor: function keyFor(sym) {
-    if (!isSymbol(sym)) throw TypeError(sym + ' is not a symbol!');
-    for (var key in SymbolRegistry) if (SymbolRegistry[key] === sym) return key;
-  },
-  useSetter: function () { setter = true; },
-  useSimple: function () { setter = false; }
-});
-
-$export($export.S + $export.F * !USE_NATIVE, 'Object', {
-  // 19.1.2.2 Object.create(O [, Properties])
-  create: $create,
-  // 19.1.2.4 Object.defineProperty(O, P, Attributes)
-  defineProperty: $defineProperty,
-  // 19.1.2.3 Object.defineProperties(O, Properties)
-  defineProperties: $defineProperties,
-  // 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
-  getOwnPropertyDescriptor: $getOwnPropertyDescriptor,
-  // 19.1.2.7 Object.getOwnPropertyNames(O)
-  getOwnPropertyNames: $getOwnPropertyNames,
-  // 19.1.2.8 Object.getOwnPropertySymbols(O)
-  getOwnPropertySymbols: $getOwnPropertySymbols
-});
-
-// 24.3.2 JSON.stringify(value [, replacer [, space]])
-$JSON && $export($export.S + $export.F * (!USE_NATIVE || $fails(function () {
-  var S = $Symbol();
-  // MS Edge converts symbol values to JSON as {}
-  // WebKit converts symbol values to JSON as null
-  // V8 throws on boxed symbols
-  return _stringify([S]) != '[null]' || _stringify({ a: S }) != '{}' || _stringify(Object(S)) != '{}';
-})), 'JSON', {
-  stringify: function stringify(it) {
-    var args = [it];
-    var i = 1;
-    var replacer, $replacer;
-    while (arguments.length > i) args.push(arguments[i++]);
-    $replacer = replacer = args[1];
-    if (!isObject(replacer) && it === undefined || isSymbol(it)) return; // IE8 returns string on undefined
-    if (!isArray(replacer)) replacer = function (key, value) {
-      if (typeof $replacer == 'function') value = $replacer.call(this, key, value);
-      if (!isSymbol(value)) return value;
-    };
-    args[1] = replacer;
-    return _stringify.apply($JSON, args);
-  }
-});
-
-// 19.4.3.4 Symbol.prototype[@@toPrimitive](hint)
-$Symbol[PROTOTYPE][TO_PRIMITIVE] || __webpack_require__("35e8")($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf);
-// 19.4.3.5 Symbol.prototype[@@toStringTag]
-setToStringTag($Symbol, 'Symbol');
-// 20.2.1.9 Math[@@toStringTag]
-setToStringTag(Math, 'Math', true);
-// 24.3.3 JSON[@@toStringTag]
-setToStringTag(global.JSON, 'JSON', true);
-
-
-/***/ }),
-
-/***/ "01f9":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var LIBRARY = __webpack_require__("2d00");
-var $export = __webpack_require__("5ca1");
-var redefine = __webpack_require__("2aba");
-var hide = __webpack_require__("32e9");
-var Iterators = __webpack_require__("84f2");
-var $iterCreate = __webpack_require__("41a0");
-var setToStringTag = __webpack_require__("7f20");
-var getPrototypeOf = __webpack_require__("38fd");
-var ITERATOR = __webpack_require__("2b4c")('iterator');
-var BUGGY = !([].keys && 'next' in [].keys()); // Safari has buggy iterators w/o `next`
-var FF_ITERATOR = '@@iterator';
-var KEYS = 'keys';
-var VALUES = 'values';
-
-var returnThis = function () { return this; };
-
-module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCED) {
-  $iterCreate(Constructor, NAME, next);
-  var getMethod = function (kind) {
-    if (!BUGGY && kind in proto) return proto[kind];
-    switch (kind) {
-      case KEYS: return function keys() { return new Constructor(this, kind); };
-      case VALUES: return function values() { return new Constructor(this, kind); };
-    } return function entries() { return new Constructor(this, kind); };
-  };
-  var TAG = NAME + ' Iterator';
-  var DEF_VALUES = DEFAULT == VALUES;
-  var VALUES_BUG = false;
-  var proto = Base.prototype;
-  var $native = proto[ITERATOR] || proto[FF_ITERATOR] || DEFAULT && proto[DEFAULT];
-  var $default = $native || getMethod(DEFAULT);
-  var $entries = DEFAULT ? !DEF_VALUES ? $default : getMethod('entries') : undefined;
-  var $anyNative = NAME == 'Array' ? proto.entries || $native : $native;
-  var methods, key, IteratorPrototype;
-  // Fix native
-  if ($anyNative) {
-    IteratorPrototype = getPrototypeOf($anyNative.call(new Base()));
-    if (IteratorPrototype !== Object.prototype && IteratorPrototype.next) {
-      // Set @@toStringTag to native iterators
-      setToStringTag(IteratorPrototype, TAG, true);
-      // fix for some old engines
-      if (!LIBRARY && typeof IteratorPrototype[ITERATOR] != 'function') hide(IteratorPrototype, ITERATOR, returnThis);
-    }
-  }
-  // fix Array#{values, @@iterator}.name in V8 / FF
-  if (DEF_VALUES && $native && $native.name !== VALUES) {
-    VALUES_BUG = true;
-    $default = function values() { return $native.call(this); };
-  }
-  // Define iterator
-  if ((!LIBRARY || FORCED) && (BUGGY || VALUES_BUG || !proto[ITERATOR])) {
-    hide(proto, ITERATOR, $default);
-  }
-  // Plug for library
-  Iterators[NAME] = $default;
-  Iterators[TAG] = returnThis;
-  if (DEFAULT) {
-    methods = {
-      values: DEF_VALUES ? $default : getMethod(VALUES),
-      keys: IS_SET ? $default : getMethod(KEYS),
-      entries: $entries
-    };
-    if (FORCED) for (key in methods) {
-      if (!(key in proto)) redefine(proto, key, methods[key]);
-    } else $export($export.P + $export.F * (BUGGY || VALUES_BUG), NAME, methods);
-  }
-  return methods;
-};
-
-
-/***/ }),
-
-/***/ "02f4":
-/***/ (function(module, exports, __webpack_require__) {
-
-var toInteger = __webpack_require__("4588");
-var defined = __webpack_require__("be13");
-// true  -> String#at
-// false -> String#codePointAt
-module.exports = function (TO_STRING) {
-  return function (that, pos) {
-    var s = String(defined(that));
-    var i = toInteger(pos);
-    var l = s.length;
-    var a, b;
-    if (i < 0 || i >= l) return TO_STRING ? '' : undefined;
-    a = s.charCodeAt(i);
-    return a < 0xd800 || a > 0xdbff || i + 1 === l || (b = s.charCodeAt(i + 1)) < 0xdc00 || b > 0xdfff
-      ? TO_STRING ? s.charAt(i) : a
-      : TO_STRING ? s.slice(i, i + 2) : (a - 0xd800 << 10) + (b - 0xdc00) + 0x10000;
-  };
-};
-
-
-/***/ }),
-
-/***/ "0390":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var at = __webpack_require__("02f4")(true);
-
- // `AdvanceStringIndex` abstract operation
-// https://tc39.github.io/ecma262/#sec-advancestringindex
-module.exports = function (S, index, unicode) {
-  return index + (unicode ? at(S, index).length : 1);
-};
-
-
-/***/ }),
-
-/***/ "0395":
-/***/ (function(module, exports, __webpack_require__) {
-
-// fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
-var toIObject = __webpack_require__("36c3");
-var gOPN = __webpack_require__("6abf").f;
-var toString = {}.toString;
-
-var windowNames = typeof window == 'object' && window && Object.getOwnPropertyNames
-  ? Object.getOwnPropertyNames(window) : [];
-
-var getWindowNames = function (it) {
-  try {
-    return gOPN(it);
-  } catch (e) {
-    return windowNames.slice();
-  }
-};
-
-module.exports.f = function getOwnPropertyNames(it) {
-  return windowNames && toString.call(it) == '[object Window]' ? getWindowNames(it) : gOPN(toIObject(it));
-};
-
-
-/***/ }),
-
-/***/ "03dd":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"42fc28b8-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/z-canvas.vue?vue&type=template&id=7d151d6c&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"z-canvas",class:[_vm.classes, _vm.$zircle.getTheme(), _vm.$zircle.getThemeMode()],style:([_vm.$zircle.getPreviousViewName() !== '' ? {cursor: 'zoom-out'} : {}]),attrs:{"id":"z-container"},on:{"click":function($event){$event.stopPropagation();return _vm.goback($event)}}},[_c('div',{ref:"zoom",style:(_vm.zoom),attrs:{"id":"z-zoomable-layer"},on:{"transitionend":_vm.notify}},[_c('z-view-manager')],1)])}
-var staticRenderFns = []
-
-
-// CONCATENATED MODULE: ./src/components/z-canvas.vue?vue&type=template&id=7d151d6c&
-
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"42fc28b8-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/child-components/z-view-manager.vue?vue&type=template&id=4d70a21d&
-var z_view_managervue_type_template_id_4d70a21d_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition-group',{attrs:{"name":_vm.$zircle.getNavigationMode() === 'forward' ? 'z-next' : 'z-prev',"tag":"section"}},[_vm._l((_vm.views),function(view){return _c(view.component,{key:view.name,tag:"component",class:{
-      'is-current-view': _vm.$zircle.getCurrentViewName() === view.name && _vm.$zircle.getRouterState() === false,
-      'is-previous-view': _vm.$zircle.getPreviousViewName() === view.name,
-      'is-past-view': _vm.$zircle.getPastViewName() === view.name
-    }})}),(_vm.$zircle.getRouterState() === true && _vm.$zircle.getHistoryLength() >= 1)?_c('router-view',{key:_vm.$zircle.getCurrentViewName(),staticClass:"is-current-view"}):_vm._e()],2)}
-var z_view_managervue_type_template_id_4d70a21d_staticRenderFns = []
-
-
-// CONCATENATED MODULE: ./src/components/child-components/z-view-manager.vue?vue&type=template&id=4d70a21d&
-
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/child-components/z-view-manager.vue?vue&type=script&lang=js&
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+        /***/ }),
+
+    /***/ "55fa":
+    /***/ (function (module, exports, __webpack_require__) {
+        (function webpackUniversalModuleDefinition(root, factory) {
+            if (true) {
+                module.exports = factory(__webpack_require__(`8bbf`))
+            } else {}
+        })((typeof self !== `undefined` ? self : this), function (__WEBPACK_EXTERNAL_MODULE__8bbf__) {
+            return /******/ (function (modules) { // webpackBootstrap
+                /******/ 	// The module cache
+                /******/ 	let installedModules = {}
+                /******/
+                /******/ 	// The require function
+                /******/ 	function __webpack_require__(moduleId) {
+                    /******/
+                    /******/ 		// Check if module is in cache
+                    /******/ 		if (installedModules[moduleId]) {
+                        /******/ 			return installedModules[moduleId].exports
+                        /******/ 		}
+                    /******/ 		// Create a new module (and put it into the cache)
+                    /******/ 		let module = installedModules[moduleId] = {
+                        /******/ 			i: moduleId,
+                        /******/ 			l: false,
+                        /******/ 			exports: {},
+                        /******/ 		}
+                    /******/
+                    /******/ 		// Execute the module function
+                    /******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__)
+                    /******/
+                    /******/ 		// Flag the module as loaded
+                    /******/ 		module.l = true
+                    /******/
+                    /******/ 		// Return the exports of the module
+                    /******/ 		return module.exports
+                    /******/ 	}
+                /******/
+                /******/
+                /******/ 	// expose the modules object (__webpack_modules__)
+                /******/ 	__webpack_require__.m = modules
+                /******/
+                /******/ 	// expose the module cache
+                /******/ 	__webpack_require__.c = installedModules
+                /******/
+                /******/ 	// define getter function for harmony exports
+                /******/ 	__webpack_require__.d = function (exports, name, getter) {
+                    /******/ 		if (!__webpack_require__.o(exports, name)) {
+                        /******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter })
+                        /******/ 		}
+                    /******/ 	}
+                /******/
+                /******/ 	// define __esModule on exports
+                /******/ 	__webpack_require__.r = function (exports) {
+                    /******/ 		if (typeof Symbol !== `undefined` && Symbol.toStringTag) {
+                        /******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: `Module` })
+                        /******/ 		}
+                    /******/ 		Object.defineProperty(exports, `__esModule`, { value: true })
+                    /******/ 	}
+                /******/
+                /******/ 	// create a fake namespace object
+                /******/ 	// mode & 1: value is a module id, require it
+                /******/ 	// mode & 2: merge all properties of value into the ns
+                /******/ 	// mode & 4: return value when already ns object
+                /******/ 	// mode & 8|1: behave like require
+                /******/ 	__webpack_require__.t = function (value, mode) {
+                    /******/ 		if (mode & 1) {
+                        value = __webpack_require__(value)
+                    }
+                    /******/ 		if (mode & 8) {
+                        return value
+                    }
+                    /******/ 		if ((mode & 4) && typeof value === `object` && value && value.__esModule) {
+                        return value
+                    }
+                    /******/ 		let ns = Object.create(null)
+                    /******/ 		__webpack_require__.r(ns)
+                    /******/ 		Object.defineProperty(ns, `default`, { enumerable: true, value: value })
+                    /******/ 		if (mode & 2 && typeof value !== `string`) {
+                        for (let key in value) {
+                            __webpack_require__.d(ns, key, function (key) {
+                                return value[key] 
+                            }.bind(null, key))
+                        }
+                    }
+                    /******/ 		return ns
+                    /******/ 	}
+                /******/
+                /******/ 	// getDefaultExport function for compatibility with non-harmony modules
+                /******/ 	__webpack_require__.n = function (module) {
+                    /******/ 		let getter = module && module.__esModule ?
+                    /******/ 			function getDefault() {
+                            return module.default 
+                        } :
+                    /******/ 			function getModuleExports() {
+                            return module 
+                        }
+                    /******/ 		__webpack_require__.d(getter, `a`, getter)
+                    /******/ 		return getter
+                    /******/ 	}
+                /******/
+                /******/ 	// Object.prototype.hasOwnProperty.call
+                /******/ 	__webpack_require__.o = function (object, property) {
+                    return Object.prototype.hasOwnProperty.call(object, property) 
+                }
+                /******/
+                /******/ 	// __webpack_public_path__
+                /******/ 	__webpack_require__.p = ``
+                /******/
+                /******/
+                /******/ 	// Load entry module and return exports
+                /******/ 	return __webpack_require__(__webpack_require__.s = `fb15`)
+                /******/ })
+            /************************************************************************/
+            /******/ ({
+
+                /***/ "014b":
+                /***/ (function (module, exports, __webpack_require__) {
+                    "use strict"
+
+                    // ECMAScript 6 symbols shim
+                    let global = __webpack_require__(`e53d`)
+                    let has = __webpack_require__(`07e3`)
+                    let DESCRIPTORS = __webpack_require__(`8e60`)
+                    let $export = __webpack_require__(`63b6`)
+                    let redefine = __webpack_require__(`9138`)
+                    let META = __webpack_require__(`ebfd`).KEY
+                    let $fails = __webpack_require__(`294c`)
+                    let shared = __webpack_require__(`dbdb`)
+                    let setToStringTag = __webpack_require__(`45f2`)
+                    let uid = __webpack_require__(`62a0`)
+                    let wks = __webpack_require__(`5168`)
+                    let wksExt = __webpack_require__(`ccb9`)
+                    let wksDefine = __webpack_require__(`6718`)
+                    let enumKeys = __webpack_require__(`47ee`)
+                    let isArray = __webpack_require__(`9003`)
+                    let anObject = __webpack_require__(`e4ae`)
+                    let isObject = __webpack_require__(`f772`)
+                    let toIObject = __webpack_require__(`36c3`)
+                    let toPrimitive = __webpack_require__(`1bc3`)
+                    let createDesc = __webpack_require__(`aebd`)
+                    let _create = __webpack_require__(`a159`)
+                    let gOPNExt = __webpack_require__(`0395`)
+                    let $GOPD = __webpack_require__(`bf0b`)
+                    let $DP = __webpack_require__(`d9f6`)
+                    let $keys = __webpack_require__(`c3a1`)
+                    let gOPD = $GOPD.f
+                    let dP = $DP.f
+                    let gOPN = gOPNExt.f
+                    let $Symbol = global.Symbol
+                    let $JSON = global.JSON
+                    let _stringify = $JSON && $JSON.stringify
+                    let PROTOTYPE = `prototype`
+                    let HIDDEN = wks(`_hidden`)
+                    let TO_PRIMITIVE = wks(`toPrimitive`)
+                    let isEnum = {}.propertyIsEnumerable
+                    let SymbolRegistry = shared(`symbol-registry`)
+                    let AllSymbols = shared(`symbols`)
+                    let OPSymbols = shared(`op-symbols`)
+                    let ObjectProto = Object[PROTOTYPE]
+                    let USE_NATIVE = typeof $Symbol === `function`
+                    let QObject = global.QObject
+                    // Don't use setters in Qt Script, https://github.com/zloirock/core-js/issues/173
+                    let setter = !QObject || !QObject[PROTOTYPE] || !QObject[PROTOTYPE].findChild
+
+                    // fallback for old Android, https://code.google.com/p/v8/issues/detail?id=687
+                    let setSymbolDesc = DESCRIPTORS && $fails(function () {
+                        return _create(dP({}, `a`, {
+                            get: function () {
+                                return dP(this, `a`, { value: 7 }).a 
+                            },
+                        })).a != 7
+                    }) ? function (it, key, D) {
+                            let protoDesc = gOPD(ObjectProto, key)
+                            if (protoDesc) {
+                                delete ObjectProto[key]
+                            }
+                            dP(it, key, D)
+                            if (protoDesc && it !== ObjectProto) {
+                                dP(ObjectProto, key, protoDesc)
+                            }
+                        } : dP
+
+                    let wrap = function (tag) {
+                        let sym = AllSymbols[tag] = _create($Symbol[PROTOTYPE])
+                        sym._k = tag
+                        return sym
+                    }
+
+                    let isSymbol = USE_NATIVE && typeof $Symbol.iterator === `symbol` ? function (it) {
+                        return typeof it === `symbol`
+                    } : function (it) {
+                        return it instanceof $Symbol
+                    }
+
+                    var $defineProperty = function defineProperty(it, key, D) {
+                        if (it === ObjectProto) {
+                            $defineProperty(OPSymbols, key, D)
+                        }
+                        anObject(it)
+                        key = toPrimitive(key, true)
+                        anObject(D)
+                        if (has(AllSymbols, key)) {
+                            if (!D.enumerable) {
+                                if (!has(it, HIDDEN)) {
+                                    dP(it, HIDDEN, createDesc(1, {}))
+                                }
+                                it[HIDDEN][key] = true
+                            } else {
+                                if (has(it, HIDDEN) && it[HIDDEN][key]) {
+                                    it[HIDDEN][key] = false
+                                }
+                                D = _create(D, { enumerable: createDesc(0, false) })
+                            } return setSymbolDesc(it, key, D)
+                        } return dP(it, key, D)
+                    }
+                    let $defineProperties = function defineProperties(it, P) {
+                        anObject(it)
+                        let keys = enumKeys(P = toIObject(P))
+                        let i = 0
+                        let l = keys.length
+                        let key
+                        while (l > i) {
+                            $defineProperty(it, key = keys[i++], P[key])
+                        }
+                        return it
+                    }
+                    let $create = function create(it, P) {
+                        return P === undefined ? _create(it) : $defineProperties(_create(it), P)
+                    }
+                    let $propertyIsEnumerable = function propertyIsEnumerable(key) {
+                        let E = isEnum.call(this, key = toPrimitive(key, true))
+                        if (this === ObjectProto && has(AllSymbols, key) && !has(OPSymbols, key)) {
+                            return false
+                        }
+                        return E || !has(this, key) || !has(AllSymbols, key) || has(this, HIDDEN) && this[HIDDEN][key] ? E : true
+                    }
+                    let $getOwnPropertyDescriptor = function getOwnPropertyDescriptor(it, key) {
+                        it = toIObject(it)
+                        key = toPrimitive(key, true)
+                        if (it === ObjectProto && has(AllSymbols, key) && !has(OPSymbols, key)) {
+                            return
+                        }
+                        let D = gOPD(it, key)
+                        if (D && has(AllSymbols, key) && !(has(it, HIDDEN) && it[HIDDEN][key])) {
+                            D.enumerable = true
+                        }
+                        return D
+                    }
+                    let $getOwnPropertyNames = function getOwnPropertyNames(it) {
+                        let names = gOPN(toIObject(it))
+                        let result = []
+                        let i = 0
+                        let key
+                        while (names.length > i) {
+                            if (!has(AllSymbols, key = names[i++]) && key != HIDDEN && key != META) {
+                                result.push(key)
+                            }
+                        } return result
+                    }
+                    let $getOwnPropertySymbols = function getOwnPropertySymbols(it) {
+                        let IS_OP = it === ObjectProto
+                        let names = gOPN(IS_OP ? OPSymbols : toIObject(it))
+                        let result = []
+                        let i = 0
+                        let key
+                        while (names.length > i) {
+                            if (has(AllSymbols, key = names[i++]) && (IS_OP ? has(ObjectProto, key) : true)) {
+                                result.push(AllSymbols[key])
+                            }
+                        } return result
+                    }
+
+                    // 19.4.1.1 Symbol([description])
+                    if (!USE_NATIVE) {
+                        $Symbol = function Symbol() {
+                            if (this instanceof $Symbol) {
+                                throw TypeError(`Symbol is not a constructor!`)
+                            }
+                            let tag = uid(arguments.length > 0 ? arguments[0] : undefined)
+                            var $set = function (value) {
+                                if (this === ObjectProto) {
+                                    $set.call(OPSymbols, value)
+                                }
+                                if (has(this, HIDDEN) && has(this[HIDDEN], tag)) {
+                                    this[HIDDEN][tag] = false
+                                }
+                                setSymbolDesc(this, tag, createDesc(1, value))
+                            }
+                            if (DESCRIPTORS && setter) {
+                                setSymbolDesc(ObjectProto, tag, { configurable: true, set: $set })
+                            }
+                            return wrap(tag)
+                        }
+                        redefine($Symbol[PROTOTYPE], `toString`, function toString() {
+                            return this._k
+                        })
+
+                        $GOPD.f = $getOwnPropertyDescriptor
+                        $DP.f = $defineProperty
+                        __webpack_require__(`6abf`).f = gOPNExt.f = $getOwnPropertyNames
+                        __webpack_require__(`355d`).f = $propertyIsEnumerable
+                        __webpack_require__(`9aa9`).f = $getOwnPropertySymbols
+
+                        if (DESCRIPTORS && !__webpack_require__(`b8e3`)) {
+                            redefine(ObjectProto, `propertyIsEnumerable`, $propertyIsEnumerable, true)
+                        }
+
+                        wksExt.f = function (name) {
+                            return wrap(wks(name))
+                        }
+                    }
+
+                    $export($export.G + $export.W + $export.F * !USE_NATIVE, { Symbol: $Symbol })
+
+                    for (let es6Symbols = (
+                        // 19.4.2.2, 19.4.2.3, 19.4.2.4, 19.4.2.6, 19.4.2.8, 19.4.2.9, 19.4.2.10, 19.4.2.11, 19.4.2.12, 19.4.2.13, 19.4.2.14
+                            `hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables`
+                        ).split(`,`), j = 0; es6Symbols.length > j;){
+                        wks(es6Symbols[j++])
+                    }
+
+                    for (let wellKnownSymbols = $keys(wks.store), k = 0; wellKnownSymbols.length > k;) {
+                        wksDefine(wellKnownSymbols[k++])
+                    }
+
+                    $export($export.S + $export.F * !USE_NATIVE, `Symbol`, {
+                        // 19.4.2.1 Symbol.for(key)
+                        for: function (key) {
+                            return has(SymbolRegistry, key += ``)
+                                ? SymbolRegistry[key]
+                                : SymbolRegistry[key] = $Symbol(key)
+                        },
+                        // 19.4.2.5 Symbol.keyFor(sym)
+                        keyFor: function keyFor(sym) {
+                            if (!isSymbol(sym)) {
+                                throw TypeError(sym + ` is not a symbol!`)
+                            }
+                            for (let key in SymbolRegistry) {
+                                if (SymbolRegistry[key] === sym) {
+                                    return key
+                                }
+                            }
+                        },
+                        useSetter: function () {
+                            setter = true 
+                        },
+                        useSimple: function () {
+                            setter = false 
+                        },
+                    })
+
+                    $export($export.S + $export.F * !USE_NATIVE, `Object`, {
+                        // 19.1.2.2 Object.create(O [, Properties])
+                        create: $create,
+                        // 19.1.2.4 Object.defineProperty(O, P, Attributes)
+                        defineProperty: $defineProperty,
+                        // 19.1.2.3 Object.defineProperties(O, Properties)
+                        defineProperties: $defineProperties,
+                        // 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
+                        getOwnPropertyDescriptor: $getOwnPropertyDescriptor,
+                        // 19.1.2.7 Object.getOwnPropertyNames(O)
+                        getOwnPropertyNames: $getOwnPropertyNames,
+                        // 19.1.2.8 Object.getOwnPropertySymbols(O)
+                        getOwnPropertySymbols: $getOwnPropertySymbols,
+                    })
+
+                    // 24.3.2 JSON.stringify(value [, replacer [, space]])
+                    $JSON && $export($export.S + $export.F * (!USE_NATIVE || $fails(function () {
+                        let S = $Symbol()
+                        // MS Edge converts symbol values to JSON as {}
+                        // WebKit converts symbol values to JSON as null
+                        // V8 throws on boxed symbols
+                        return _stringify([S]) != `[null]` || _stringify({ a: S }) != `{}` || _stringify(Object(S)) != `{}`
+                    })), `JSON`, {
+                        stringify: function stringify(it) {
+                            let args = [it]
+                            let i = 1
+                            let replacer; let $replacer
+                            while (arguments.length > i) {
+                                args.push(arguments[i++])
+                            }
+                            $replacer = replacer = args[1]
+                            if (!isObject(replacer) && it === undefined || isSymbol(it)) {
+                                return
+                            } // IE8 returns string on undefined
+                            if (!isArray(replacer)) {
+                                replacer = function (key, value) {
+                                    if (typeof $replacer === `function`) {
+                                        value = $replacer.call(this, key, value)
+                                    }
+                                    if (!isSymbol(value)) {
+                                        return value
+                                    }
+                                }
+                            }
+                            args[1] = replacer
+                            return _stringify.apply($JSON, args)
+                        },
+                    })
+
+                    // 19.4.3.4 Symbol.prototype[@@toPrimitive](hint)
+                    $Symbol[PROTOTYPE][TO_PRIMITIVE] || __webpack_require__(`35e8`)($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf)
+                    // 19.4.3.5 Symbol.prototype[@@toStringTag]
+                    setToStringTag($Symbol, `Symbol`)
+                    // 20.2.1.9 Math[@@toStringTag]
+                    setToStringTag(Math, `Math`, true)
+                    // 24.3.3 JSON[@@toStringTag]
+                    setToStringTag(global.JSON, `JSON`, true)
+                    /***/ }),
+
+                /***/ "01f9":
+                /***/ (function (module, exports, __webpack_require__) {
+                    "use strict"
+
+                    let LIBRARY = __webpack_require__(`2d00`)
+                    let $export = __webpack_require__(`5ca1`)
+                    let redefine = __webpack_require__(`2aba`)
+                    let hide = __webpack_require__(`32e9`)
+                    let Iterators = __webpack_require__(`84f2`)
+                    let $iterCreate = __webpack_require__(`41a0`)
+                    let setToStringTag = __webpack_require__(`7f20`)
+                    let getPrototypeOf = __webpack_require__(`38fd`)
+                    let ITERATOR = __webpack_require__(`2b4c`)(`iterator`)
+                    let BUGGY = !([].keys && `next` in [].keys()) // Safari has buggy iterators w/o `next`
+                    let FF_ITERATOR = `@@iterator`
+                    let KEYS = `keys`
+                    let VALUES = `values`
+
+                    let returnThis = function () {
+                        return this 
+                    }
+
+                    module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCED) {
+                        $iterCreate(Constructor, NAME, next)
+                        let getMethod = function (kind) {
+                            if (!BUGGY && kind in proto) {
+                                return proto[kind]
+                            }
+                            switch (kind) {
+                            case KEYS: return function keys() {
+                                return new Constructor(this, kind) 
+                            }
+                            case VALUES: return function values() {
+                                return new Constructor(this, kind) 
+                            }
+                            } return function entries() {
+                                return new Constructor(this, kind) 
+                            }
+                        }
+                        let TAG = NAME + ` Iterator`
+                        let DEF_VALUES = DEFAULT == VALUES
+                        let VALUES_BUG = false
+                        var proto = Base.prototype
+                        let $native = proto[ITERATOR] || proto[FF_ITERATOR] || DEFAULT && proto[DEFAULT]
+                        let $default = $native || getMethod(DEFAULT)
+                        let $entries = DEFAULT ? !DEF_VALUES ? $default : getMethod(`entries`) : undefined
+                        let $anyNative = NAME == `Array` ? proto.entries || $native : $native
+                        let methods; let key; let IteratorPrototype
+                        // Fix native
+                        if ($anyNative) {
+                            IteratorPrototype = getPrototypeOf($anyNative.call(new Base()))
+                            if (IteratorPrototype !== Object.prototype && IteratorPrototype.next) {
+                                // Set @@toStringTag to native iterators
+                                setToStringTag(IteratorPrototype, TAG, true)
+                                // fix for some old engines
+                                if (!LIBRARY && typeof IteratorPrototype[ITERATOR] !== `function`) {
+                                    hide(IteratorPrototype, ITERATOR, returnThis)
+                                }
+                            }
+                        }
+                        // fix Array#{values, @@iterator}.name in V8 / FF
+                        if (DEF_VALUES && $native && $native.name !== VALUES) {
+                            VALUES_BUG = true
+                            $default = function values() {
+                                return $native.call(this) 
+                            }
+                        }
+                        // Define iterator
+                        if ((!LIBRARY || FORCED) && (BUGGY || VALUES_BUG || !proto[ITERATOR])) {
+                            hide(proto, ITERATOR, $default)
+                        }
+                        // Plug for library
+                        Iterators[NAME] = $default
+                        Iterators[TAG] = returnThis
+                        if (DEFAULT) {
+                            methods = {
+                                values: DEF_VALUES ? $default : getMethod(VALUES),
+                                keys: IS_SET ? $default : getMethod(KEYS),
+                                entries: $entries,
+                            }
+                            if (FORCED) {
+                                for (key in methods) {
+                                    if (!(key in proto)) {
+                                        redefine(proto, key, methods[key])
+                                    }
+                                }
+                            } else {
+                                $export($export.P + $export.F * (BUGGY || VALUES_BUG), NAME, methods)
+                            }
+                        }
+                        return methods
+                    }
+                    /***/ }),
+
+                /***/ "02f4":
+                /***/ (function (module, exports, __webpack_require__) {
+                    let toInteger = __webpack_require__(`4588`)
+                    let defined = __webpack_require__(`be13`)
+                    // true  -> String#at
+                    // false -> String#codePointAt
+                    module.exports = function (TO_STRING) {
+                        return function (that, pos) {
+                            let s = String(defined(that))
+                            let i = toInteger(pos)
+                            let l = s.length
+                            let a; let b
+                            if (i < 0 || i >= l) {
+                                return TO_STRING ? `` : undefined
+                            }
+                            a = s.charCodeAt(i)
+                            return a < 0xd800 || a > 0xdbff || i + 1 === l || (b = s.charCodeAt(i + 1)) < 0xdc00 || b > 0xdfff
+                                ? TO_STRING ? s.charAt(i) : a
+                                : TO_STRING ? s.slice(i, i + 2) : (a - 0xd800 << 10) + (b - 0xdc00) + 0x10000
+                        }
+                    }
+                    /***/ }),
+
+                /***/ "0390":
+                /***/ (function (module, exports, __webpack_require__) {
+                    "use strict"
+
+                    let at = __webpack_require__(`02f4`)(true)
+
+                    // `AdvanceStringIndex` abstract operation
+                    // https://tc39.github.io/ecma262/#sec-advancestringindex
+                    module.exports = function (S, index, unicode) {
+                        return index + (unicode ? at(S, index).length : 1)
+                    }
+                    /***/ }),
+
+                /***/ "0395":
+                /***/ (function (module, exports, __webpack_require__) {
+                    // fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
+                    let toIObject = __webpack_require__(`36c3`)
+                    let gOPN = __webpack_require__(`6abf`).f
+                    let toString = {}.toString
+
+                    let windowNames = typeof window === `object` && window && Object.getOwnPropertyNames
+                        ? Object.getOwnPropertyNames(window) : []
+
+                    let getWindowNames = function (it) {
+                        try {
+                            return gOPN(it)
+                        } catch (e) {
+                            return windowNames.slice()
+                        }
+                    }
+
+                    module.exports.f = function getOwnPropertyNames(it) {
+                        return windowNames && toString.call(it) == `[object Window]` ? getWindowNames(it) : gOPN(toIObject(it))
+                    }
+                    /***/ }),
+
+                /***/ "03dd":
+                /***/ (function (module, __webpack_exports__, __webpack_require__) {
+                    "use strict"
+
+                    // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"42fc28b8-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/z-canvas.vue?vue&type=template&id=7d151d6c&
+                    let render = function () {
+                        let _vm = this; let _h = _vm.$createElement; let _c = _vm._self._c || _h; return _c(`div`,{ staticClass: `z-canvas`,class: [_vm.classes, _vm.$zircle.getTheme(), _vm.$zircle.getThemeMode()],style: ([_vm.$zircle.getPreviousViewName() !== `` ? { cursor: `zoom-out` } : {}]),attrs: { id: `z-container` },on: { click: function ($event){
+                            $event.stopPropagation(); return _vm.goback($event)
+                        } } },[_c(`div`,{ ref: `zoom`,style: (_vm.zoom),attrs: { id: `z-zoomable-layer` },on: { transitionend: _vm.notify } },[_c(`z-view-manager`)],1)])
+                    }
+                    let staticRenderFns = []
+
+                    // CONCATENATED MODULE: ./src/components/z-canvas.vue?vue&type=template&id=7d151d6c&
+
+                    // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"42fc28b8-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/child-components/z-view-manager.vue?vue&type=template&id=4d70a21d&
+                    let z_view_managervue_type_template_id_4d70a21d_render = function () {
+                        let _vm = this; let _h = _vm.$createElement; let _c = _vm._self._c || _h; return _c(`transition-group`,{ attrs: { name: _vm.$zircle.getNavigationMode() === `forward` ? `z-next` : `z-prev`,tag: `section` } },[_vm._l((_vm.views),function (view){
+                            return _c(view.component,{ key: view.name,tag: `component`,class: {
+                                'is-current-view': _vm.$zircle.getCurrentViewName() === view.name && _vm.$zircle.getRouterState() === false,
+                                'is-previous-view': _vm.$zircle.getPreviousViewName() === view.name,
+                                'is-past-view': _vm.$zircle.getPastViewName() === view.name,
+                            } })
+                        }),(_vm.$zircle.getRouterState() === true && _vm.$zircle.getHistoryLength() >= 1) ? _c(`router-view`,{ key: _vm.$zircle.getCurrentViewName(),staticClass: `is-current-view` }) : _vm._e()],2)
+                    }
+                    let z_view_managervue_type_template_id_4d70a21d_staticRenderFns = []
+
+                    // CONCATENATED MODULE: ./src/components/child-components/z-view-manager.vue?vue&type=template&id=4d70a21d&
+
+                    // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/child-components/z-view-manager.vue?vue&type=script&lang=js&
+                    //
+                    //
+                    //
+                    //
+                    //
+                    //
+                    //
+                    //
+                    //
+                    //
+                    //
+                    //
+                    //
+                    //
+                    //
+                    //
+                    //
+                    //
 
 /* eslint-disable */
 /* harmony default export */ var z_view_managervue_type_script_lang_js_ = ({

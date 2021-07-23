@@ -1,14 +1,12 @@
 const path = require(`path`)
 const { postsPerPage } = require(`./src/utils/siteConfig`)
 const { paginate } = require(`gatsby-awesome-pagination`)
-const { VueLoaderPlugin } = require('vue-loader')
+const { VueLoaderPlugin } = require(`vue-loader`)
 
 /**
  * Here is the place where Gatsby creates the URLs for all the
  * posts, tags, pages and authors that we fetched from the Ghost site.
  */
-
-
 
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions
@@ -65,8 +63,41 @@ exports.createPages = async ({ graphql, actions }) => {
     const blogTemplate = path.resolve(`src/templates/blog.js`)
     const tagsTemplate = path.resolve(`src/templates/tag.js`)
     const authorTemplate = path.resolve(`src/templates/author.js`)
-    const pageTemplate = path.resolve(`src/templates/page.js`)
+    //const pageTemplate = path.resolve(`src/templates/page.js`)
     const postTemplate = path.resolve(`src/templates/post.js`)
+
+    exports.onCreateWebpackConfig = ({
+        stage,
+        rules,
+        loaders,
+        plugins,
+        actions,
+      }) => {
+        actions.setWebpackConfig({
+            module: {
+                rules: [
+                  {
+                    test: /\.svg$/,
+                    use: [
+                      {
+                        loader: 'file-loader'
+                      },
+                      {
+                        loader: 'svgo-loader',
+                        options: {
+                          configFile: false
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+              });
+            };
+
+
+
+
 
     // Create tag pages
     tags.forEach(({ node }) => {
@@ -84,8 +115,7 @@ exports.createPages = async ({ graphql, actions }) => {
             items: items,
             itemsPerPage: postsPerPage,
             component: tagsTemplate,
-            pathPrefix: ({ pageNumber }) =>
-                pageNumber === 0 ? url : `${url}/page`,
+            pathPrefix: ({ pageNumber }) => (pageNumber === 0 ? url : `${url}/page`),
             context: {
                 slug: node.slug,
             },
@@ -108,8 +138,7 @@ exports.createPages = async ({ graphql, actions }) => {
             items: items,
             itemsPerPage: postsPerPage,
             component: authorTemplate,
-            pathPrefix: ({ pageNumber }) =>
-                pageNumber === 0 ? url : `${url}/page`,
+            pathPrefix: ({ pageNumber }) => (pageNumber === 0 ? url : `${url}/page`),
             context: {
                 slug: node.slug,
             },
@@ -117,7 +146,7 @@ exports.createPages = async ({ graphql, actions }) => {
     })
 
     // Create pages
-    pages.forEach(({ node }) => {
+ /*    pages.forEach(({ node }) => {
         // This part here defines, that our pages will use
         // a `/:slug/` permalink.
         node.url = `/${node.slug}/`
@@ -131,7 +160,7 @@ exports.createPages = async ({ graphql, actions }) => {
                 slug: node.slug,
             },
         })
-    })
+    }) */
 
     // Create post pages
     posts.forEach(({ node }) => {

@@ -2,12 +2,12 @@
  * Font Awesome Pro 6.0.0-alpha3 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license (Commercial License)
  */
-;(function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined'
+(function (global, factory) {
+    typeof exports === `object` && typeof module !== `undefined`
         ? factory()
-        : typeof define === 'function' && define.amd
-        ? define(factory)
-        : factory()
+        : typeof define === `function` && define.amd
+            ? define(factory)
+            : factory()
 })(this, function () {
     'use strict'
 
@@ -15,8 +15,8 @@
         '@babel/helpers - typeof'
 
         if (
-            typeof Symbol === 'function' &&
-            typeof Symbol.iterator === 'symbol'
+            typeof Symbol === `function` &&
+            typeof Symbol.iterator === `symbol`
         ) {
             _typeof = function (obj) {
                 return typeof obj
@@ -24,10 +24,10 @@
         } else {
             _typeof = function (obj) {
                 return obj &&
-                    typeof Symbol === 'function' &&
+                    typeof Symbol === `function` &&
                     obj.constructor === Symbol &&
                     obj !== Symbol.prototype
-                    ? 'symbol'
+                    ? `symbol`
                     : typeof obj
             }
         }
@@ -51,11 +51,11 @@
     }
 
     function _objectSpread(target) {
-        for (var i = 1; i < arguments.length; i++) {
+        for (let i = 1; i < arguments.length; i++) {
             var source = arguments[i] != null ? Object(arguments[i]) : {}
-            var ownKeys = Object.keys(source)
+            let ownKeys = Object.keys(source)
 
-            if (typeof Object.getOwnPropertySymbols === 'function') {
+            if (typeof Object.getOwnPropertySymbols === `function`) {
                 ownKeys = ownKeys.concat(
                     Object.getOwnPropertySymbols(source).filter(function (sym) {
                         return Object.getOwnPropertyDescriptor(
@@ -74,31 +74,35 @@
         return target
     }
 
-    var _WINDOW = {}
-    var _DOCUMENT = {}
+    let _WINDOW = {}
+    let _DOCUMENT = {}
 
     try {
-        if (typeof window !== 'undefined') _WINDOW = window
-        if (typeof document !== 'undefined') _DOCUMENT = document
+        if (typeof window !== `undefined`) {
+            _WINDOW = window
+        }
+        if (typeof document !== `undefined`) {
+            _DOCUMENT = document
+        }
     } catch (e) {}
 
-    var _ref = _WINDOW.navigator || {},
-        _ref$userAgent = _ref.userAgent,
-        userAgent = _ref$userAgent === void 0 ? '' : _ref$userAgent
-    var WINDOW = _WINDOW
-    var DOCUMENT = _DOCUMENT
-    var IS_BROWSER = !!WINDOW.document
-    var IS_DOM =
+    let _ref = _WINDOW.navigator || {}
+    let _ref$userAgent = _ref.userAgent
+    let userAgent = _ref$userAgent === void 0 ? `` : _ref$userAgent
+    let WINDOW = _WINDOW
+    let DOCUMENT = _DOCUMENT
+    let IS_BROWSER = !!WINDOW.document
+    let IS_DOM =
         !!DOCUMENT.documentElement &&
         !!DOCUMENT.head &&
-        typeof DOCUMENT.addEventListener === 'function' &&
-        typeof DOCUMENT.createElement === 'function'
-    var IS_IE = ~userAgent.indexOf('MSIE') || ~userAgent.indexOf('Trident/')
+        typeof DOCUMENT.addEventListener === `function` &&
+        typeof DOCUMENT.createElement === `function`
+    let IS_IE = ~userAgent.indexOf(`MSIE`) || ~userAgent.indexOf(`Trident/`)
 
-    var functions = []
+    let functions = []
 
-    var listener = function listener() {
-        DOCUMENT.removeEventListener('DOMContentLoaded', listener)
+    let listener = function listener() {
+        DOCUMENT.removeEventListener(`DOMContentLoaded`, listener)
         loaded = 1
         functions.map(function (fn) {
             return fn()
@@ -111,96 +115,100 @@
         loaded = (
             DOCUMENT.documentElement.doScroll ? /^loaded|^c/ : /^loaded|^i|^c/
         ).test(DOCUMENT.readyState)
-        if (!loaded) DOCUMENT.addEventListener('DOMContentLoaded', listener)
+        if (!loaded) {
+            DOCUMENT.addEventListener(`DOMContentLoaded`, listener)
+        }
     }
 
     function domready(fn) {
-        if (!IS_DOM) return
+        if (!IS_DOM) {
+            return
+        }
         loaded ? setTimeout(fn, 0) : functions.push(fn)
     }
 
     function report(_ref) {
-        var nodesTested = _ref.nodesTested,
-            nodesFound = _ref.nodesFound
-        var timedOutTests = {}
+        let nodesTested = _ref.nodesTested
+        let nodesFound = _ref.nodesFound
+        let timedOutTests = {}
 
-        for (var key in nodesFound) {
+        for (let key in nodesFound) {
             if (!(nodesTested.conflict[key] || nodesTested.noConflict[key])) {
                 timedOutTests[key] = nodesFound[key]
             }
         }
 
-        var conflictsCount = Object.keys(nodesTested.conflict).length
+        let conflictsCount = Object.keys(nodesTested.conflict).length
 
         if (conflictsCount > 0) {
             console.info(
-                '%cConflict'.concat(conflictsCount > 1 ? 's' : '', ' found:'),
-                'color: darkred; font-size: large'
+                `%cConflict`.concat(conflictsCount > 1 ? `s` : ``, ` found:`),
+                `color: darkred; font-size: large`
             )
-            var data = {}
+            let data = {}
 
-            for (var _key in nodesTested.conflict) {
-                var item = nodesTested.conflict[_key]
+            for (let _key in nodesTested.conflict) {
+                let item = nodesTested.conflict[_key]
                 data[_key] = {
                     tagName: item.tagName,
-                    'src/href': item.src || item.href || 'n/a',
+                    'src/href': item.src || item.href || `n/a`,
                     'innerText excerpt':
-                        item.innerText && item.innerText !== ''
-                            ? item.innerText.slice(0, 200) + '...'
-                            : '(empty)',
+                        item.innerText && item.innerText !== ``
+                            ? item.innerText.slice(0, 200) + `...`
+                            : `(empty)`,
                 }
             }
 
             console.table(data)
         }
 
-        var noConflictsCount = Object.keys(nodesTested.noConflict).length
+        let noConflictsCount = Object.keys(nodesTested.noConflict).length
 
         if (noConflictsCount > 0) {
             console.info(
-                '%cNo conflict'
-                    .concat(noConflictsCount > 1 ? 's' : '', ' found with ')
-                    .concat(noConflictsCount === 1 ? 'this' : 'these', ':'),
-                'color: green; font-size: large'
+                `%cNo conflict`
+                    .concat(noConflictsCount > 1 ? `s` : ``, ` found with `)
+                    .concat(noConflictsCount === 1 ? `this` : `these`, `:`),
+                `color: green; font-size: large`
             )
-            var _data = {}
+            let _data = {}
 
-            for (var _key2 in nodesTested.noConflict) {
-                var _item = nodesTested.noConflict[_key2]
+            for (let _key2 in nodesTested.noConflict) {
+                let _item = nodesTested.noConflict[_key2]
                 _data[_key2] = {
                     tagName: _item.tagName,
-                    'src/href': _item.src || _item.href || 'n/a',
+                    'src/href': _item.src || _item.href || `n/a`,
                     'innerText excerpt':
-                        _item.innerText && _item.innerText !== ''
-                            ? _item.innerText.slice(0, 200) + '...'
-                            : '(empty)',
+                        _item.innerText && _item.innerText !== ``
+                            ? _item.innerText.slice(0, 200) + `...`
+                            : `(empty)`,
                 }
             }
 
             console.table(_data)
         }
 
-        var timeOutCount = Object.keys(timedOutTests).length
+        let timeOutCount = Object.keys(timedOutTests).length
 
         if (timeOutCount > 0) {
             console.info(
-                '%cLeftovers--we timed out before collecting test results for '.concat(
-                    timeOutCount === 1 ? 'this' : 'these',
-                    ':'
+                `%cLeftovers--we timed out before collecting test results for `.concat(
+                    timeOutCount === 1 ? `this` : `these`,
+                    `:`
                 ),
-                'color: blue; font-size: large'
+                `color: blue; font-size: large`
             )
-            var _data2 = {}
+            let _data2 = {}
 
-            for (var _key3 in timedOutTests) {
-                var _item2 = timedOutTests[_key3]
+            for (let _key3 in timedOutTests) {
+                let _item2 = timedOutTests[_key3]
                 _data2[_key3] = {
                     tagName: _item2.tagName,
-                    'src/href': _item2.src || _item2.href || 'n/a',
+                    'src/href': _item2.src || _item2.href || `n/a`,
                     'innerText excerpt':
-                        _item2.innerText && _item2.innerText !== ''
-                            ? _item2.innerText.slice(0, 200) + '...'
-                            : '(empty)',
+                        _item2.innerText && _item2.innerText !== ``
+                            ? _item2.innerText.slice(0, 200) + `...`
+                            : `(empty)`,
                 }
             }
 
@@ -208,14 +216,14 @@
         }
     }
 
-    var commonjsGlobal =
-        typeof window !== 'undefined'
+    let commonjsGlobal =
+        typeof window !== `undefined`
             ? window
-            : typeof global !== 'undefined'
-            ? global
-            : typeof self !== 'undefined'
-            ? self
-            : {}
+            : typeof global !== `undefined`
+                ? global
+                : typeof self !== `undefined`
+                    ? self
+                    : {}
 
     function createCommonjsModule(fn, module) {
         return (
@@ -225,8 +233,8 @@
         )
     }
 
-    var md5 = createCommonjsModule(function (module) {
-        ;(function ($) {
+    let md5 = createCommonjsModule(function (module) {
+        (function ($) {
             /**
              * Add integers, wrapping at 2^32.
              * This uses 16-bit operations internally to work around bugs in interpreters.
@@ -237,8 +245,8 @@
              */
 
             function safeAdd(x, y) {
-                var lsw = (x & 0xffff) + (y & 0xffff)
-                var msw = (x >> 16) + (y >> 16) + (lsw >> 16)
+                let lsw = (x & 0xffff) + (y & 0xffff)
+                let msw = (x >> 16) + (y >> 16) + (lsw >> 16)
                 return (msw << 16) | (lsw & 0xffff)
             }
             /**
@@ -346,15 +354,15 @@
                 /* append padding */
                 x[len >> 5] |= 0x80 << len % 32
                 x[(((len + 64) >>> 9) << 4) + 14] = len
-                var i
-                var olda
-                var oldb
-                var oldc
-                var oldd
-                var a = 1732584193
-                var b = -271733879
-                var c = -1732584194
-                var d = 271733878
+                let i
+                let olda
+                let oldb
+                let oldc
+                let oldd
+                let a = 1732584193
+                let b = -271733879
+                let c = -1732584194
+                let d = 271733878
 
                 for (i = 0; i < x.length; i += 16) {
                     olda = a
@@ -441,9 +449,9 @@
              */
 
             function binl2rstr(input) {
-                var i
-                var output = ''
-                var length32 = input.length * 32
+                let i
+                let output = ``
+                let length32 = input.length * 32
 
                 for (i = 0; i < length32; i += 8) {
                     output += String.fromCharCode(
@@ -462,15 +470,15 @@
              */
 
             function rstr2binl(input) {
-                var i
-                var output = []
+                let i
+                let output = []
                 output[(input.length >> 2) - 1] = undefined
 
                 for (i = 0; i < output.length; i += 1) {
                     output[i] = 0
                 }
 
-                var length8 = input.length * 8
+                let length8 = input.length * 8
 
                 for (i = 0; i < length8; i += 8) {
                     output[i >> 5] |= (input.charCodeAt(i / 8) & 0xff) << i % 32
@@ -497,11 +505,11 @@
              */
 
             function rstrHMACMD5(key, data) {
-                var i
-                var bkey = rstr2binl(key)
-                var ipad = []
-                var opad = []
-                var hash
+                let i
+                let bkey = rstr2binl(key)
+                let ipad = []
+                let opad = []
+                let hash
                 ipad[15] = opad[15] = undefined
 
                 if (bkey.length > 16) {
@@ -527,10 +535,10 @@
              */
 
             function rstr2hex(input) {
-                var hexTab = '0123456789abcdef'
-                var output = ''
-                var x
-                var i
+                let hexTab = `0123456789abcdef`
+                let output = ``
+                let x
+                let i
 
                 for (i = 0; i < input.length; i += 1) {
                     x = input.charCodeAt(i)
@@ -629,13 +637,15 @@
     })
 
     function md5ForNode(node) {
-        if (null === node || 'object' !== _typeof(node)) return undefined
+        if (null === node || `object` !== _typeof(node)) {
+            return undefined
+        }
 
         if (node.src) {
             return md5(node.src)
         } else if (node.href) {
             return md5(node.href)
-        } else if (node.innerText && '' !== node.innerText) {
+        } else if (node.innerText && `` !== node.innerText) {
             // eslint-disable-line yoda
             return md5(node.innerText)
         } else {
@@ -643,44 +653,44 @@
         }
     }
 
-    var diagScriptId = 'fa-kits-diag'
-    var nodeUnderTestId = 'fa-kits-node-under-test'
-    var md5Attr = 'data-md5'
-    var detectionIgnoreAttr = 'data-fa-detection-ignore'
-    var timeoutAttr = 'data-fa-detection-timeout'
-    var resultsCollectionMaxWaitAttr =
-        'data-fa-detection-results-collection-max-wait'
+    let diagScriptId = `fa-kits-diag`
+    let nodeUnderTestId = `fa-kits-node-under-test`
+    let md5Attr = `data-md5`
+    let detectionIgnoreAttr = `data-fa-detection-ignore`
+    let timeoutAttr = `data-fa-detection-timeout`
+    let resultsCollectionMaxWaitAttr =
+        `data-fa-detection-results-collection-max-wait`
 
-    var silenceErrors = function silenceErrors(e) {
+    let silenceErrors = function silenceErrors(e) {
         e.preventDefault()
         e.stopPropagation()
     }
 
     function pollUntil(_ref) {
-        var _ref$fn = _ref.fn,
-            fn =
+        let _ref$fn = _ref.fn
+        let fn =
                 _ref$fn === void 0
                     ? function () {
-                          return true
-                      }
-                    : _ref$fn,
-            _ref$initialDuration = _ref.initialDuration,
-            initialDuration =
-                _ref$initialDuration === void 0 ? 1 : _ref$initialDuration,
-            _ref$maxDuration = _ref.maxDuration,
-            maxDuration =
+                        return true
+                    }
+                    : _ref$fn
+        let _ref$initialDuration = _ref.initialDuration
+        let initialDuration =
+                _ref$initialDuration === void 0 ? 1 : _ref$initialDuration
+        let _ref$maxDuration = _ref.maxDuration
+        let maxDuration =
                 _ref$maxDuration === void 0
                     ? WINDOW.FontAwesomeDetection.timeout
-                    : _ref$maxDuration,
-            _ref$showProgress = _ref.showProgress,
-            showProgress =
-                _ref$showProgress === void 0 ? false : _ref$showProgress,
-            progressIndicator = _ref.progressIndicator
+                    : _ref$maxDuration
+        let _ref$showProgress = _ref.showProgress
+        let showProgress =
+                _ref$showProgress === void 0 ? false : _ref$showProgress
+        let progressIndicator = _ref.progressIndicator
         return new Promise(function (resolve, reject) {
             // eslint-disable-line compat/compat
             function poll(duration, cumulativeDuration) {
                 setTimeout(function () {
-                    var result = fn()
+                    let result = fn()
 
                     if (showProgress) {
                         console.info(progressIndicator)
@@ -690,14 +700,14 @@
                         // eslint-disable-line no-extra-boolean-cast
                         resolve(result)
                     } else {
-                        var nextDuration = 250
-                        var nextCumulativeDuration =
+                        let nextDuration = 250
+                        let nextCumulativeDuration =
                             nextDuration + cumulativeDuration
 
                         if (nextCumulativeDuration <= maxDuration) {
                             poll(nextDuration, nextCumulativeDuration)
                         } else {
-                            reject('timeout') // eslint-disable-line prefer-promise-reject-errors
+                            reject(`timeout`) // eslint-disable-line prefer-promise-reject-errors
                         }
                     }
                 }, duration)
@@ -708,13 +718,13 @@
     }
 
     function detectWebfontConflicts() {
-        var linkTags = Array.from(DOCUMENT.getElementsByTagName('link')).filter(
+        let linkTags = Array.from(DOCUMENT.getElementsByTagName(`link`)).filter(
             function (t) {
                 return !t.hasAttribute(detectionIgnoreAttr)
             }
         )
-        var styleTags = Array.from(
-            DOCUMENT.getElementsByTagName('style')
+        let styleTags = Array.from(
+            DOCUMENT.getElementsByTagName(`style`)
         ).filter(function (t) {
             if (t.hasAttribute(detectionIgnoreAttr)) {
                 return false
@@ -726,7 +736,7 @@
                 WINDOW.FontAwesomeConfig &&
                 t.innerText.match(
                     new RegExp(
-                        'svg:not\\(:root\\)\\.'.concat(
+                        `svg:not\\(:root\\)\\.`.concat(
                             WINDOW.FontAwesomeConfig.replacementClass
                         )
                     )
@@ -739,19 +749,19 @@
         })
 
         function runDiag(scriptOrLinkTag, md5) {
-            var diagFrame = DOCUMENT.createElement('iframe') // Using "visibility: hidden; position: absolute" instead of "display: none;" because
+            let diagFrame = DOCUMENT.createElement(`iframe`) // Using "visibility: hidden; position: absolute" instead of "display: none;" because
             // Firefox will not return the expected results for getComputedStyle if our iframe has display: none.
 
             diagFrame.setAttribute(
-                'style',
-                'visibility: hidden; position: absolute; height: 0; width: 0;'
+                `style`,
+                `visibility: hidden; position: absolute; height: 0; width: 0;`
             )
-            var testIconId = 'fa-test-icon-' + md5
-            var iTag = DOCUMENT.createElement('i')
-            iTag.setAttribute('class', 'fa fa-coffee')
-            iTag.setAttribute('id', testIconId)
-            var diagScript = DOCUMENT.createElement('script')
-            diagScript.setAttribute('id', diagScriptId) // WARNING: this function will be toString()'d and assigned to innerText of the diag script
+            let testIconId = `fa-test-icon-` + md5
+            let iTag = DOCUMENT.createElement(`i`)
+            iTag.setAttribute(`class`, `fa fa-coffee`)
+            iTag.setAttribute(`id`, testIconId)
+            let diagScript = DOCUMENT.createElement(`script`)
+            diagScript.setAttribute(`id`, diagScriptId) // WARNING: this function will be toString()'d and assigned to innerText of the diag script
             // element that we'll be putting into a diagnostic iframe.
             // That means that this code won't compile until after the outer script has run and injected
             // this code into the iframe. There are some compile time errors that might occur there.
@@ -759,7 +769,7 @@
             // will probably cause it to choke. Chrome will show an error like this:
             // Uncaught SyntaxError: Unexpected end of input
 
-            var diagScriptFun = function diagScriptFun(
+            let diagScriptFun = function diagScriptFun(
                 nodeUnderTestId,
                 testIconId,
                 md5,
@@ -767,10 +777,10 @@
             ) {
                 parent.FontAwesomeDetection.__pollUntil({
                     fn: function fn() {
-                        var iEl = document.getElementById(testIconId)
-                        var computedStyle = window.getComputedStyle(iEl)
-                        var fontFamily =
-                            computedStyle.getPropertyValue('font-family')
+                        let iEl = document.getElementById(testIconId)
+                        let computedStyle = window.getComputedStyle(iEl)
+                        let fontFamily =
+                            computedStyle.getPropertyValue(`font-family`)
 
                         if (
                             !!fontFamily.match(/FontAwesome/) ||
@@ -783,11 +793,11 @@
                     },
                 })
                     .then(function () {
-                        var node = document.getElementById(nodeUnderTestId)
+                        let node = document.getElementById(nodeUnderTestId)
                         parent.postMessage(
                             {
-                                type: 'fontawesome-conflict',
-                                technology: 'webfont',
+                                type: `fontawesome-conflict`,
+                                technology: `webfont`,
                                 href: node.href,
                                 innerText: node.innerText,
                                 tagName: node.tagName,
@@ -797,13 +807,13 @@
                         )
                     })
                     .catch(function (e) {
-                        var node = document.getElementById(nodeUnderTestId)
+                        let node = document.getElementById(nodeUnderTestId)
 
-                        if (e === 'timeout') {
+                        if (e === `timeout`) {
                             parent.postMessage(
                                 {
-                                    type: 'no-conflict',
-                                    technology: 'webfont',
+                                    type: `no-conflict`,
+                                    technology: `webfont`,
                                     href: node.src,
                                     innerText: node.innerText,
                                     tagName: node.tagName,
@@ -817,20 +827,20 @@
                     })
             }
 
-            var parentOrigin =
-                WINDOW.location.origin === 'file://'
-                    ? '*'
+            let parentOrigin =
+                WINDOW.location.origin === `file://`
+                    ? `*`
                     : WINDOW.location.origin
-            diagScript.innerText = '('
-                .concat(diagScriptFun.toString(), ")('")
-                .concat(nodeUnderTestId, "', '")
-                .concat(testIconId || 'foo', "', '")
-                .concat(md5, "', '")
-                .concat(parentOrigin, "');")
+            diagScript.innerText = `(`
+                .concat(diagScriptFun.toString(), `)('`)
+                .concat(nodeUnderTestId, `', '`)
+                .concat(testIconId || `foo`, `', '`)
+                .concat(md5, `', '`)
+                .concat(parentOrigin, `');`)
 
             diagFrame.onload = function () {
                 diagFrame.contentWindow.addEventListener(
-                    'error',
+                    `error`,
                     silenceErrors,
                     true
                 )
@@ -844,23 +854,23 @@
             })
         }
 
-        var cssByMD5 = {}
+        let cssByMD5 = {}
 
-        for (var i = 0; i < linkTags.length; i++) {
-            var linkUnderTest = DOCUMENT.createElement('link')
-            linkUnderTest.setAttribute('id', nodeUnderTestId)
-            linkUnderTest.setAttribute('href', linkTags[i].href)
-            linkUnderTest.setAttribute('rel', linkTags[i].rel)
-            var md5ForLink = md5ForNode(linkTags[i])
+        for (let i = 0; i < linkTags.length; i++) {
+            let linkUnderTest = DOCUMENT.createElement(`link`)
+            linkUnderTest.setAttribute(`id`, nodeUnderTestId)
+            linkUnderTest.setAttribute(`href`, linkTags[i].href)
+            linkUnderTest.setAttribute(`rel`, linkTags[i].rel)
+            let md5ForLink = md5ForNode(linkTags[i])
             linkUnderTest.setAttribute(md5Attr, md5ForLink)
             cssByMD5[md5ForLink] = linkTags[i]
             runDiag(linkUnderTest, md5ForLink)
         }
 
-        for (var _i = 0; _i < styleTags.length; _i++) {
-            var styleUnderTest = DOCUMENT.createElement('style')
-            styleUnderTest.setAttribute('id', nodeUnderTestId)
-            var md5ForStyle = md5ForNode(styleTags[_i])
+        for (let _i = 0; _i < styleTags.length; _i++) {
+            let styleUnderTest = DOCUMENT.createElement(`style`)
+            styleUnderTest.setAttribute(`id`, nodeUnderTestId)
+            let md5ForStyle = md5ForNode(styleTags[_i])
             styleUnderTest.setAttribute(md5Attr, md5ForStyle)
             styleUnderTest.innerText = styleTags[_i].innerText
             cssByMD5[md5ForStyle] = styleTags[_i]
@@ -871,37 +881,37 @@
     }
 
     function detectSvgConflicts(currentScript) {
-        var scripts = Array.from(DOCUMENT.scripts).filter(function (t) {
+        let scripts = Array.from(DOCUMENT.scripts).filter(function (t) {
             return !t.hasAttribute(detectionIgnoreAttr) && t !== currentScript
         })
-        var scriptsByMD5 = {}
+        let scriptsByMD5 = {}
 
-        var _loop = function _loop(scriptIdx) {
-            var diagFrame = DOCUMENT.createElement('iframe')
-            diagFrame.setAttribute('style', 'display:none;')
-            var scriptUnderTest = DOCUMENT.createElement('script')
-            scriptUnderTest.setAttribute('id', nodeUnderTestId)
-            var md5ForScript = md5ForNode(scripts[scriptIdx])
+        let _loop = function _loop(scriptIdx) {
+            let diagFrame = DOCUMENT.createElement(`iframe`)
+            diagFrame.setAttribute(`style`, `display:none;`)
+            let scriptUnderTest = DOCUMENT.createElement(`script`)
+            scriptUnderTest.setAttribute(`id`, nodeUnderTestId)
+            let md5ForScript = md5ForNode(scripts[scriptIdx])
             scriptUnderTest.setAttribute(md5Attr, md5ForScript)
             scriptsByMD5[md5ForScript] = scripts[scriptIdx]
 
-            if (scripts[scriptIdx].src !== '') {
+            if (scripts[scriptIdx].src !== ``) {
                 scriptUnderTest.src = scripts[scriptIdx].src
             }
 
-            if (scripts[scriptIdx].innerText !== '') {
+            if (scripts[scriptIdx].innerText !== ``) {
                 scriptUnderTest.innerText = scripts[scriptIdx].innerText
             }
 
             scriptUnderTest.async = true
-            var diagScript = DOCUMENT.createElement('script')
-            diagScript.setAttribute('id', diagScriptId)
-            var parentOrigin =
-                WINDOW.location.origin === 'file://'
-                    ? '*'
+            let diagScript = DOCUMENT.createElement(`script`)
+            diagScript.setAttribute(`id`, diagScriptId)
+            let parentOrigin =
+                WINDOW.location.origin === `file://`
+                    ? `*`
                     : WINDOW.location.origin
 
-            var diagScriptFun = function diagScriptFun(
+            let diagScriptFun = function diagScriptFun(
                 nodeUnderTestId,
                 md5,
                 parentOrigin
@@ -915,12 +925,12 @@
                     },
                 })
                     .then(function () {
-                        var scriptNode =
+                        let scriptNode =
                             document.getElementById(nodeUnderTestId)
                         parent.postMessage(
                             {
-                                type: 'fontawesome-conflict',
-                                technology: 'js',
+                                type: `fontawesome-conflict`,
+                                technology: `js`,
                                 src: scriptNode.src,
                                 innerText: scriptNode.innerText,
                                 tagName: scriptNode.tagName,
@@ -930,13 +940,13 @@
                         )
                     })
                     .catch(function (e) {
-                        var scriptNode =
+                        let scriptNode =
                             document.getElementById(nodeUnderTestId)
 
-                        if (e === 'timeout') {
+                        if (e === `timeout`) {
                             parent.postMessage(
                                 {
-                                    type: 'no-conflict',
+                                    type: `no-conflict`,
                                     src: scriptNode.src,
                                     innerText: scriptNode.innerText,
                                     tagName: scriptNode.tagName,
@@ -950,15 +960,15 @@
                     })
             }
 
-            diagScript.innerText = '('
-                .concat(diagScriptFun.toString(), ")('")
-                .concat(nodeUnderTestId, "', '")
-                .concat(md5ForScript, "', '")
-                .concat(parentOrigin, "');")
+            diagScript.innerText = `(`
+                .concat(diagScriptFun.toString(), `)('`)
+                .concat(nodeUnderTestId, `', '`)
+                .concat(md5ForScript, `', '`)
+                .concat(parentOrigin, `');`)
 
             diagFrame.onload = function () {
                 diagFrame.contentWindow.addEventListener(
-                    'error',
+                    `error`,
                     silenceErrors,
                     true
                 )
@@ -971,7 +981,7 @@
             })
         }
 
-        for (var scriptIdx = 0; scriptIdx < scripts.length; scriptIdx++) {
+        for (let scriptIdx = 0; scriptIdx < scripts.length; scriptIdx++) {
             _loop(scriptIdx)
         }
 
@@ -979,8 +989,8 @@
     }
 
     function setDoneResults(_ref2) {
-        var nodesTested = _ref2.nodesTested,
-            nodesFound = _ref2.nodesFound
+        let nodesTested = _ref2.nodesTested
+        let nodesFound = _ref2.nodesFound
         WINDOW.FontAwesomeDetection = WINDOW.FontAwesomeDetection || {}
         WINDOW.FontAwesomeDetection.nodesTested = nodesTested
         WINDOW.FontAwesomeDetection.nodesFound = nodesFound
@@ -988,36 +998,36 @@
     }
 
     function conflictDetection() {
-        var report$$1 =
+        let report$$1 =
             arguments.length > 0 && arguments[0] !== undefined
                 ? arguments[0]
                 : function () {}
-        var nodesTested = {
+        let nodesTested = {
             conflict: {},
             noConflict: {},
         }
 
         WINDOW.onmessage = function (e) {
             if (
-                WINDOW.location.origin === 'file://' ||
+                WINDOW.location.origin === `file://` ||
                 e.origin === WINDOW.location.origin
             ) {
                 if (e && e.data) {
-                    if (e.data.type === 'fontawesome-conflict') {
+                    if (e.data.type === `fontawesome-conflict`) {
                         nodesTested.conflict[e.data.md5] = e.data
-                    } else if (e.data.type === 'no-conflict') {
+                    } else if (e.data.type === `no-conflict`) {
                         nodesTested.noConflict[e.data.md5] = e.data
                     }
                 }
             }
         }
 
-        var scriptsToTest = detectSvgConflicts(DOCUMENT.currentScript)
-        var cssToTest = detectWebfontConflicts()
+        let scriptsToTest = detectSvgConflicts(DOCUMENT.currentScript)
+        let cssToTest = detectWebfontConflicts()
 
-        var nodesFound = _objectSpread({}, scriptsToTest, cssToTest)
+        let nodesFound = _objectSpread({}, scriptsToTest, cssToTest)
 
-        var testCount =
+        let testCount =
             Object.keys(scriptsToTest).length + Object.keys(cssToTest).length // The resultsCollectionMaxWait allows for the time between when the tests running under
         // child iframes call postMessage with their results, and when the parent window
         // receives and handles those events with window.onmessage.
@@ -1025,56 +1035,56 @@
         // Naming it something very different from "timeout" is to help avoid the potential ambiguity between
         // these two timeout-related settings.
 
-        var masterTimeout =
+        let masterTimeout =
             WINDOW.FontAwesomeDetection.timeout +
             WINDOW.FontAwesomeDetection.resultsCollectionMaxWait
-        console.group('Font Awesome Detector')
+        console.group(`Font Awesome Detector`)
 
         if (testCount === 0) {
-            console.info('%cAll Good!', 'color: green; font-size: large')
+            console.info(`%cAll Good!`, `color: green; font-size: large`)
             console.info(
-                "We didn't find anything that needs testing for conflicts. Ergo, no conflicts."
+                `We didn't find anything that needs testing for conflicts. Ergo, no conflicts.`
             )
         } else {
-            console.info('Testing '.concat(testCount, ' possible conflicts.'))
+            console.info(`Testing `.concat(testCount, ` possible conflicts.`))
             console.info(
-                "We'll wait about ".concat(
+                `We'll wait about `.concat(
                     Math.round(WINDOW.FontAwesomeDetection.timeout / 10) / 100,
-                    ' seconds while testing these and\n'
+                    ` seconds while testing these and\n`
                 ) +
-                    'then up to another '.concat(
+                    `then up to another `.concat(
                         Math.round(
                             WINDOW.FontAwesomeDetection
                                 .resultsCollectionMaxWait / 10
                         ) / 100,
-                        ' to allow the browser time\n'
+                        ` to allow the browser time\n`
                     ) +
-                    "to accumulate the results. But we'll probably be outta here way before then.\n\n"
+                    `to accumulate the results. But we'll probably be outta here way before then.\n\n`
             )
             console.info(
-                'You can adjust those durations by assigning values to these attributes on the <script> element that loads this detection:'
+                `You can adjust those durations by assigning values to these attributes on the <script> element that loads this detection:`
             )
             console.info(
-                '\t%c'.concat(
+                `\t%c`.concat(
                     timeoutAttr,
-                    "%c: milliseconds to wait for each test before deciding whether it's a conflict."
+                    `%c: milliseconds to wait for each test before deciding whether it's a conflict.`
                 ),
-                'font-weight: bold;',
-                'font-size: normal;'
+                `font-weight: bold;`,
+                `font-size: normal;`
             )
             console.info(
-                '\t%c'.concat(
+                `\t%c`.concat(
                     resultsCollectionMaxWaitAttr,
-                    '%c: milliseconds to wait for the browser to accumulate test results before giving up.'
+                    `%c: milliseconds to wait for the browser to accumulate test results before giving up.`
                 ),
-                'font-weight: bold;',
-                'font-size: normal;'
+                `font-weight: bold;`,
+                `font-size: normal;`
             )
             pollUntil({
                 // Give this overall timer a little extra cushion
                 maxDuration: masterTimeout,
                 showProgress: true,
-                progressIndicator: 'waiting...',
+                progressIndicator: `waiting...`,
                 fn: function fn() {
                     return (
                         Object.keys(nodesTested.conflict).length +
@@ -1084,7 +1094,7 @@
                 },
             })
                 .then(function () {
-                    console.info('DONE!')
+                    console.info(`DONE!`)
                     setDoneResults({
                         nodesTested: nodesTested,
                         nodesFound: nodesFound,
@@ -1096,9 +1106,9 @@
                     console.groupEnd()
                 })
                 .catch(function (e) {
-                    if (e === 'timeout') {
+                    if (e === `timeout`) {
                         console.info(
-                            "TIME OUT! We waited until we got tired. Here's what we found:"
+                            `TIME OUT! We waited until we got tired. Here's what we found:`
                         )
                         setDoneResults({
                             nodesTested: nodesTested,
@@ -1109,9 +1119,9 @@
                             nodesFound: nodesFound,
                         })
                     } else {
-                        console.info('Whoops! We hit an error:', e)
+                        console.info(`Whoops! We hit an error:`, e)
                         console.info(
-                            "Here's what we'd found up until that error:"
+                            `Here's what we'd found up until that error:`
                         )
                         setDoneResults({
                             nodesTested: nodesTested,
@@ -1128,18 +1138,18 @@
         }
     } // Allow clients to access, and in some cases, override some properties
 
-    var initialConfig = WINDOW.FontAwesomeDetection || {} // These can be overridden
+    let initialConfig = WINDOW.FontAwesomeDetection || {} // These can be overridden
 
-    var _default = {
+    let _default = {
         report: report,
-        timeout: +(DOCUMENT.currentScript.getAttribute(timeoutAttr) || '2000'),
+        timeout: +(DOCUMENT.currentScript.getAttribute(timeoutAttr) || `2000`),
         resultsCollectionMaxWait: +(
             DOCUMENT.currentScript.getAttribute(resultsCollectionMaxWaitAttr) ||
-            '5000'
+            `5000`
         ),
     }
 
-    var _config = _objectSpread({}, _default, initialConfig, {
+    let _config = _objectSpread({}, _default, initialConfig, {
         // These cannot be overridden
         __pollUntil: pollUntil,
         md5ForNode: md5ForNode,
@@ -1150,9 +1160,9 @@
 
     WINDOW.FontAwesomeDetection = _config
 
-    var PRODUCTION = (function () {
+    let PRODUCTION = (function () {
         try {
-            return process.env.NODE_ENV === 'production'
+            return process.env.NODE_ENV === `production`
         } catch (e) {
             return false
         }

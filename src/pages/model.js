@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import { Helmet } from "react-helmet"
 
-
 const one = [`
     template: \`
     <z-view style="border-color: #8F6AFA; font-family: 'Montserrat', sans-serif; font-weight: bold; color: #ffffff; border-width: 1px; background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%)">
@@ -60,10 +59,10 @@ const one = [`
 
 
 
-    </z-view>\``
-    ];
-    const context = [
-   `
+    </z-view>\``,
+]
+const context = [
+    `
     template: \`
     <z-view style="border: 1px #0099EE solid;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%); font-size: 32px; color: white;">
      Context
@@ -125,11 +124,11 @@ const one = [`
         </z-spot>
     </z-view>
     \`
-    `
-    ];
+    `,
+]
 
-    const market = [
-   `
+const market = [
+    `
     template: \`
     <z-view style="border: 1px #0099EE solid;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%); font-size: 32px; color: white;">
      Market
@@ -172,11 +171,11 @@ const one = [`
          Industry Analysis
         </z-spot>
 
-    `
-    ];
+    `,
+]
 
-    const brand = [
-   `
+const brand = [
+    `
     template: \`
     <z-view style="border: 1px #0099EE solid;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%); font-size: 32px; color: white;">
      Brand
@@ -218,11 +217,11 @@ const one = [`
         </z-spot>
         </z-view>
 
-    `
-    ];
+    `,
+]
 
-    const growth = [
-   `
+const growth = [
+    `
     template: \`
     <z-view style="border: 1px #0099EE solid;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%); font-size: 32px; color: white;">
      Growth
@@ -245,12 +244,11 @@ const one = [`
 
     </z-view>
 
+    `,
+]
+
+const techstack = [
     `
-    ];
-
-
-    const techstack = [
-   `
     template: \`
     <z-view style="border: 1px #0099EE solid;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%); font-size: 32px; color: white;">
      Tech Stack
@@ -282,10 +280,10 @@ const one = [`
         </z-spot>
     </z-view>
 
+    `,
+]
+const action = [
     `
-    ];
-    const action = [
-   `
     template: \`
     <z-view style="border: 1px #0099EE solid;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%); font-size: 32px; color: white;">
      Action
@@ -308,82 +306,82 @@ const one = [`
 
 
      </z-view>
-    `
-    ];
+    `,
+]
 
-    const personas = [
-   `
+const personas = [
+    `
     template: \`
     <z-view style="border: 1px solid white;  color: white;">
-    Personas  </z-view>\``
-    ];
+    Personas  </z-view>\``,
+]
 
-    const buyers = [
-   `
+const buyers = [
+    `
     template: \`
     <z-view style="border: 1px solid white;  color: white;">
     Buyer Base
-    </z-view>\``
-    ];
+    </z-view>\``,
+]
 
-    const industry = [
-   `
+const industry = [
+    `
     template: \`
     <z-view style="border: 1px solid white;  color: white;">
     Industry Analysis
-    </z-view>\``
-    ];
-    const research = [
-   `
+    </z-view>\``,
+]
+const research = [
+    `
     template: \`
     <z-view style="border: 1px solid white;  color: white;">
     Research Studies
-    </z-view>\``
-    ];
-    const roadblocks = [
-   `
+    </z-view>\``,
+]
+const roadblocks = [
+    `
     template: \`
     <z-view style="border: 1px solid white;  color: white;">
     Roadblocks
-    </z-view>`
-    ]
-    const roots = [
-   `
+    </z-view>`,
+]
+const roots = [
+    `
     template: \`
     <z-view style="border: 1px solid white;  color: white;">
     Roots
-    </z-view>\``
-    ];
-    const constraints = [
-   `
+    </z-view>\``,
+]
+const constraints = [
+    `
     template: \`
     <z-view style="border: 1px solid white;  color: white;">
     Constraints
-    </z-view>\``
-    ];
-    const history = [
-   `
+    </z-view>\``,
+]
+const history = [
+    `
     template: \`
     <z-view style="border: 1px solid white;  color: white;">
     History
-    </z-view>\``
-    ];
-    const vision = [
-   `
+    </z-view>\``,
+]
+const vision = [
+    `
     template: \`
     <z-view style="border: 1px solid white;  color: white; font-size: 16px;">
     A vision serves as your company's north star.
-    </z-view>\``
-    ];
-    const mission = [
-   `
+    </z-view>\``,
+]
+const mission = [
+    `
     template: \`
     <z-view style="border: 1px solid white;  color: white; font-size: 16px; line-height: 16px;">
     A mission statement is what you are doing today to get to tomorrow.
-    </z-view>\``
-    ];
+    </z-view>\``,
+]
 
-  const vueapp= [
+const vueapp = [
     `  new Vue({
       el: '#app',
       components: {
@@ -411,48 +409,45 @@ const one = [`
 
     })`]
 
-
-
 export default class Model extends Component {
-  componentDidMount() {
+    componentDidMount() {
     // set up and use external package as needed
 
-}
-  render(props) {
-    return (
-        <React.Fragment>
- <div id='app' dangerouslySetInnerHTML={{ __html: "<z-canvas :views='$options.components'></z-canvas>" }} />
+    }
+    render(props) {
+        return (
+            <React.Fragment>
+                <div id="app" dangerouslySetInnerHTML={{ __html: `<z-canvas :views='$options.components'></z-canvas>` }} />
 
+                <Helmet>
 
-<Helmet>
+                    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js" type="text/javascript">
+                    </script>
+                    <link href="https://unpkg.com/zircle/dist/zircle.css" rel="stylesheet" />
+                    <link href="/css/hacks.css" rel="stylesheet" />
 
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js" type="text/javascript">
-</script>
-<link href="https://unpkg.com/zircle/dist/zircle.css" rel="stylesheet" />
-<link href="/css/hacks.css" rel="stylesheet" />
-
-<script type="text/javascript" src='https://unpkg.com/zircle'>
-</script>
-        </Helmet>
-        <script dangerouslySetInnerHTML={{ __html: context  }} />
-        <script dangerouslySetInnerHTML={{ __html: one  }} />
-        <script dangerouslySetInnerHTML={{ __html: mission  }} />
-        <script dangerouslySetInnerHTML={{ __html: vision  }} />
-        <script dangerouslySetInnerHTML={{ __html: history  }} />
-        <script dangerouslySetInnerHTML={{ __html: constraints  }} />
-        <script dangerouslySetInnerHTML={{ __html: roots  }} />
-        <script dangerouslySetInnerHTML={{ __html: roadblocks  }} />
-        <script dangerouslySetInnerHTML={{ __html: industry  }} />
-        <script dangerouslySetInnerHTML={{ __html: research  }} />
-        <script dangerouslySetInnerHTML={{ __html: buyers  }} />
-        <script dangerouslySetInnerHTML={{ __html: personas  }} />
-        <script dangerouslySetInnerHTML={{ __html: market  }} />
-        <script dangerouslySetInnerHTML={{ __html: brand  }} />
-        <script dangerouslySetInnerHTML={{ __html: action  }} />
-        <script dangerouslySetInnerHTML={{ __html: techstack  }} />
-        <script dangerouslySetInnerHTML={{ __html: growth  }} />
-        <script dangerouslySetInnerHTML={{ __html: vueapp  }} />
-      </React.Fragment>
-    )
-  }
+                    <script type="text/javascript" src="https://unpkg.com/zircle">
+                    </script>
+                </Helmet>
+                <script dangerouslySetInnerHTML={{ __html: context }} />
+                <script dangerouslySetInnerHTML={{ __html: one }} />
+                <script dangerouslySetInnerHTML={{ __html: mission }} />
+                <script dangerouslySetInnerHTML={{ __html: vision }} />
+                <script dangerouslySetInnerHTML={{ __html: history }} />
+                <script dangerouslySetInnerHTML={{ __html: constraints }} />
+                <script dangerouslySetInnerHTML={{ __html: roots }} />
+                <script dangerouslySetInnerHTML={{ __html: roadblocks }} />
+                <script dangerouslySetInnerHTML={{ __html: industry }} />
+                <script dangerouslySetInnerHTML={{ __html: research }} />
+                <script dangerouslySetInnerHTML={{ __html: buyers }} />
+                <script dangerouslySetInnerHTML={{ __html: personas }} />
+                <script dangerouslySetInnerHTML={{ __html: market }} />
+                <script dangerouslySetInnerHTML={{ __html: brand }} />
+                <script dangerouslySetInnerHTML={{ __html: action }} />
+                <script dangerouslySetInnerHTML={{ __html: techstack }} />
+                <script dangerouslySetInnerHTML={{ __html: growth }} />
+                <script dangerouslySetInnerHTML={{ __html: vueapp }} />
+            </React.Fragment>
+        )
+    }
 }

@@ -17,12 +17,12 @@ import './meditating.component.scss'
 export default function RunAwayLittleGirl() {
     return (
         <>
-        <StaticImage
-            src="./femalemeditation.svg"
-            alt="Run Away Little Girl"
-            layout="fullWidth"
-            className="overflow-visible banner floater meditate meditateimg animate-enter"
-        />
+            <StaticImage
+                src="./femalemeditation.svg"
+                alt="Run Away Little Girl"
+                layout="fullWidth"
+                className="overflow-visible banner floater meditate meditateimg animate-enter"
+            />
         </>
     )
 }

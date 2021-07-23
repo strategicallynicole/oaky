@@ -13,11 +13,11 @@
 module.exports = () => {
     return {
         plugins: [
-            require('postcss-preset-env'),
-            require('postcss-import'),
-            require('tailwindcss'),
-            require('./tailwind.config.js'), // Optional: Load custom Tailwind CSS configuration
-            require('autoprefixer'),
+            require(`postcss-preset-env`),
+            require(`postcss-import`),
+            require(`tailwindcss`),
+            require(`./tailwind.config.js`), // Optional: Load custom Tailwind CSS configuration
+            require(`autoprefixer`),
         ],
     }
 }

@@ -32,6 +32,7 @@
         "eslint": "7.29.0",
         "eslint-plugin-ghost": "2.4.0",
         "eslint-plugin-react": "7.24.0",
+        "svgo-loader": "^3.0.0",
         "tailwindcss-text-fill-stroke": "^1.1.2"
     },
     "dependencies": {

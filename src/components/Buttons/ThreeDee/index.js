@@ -17,21 +17,19 @@ const Button = (props) => {
     const { btntext } = props
     const { btnlink } = props
     return (
-<>
-<div
-          className="wow fadeInLeft"
-          data-wow-delay="100ms"
-          data-wow-duration="1000ms"
+        <>
+            <div
+                className="wow fadeInLeft"
+                data-wow-delay="100ms"
+                data-wow-duration="1000ms"
 
-      >
-      <a className={styles.btn, styles.cta} href={btnlink}>
-{btntext}</a>
+            >
+                <a className={styles.btn, styles.cta} href={btnlink}>
+                    {btntext}</a>
 
-
-      </div>
-      </>
+            </div>
+        </>
     )
-};
-export default Button;
-
+}
+export default Button
 

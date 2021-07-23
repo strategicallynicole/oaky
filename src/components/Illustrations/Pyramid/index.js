@@ -12,18 +12,18 @@
  **/
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
-import * as animations from 'animate.css';
-import './pyramid.scss';
+import * as animations from 'animate.css'
+import './pyramid.scss'
 
 export default function Pyramid() {
     return (
         <>
-        <StaticImage
-            src="./pyramid.svg"
-            alt="Pyramid"
-            layout="fullWidth"
-            className="animate__animated animate__rubberBand animate rubberBand pyramid"
-        />
+            <StaticImage
+                src="./pyramid.svg"
+                alt="Pyramid"
+                layout="fullWidth"
+                className="animate__animated animate__rubberBand animate rubberBand pyramid"
+            />
         </>
     )
 }

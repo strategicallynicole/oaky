@@ -18,12 +18,12 @@ import businessman from './businessman.svg'
 export default function BusinessMan() {
     return (
         <>
-        <img
-            src={businessman}
-            alt="Business Man"
-            layout="fullWidth"
-            className="overflow-visible businessman"
-        />
+            <img
+                src={businessman}
+                alt="Business Man"
+                layout="fullWidth"
+                className="overflow-visible businessman"
+            />
         </>
     )
 }

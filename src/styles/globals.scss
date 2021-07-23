@@ -1,18 +1,18 @@
 $border-color: linear-gradient(90deg, #6633FF 18.59%, #3366FF 68.36%, #0099FF 105%);
 
-@import "./grid.scss";
-@import "./mixins.scss";
+@import "./core/grid.scss";
+@import "./core/_mixins.scss";
 
-@import './default/variables';
-@import './default/mixins';
-@import './default/reset';
-@import './default/typography';
-@import './default/extend';
-@import './default/animations';
-@import './default/animation-text';
-@import './default/shortcode';
-@import './default/spacing';
-
+@import './core/variables';
+@import './core/mixins.scss';
+@import './core/reset';
+@import './core/typography';
+@import './core/extend';
+@import './core/animations';
+@import './core/animation-text';
+@import './core/shortcode';
+@import './core/spacing';
+@import './plugins/zircle.scss';
 /*-- Variables --*/
 
 $border-color: linear-gradient(90deg, #6633FF 18.59%, #3366FF 68.36%, #0099FF 105%);

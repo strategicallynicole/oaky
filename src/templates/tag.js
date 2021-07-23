@@ -16,7 +16,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import { PostCard, Pagination } from '../components/common'
 import { MetaData } from '../components/common/meta'
-import Title from "../components/Titles/h1.js";
+import Title from "../components/Titles/h1.js"
 
 /**
 * Tag page (/tag/:slug)
@@ -38,7 +38,7 @@ const Tag = ({ data, location, pageContext }) => {
             <Layout>
                 <div className="container">
                     <header className="tag-header">
-                    <Title titletext={tag.name} />
+                        <Title titletext={tag.name} />
                         {tag.description ? <p>{tag.description}</p> : null }
                     </header>
                     <section className="post-feed">

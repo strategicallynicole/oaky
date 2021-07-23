@@ -17,14 +17,14 @@ import * as styles from "./index.module.scss"
 export default function RunAwayLittleGirl() {
     return (
         <div className="mobileimageholder">
-        <div className={styles.imgholder}>
-        <StaticImage
-            src="./runawaylittlegirl.webp"
-            alt="Run Away Little Girl"
-            layout="fullWidth"
-            className={styles.runawaylittlegirl, styles.animateEnter, styles.running}
-        />
-        </div>
+            <div className={styles.imgholder}>
+                <StaticImage
+                    src="./runawaylittlegirl.webp"
+                    alt="Run Away Little Girl"
+                    layout="fullWidth"
+                    className={styles.runawaylittlegirl, styles.animateEnter, styles.running}
+                />
+            </div>
         </div>
     )
 }

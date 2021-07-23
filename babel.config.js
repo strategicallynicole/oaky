@@ -11,10 +11,10 @@
     * - Modification    :
 **/
 module.exports = (api) => {
-  api.cache(false)
-  return {
-    presets: ['babel-preset-gatsby', '@babel/preset-react', '@babel/preset-typescript'],
-    plugins: [
-    ]
-  }
+    api.cache(false)
+    return {
+        presets: [`babel-preset-gatsby`, `@babel/preset-react`, `@babel/preset-typescript`],
+        plugins: [
+        ],
+    }
 }

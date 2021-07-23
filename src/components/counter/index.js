@@ -8,17 +8,17 @@ class Counter_Component extends React.Component {
         this.state = {
             start: false,
             inViewport: false,
-            animation_complete: false
+            animation_complete: false,
         }
     }
 
     componentDidUpdate() {
         if (this.state.inViewport !== this.props.inViewport && !this.state.animation_complete) {
-            this.setState({inViewport: this.props.inViewport, value: this.props.state})
+            this.setState({ inViewport: this.props.inViewport, value: this.props.state })
             setTimeout(() => { 
-                this.setState({start: true, animation_complete: true})
+                this.setState({ start: true, animation_complete: true })
             }
-            , this.props.delay);
+            , this.props.delay)
         }
     }
 
@@ -31,7 +31,7 @@ class Counter_Component extends React.Component {
     }
 
     render() {
-        const { value, symbol} = this.props
+        const { value, symbol } = this.props
 
         const Animation = keyframes`
             0%  {color: #04e5e5;}
@@ -61,11 +61,9 @@ class Counter_Component extends React.Component {
                 {this.text()}
             </CounterContainer>
         )
-        
     }
 
     text() {
-
         if (this.props.text) {
             const Text = styled.span`
         
@@ -79,6 +77,6 @@ class Counter_Component extends React.Component {
     }
 }
 
-const Counter = handleViewport(Counter_Component);
+const Counter = handleViewport(Counter_Component)
 
 export default Counter

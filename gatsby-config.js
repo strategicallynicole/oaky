@@ -10,15 +10,15 @@
  * - Author          :
  * - Modification    :
  **/
-const path = require('path')
+const path = require(`path`)
 
-const config = require('./src/utils/siteConfig')
-const generateRSSFeed = require('./src/utils/rss/generate-feed')
+const config = require(`./src/utils/siteConfig`)
+const generateRSSFeed = require(`./src/utils/rss/generate-feed`)
 
 let ghostConfig
 
 try {
-    ghostConfig = require('./.ghost')
+    ghostConfig = require(`./.ghost`)
 } catch (e) {
     ghostConfig = {
         production: {
@@ -28,7 +28,7 @@ try {
     }
 } finally {
     const { apiUrl, contentApiKey } =
-        process.env.NODE_ENV === 'development'
+        process.env.NODE_ENV === `development`
             ? ghostConfig.development
             : ghostConfig.production
 
@@ -40,8 +40,8 @@ try {
 }
 
 if (
-    process.env.NODE_ENV === 'production' &&
-    config.siteUrl === 'http://localhost:8000' &&
+    process.env.NODE_ENV === `production` &&
+    config.siteUrl === `http://localhost:8000` &&
     !process.env.SITEURL
 ) {
     throw new Error(
@@ -59,35 +59,35 @@ if (
 module.exports = {
     siteMetadata: {
         siteUrl: process.env.SITEURL || config.siteUrl,
-        getform_url: 'oakwave.com',
+        getform_url: `oakwave.com`,
     },
     plugins: [
         /**
          *  Content Plugins
          */
         {
-            resolve: 'gatsby-source-filesystem',
+            resolve: `gatsby-source-filesystem`,
             options: {
-                path: path.join(__dirname, 'src', 'pages'),
-                name: 'pages',
+                path: path.join(__dirname, `src`, `pages`),
+                name: `pages`,
             },
         },
-        'gatsby-plugin-image',
+        `gatsby-plugin-image`,
         // Setup for optimised images.
         // See https://www.gatsbyjs.org/packages/gatsby-image/
         {
-            resolve: 'gatsby-source-filesystem',
+            resolve: `gatsby-source-filesystem`,
             options: {
-                path: path.join(__dirname, 'src', 'images'),
-                name: 'images',
+                path: path.join(__dirname, `src`, `images`),
+                name: `images`,
             },
         },
-        'gatsby-plugin-sharp',
-        'gatsby-transformer-sharp',
+        `gatsby-plugin-sharp`,
+        `gatsby-transformer-sharp`,
         {
-            resolve: 'gatsby-source-ghost',
+            resolve: `gatsby-source-ghost`,
             options:
-                process.env.NODE_ENV === 'development'
+                process.env.NODE_ENV === `development`
                     ? ghostConfig.development
                     : ghostConfig.production,
         },
@@ -95,14 +95,14 @@ module.exports = {
          *  Utility Plugins
          */
         {
-            resolve: 'gatsby-plugin-ghost-manifest',
+            resolve: `gatsby-plugin-ghost-manifest`,
             options: {
                 short_name: config.shortTitle,
-                start_url: '/',
+                start_url: `/`,
                 background_color: config.backgroundColor,
                 theme_color: config.themeColor,
-                display: 'minimal-ui',
-                getform_url: '#',
+                display: `minimal-ui`,
+                getform_url: `#`,
                 icon: `static/${config.siteIcon}`,
                 legacy: true,
                 query: `
@@ -120,7 +120,7 @@ module.exports = {
             },
         },
         {
-            resolve: 'gatsby-plugin-feed',
+            resolve: `gatsby-plugin-feed`,
             options: {
                 query: `
                 {
@@ -138,7 +138,7 @@ module.exports = {
             },
         },
         {
-            resolve: 'gatsby-plugin-advanced-sitemap',
+            resolve: `gatsby-plugin-advanced-sitemap`,
             options: {
                 query: `
                 {
@@ -185,76 +185,76 @@ module.exports = {
                 }`,
                 mapping: {
                     allGhostPost: {
-                        sitemap: 'posts',
+                        sitemap: `posts`,
                     },
                     allGhostTag: {
-                        sitemap: 'tags',
+                        sitemap: `tags`,
                     },
                     allGhostAuthor: {
-                        sitemap: 'authors',
+                        sitemap: `authors`,
                     },
                     allGhostPage: {
-                        sitemap: 'pages',
+                        sitemap: `pages`,
                     },
                 },
                 exclude: [
-                    '/dev-404-page',
-                    '/404',
-                    '/404.html',
-                    '/offline-plugin-app-shell-fallback',
+                    `/dev-404-page`,
+                    `/404`,
+                    `/404.html`,
+                    `/offline-plugin-app-shell-fallback`,
                 ],
                 createLinkInHead: true,
                 addUncaughtPages: true,
             },
         },
-        'gatsby-plugin-catch-links',
-        'gatsby-plugin-react-helmet',
-        'gatsby-plugin-force-trailing-slashes',
+        `gatsby-plugin-catch-links`,
+        `gatsby-plugin-react-helmet`,
+        `gatsby-plugin-force-trailing-slashes`,
 
         {
-            resolve: 'gatsby-plugin-anchor-links',
+            resolve: `gatsby-plugin-anchor-links`,
             options: {
                 offset: -100,
             },
         },
         {
-            resolve: 'gatsby-plugin-sass',
+            resolve: `gatsby-plugin-sass`,
 
             options: {
                 sassOptions: {
-                    includePaths: ['./src'],
+                    includePaths: [`./src`],
                 },
                 useResolveUrlLoader: true,
-                implementation: require('sass'),
+                implementation: require(`sass`),
                 postCssPlugins: [
-                    require('postcss-preset-env'),
-                    require('postcss-import'),
-                    require('tailwindcss'),
-                    require('./tailwind.config.js'), // Optional: Load custom Tailwind CSS configuration
-                    require('autoprefixer'),
+                    require(`postcss-preset-env`),
+                    require(`postcss-import`),
+                    require(`tailwindcss`),
+                    require(`./tailwind.config.js`), // Optional: Load custom Tailwind CSS configuration
+                    require(`autoprefixer`),
                 ],
             },
         },
 
-        'gatsby-transformer-yaml',
+        `gatsby-transformer-yaml`,
 
-        'gatsby-plugin-offline',
+        `gatsby-plugin-offline`,
         {
-            resolve: 'gatsby-plugin-google-fonts',
+            resolve: `gatsby-plugin-google-fonts`,
             options: {
                 fonts: [
-                    'Montserrat ital',
-                    'sans-serif:300',
-                    '300i',
-                    '400',
-                    '400i',
-                    '500',
-                    '600',
-                    '700',
-                    '900',
+                    `Montserrat ital`,
+                    `sans-serif:300`,
+                    `300i`,
+                    `400`,
+                    `400i`,
+                    `500`,
+                    `600`,
+                    `700`,
+                    `900`,
                 ],
-                fonts: ['Mulish', 'sans-serif:300', '400', '500', '600', '700'],
-                display: 'swap',
+                fonts: [`Mulish`, `sans-serif:300`, `400`, `500`, `600`, `700`],
+                display: `swap`,
             },
         },
     ],

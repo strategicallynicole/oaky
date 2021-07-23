@@ -51,7 +51,7 @@ exports.onRenderBody = ({ setHeadComponents }, pluginOptions) => {
     }
 
     if (pluginOptions.legacy) {
-        const iconLinkTags = icons.map((icon) => (
+        const iconLinkTags = icons.map(icon => (
             <link
                 key={`gatsby-plugin-manifest-apple-touch-icon-${icon.sizes}`}
                 rel="apple-touch-icon"

@@ -1,11 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-const TestimonialTwo = () => {
-    return (
-        <div>
+const TestimonialTwo = () => (
+    <div>
             
-        </div>
-    )
-}
+    </div>
+)
 
-export default TestimonialTwo;
+export default TestimonialTwo

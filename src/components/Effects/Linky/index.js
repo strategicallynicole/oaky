@@ -3,12 +3,11 @@ import './index.scss'
 //Styeld Component does not support @for loops
 
 class Linky extends React.Component {
-
     render() {
         const { text } = this.props
         const { link } = this.props
 
-        return(
+        return (
             <a className="linky" data-text={text} href={link}>{text}</a>
         )
     }

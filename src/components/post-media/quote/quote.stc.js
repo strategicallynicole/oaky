@@ -1,10 +1,10 @@
-import styled from "styled-components";
-import {themeGet} from '@styled-system/theme-get'
+import styled from "styled-components"
+import { themeGet } from '@styled-system/theme-get'
 
 export const BlogQuote = styled.blockquote `
     position: relative;
     padding: 50px 31px 50px;
-    background: ${themeGet("colors.themeColor")};
+    background: ${themeGet(`colors.themeColor`)};
     text-align: center;
     border-radius: 5px;
     .icon{
@@ -21,4 +21,4 @@ export const BlogQuote = styled.blockquote `
         color: #333;
         margin-bottom: 0;
     }
-`;
+`

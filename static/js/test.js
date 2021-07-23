@@ -1,12 +1,12 @@
 const home = {
-    template: `<z-view>Hello World!</z-view>`
-  }
-  new Vue({
-    el: '#app',
+    template: `<z-view>Hello World!</z-view>`,
+}
+new Vue({
+    el: `#app`,
     components: {
-      home
+        home,
     },
-    mounted () {
-      this.$zircle.setView('home')
-    }
-  })
+    mounted() {
+        this.$zircle.setView(`home`)
+    },
+})

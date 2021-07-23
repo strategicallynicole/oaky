@@ -18,96 +18,96 @@ function LogoComponent(props) {
     const { type } = props
     const { classes } = props
     switch (type) {
-        case 'standard':
-            return (
-                <>
-                    <StaticImage
-                        src="../../images/logo/darkbgwhitelogo.webp"
-                        alt="White Logo"
-                        placeholder="blurred"
-                         layout="constrained"
-                        width={200}                       className={classes}
-                    />
-                </>
-            )
-        case 'darkversion':
-            return (
-                <>
-                    <StaticImage
-                        src="../../images/logo/lightbglogo.webp"
-                        alt="Black Logo"
-                        placeholder="blurred"
-                         layout="constrained"
-                        width={200}
-                        className={classes}
+    case `standard`:
+        return (
+            <>
+                <StaticImage
+                    src="../../images/logo/darkbgwhitelogo.webp"
+                    alt="White Logo"
+                    placeholder="blurred"
+                    layout="constrained"
+                    width={200} className={classes}
+                />
+            </>
+        )
+    case `darkversion`:
+        return (
+            <>
+                <StaticImage
+                    src="../../images/logo/lightbglogo.webp"
+                    alt="Black Logo"
+                    placeholder="blurred"
+                    layout="constrained"
+                    width={200}
+                    className={classes}
 
-                    />
-                </>
-            )
+                />
+            </>
+        )
 
-        case 'stackedwhite':
-            return (
-                <>
-                    <StaticImage
-                        src="../../images/logo/stackedonwhitebg.webp"
-                        alt="White Logo"
-                        placeholder="blurred"
-                         layout="constrained"
-                        width={100}                      className={classes}
-                    />
-                </>
-            )
-        case 'stackeddark':
-            return (
-                <>
-                    <StaticImage
-                        src="../../images/logo/verticalondark.webp"
-                        alt="BlackLogo"
-                        placeholder="blurred"
-                         layout="constrained"
-                        width={200}
-                        className={classes}
-                    />
-                </>
-            )
-        case 'symbol':
-            return (
-                <>
-                    <StaticImage
-                        src="../../images/logo/symbol.svg"
-                        alt="Symbol"
-                        placeholder="blurred"
-                         layout="constrained"
-                        width={200}
-                        className={classes}
-                    />
-                </>
-            )
-        case 'abbreviation':
-            return (
-                <>
-                    <StaticImage
-                        src="../../images/logo/abbreviation.webp"
-                        alt="Abbreviation"
-                        placeholder="blurred"
-                         layout="constrained"
-                        width={75}                      className={classes}
-                    />
-                </>
-            )
-        default:
-            return (
-                <>
-                    <StaticImage
-                        src="../../images/logo/stackedonwhitebg.webp"
-                        alt="Placeholder"
-                        placeholder="blurred"
-                        layout="constrained"
-                        width={400}
-                        className={classes}
-                    />
-                </>
-            )
+    case `stackedwhite`:
+        return (
+            <>
+                <StaticImage
+                    src="../../images/logo/stackedonwhitebg.webp"
+                    alt="White Logo"
+                    placeholder="blurred"
+                    layout="constrained"
+                    width={100} className={classes}
+                />
+            </>
+        )
+    case `stackeddark`:
+        return (
+            <>
+                <StaticImage
+                    src="../../images/logo/verticalondark.webp"
+                    alt="BlackLogo"
+                    placeholder="blurred"
+                    layout="constrained"
+                    width={200}
+                    className={classes}
+                />
+            </>
+        )
+    case `symbol`:
+        return (
+            <>
+                <StaticImage
+                    src="../../images/logo/symbol.svg"
+                    alt="Symbol"
+                    placeholder="blurred"
+                    layout="constrained"
+                    width={200}
+                    className={classes}
+                />
+            </>
+        )
+    case `abbreviation`:
+        return (
+            <>
+                <StaticImage
+                    src="../../images/logo/abbreviation.webp"
+                    alt="Abbreviation"
+                    placeholder="blurred"
+                    layout="constrained"
+                    width={75} className={classes}
+                />
+            </>
+        )
+    default:
+        return (
+            <>
+                <StaticImage
+                    src="../../images/logo/stackedonwhitebg.webp"
+                    alt="Placeholder"
+                    placeholder="blurred"
+                    layout="constrained"
+                    width={400}
+                    className={classes}
+                />
+            </>
+        )
     }
 }
 
@@ -115,19 +115,19 @@ LogoComponent.propTypes = {
     classes: PropTypes.string,
 
     type: PropTypes.oneOf([
-        'standard',
-        'darkversion',
-        'stackedwhite',
-        'stackeddark',
-        'symbol',
-        'abbreviation',
-        'abbreviationwhite',
+        `standard`,
+        `darkversion`,
+        `stackedwhite`,
+        `stackeddark`,
+        `symbol`,
+        `abbreviation`,
+        `abbreviationwhite`,
 
     ]),
 }
 LogoComponent.defaultProps = {
-    type: 'standard',
-    classes: '',
+    type: `standard`,
+    classes: ``,
 
 }
 

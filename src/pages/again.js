@@ -10,15 +10,13 @@
     * - Author          :
     * - Modification    :
 **/
-import React from "react";
-import Layout from "../components/layout";
-
-
+import React from "react"
+import Layout from "../components/layout"
 
 const Modely = () => (
-<>
-<Layout>
-  </Layout>
-  </>
+    <>
+        <Layout>
+        </Layout>
+    </>
 )
-export default Modely;
+export default Modely

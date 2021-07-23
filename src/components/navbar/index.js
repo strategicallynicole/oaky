@@ -3,24 +3,24 @@ import styled from 'styled-components'
 import { Container } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
-var scrollToElement = require('scroll-to-element')
+let scrollToElement = require(`scroll-to-element`)
 
 class Navbar extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-          collapse: false,
-          sticky: false,
-          sections: this.props.sections ? this.props.sections : ['home', 'about', 'services', 'portfolio', 'testimonials', 'clients', 'team', 'blog', 'contact']
+            collapse: false,
+            sticky: false,
+            sections: this.props.sections ? this.props.sections : [`home`, `about`, `services`, `portfolio`, `testimonials`, `clients`, `team`, `blog`, `contact`],
         }
     }
 
     componentDidMount() {
-        window.addEventListener('scroll', this.handleScroll, { passive: true })
+        window.addEventListener(`scroll`, this.handleScroll, { passive: true })
     }
 
     componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleScroll)
+        window.removeEventListener(`scroll`, this.handleScroll)
     }
 
     shouldComponentUpdate(nextProps, nextState) {
@@ -34,7 +34,7 @@ class Navbar extends React.Component {
         }
     }
 
-    handleScroll = event => {
+    handleScroll = (event) => {
         if (window.pageYOffset >= 50) {
             this.setState({ sticky: true })
         } else {
@@ -43,17 +43,15 @@ class Navbar extends React.Component {
     }
 
     collapseNav() {
-        console.log(this.state, 'col')
+        console.log(this.state, `col`)
         if (!this.state.collapse) {
             this.setState({ collapse: true })
         } else {
             this.setState({ collapse: false })
         }
     }
-    
 
     render() {
-
         const NavbarWrapper = styled.div`
             position: absolute;
             z-index: 1;
@@ -132,9 +130,8 @@ class Navbar extends React.Component {
             }
         `
         
-        
-        return(
-            <NavbarWrapper className={`header${this.state.sticky === true ? ' sticky' : ''}`}>
+        return (
+            <NavbarWrapper className={`header${this.state.sticky === true ? ` sticky` : ``}`}>
                 <NavbarContainer>
                     <LogoWrapper className="logo">
                         <Logo src="/img/logo.png" alt="logo" />
@@ -145,8 +142,8 @@ class Navbar extends React.Component {
                     >
                         <FontAwesomeIcon icon={faBars} className="bars" />
                     </Toggler>
-                    <Nav className={`navbar navbar-expand-sm ${this.state.collapse === true ? 'expand' : 'hidden_mobile'}`}>
-                        <NavInner className={`navbar-collapse collapse ${this.state.collapse === true ? 'show' : ''}`}>
+                    <Nav className={`navbar navbar-expand-sm ${this.state.collapse === true ? `expand` : `hidden_mobile`}`}>
+                        <NavInner className={`navbar-collapse collapse ${this.state.collapse === true ? `show` : ``}`}>
                             <div className="navbar-nav">{this.navItems()}</div>
                         </NavInner>
                     </Nav>
@@ -160,11 +157,11 @@ class Navbar extends React.Component {
             const el = document.getElementById(id)
             scrollToElement(el, {
                 offset: 0,
-                ease: 'in-out-expo',
-                duration: 2000
+                ease: `in-out-expo`,
+                duration: 2000,
             })
         } else {
-            window.location.href = `./#${id}`;
+            window.location.href = `./#${id}`
         }
     }
 
@@ -189,13 +186,11 @@ class Navbar extends React.Component {
             }
         `
         
-        return this.state.sections.map((value, index) => {
-            return (
-                <NavItem key={index} onClick={() => this.navigate(value)}>
-                    {value}
-                </NavItem>
-            )
-        })
+        return this.state.sections.map((value, index) => (
+            <NavItem key={index} onClick={() => this.navigate(value)}>
+                {value}
+            </NavItem>
+        ))
     }
 }
 

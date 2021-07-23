@@ -30,56 +30,49 @@ import Counter from '../components/counter'
 * This file renders a single page and loads all the content.
 *
 */
-'use strict';
-const About = ({ location }) => {
+`use strict`
+const About = ({ location }) => (
+    <>
 
-    return (
-        <>
-
-
-            <Layout>
+        <Layout>
             <MetaData location={location} />
 
-                <section className="w-full px-30">
-<Title
-className="wow slideInRight"
-data-wow-delay="1s"
-bgtext='Do You Like Us? Yes/No (circle one)'
-titletext='About Us'
-/>
-                  <div className="flex flex-wrap overflow-hidden">
+            <section className="w-full px-30">
+                <Title
+                    className="wow slideInRight"
+                    data-wow-delay="1s"
+                    bgtext="Do You Like Us? Yes/No (circle one)"
+                    titletext="About Us"
+                />
+                <div className="flex flex-wrap overflow-hidden">
 
+                    <div className="w-full gap-1 pt-20 ml-20 mr-20 overflow-hidden wow sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 slideInRight"
+                        data-wow-delay="1s">
+                        <Definition />
 
-<div className="w-full gap-1 pt-20 ml-20 mr-20 overflow-hidden wow sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 slideInRight"
-data-wow-delay="1s">
-    <Definition />
+                    </div>
 
-</div>
+                    <div className="w-full mr-20 ml-20 overflow-hidden gap-1 pt-60 sm:w-full md:w-1/2 lg:w-1/3 xl:w-1/3 wow slideInRight"
+                        data-wow-delay="1s">
+                        <BusinessMan />
 
-<div class="w-full mr-20 ml-20 overflow-hidden gap-1 pt-60 sm:w-full md:w-1/2 lg:w-1/3 xl:w-1/3 wow slideInRight"
-data-wow-delay="1s">
-    <BusinessMan />
+                    </div>
 
-            </div>
+                </div>
+                {/* The main page content */}
 
+            </section>
 
-</div>
-                        {/* The main page content */}
+            <section className="w-full px-28 wow slideInRight"
+                data-wow-delay="1s">
+                <Quiz /></section>
+            <section className="w-full px-28 wow slideInRight"
+                data-wow-delay="1s"><Counter />
+            </section>
 
-                        </section>
-
-                        <section className="w-full px-28 wow slideInRight"
-data-wow-delay="1s">
-                        <Quiz /></section>
-                        <section className="w-full px-28 wow slideInRight"
-data-wow-delay="1s"><Counter />
-</section>
-
-</Layout>
-        </>
-    )
-}
+        </Layout>
+    </>
+)
 
 export default About
-
 

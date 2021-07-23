@@ -18,30 +18,29 @@ const Button = (props) => {
     const { btntext } = props
     const { btnlink } = props
     return (
-<>
-<a
-          className="rn-button wow fadeInLeft"
-          data-wow-delay="100ms"
-          data-wow-duration="1000ms"
-          href={btnlink}
-      >
-<button class={styles.button, styles.button1}>
-    <span class={styles.buttonContent}>{btntext}</span>
-  </button>
-  </a>
+        <>
+            <a
+                className="rn-button wow fadeInLeft"
+                data-wow-delay="100ms"
+                data-wow-duration="1000ms"
+                href={btnlink}
+            >
+                <button className={styles.button, styles.button1}>
+                    <span className={styles.buttonContent}>{btntext}</span>
+                </button>
+            </a>
 
-      </>
+        </>
     )
-};
+}
 
 Button.propTypes = {
     btntext: PropTypes.string,
-    btnlink: PropTypes.string
+    btnlink: PropTypes.string,
 }
 Button.defaultProps = {
-    btntext: '',
-    btnlink: ''
-
+    btntext: ``,
+    btnlink: ``,
 
 }
-export default Button;
+export default Button

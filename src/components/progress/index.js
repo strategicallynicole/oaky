@@ -1,9 +1,7 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 
-
 class ProgressBar extends React.Component {
-
     render() {
         const { text } = this.props
 
@@ -44,12 +42,11 @@ class ProgressBar extends React.Component {
             animation: ${ColorAnimation} 10s infinite alternate;
         `
 
-
-        return(
+        return (
             <ProgressContainer>
                 <Text>{text}</Text>
                 <Value>{this.props.value}%</Value>
-                <Progress style={{width: `${this.props.value}%`}}></Progress>
+                <Progress style={{ width: `${this.props.value}%` }}></Progress>
             </ProgressContainer>
         )
     }

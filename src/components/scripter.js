@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from 'react'
 
 const scripter =
 
@@ -405,12 +404,7 @@ const one =
     });
      `
 
-    var scriptTag = document.createElement("script");       // Create a <li> node
-    var textnode = document.createTextNode(scripter);  // Create a text node
-    scriptTag.appendChild(textnode);
-
-
-
-
-
+let scriptTag = document.createElement(`script`) // Create a <li> node
+let textnode = document.createTextNode(scripter) // Create a text node
+scriptTag.appendChild(textnode)
 

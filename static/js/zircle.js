@@ -6,9 +6,9 @@ const foo = {
     to-view="context">
     Context
     </z-spot>
-  </z-view>`
-  }
-  const context = {
+  </z-view>`,
+}
+const context = {
     template: `<z-view>
   Context   <z-spot
     slot="extension"
@@ -20,20 +20,20 @@ const foo = {
     :angle="125"
     to-view="mission">
     Mission
-    </z-spot></z-view>`
-  }
-  new Vue({
-    el: '#app',
+    </z-spot></z-view>`,
+}
+new Vue({
+    el: `#app`,
     components: {
-      foo,
-      context
+        foo,
+        context,
     },
-    mounted () {
-      this.$zircle.config({
-        style: {
-          theme: 'black'
-        }
-      })
-      this.$zircle.setView('foo')
-    }
-  })
+    mounted() {
+        this.$zircle.config({
+            style: {
+                theme: `black`,
+            },
+        })
+        this.$zircle.setView(`foo`)
+    },
+})

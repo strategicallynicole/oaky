@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
-import classnames from 'classnames';
-import { FaQuoteRight } from 'react-icons/fa';
+import React, { useState } from 'react'
+import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap'
+import classnames from 'classnames'
+import { FaQuoteRight } from 'react-icons/fa'
 
-import testimonialOne from '../images/testimonial/1.jpg';
-import testimonialTwo from '../images/testimonial/2.jpg';
-import testimonialThree from '../images/testimonial/3.jpg';
-
-
+import testimonialOne from '../images/testimonial/1.jpg'
+import testimonialTwo from '../images/testimonial/2.jpg'
+import testimonialThree from '../images/testimonial/3.jpg'
 
 const Testimonial = () => {
-    const [activeTab, setActiveTab] = useState('1');
-    const toggle = tab => {
-        if(activeTab !== tab) setActiveTab(tab);
+    const [activeTab, setActiveTab] = useState(`1`)
+    const toggle = (tab) => {
+        if (activeTab !== tab) {
+            setActiveTab(tab)
+        }
     }
 
     return (
@@ -91,17 +91,21 @@ const Testimonial = () => {
                                     <Nav className="rn-nav-image-item" tabs>
                                         <NavItem className="first-item">
                                             <NavLink
-                                                className={classnames({ active: activeTab === '1' })}
-                                                onClick={() => { toggle('1'); }}
-                                                >
-                                                    <img src={testimonialOne} alt="Testimonail Images" />
+                                                className={classnames({ active: activeTab === `1` })}
+                                                onClick={() => {
+                                                    toggle(`1`) 
+                                                }}
+                                            >
+                                                <img src={testimonialOne} alt="Testimonail Images" />
                                                     
                                             </NavLink>
                                         </NavItem>
                                         <NavItem>
                                             <NavLink
-                                            className={classnames({ active: activeTab === '2' })}
-                                            onClick={() => { toggle('2'); }}
+                                                className={classnames({ active: activeTab === `2` })}
+                                                onClick={() => {
+                                                    toggle(`2`) 
+                                                }}
                                             >
                                                 <img src={testimonialTwo} alt="Testimonail Images" />
                                             </NavLink>
@@ -109,8 +113,10 @@ const Testimonial = () => {
 
                                         <NavItem>
                                             <NavLink
-                                            className={classnames({ active: activeTab === '3' })}
-                                            onClick={() => { toggle('3'); }}
+                                                className={classnames({ active: activeTab === `3` })}
+                                                onClick={() => {
+                                                    toggle(`3`) 
+                                                }}
                                             >
                                                 <img src={testimonialThree} alt="Testimonail Images" />
                                             </NavLink>

@@ -1,4 +1,3 @@
-
 const one = {
     template: `
     <z-view style="border-color: #8F6AFA; font-family: 'Montserrat', sans-serif; font-weight: bold; color: #ffffff; border-width: 1px; background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%)">
@@ -57,9 +56,9 @@ const one = {
 
 
 
-    </z-view>`
-    };
-    const context = {
+    </z-view>`,
+}
+const context = {
     template: `
     <z-view style="border: 1px #0099EE solid;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%); font-size: 32px; color: white;">
      Context
@@ -119,10 +118,10 @@ const one = {
         to-view="mission" style="border: 1px solid white; font-size: 16px;  color: white;">
     Mission
         </z-spot>
-    </z-view>`
-    };
+    </z-view>`,
+}
 
-    const market = {
+const market = {
     template: `
     <z-view style="border: 1px #0099EE solid;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%); font-size: 32px; color: white;">
      Market
@@ -165,10 +164,10 @@ const one = {
          Industry Analysis
         </z-spot>
 
-    `
-    };
+    `,
+}
 
-    const brand = {
+const brand = {
     template: `
     <z-view style="border: 1px #0099EE solid;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%); font-size: 32px; color: white;">
      Brand
@@ -210,10 +209,10 @@ const one = {
         </z-spot>
         </z-view>
 
-    `
-    };
+    `,
+}
 
-    const growth = {
+const growth = {
     template: `
     <z-view style="border: 1px #0099EE solid;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%); font-size: 32px; color: white;">
      Growth
@@ -236,11 +235,10 @@ const one = {
 
     </z-view>
 
-    `
-    };
+    `,
+}
 
-
-    const techstack = {
+const techstack = {
     template: `
     <z-view style="border: 1px #0099EE solid;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%); font-size: 32px; color: white;">
      Tech Stack
@@ -272,9 +270,9 @@ const one = {
         </z-spot>
     </z-view>
 
-    `
-    };
-    const action = {
+    `,
+}
+const action = {
     template: `
     <z-view style="border: 1px #0099EE solid;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%); font-size: 32px; color: white;">
      Action
@@ -297,95 +295,94 @@ const one = {
 
 
      </z-view>
-    `
-    };
+    `,
+}
 
-    const personas = {
+const personas = {
     template: `
     <z-view style="border: 1px solid white;  color: white;">
-    Personas  </z-view>`
-    };
+    Personas  </z-view>`,
+}
 
-    const buyers = {
+const buyers = {
     template: `
     <z-view style="border: 1px solid white;  color: white;">
     Buyer Base
-    </z-view>`
-    };
+    </z-view>`,
+}
 
-    const industry = {
+const industry = {
     template: `
     <z-view style="border: 1px solid white;  color: white;">
     Industry Analysis
-    </z-view>`
-    };
-    const research = {
+    </z-view>`,
+}
+const research = {
     template: `
     <z-view style="border: 1px solid white;  color: white;">
     Research Studies
-    </z-view>`
-    };
-    const roadblocks = {
+    </z-view>`,
+}
+const roadblocks = {
     template: `
     <z-view style="border: 1px solid white;  color: white;">
     Roadblocks
-    </z-view>`
-    }
-    const roots = {
+    </z-view>`,
+}
+const roots = {
     template: `
     <z-view style="border: 1px solid white;  color: white;">
     Roots
-    </z-view>`
-    };
-    const constraints = {
+    </z-view>`,
+}
+const constraints = {
     template: `
     <z-view style="border: 1px solid white;  color: white;">
     Constraints
-    </z-view>`
-    };
-    const history = {
+    </z-view>`,
+}
+const history = {
     template: `
     <z-view style="border: 1px solid white;  color: white;">
     History
-    </z-view>`
-    };
-    const vision = {
+    </z-view>`,
+}
+const vision = {
     template: `
     <z-view style="border: 1px solid white;  color: white; font-size: 16px;">
     A vision serves as your company's north star.
-    </z-view>`
-    };
-    const mission = {
+    </z-view>`,
+}
+const mission = {
     template: `
     <z-view style="border: 1px solid white;  color: white; font-size: 16px; line-height: 16px;">
     A mission statement is what you are doing today to get to tomorrow.
-    </z-view>`
-    };
-
+    </z-view>`,
+}
 
 new Vue({
-  el: '#app',
-  components: {
-    one,
-    context,
-    vision,
-    mission,
-    history,
-    constraints,
-    roots,
-    roadblocks,
-    industry,
-    research,
-    buyers,
-    personas,
-    market,
-    brand,
-    action,
-    techstack,
-    growth
-  },
-  mounted () {
-    this.$zircle.setView('one')
-  }
+    el: `#app`,
+    components: {
+        one,
+        context,
+        vision,
+        mission,
+        history,
+        constraints,
+        roots,
+        roadblocks,
+        industry,
+        research,
+        buyers,
+        personas,
+        market,
+        brand,
+        action,
+        techstack,
+        growth,
+    },
+    mounted() {
+        this.$zircle.setView(`one`)
+    },
 })
 

@@ -56,9 +56,9 @@ export const one = {
 
 
 
-    </z-view>`
-  }
-  export const context = {
+    </z-view>`,
+}
+export const context = {
     template: `
     <z-view style="border: 1px #0099EE solid;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%); font-size: 32px; color: white;">
      Context
@@ -118,10 +118,10 @@ export const one = {
         to-view="mission" style="border: 1px solid white; font-size: 16px;  color: white;">
   Mission
         </z-spot>
-    </z-view>`
-  }
+    </z-view>`,
+}
 
-  export const market = {
+export const market = {
     template: `
     <z-view style="border: 1px #0099EE solid;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%); font-size: 32px; color: white;">
      Market
@@ -164,10 +164,10 @@ export const one = {
          Industry Analysis
         </z-spot>
 
-  `
-  }
+  `,
+}
 
-  export const brand = {
+export const brand = {
     template: `
     <z-view style="border: 1px #0099EE solid;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%); font-size: 32px; color: white;">
      Brand
@@ -209,10 +209,10 @@ export const one = {
         </z-spot>
         </z-view>
 
-  `
-  }
+  `,
+}
 
-  export  const growth = {
+export const growth = {
     template: `
     <z-view style="border: 1px #0099EE solid;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%); font-size: 32px; color: white;">
      Growth
@@ -235,11 +235,10 @@ export const one = {
 
   </z-view>
 
-  `
-  }
+  `,
+}
 
-
-  export const techstack = {
+export const techstack = {
     template: `
     <z-view style="border: 1px #0099EE solid;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%); font-size: 32px; color: white;">
      Tech Stack
@@ -271,9 +270,9 @@ export const one = {
         </z-spot>
   </z-view>
 
-  `
-  }
-  export const action = {
+  `,
+}
+export const action = {
     template: `
     <z-view style="border: 1px #0099EE solid;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%); font-size: 32px; color: white;">
      Action
@@ -296,67 +295,67 @@ export const one = {
 
 
      </z-view>
-  `
-  }
+  `,
+}
 
-  export const personas = {
+export const personas = {
     template: `
     <z-view style="border: 1px solid white;  color: white;">
-  Personas  </z-view>`
-  }
+  Personas  </z-view>`,
+}
 
-  export  const buyers = {
+export const buyers = {
     template: `
     <z-view style="border: 1px solid white;  color: white;">
   Buyer Base
-    </z-view>`
-  }
+    </z-view>`,
+}
 
-  export const industry = {
+export const industry = {
     template: `
     <z-view style="border: 1px solid white;  color: white;">
   Industry Analysis
-    </z-view>`
-  }
-  export const research = {
+    </z-view>`,
+}
+export const research = {
     template: `
     <z-view style="border: 1px solid white;  color: white;">
   Research Studies
-    </z-view>`
-  }
-  export const roadblocks = {
+    </z-view>`,
+}
+export const roadblocks = {
     template: `
     <z-view style="border: 1px solid white;  color: white;">
   Roadblocks
-    </z-view>`
-  }
-  export const roots = {
+    </z-view>`,
+}
+export const roots = {
     template: `
     <z-view style="border: 1px solid white;  color: white;">
   Roots
-    </z-view>`
-  }
-  export const constraints = {
+    </z-view>`,
+}
+export const constraints = {
     template: `
     <z-view style="border: 1px solid white;  color: white;">
   Constraints
-    </z-view>`
-  }
-  export  const history = {
+    </z-view>`,
+}
+export const history = {
     template: `
     <z-view style="border: 1px solid white;  color: white;">
   History
-    </z-view>`
-  }
-  export  const vision = {
+    </z-view>`,
+}
+export const vision = {
     template: `
     <z-view style="border: 1px solid white;  color: white; font-size: 16px;">
    A vision serves as your company's north star.
-    </z-view>`
-  }
-  export const mission = {
+    </z-view>`,
+}
+export const mission = {
     template: `
     <z-view style="border: 1px solid white;  color: white; font-size: 16px; line-height: 16px;">
   A mission statement is what you are doing today to get to tomorrow.
-    </z-view>`
-  }
+    </z-view>`,
+}

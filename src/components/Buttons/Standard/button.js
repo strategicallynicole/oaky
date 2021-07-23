@@ -13,28 +13,24 @@
 import React from 'react'
 import "./button.comp.scss"
 
-
-function Button (props) {
-const btnlink = props.btnlink;
-const btntext = props.btntext;
+function Button(props) {
+    const btnlink = props.btnlink
+    const btntext = props.btntext
     return (
-<div className="button-group">
+        <div className="button-group">
 
-<a
+            <a
 
-          className="rn-button wow fadeInLeft"
-          data-wow-delay="100ms"
-          data-wow-duration="1000ms"
-          href={btnlink}
-      >
-        <span>{btntext}</span>
-      </a>
+                className="rn-button wow fadeInLeft"
+                data-wow-delay="100ms"
+                data-wow-duration="1000ms"
+                href={btnlink}
+            >
+                <span>{btntext}</span>
+            </a>
 
-</div>
-
-
+        </div>
 
     )
-
-};
-export default Button;
+}
+export default Button

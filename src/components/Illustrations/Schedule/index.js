@@ -12,18 +12,17 @@
  **/
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
-import * as animations from 'animate.css';
-
+import * as animations from 'animate.css'
 
 export default function Alarmed() {
     return (
         <>
-        <StaticImage
-            src="./alarmed.svg"
-            alt="Alarmed"
-            layout="fullWidth"
-            className="overflow-visible animate__jackInTheBox animate__animated"
-        />
+            <StaticImage
+                src="./alarmed.svg"
+                alt="Alarmed"
+                layout="fullWidth"
+                className="overflow-visible animate__jackInTheBox animate__animated"
+            />
         </>
     )
 }

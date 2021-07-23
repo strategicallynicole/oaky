@@ -2,15 +2,15 @@
  * Font Awesome Pro 6.0.0-alpha3 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license (Commercial License)
  */
-;(function () {
+(function () {
     'use strict'
 
     function _typeof(obj) {
         '@babel/helpers - typeof'
 
         if (
-            typeof Symbol === 'function' &&
-            typeof Symbol.iterator === 'symbol'
+            typeof Symbol === `function` &&
+            typeof Symbol.iterator === `symbol`
         ) {
             _typeof = function (obj) {
                 return typeof obj
@@ -18,10 +18,10 @@
         } else {
             _typeof = function (obj) {
                 return obj &&
-                    typeof Symbol === 'function' &&
+                    typeof Symbol === `function` &&
                     obj.constructor === Symbol &&
                     obj !== Symbol.prototype
-                    ? 'symbol'
+                    ? `symbol`
                     : typeof obj
             }
         }
@@ -31,23 +31,29 @@
 
     function _classCallCheck(instance, Constructor) {
         if (!(instance instanceof Constructor)) {
-            throw new TypeError('Cannot call a class as a function')
+            throw new TypeError(`Cannot call a class as a function`)
         }
     }
 
     function _defineProperties(target, props) {
-        for (var i = 0; i < props.length; i++) {
-            var descriptor = props[i]
+        for (let i = 0; i < props.length; i++) {
+            let descriptor = props[i]
             descriptor.enumerable = descriptor.enumerable || false
             descriptor.configurable = true
-            if ('value' in descriptor) descriptor.writable = true
+            if (`value` in descriptor) {
+                descriptor.writable = true
+            }
             Object.defineProperty(target, descriptor.key, descriptor)
         }
     }
 
     function _createClass(Constructor, protoProps, staticProps) {
-        if (protoProps) _defineProperties(Constructor.prototype, protoProps)
-        if (staticProps) _defineProperties(Constructor, staticProps)
+        if (protoProps) {
+            _defineProperties(Constructor.prototype, protoProps)
+        }
+        if (staticProps) {
+            _defineProperties(Constructor, staticProps)
+        }
         return Constructor
     }
 
@@ -67,11 +73,11 @@
     }
 
     function _objectSpread(target) {
-        for (var i = 1; i < arguments.length; i++) {
+        for (let i = 1; i < arguments.length; i++) {
             var source = arguments[i] != null ? Object(arguments[i]) : {}
-            var ownKeys = Object.keys(source)
+            let ownKeys = Object.keys(source)
 
-            if (typeof Object.getOwnPropertySymbols === 'function') {
+            if (typeof Object.getOwnPropertySymbols === `function`) {
                 ownKeys = ownKeys.concat(
                     Object.getOwnPropertySymbols(source).filter(function (sym) {
                         return Object.getOwnPropertyDescriptor(
@@ -109,25 +115,31 @@
     }
 
     function _arrayWithoutHoles(arr) {
-        if (Array.isArray(arr)) return _arrayLikeToArray(arr)
+        if (Array.isArray(arr)) {
+            return _arrayLikeToArray(arr)
+        }
     }
 
     function _arrayWithHoles(arr) {
-        if (Array.isArray(arr)) return arr
+        if (Array.isArray(arr)) {
+            return arr
+        }
     }
 
     function _iterableToArray(iter) {
-        if (typeof Symbol !== 'undefined' && Symbol.iterator in Object(iter))
+        if (typeof Symbol !== `undefined` && Symbol.iterator in Object(iter)) {
             return Array.from(iter)
+        }
     }
 
     function _iterableToArrayLimit(arr, i) {
-        if (typeof Symbol === 'undefined' || !(Symbol.iterator in Object(arr)))
+        if (typeof Symbol === `undefined` || !(Symbol.iterator in Object(arr))) {
             return
-        var _arr = []
-        var _n = true
-        var _d = false
-        var _e = undefined
+        }
+        let _arr = []
+        let _n = true
+        let _d = false
+        let _e = undefined
 
         try {
             for (
@@ -137,16 +149,22 @@
             ) {
                 _arr.push(_s.value)
 
-                if (i && _arr.length === i) break
+                if (i && _arr.length === i) {
+                    break
+                }
             }
         } catch (err) {
             _d = true
             _e = err
         } finally {
             try {
-                if (!_n && _i['return'] != null) _i['return']()
+                if (!_n && _i.return != null) {
+                    _i.return()
+                }
             } finally {
-                if (_d) throw _e
+                if (_d) {
+                    throw _e
+                }
             }
         }
 
@@ -154,102 +172,128 @@
     }
 
     function _unsupportedIterableToArray(o, minLen) {
-        if (!o) return
-        if (typeof o === 'string') return _arrayLikeToArray(o, minLen)
-        var n = Object.prototype.toString.call(o).slice(8, -1)
-        if (n === 'Object' && o.constructor) n = o.constructor.name
-        if (n === 'Map' || n === 'Set') return Array.from(o)
-        if (
-            n === 'Arguments' ||
-            /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)
-        )
+        if (!o) {
+            return
+        }
+        if (typeof o === `string`) {
             return _arrayLikeToArray(o, minLen)
+        }
+        let n = Object.prototype.toString.call(o).slice(8, -1)
+        if (n === `Object` && o.constructor) {
+            n = o.constructor.name
+        }
+        if (n === `Map` || n === `Set`) {
+            return Array.from(o)
+        }
+        if (
+            n === `Arguments` ||
+            /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)
+        ) {
+            return _arrayLikeToArray(o, minLen)
+        }
     }
 
     function _arrayLikeToArray(arr, len) {
-        if (len == null || len > arr.length) len = arr.length
+        if (len == null || len > arr.length) {
+            len = arr.length
+        }
 
-        for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]
+        for (var i = 0, arr2 = new Array(len); i < len; i++) {
+            arr2[i] = arr[i]
+        }
 
         return arr2
     }
 
     function _nonIterableSpread() {
         throw new TypeError(
-            'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+            `Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.`
         )
     }
 
     function _nonIterableRest() {
         throw new TypeError(
-            'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.'
+            `Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.`
         )
     }
 
-    var noop = function noop() {}
+    let noop = function noop() {}
 
-    var _GLOBAL = {}
-    var _SET_TIMEOUT = undefined // eslint-disable-line no-undef-init
+    let _GLOBAL = {}
+    let _SET_TIMEOUT = undefined // eslint-disable-line no-undef-init
 
-    var _SET_IMMEDIATE = undefined // eslint-disable-line no-undef-init
+    let _SET_IMMEDIATE = undefined // eslint-disable-line no-undef-init
 
-    var _WINDOW = {}
-    var _DOCUMENT = {}
-    var _MUTATION_OBSERVER = null
-    var _PERFORMANCE = {
+    let _WINDOW = {}
+    let _DOCUMENT = {}
+    let _MUTATION_OBSERVER = null
+    let _PERFORMANCE = {
         mark: noop,
         measure: noop,
     }
 
     try {
-        if (typeof global !== 'undefined') _GLOBAL = global
-        if (typeof setTimeout === 'function') _SET_TIMEOUT = setTimeout
-        if (typeof setImmediate === 'function') _SET_IMMEDIATE = setImmediate
-        if (typeof window !== 'undefined') _WINDOW = window
-        if (typeof document !== 'undefined') _DOCUMENT = document
-        if (typeof MutationObserver !== 'undefined')
+        if (typeof global !== `undefined`) {
+            _GLOBAL = global
+        }
+        if (typeof setTimeout === `function`) {
+            _SET_TIMEOUT = setTimeout
+        }
+        if (typeof setImmediate === `function`) {
+            _SET_IMMEDIATE = setImmediate
+        }
+        if (typeof window !== `undefined`) {
+            _WINDOW = window
+        }
+        if (typeof document !== `undefined`) {
+            _DOCUMENT = document
+        }
+        if (typeof MutationObserver !== `undefined`) {
             _MUTATION_OBSERVER = MutationObserver
-        if (typeof performance !== 'undefined') _PERFORMANCE = performance
+        }
+        if (typeof performance !== `undefined`) {
+            _PERFORMANCE = performance
+        }
     } catch (e) {}
 
-    var _ref = _WINDOW.navigator || {},
-        _ref$userAgent = _ref.userAgent,
-        userAgent = _ref$userAgent === void 0 ? '' : _ref$userAgent
+    let _ref = _WINDOW.navigator || {}
+    let _ref$userAgent = _ref.userAgent
+    let userAgent = _ref$userAgent === void 0 ? `` : _ref$userAgent
 
-    var GLOBAL = _GLOBAL
-    var SET_TIMEOUT = _SET_TIMEOUT
-    var SET_IMMEDIATE = _SET_IMMEDIATE
-    var WINDOW = _WINDOW
-    var DOCUMENT = _DOCUMENT
-    var MUTATION_OBSERVER = _MUTATION_OBSERVER
-    var PERFORMANCE = _PERFORMANCE
-    var IS_BROWSER = !!WINDOW.document
-    var IS_DOM =
+    let GLOBAL = _GLOBAL
+    let SET_TIMEOUT = _SET_TIMEOUT
+    let SET_IMMEDIATE = _SET_IMMEDIATE
+    let WINDOW = _WINDOW
+    let DOCUMENT = _DOCUMENT
+    let MUTATION_OBSERVER = _MUTATION_OBSERVER
+    let PERFORMANCE = _PERFORMANCE
+    let IS_BROWSER = !!WINDOW.document
+    let IS_DOM =
         !!DOCUMENT.documentElement &&
         !!DOCUMENT.head &&
-        typeof DOCUMENT.addEventListener === 'function' &&
-        typeof DOCUMENT.createElement === 'function'
-    var IS_IE = ~userAgent.indexOf('MSIE') || ~userAgent.indexOf('Trident/')
+        typeof DOCUMENT.addEventListener === `function` &&
+        typeof DOCUMENT.createElement === `function`
+    let IS_IE = ~userAgent.indexOf(`MSIE`) || ~userAgent.indexOf(`Trident/`)
 
-    var PENDING = 'pending'
-    var SETTLED = 'settled'
-    var FULFILLED = 'fulfilled'
-    var REJECTED = 'rejected'
+    let PENDING = `pending`
+    let SETTLED = `settled`
+    let FULFILLED = `fulfilled`
+    let REJECTED = `rejected`
 
-    var NOOP = function NOOP() {}
+    let NOOP = function NOOP() {}
 
-    var isNode =
-        typeof GLOBAL !== 'undefined' &&
-        typeof GLOBAL.process !== 'undefined' &&
-        typeof GLOBAL.process.emit === 'function'
-    var asyncSetTimer =
-        typeof SET_IMMEDIATE !== 'undefined' ? SET_IMMEDIATE : SET_TIMEOUT
-    var asyncQueue = []
-    var asyncTimer
+    let isNode =
+        typeof GLOBAL !== `undefined` &&
+        typeof GLOBAL.process !== `undefined` &&
+        typeof GLOBAL.process.emit === `function`
+    let asyncSetTimer =
+        typeof SET_IMMEDIATE !== `undefined` ? SET_IMMEDIATE : SET_TIMEOUT
+    let asyncQueue = []
+    let asyncTimer
 
     function asyncFlush() {
         // run promise callbacks
-        for (var i = 0; i < asyncQueue.length; i++) {
+        for (let i = 0; i < asyncQueue.length; i++) {
             asyncQueue[i][0](asyncQueue[i][1])
         } // reset async asyncQueue
 
@@ -283,13 +327,13 @@
     }
 
     function invokeCallback(subscriber) {
-        var owner = subscriber.owner
-        var settled = owner._state
-        var value = owner._data
-        var callback = subscriber[settled]
-        var promise = subscriber.then
+        let owner = subscriber.owner
+        let settled = owner._state
+        let value = owner._data
+        let callback = subscriber[settled]
+        let promise = subscriber.then
 
-        if (typeof callback === 'function') {
+        if (typeof callback === `function`) {
             settled = FULFILLED
 
             try {
@@ -311,23 +355,23 @@
     }
 
     function handleThenable(promise, value) {
-        var resolved
+        let resolved
 
         try {
             if (promise === value) {
                 throw new TypeError(
-                    'A promises callback cannot return that same promise.'
+                    `A promises callback cannot return that same promise.`
                 )
             }
 
             if (
                 value &&
-                (typeof value === 'function' || _typeof(value) === 'object')
+                (typeof value === `function` || _typeof(value) === `object`)
             ) {
                 // then should be retrieved only once
-                var then = value.then
+                let then = value.then
 
-                if (typeof then === 'function') {
+                if (typeof then === `function`) {
                     then.call(
                         value,
                         function (val) {
@@ -398,29 +442,29 @@
         publish(promise)
 
         if (!promise._handled && isNode) {
-            GLOBAL.process.emit('unhandledRejection', promise._data, promise)
+            GLOBAL.process.emit(`unhandledRejection`, promise._data, promise)
         }
     }
 
     function notifyRejectionHandled(promise) {
-        GLOBAL.process.emit('rejectionHandled', promise)
+        GLOBAL.process.emit(`rejectionHandled`, promise)
     }
 
-    var P =
+    let P =
         /*#__PURE__*/
         (function () {
             function P(resolver) {
                 _classCallCheck(this, P)
 
-                if (typeof resolver !== 'function') {
+                if (typeof resolver !== `function`) {
                     throw new TypeError(
-                        'Promise resolver ' + resolver + ' is not a function'
+                        `Promise resolver ` + resolver + ` is not a function`
                     )
                 }
 
                 if (this instanceof P === false) {
                     throw new TypeError(
-                        "Failed to construct 'Promise': Please use the 'new' operator, this object constructor cannot be called as a function."
+                        `Failed to construct 'Promise': Please use the 'new' operator, this object constructor cannot be called as a function.`
                     )
                 }
 
@@ -436,9 +480,9 @@
                 P,
                 [
                     {
-                        key: 'then',
+                        key: `then`,
                         value: function then(onFulfillment, onRejection) {
-                            var subscriber = {
+                            let subscriber = {
                                 owner: this,
                                 then: new this.constructor(NOOP),
                                 fulfilled: onFulfillment,
@@ -471,7 +515,7 @@
                         },
                     },
                     {
-                        key: 'catch',
+                        key: `catch`,
                         value: function _catch(onRejection) {
                             return this.then(null, onRejection)
                         },
@@ -479,17 +523,17 @@
                 ],
                 [
                     {
-                        key: 'all',
+                        key: `all`,
                         value: function all(promises) {
                             if (!Array.isArray(promises)) {
                                 throw new TypeError(
-                                    'You must pass an array to Promise.all().'
+                                    `You must pass an array to Promise.all().`
                                 )
                             }
 
                             return new P(function (resolve, reject) {
-                                var results = []
-                                var remaining = 0
+                                let results = []
+                                let remaining = 0
 
                                 function resolver(index) {
                                     remaining++
@@ -511,7 +555,7 @@
 
                                     if (
                                         promise &&
-                                        typeof promise.then === 'function'
+                                        typeof promise.then === `function`
                                     ) {
                                         promise.then(resolver(i), reject)
                                     } else {
@@ -526,11 +570,11 @@
                         },
                     },
                     {
-                        key: 'resolve',
+                        key: `resolve`,
                         value: function resolve(value) {
                             if (
                                 value &&
-                                _typeof(value) === 'object' &&
+                                _typeof(value) === `object` &&
                                 value.constructor === P
                             ) {
                                 return value
@@ -542,7 +586,7 @@
                         },
                     },
                     {
-                        key: 'reject',
+                        key: `reject`,
                         value: function reject(reason) {
                             return new P(function (resolve, reject) {
                                 reject(reason)
@@ -555,127 +599,127 @@
             return P
         })()
 
-    var PromisePonyfill = {
+    let PromisePonyfill = {
         provides: function provides(providers) {
-            if (typeof providers.Promise === 'undefined') {
+            if (typeof providers.Promise === `undefined`) {
                 providers.Promise = P
             }
         },
     }
 
-    var NAMESPACE_IDENTIFIER = '___FONT_AWESOME___'
-    var UNITS_IN_GRID = 16
-    var DEFAULT_FAMILY_PREFIX = 'fa'
-    var DEFAULT_REPLACEMENT_CLASS = 'svg-inline--fa'
-    var DATA_FA_I2SVG = 'data-fa-i2svg'
-    var DATA_FA_PSEUDO_ELEMENT = 'data-fa-pseudo-element'
-    var DATA_FA_PSEUDO_ELEMENT_PENDING = 'data-fa-pseudo-element-pending'
-    var DATA_PREFIX = 'data-prefix'
-    var DATA_ICON = 'data-icon'
-    var HTML_CLASS_I2SVG_BASE_CLASS = 'fontawesome-i2svg'
-    var MUTATION_APPROACH_ASYNC = 'async'
-    var TAGNAMES_TO_SKIP_FOR_PSEUDOELEMENTS = [
-        'HTML',
-        'HEAD',
-        'STYLE',
-        'SCRIPT',
+    let NAMESPACE_IDENTIFIER = `___FONT_AWESOME___`
+    let UNITS_IN_GRID = 16
+    let DEFAULT_FAMILY_PREFIX = `fa`
+    let DEFAULT_REPLACEMENT_CLASS = `svg-inline--fa`
+    let DATA_FA_I2SVG = `data-fa-i2svg`
+    let DATA_FA_PSEUDO_ELEMENT = `data-fa-pseudo-element`
+    let DATA_FA_PSEUDO_ELEMENT_PENDING = `data-fa-pseudo-element-pending`
+    let DATA_PREFIX = `data-prefix`
+    let DATA_ICON = `data-icon`
+    let HTML_CLASS_I2SVG_BASE_CLASS = `fontawesome-i2svg`
+    let MUTATION_APPROACH_ASYNC = `async`
+    let TAGNAMES_TO_SKIP_FOR_PSEUDOELEMENTS = [
+        `HTML`,
+        `HEAD`,
+        `STYLE`,
+        `SCRIPT`,
     ]
-    var PRODUCTION = (function () {
+    let PRODUCTION = (function () {
         try {
-            return 'production' === 'production'
+            return `production` === `production`
         } catch (e) {
             return false
         }
     })()
-    var PREFIX_TO_STYLE = {
-        fas: 'solid',
-        'fa-solid': 'solid',
-        far: 'regular',
-        'far-regular': 'regular',
-        fal: 'light',
-        'fa-light': 'light',
-        fat: 'thin',
-        'fa-thin': 'thin',
-        fad: 'duotone',
-        'fa-duotone': 'duotone',
-        fab: 'brands',
-        'fa-brands': 'brands',
-        fak: 'kit',
-        'fa-kit': 'kit',
-        fa: 'solid',
+    let PREFIX_TO_STYLE = {
+        fas: `solid`,
+        'fa-solid': `solid`,
+        far: `regular`,
+        'far-regular': `regular`,
+        fal: `light`,
+        'fa-light': `light`,
+        fat: `thin`,
+        'fa-thin': `thin`,
+        fad: `duotone`,
+        'fa-duotone': `duotone`,
+        fab: `brands`,
+        'fa-brands': `brands`,
+        fak: `kit`,
+        'fa-kit': `kit`,
+        fa: `solid`,
     }
-    var STYLE_TO_PREFIX = {
-        solid: 'fas',
-        regular: 'far',
-        light: 'fal',
-        thin: 'fat',
-        duotone: 'fad',
-        brands: 'fab',
-        kit: 'fak',
+    let STYLE_TO_PREFIX = {
+        solid: `fas`,
+        regular: `far`,
+        light: `fal`,
+        thin: `fat`,
+        duotone: `fad`,
+        brands: `fab`,
+        kit: `fak`,
     }
-    var ICON_SELECTION_SYNTAX_PATTERN = /fa[srltdbk\-\ ]/ // eslint-disable-line no-useless-escape
+    let ICON_SELECTION_SYNTAX_PATTERN = /fa[srltdbk\-\ ]/ // eslint-disable-line no-useless-escape
 
-    var LAYERS_TEXT_CLASSNAME = 'fa-layers-text'
-    var FONT_FAMILY_PATTERN =
+    let LAYERS_TEXT_CLASSNAME = `fa-layers-text`
+    let FONT_FAMILY_PATTERN =
         /Font Awesome ([6 ]*)(Solid|Regular|Light|Thin|Duotone|Brands|Free|Pro|Kit).*/ // TODO: do we need to handle font-weight for kit SVG pseudo-elements?
 
-    var FONT_WEIGHT_TO_PREFIX = {
-        900: 'fas',
-        400: 'far',
-        normal: 'far',
-        300: 'fal',
-        100: 'fat',
+    let FONT_WEIGHT_TO_PREFIX = {
+        900: `fas`,
+        400: `far`,
+        normal: `far`,
+        300: `fal`,
+        100: `fat`,
     }
-    var oneToTen = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    var oneToTwenty = oneToTen.concat([11, 12, 13, 14, 15, 16, 17, 18, 19, 20])
-    var ATTRIBUTES_WATCHED_FOR_MUTATION = [
-        'class',
-        'data-prefix',
-        'data-icon',
-        'data-fa-transform',
-        'data-fa-mask',
+    let oneToTen = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    let oneToTwenty = oneToTen.concat([11, 12, 13, 14, 15, 16, 17, 18, 19, 20])
+    let ATTRIBUTES_WATCHED_FOR_MUTATION = [
+        `class`,
+        `data-prefix`,
+        `data-icon`,
+        `data-fa-transform`,
+        `data-fa-mask`,
     ]
-    var DUOTONE_CLASSES = {
-        GROUP: 'group',
-        SWAP_OPACITY: 'swap-opacity',
-        PRIMARY: 'primary',
-        SECONDARY: 'secondary',
+    let DUOTONE_CLASSES = {
+        GROUP: `group`,
+        SWAP_OPACITY: `swap-opacity`,
+        PRIMARY: `primary`,
+        SECONDARY: `secondary`,
     }
-    var RESERVED_CLASSES = [
-        '2xs',
-        'xs',
-        'sm',
-        'lg',
-        'xl',
-        '2xl',
-        'beat',
-        'border',
-        'fade',
-        'flash',
-        'flip-both',
-        'flip-horizontal',
-        'flip-vertical',
-        'flip',
-        'fw',
-        'inverse',
-        'layers-counter',
-        'layers-text',
-        'layers',
-        'li',
-        'pull-left',
-        'pull-right',
-        'pulse',
-        'rotate-180',
-        'rotate-270',
-        'rotate-90',
-        'rotate-by',
-        'spin-pulse',
-        'spin-reverse',
-        'spin',
-        'stack-1x',
-        'stack-2x',
-        'stack',
-        'ul',
+    let RESERVED_CLASSES = [
+        `2xs`,
+        `xs`,
+        `sm`,
+        `lg`,
+        `xl`,
+        `2xl`,
+        `beat`,
+        `border`,
+        `fade`,
+        `flash`,
+        `flip-both`,
+        `flip-horizontal`,
+        `flip-vertical`,
+        `flip`,
+        `fw`,
+        `inverse`,
+        `layers-counter`,
+        `layers-text`,
+        `layers`,
+        `li`,
+        `pull-left`,
+        `pull-right`,
+        `pulse`,
+        `rotate-180`,
+        `rotate-270`,
+        `rotate-90`,
+        `rotate-by`,
+        `spin-pulse`,
+        `spin-reverse`,
+        `spin`,
+        `stack-1x`,
+        `stack-2x`,
+        `stack`,
+        `ul`,
         DUOTONE_CLASSES.GROUP,
         DUOTONE_CLASSES.SWAP_OPACITY,
         DUOTONE_CLASSES.PRIMARY,
@@ -683,19 +727,19 @@
     ]
         .concat(
             oneToTen.map(function (n) {
-                return ''.concat(n, 'x')
+                return ``.concat(n, `x`)
             })
         )
         .concat(
             oneToTwenty.map(function (n) {
-                return 'w-'.concat(n)
+                return `w-`.concat(n)
             })
         )
 
-    var initial = WINDOW.FontAwesomeConfig || {}
+    let initial = WINDOW.FontAwesomeConfig || {}
 
     function getAttrConfig(attr) {
-        var element = DOCUMENT.querySelector('script[' + attr + ']')
+        let element = DOCUMENT.querySelector(`script[` + attr + `]`)
 
         if (element) {
             return element.getAttribute(attr)
@@ -706,33 +750,39 @@
         // Getting an empty string will occur if the attribute is set on the HTML tag but without a value
         // We'll assume that this is an indication that it should be toggled to true
         // For example <script data-search-pseudo-elements src="..."></script>
-        if (val === '') return true
-        if (val === 'false') return false
-        if (val === 'true') return true
+        if (val === ``) {
+            return true
+        }
+        if (val === `false`) {
+            return false
+        }
+        if (val === `true`) {
+            return true
+        }
         return val
     }
 
-    if (DOCUMENT && typeof DOCUMENT.querySelector === 'function') {
-        var attrs = [
-            ['data-family-prefix', 'familyPrefix'],
-            ['data-style-default', 'styleDefault'],
-            ['data-replacement-class', 'replacementClass'],
-            ['data-auto-replace-svg', 'autoReplaceSvg'],
-            ['data-auto-add-css', 'autoAddCss'],
-            ['data-auto-a11y', 'autoA11y'],
-            ['data-search-pseudo-elements', 'searchPseudoElements'],
-            ['data-observe-mutations', 'observeMutations'],
-            ['data-mutate-approach', 'mutateApproach'],
-            ['data-keep-original-source', 'keepOriginalSource'],
-            ['data-measure-performance', 'measurePerformance'],
-            ['data-show-missing-icons', 'showMissingIcons'],
+    if (DOCUMENT && typeof DOCUMENT.querySelector === `function`) {
+        let attrs = [
+            [`data-family-prefix`, `familyPrefix`],
+            [`data-style-default`, `styleDefault`],
+            [`data-replacement-class`, `replacementClass`],
+            [`data-auto-replace-svg`, `autoReplaceSvg`],
+            [`data-auto-add-css`, `autoAddCss`],
+            [`data-auto-a11y`, `autoA11y`],
+            [`data-search-pseudo-elements`, `searchPseudoElements`],
+            [`data-observe-mutations`, `observeMutations`],
+            [`data-mutate-approach`, `mutateApproach`],
+            [`data-keep-original-source`, `keepOriginalSource`],
+            [`data-measure-performance`, `measurePerformance`],
+            [`data-show-missing-icons`, `showMissingIcons`],
         ]
         attrs.forEach(function (_ref) {
-            var _ref2 = _slicedToArray(_ref, 2),
-                attr = _ref2[0],
-                key = _ref2[1]
+            let _ref2 = _slicedToArray(_ref, 2)
+            let attr = _ref2[0]
+            let key = _ref2[1]
 
-            var val = coerce(getAttrConfig(attr))
+            let val = coerce(getAttrConfig(attr))
 
             if (val !== undefined && val !== null) {
                 initial[key] = val
@@ -740,7 +790,7 @@
         })
     }
 
-    var _default = {
+    let _default = {
         familyPrefix: DEFAULT_FAMILY_PREFIX,
         styleDefault: null,
         replacementClass: DEFAULT_REPLACEMENT_CLASS,
@@ -749,22 +799,24 @@
         autoA11y: true,
         searchPseudoElements: false,
         observeMutations: true,
-        mutateApproach: 'async',
+        mutateApproach: `async`,
         keepOriginalSource: true,
         measurePerformance: false,
         showMissingIcons: true,
     }
 
-    var _config = _objectSpread({}, _default, initial)
+    let _config = _objectSpread({}, _default, initial)
 
-    if (!_config.autoReplaceSvg) _config.observeMutations = false
+    if (!_config.autoReplaceSvg) {
+        _config.observeMutations = false
+    }
 
-    var config = _objectSpread({}, _config)
+    let config = _objectSpread({}, _config)
 
     WINDOW.FontAwesomeConfig = config
 
-    var d = UNITS_IN_GRID
-    var meaninglessTransform = {
+    let d = UNITS_IN_GRID
+    let meaninglessTransform = {
         size: 16,
         x: 0,
         y: 0,
@@ -801,17 +853,17 @@
             return
         }
 
-        var style = DOCUMENT.createElement('style')
-        style.setAttribute('type', 'text/css')
+        let style = DOCUMENT.createElement(`style`)
+        style.setAttribute(`type`, `text/css`)
         style.innerHTML = css
-        var headChildren = DOCUMENT.head.childNodes
-        var beforeChild = null
+        let headChildren = DOCUMENT.head.childNodes
+        let beforeChild = null
 
-        for (var i = headChildren.length - 1; i > -1; i--) {
-            var child = headChildren[i]
-            var tagName = (child.tagName || '').toUpperCase()
+        for (let i = headChildren.length - 1; i > -1; i--) {
+            let child = headChildren[i]
+            let tagName = (child.tagName || ``).toUpperCase()
 
-            if (['STYLE', 'LINK'].indexOf(tagName) > -1) {
+            if ([`STYLE`, `LINK`].indexOf(tagName) > -1) {
                 beforeChild = child
             }
         }
@@ -819,11 +871,11 @@
         DOCUMENT.head.insertBefore(style, beforeChild)
         return css
     }
-    var idPool =
-        '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    let idPool =
+        `0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`
     function nextUniqueId() {
-        var size = 12
-        var id = ''
+        let size = 12
+        let id = ``
 
         while (size-- > 0) {
             id += idPool[(Math.random() * 62) | 0]
@@ -832,9 +884,9 @@
         return id
     }
     function toArray(obj) {
-        var array = []
+        let array = []
 
-        for (var i = (obj || []).length >>> 0; i--; ) {
+        for (let i = (obj || []).length >>> 0; i--;) {
             array[i] = obj[i]
         }
 
@@ -844,21 +896,21 @@
         if (node.classList) {
             return toArray(node.classList)
         } else {
-            return (node.getAttribute('class') || '')
-                .split(' ')
+            return (node.getAttribute(`class`) || ``)
+                .split(` `)
                 .filter(function (i) {
                     return i
                 })
         }
     }
     function getIconName(familyPrefix, cls) {
-        var parts = cls.split('-')
-        var prefix = parts[0]
-        var iconName = parts.slice(1).join('-')
+        let parts = cls.split(`-`)
+        let prefix = parts[0]
+        let iconName = parts.slice(1).join(`-`)
 
         if (
             prefix === familyPrefix &&
-            iconName !== '' &&
+            iconName !== `` &&
             !isReserved(iconName)
         ) {
             return iconName
@@ -867,33 +919,33 @@
         }
     }
     function htmlEscape(str) {
-        return ''
+        return ``
             .concat(str)
-            .replace(/&/g, '&amp;')
-            .replace(/"/g, '&quot;')
-            .replace(/'/g, '&#39;')
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;')
+            .replace(/&/g, `&amp;`)
+            .replace(/"/g, `&quot;`)
+            .replace(/'/g, `&#39;`)
+            .replace(/</g, `&lt;`)
+            .replace(/>/g, `&gt;`)
     }
     function joinAttributes(attributes) {
         return Object.keys(attributes || {})
             .reduce(function (acc, attributeName) {
                 return (
                     acc +
-                    ''
-                        .concat(attributeName, '="')
-                        .concat(htmlEscape(attributes[attributeName]), '" ')
+                    ``
+                        .concat(attributeName, `="`)
+                        .concat(htmlEscape(attributes[attributeName]), `" `)
                 )
-            }, '')
+            }, ``)
             .trim()
     }
     function joinStyles(styles) {
         return Object.keys(styles || {}).reduce(function (acc, styleName) {
             return (
                 acc +
-                ''.concat(styleName, ': ').concat(styles[styleName].trim(), ';')
+                ``.concat(styleName, `: `).concat(styles[styleName].trim(), `;`)
             )
-        }, '')
+        }, ``)
     }
     function transformIsMeaningful(transform) {
         return (
@@ -906,27 +958,27 @@
         )
     }
     function transformForSvg(_ref) {
-        var transform = _ref.transform,
-            containerWidth = _ref.containerWidth,
-            iconWidth = _ref.iconWidth
-        var outer = {
-            transform: 'translate('.concat(containerWidth / 2, ' 256)'),
+        let transform = _ref.transform
+        let containerWidth = _ref.containerWidth
+        let iconWidth = _ref.iconWidth
+        let outer = {
+            transform: `translate(`.concat(containerWidth / 2, ` 256)`),
         }
-        var innerTranslate = 'translate('
-            .concat(transform.x * 32, ', ')
-            .concat(transform.y * 32, ') ')
-        var innerScale = 'scale('
-            .concat((transform.size / 16) * (transform.flipX ? -1 : 1), ', ')
-            .concat((transform.size / 16) * (transform.flipY ? -1 : 1), ') ')
-        var innerRotate = 'rotate('.concat(transform.rotate, ' 0 0)')
-        var inner = {
-            transform: ''
-                .concat(innerTranslate, ' ')
-                .concat(innerScale, ' ')
+        let innerTranslate = `translate(`
+            .concat(transform.x * 32, `, `)
+            .concat(transform.y * 32, `) `)
+        let innerScale = `scale(`
+            .concat((transform.size / 16) * (transform.flipX ? -1 : 1), `, `)
+            .concat((transform.size / 16) * (transform.flipY ? -1 : 1), `) `)
+        let innerRotate = `rotate(`.concat(transform.rotate, ` 0 0)`)
+        let inner = {
+            transform: ``
+                .concat(innerTranslate, ` `)
+                .concat(innerScale, ` `)
                 .concat(innerRotate),
         }
-        var path = {
-            transform: 'translate('.concat((iconWidth / 2) * -1, ' -256)'),
+        let path = {
+            transform: `translate(`.concat((iconWidth / 2) * -1, ` -256)`),
         }
         return {
             outer: outer,
@@ -935,61 +987,61 @@
         }
     }
     function transformForCss(_ref2) {
-        var transform = _ref2.transform,
-            _ref2$width = _ref2.width,
-            width = _ref2$width === void 0 ? UNITS_IN_GRID : _ref2$width,
-            _ref2$height = _ref2.height,
-            height = _ref2$height === void 0 ? UNITS_IN_GRID : _ref2$height,
-            _ref2$startCentered = _ref2.startCentered,
-            startCentered =
+        let transform = _ref2.transform
+        let _ref2$width = _ref2.width
+        let width = _ref2$width === void 0 ? UNITS_IN_GRID : _ref2$width
+        let _ref2$height = _ref2.height
+        let height = _ref2$height === void 0 ? UNITS_IN_GRID : _ref2$height
+        let _ref2$startCentered = _ref2.startCentered
+        let startCentered =
                 _ref2$startCentered === void 0 ? false : _ref2$startCentered
-        var val = ''
+        let val = ``
 
         if (startCentered && IS_IE) {
-            val += 'translate('
-                .concat(transform.x / d - width / 2, 'em, ')
-                .concat(transform.y / d - height / 2, 'em) ')
+            val += `translate(`
+                .concat(transform.x / d - width / 2, `em, `)
+                .concat(transform.y / d - height / 2, `em) `)
         } else if (startCentered) {
-            val += 'translate(calc(-50% + '
-                .concat(transform.x / d, 'em), calc(-50% + ')
-                .concat(transform.y / d, 'em)) ')
+            val += `translate(calc(-50% + `
+                .concat(transform.x / d, `em), calc(-50% + `)
+                .concat(transform.y / d, `em)) `)
         } else {
-            val += 'translate('
-                .concat(transform.x / d, 'em, ')
-                .concat(transform.y / d, 'em) ')
+            val += `translate(`
+                .concat(transform.x / d, `em, `)
+                .concat(transform.y / d, `em) `)
         }
 
-        val += 'scale('
-            .concat((transform.size / d) * (transform.flipX ? -1 : 1), ', ')
-            .concat((transform.size / d) * (transform.flipY ? -1 : 1), ') ')
-        val += 'rotate('.concat(transform.rotate, 'deg) ')
+        val += `scale(`
+            .concat((transform.size / d) * (transform.flipX ? -1 : 1), `, `)
+            .concat((transform.size / d) * (transform.flipY ? -1 : 1), `) `)
+        val += `rotate(`.concat(transform.rotate, `deg) `)
         return val
     }
 
-    var baseStyles =
-        'svg:not(:root).svg-inline--fa{overflow:visible;-webkit-box-sizing:content-box;box-sizing:content-box}.svg-inline--fa{display:inline-block;display:var(--fa-display,inline-block);height:1em;overflow:visible;vertical-align:-.125em}.svg-inline--fa.fa-2xs{vertical-align:.1em}.svg-inline--fa.fa-xs{vertical-align:0}.svg-inline--fa.fa-sm{vertical-align:-.0714285714em}.svg-inline--fa.fa-lg{vertical-align:-.2em}.svg-inline--fa.fa-xl{vertical-align:-.25em}.svg-inline--fa.fa-2xl{vertical-align:-.3125em}.svg-inline--fa.fa-w-1{width:.0625em}.svg-inline--fa.fa-w-2{width:.125em}.svg-inline--fa.fa-w-3{width:.1875em}.svg-inline--fa.fa-w-4{width:.25em}.svg-inline--fa.fa-w-5{width:.3125em}.svg-inline--fa.fa-w-6{width:.375em}.svg-inline--fa.fa-w-7{width:.4375em}.svg-inline--fa.fa-w-8{width:.5em}.svg-inline--fa.fa-w-9{width:.5625em}.svg-inline--fa.fa-w-10{width:.625em}.svg-inline--fa.fa-w-11{width:.6875em}.svg-inline--fa.fa-w-12{width:.75em}.svg-inline--fa.fa-w-13{width:.8125em}.svg-inline--fa.fa-w-14{width:.875em}.svg-inline--fa.fa-w-15{width:.9375em}.svg-inline--fa.fa-w-16{width:1em}.svg-inline--fa.fa-w-17{width:1.0625em}.svg-inline--fa.fa-w-18{width:1.125em}.svg-inline--fa.fa-w-19{width:1.1875em}.svg-inline--fa.fa-w-20{width:1.25em}.svg-inline--fa.fa-pull-left{margin-right:.3em;margin-right:var(--fa-pull-margin,.3em);width:auto}.svg-inline--fa.fa-pull-right{margin-left:.3em;margin-left:var(--fa-pull-margin,.3em);width:auto}.svg-inline--fa.fa-border{height:1.5em}.svg-inline--fa.fa-li{width:2em;width:var(--fa-li-width,2em);top:.25em}.svg-inline--fa.fa-fw{width:1.25em;width:var(--fa-fw-width,1.25em)}.fa-layers svg.svg-inline--fa{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.fa-layers-counter,.fa-layers-text{display:inline-block;position:absolute;text-align:center}.fa-layers{display:inline-block;height:1em;position:relative;text-align:center;vertical-align:-.125em;width:1em}.fa-layers svg.svg-inline--fa{-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-text{left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter{background-color:#ff253a;background-color:var(--fa-counter-background-color,#ff253a);border-radius:1em;border-radius:var(--fa-counter-border-radius,1em);-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff;color:var(--fa-inverse,#fff);line-height:1;line-height:var(--fa-counter-line-height,1);max-width:5em;max-width:var(--fa-counter-max-width,5em);min-width:1.5em;min-width:var(--fa-counter-min-width,1.5em);overflow:hidden;padding:.25em .5em;padding:var(--fa-counter-padding,.25em .5em);right:0;right:var(--fa-right,0);text-overflow:ellipsis;top:0;top:var(--fa-top,0);-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform:scale(var(--fa-counter-scale,.25));transform:scale(var(--fa-counter-scale,.25));-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-bottom-right{bottom:0;bottom:var(--fa-bottom,0);right:0;right:var(--fa-right,0);top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform:scale(var(--fa-layers-scale,.25));transform:scale(var(--fa-layers-scale,.25));-webkit-transform-origin:bottom right;transform-origin:bottom right}.fa-layers-bottom-left{bottom:0;bottom:var(--fa-bottom,0);left:0;left:var(--fa-left,0);right:auto;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform:scale(var(--fa-layers-scale,.25));transform:scale(var(--fa-layers-scale,.25));-webkit-transform-origin:bottom left;transform-origin:bottom left}.fa-layers-top-right{top:0;top:var(--fa-top,0);right:0;right:var(--fa-right,0);-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform:scale(var(--fa-layers-scale,.25));transform:scale(var(--fa-layers-scale,.25));-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-top-left{left:0;left:var(--fa-left,0);right:auto;top:0;top:var(--fa-top,0);-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform:scale(var(--fa-layers-scale,.25));transform:scale(var(--fa-layers-scale,.25));-webkit-transform-origin:top left;transform-origin:top left}.fa-1x{font-size:1em}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-6x{font-size:6em}.fa-7x{font-size:7em}.fa-8x{font-size:8em}.fa-9x{font-size:9em}.fa-10x{font-size:10em}.fa-2xs{font-size:.625em;line-height:.1em;vertical-align:.225em}.fa-xs{font-size:.75em;line-height:.0833333333em;vertical-align:.125em}.fa-sm{font-size:.875em;line-height:.0714285714em;vertical-align:.0535714286em}.fa-lg{font-size:1.25em;line-height:.05em;vertical-align:-.075em}.fa-xl{font-size:1.5em;line-height:.0416666667em;vertical-align:-.125em}.fa-2xl{font-size:2em;line-height:.03125em;vertical-align:-.1875em}.fa-fw{text-align:center;width:1.25em}.fa-ul{list-style-type:none;margin-left:2.5em;margin-left:var(--fa-li-margin,2.5em);padding-left:0}.fa-ul>li{position:relative}.fa-li{left:calc(2em * -1);left:calc(var(--fa-li-width,2em) * -1);position:absolute;text-align:center;width:2em;width:var(--fa-li-width,2em);line-height:inherit}.fa-border{border-color:#eee;border-color:var(--fa-border-color,#eee);border-radius:.1em;border-radius:var(--fa-border-radius,.1em);border-style:solid;border-style:var(--fa-border-style,solid);border-width:.08em;border-width:var(--fa-border-width,.08em);padding:.2em .25em .15em;padding:var(--fa-border-padding,.2em .25em .15em)}.fa-pull-left{float:left;margin-right:.3em;margin-right:var(--fa-pull-margin,.3em)}.fa-pull-right{float:right;margin-left:.3em;margin-left:var(--fa-pull-margin,.3em)}.fa-beat{-webkit-animation-name:fa-beat;animation-name:fa-beat;-webkit-animation-delay:0;animation-delay:0;-webkit-animation-delay:var(--fa-animation-delay,0);animation-delay:var(--fa-animation-delay,0);-webkit-animation-direction:normal;animation-direction:normal;-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-duration:var(--fa-animation-duration,1s);animation-duration:var(--fa-animation-duration,1s);-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;-webkit-animation-timing-function:var(--fa-animation-timing,ease-in-out);animation-timing-function:var(--fa-animation-timing,ease-in-out)}.fa-fade{-webkit-animation-name:fa-fade;animation-name:fa-fade;-webkit-animation-delay:0;animation-delay:0;-webkit-animation-delay:var(--fa-animation-delay,0);animation-delay:var(--fa-animation-delay,0);-webkit-animation-direction:normal;animation-direction:normal;-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-duration:var(--fa-animation-duration,1s);animation-duration:var(--fa-animation-duration,1s);-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:cubic-bezier(.4,0,.6,1);animation-timing-function:cubic-bezier(.4,0,.6,1);-webkit-animation-timing-function:var(--fa-animation-timing,cubic-bezier(.4,0,.6,1));animation-timing-function:var(--fa-animation-timing,cubic-bezier(.4,0,.6,1))}.fa-flash{-webkit-animation-name:fa-flash;animation-name:fa-flash;-webkit-animation-delay:0;animation-delay:0;-webkit-animation-delay:var(--fa-animation-delay,0);animation-delay:var(--fa-animation-delay,0);-webkit-animation-direction:normal;animation-direction:normal;-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-duration:var(--fa-animation-duration,1s);animation-duration:var(--fa-animation-duration,1s);-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:cubic-bezier(.4,0,.6,1);animation-timing-function:cubic-bezier(.4,0,.6,1);-webkit-animation-timing-function:var(--fa-animation-timing,cubic-bezier(.4,0,.6,1));animation-timing-function:var(--fa-animation-timing,cubic-bezier(.4,0,.6,1))}.fa-flip{-webkit-animation-name:fa-flip;animation-name:fa-flip;-webkit-animation-delay:0;animation-delay:0;-webkit-animation-delay:var(--fa-animation-delay,0);animation-delay:var(--fa-animation-delay,0);-webkit-animation-direction:normal;animation-direction:normal;-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-duration:var(--fa-animation-duration,1s);animation-duration:var(--fa-animation-duration,1s);-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;-webkit-animation-timing-function:var(--fa-animation-timing,ease-in-out);animation-timing-function:var(--fa-animation-timing,ease-in-out)}.fa-spin{-webkit-animation-name:fa-spin;animation-name:fa-spin;-webkit-animation-delay:0;animation-delay:0;-webkit-animation-delay:var(--fa-animation-delay,0);animation-delay:var(--fa-animation-delay,0);-webkit-animation-direction:normal;animation-direction:normal;-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:2s;animation-duration:2s;-webkit-animation-duration:var(--fa-animation-duration,2s);animation-duration:var(--fa-animation-duration,2s);-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:linear;animation-timing-function:linear;-webkit-animation-timing-function:var(--fa-animation-timing,linear);animation-timing-function:var(--fa-animation-timing,linear)}.fa-spin-reverse{--fa-animation-direction:reverse}.fa-pulse,.fa-spin-pulse{-webkit-animation-name:fa-spin;animation-name:fa-spin;-webkit-animation-direction:normal;animation-direction:normal;-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-duration:var(--fa-animation-duration,1s);animation-duration:var(--fa-animation-duration,1s);-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:steps(8);animation-timing-function:steps(8);-webkit-animation-timing-function:var(--fa-animation-timing,steps(8));animation-timing-function:var(--fa-animation-timing,steps(8))}@media (prefers-reduced-motion:reduce){.fa-beat,.fa-fade,.fa-flash,.fa-flip,.fa-pulse,.fa-spin,.fa-spin-pulse{-webkit-animation-delay:-1ms;animation-delay:-1ms;-webkit-animation-duration:1ms;animation-duration:1ms;-webkit-animation-iteration-count:1;animation-iteration-count:1;-webkit-transition-delay:0s;transition-delay:0s;-webkit-transition-duration:0s;transition-duration:0s}}@-webkit-keyframes fa-beat{0%,90%{-webkit-transform:scale(1);transform:scale(1)}45%{-webkit-transform:scale(1.25);transform:scale(1.25);-webkit-transform:scale(var(--fa-beat-scale,1.25));transform:scale(var(--fa-beat-scale,1.25))}}@keyframes fa-beat{0%,90%{-webkit-transform:scale(1);transform:scale(1)}45%{-webkit-transform:scale(1.25);transform:scale(1.25);-webkit-transform:scale(var(--fa-beat-scale,1.25));transform:scale(var(--fa-beat-scale,1.25))}}@-webkit-keyframes fa-fade{50%{opacity:.4;opacity:var(--fa-fade-opacity,.4)}}@keyframes fa-fade{50%{opacity:.4;opacity:var(--fa-fade-opacity,.4)}}@-webkit-keyframes fa-flash{0%,100%{opacity:.4;opacity:var(--fa-flash-opacity,.4);-webkit-transform:scale(1);transform:scale(1)}50%{opacity:1;-webkit-transform:scale(1.125);transform:scale(1.125);-webkit-transform:scale(var(--fa-flash-scale,1.125));transform:scale(var(--fa-flash-scale,1.125))}}@keyframes fa-flash{0%,100%{opacity:.4;opacity:var(--fa-flash-opacity,.4);-webkit-transform:scale(1);transform:scale(1)}50%{opacity:1;-webkit-transform:scale(1.125);transform:scale(1.125);-webkit-transform:scale(var(--fa-flash-scale,1.125));transform:scale(var(--fa-flash-scale,1.125))}}@-webkit-keyframes fa-flip{50%{-webkit-transform:rotate3d(0,1,0,-180deg);transform:rotate3d(0,1,0,-180deg);-webkit-transform:rotate3d(var(--fa-flip-x,0),var(--fa-flip-y,1),var(--fa-flip-z,0),var(--fa-flip-angle,-180deg));transform:rotate3d(var(--fa-flip-x,0),var(--fa-flip-y,1),var(--fa-flip-z,0),var(--fa-flip-angle,-180deg))}}@keyframes fa-flip{50%{-webkit-transform:rotate3d(0,1,0,-180deg);transform:rotate3d(0,1,0,-180deg);-webkit-transform:rotate3d(var(--fa-flip-x,0),var(--fa-flip-y,1),var(--fa-flip-z,0),var(--fa-flip-angle,-180deg));transform:rotate3d(var(--fa-flip-x,0),var(--fa-flip-y,1),var(--fa-flip-z,0),var(--fa-flip-angle,-180deg))}}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.fa-rotate-90{-webkit-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{-webkit-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{-webkit-transform:scale(-1,1);transform:scale(-1,1)}.fa-flip-vertical{-webkit-transform:scale(1,-1);transform:scale(1,-1)}.fa-flip-both,.fa-flip-horizontal.fa-flip-vertical{-webkit-transform:scale(-1,-1);transform:scale(-1,-1)}.fa-rotate-by{-webkit-transform:rotate(none);transform:rotate(none);-webkit-transform:rotate(var(--fa-rotate-angle,none));transform:rotate(var(--fa-rotate-angle,none))}.fa-stack{display:inline-block;vertical-align:middle;height:2em;position:relative;width:2.5em}.fa-stack-1x,.fa-stack-2x{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0;z-index:auto;z-index:var(--fa-stack-z-index,auto)}.svg-inline--fa.fa-stack-1x{height:1em;width:1.25em}.svg-inline--fa.fa-stack-2x{height:2em;width:2.5em}.fa-inverse{color:#fff;color:var(--fa-inverse,#fff)}.fa-sr-only,.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}.fa-sr-only-focusable:not(:focus),.sr-only-focusable:not(:focus){position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}.svg-inline--fa .fa-primary{fill:currentColor;fill:var(--fa-primary-color,currentColor);opacity:1;opacity:var(--fa-primary-opacity,1)}.svg-inline--fa .fa-secondary{fill:currentColor;fill:var(--fa-secondary-color,currentColor);opacity:.4;opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-primary{opacity:.4;opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-secondary{opacity:1;opacity:var(--fa-primary-opacity,1)}.svg-inline--fa mask .fa-primary,.svg-inline--fa mask .fa-secondary{fill:#000}.fa-duotone.fa-inverse,.fad.fa-inverse{color:#fff;color:var(--fa-inverse,#fff)}'
+    let baseStyles =
+        `svg:not(:root).svg-inline--fa{overflow:visible;-webkit-box-sizing:content-box;box-sizing:content-box}.svg-inline--fa{display:inline-block;display:var(--fa-display,inline-block);height:1em;overflow:visible;vertical-align:-.125em}.svg-inline--fa.fa-2xs{vertical-align:.1em}.svg-inline--fa.fa-xs{vertical-align:0}.svg-inline--fa.fa-sm{vertical-align:-.0714285714em}.svg-inline--fa.fa-lg{vertical-align:-.2em}.svg-inline--fa.fa-xl{vertical-align:-.25em}.svg-inline--fa.fa-2xl{vertical-align:-.3125em}.svg-inline--fa.fa-w-1{width:.0625em}.svg-inline--fa.fa-w-2{width:.125em}.svg-inline--fa.fa-w-3{width:.1875em}.svg-inline--fa.fa-w-4{width:.25em}.svg-inline--fa.fa-w-5{width:.3125em}.svg-inline--fa.fa-w-6{width:.375em}.svg-inline--fa.fa-w-7{width:.4375em}.svg-inline--fa.fa-w-8{width:.5em}.svg-inline--fa.fa-w-9{width:.5625em}.svg-inline--fa.fa-w-10{width:.625em}.svg-inline--fa.fa-w-11{width:.6875em}.svg-inline--fa.fa-w-12{width:.75em}.svg-inline--fa.fa-w-13{width:.8125em}.svg-inline--fa.fa-w-14{width:.875em}.svg-inline--fa.fa-w-15{width:.9375em}.svg-inline--fa.fa-w-16{width:1em}.svg-inline--fa.fa-w-17{width:1.0625em}.svg-inline--fa.fa-w-18{width:1.125em}.svg-inline--fa.fa-w-19{width:1.1875em}.svg-inline--fa.fa-w-20{width:1.25em}.svg-inline--fa.fa-pull-left{margin-right:.3em;margin-right:var(--fa-pull-margin,.3em);width:auto}.svg-inline--fa.fa-pull-right{margin-left:.3em;margin-left:var(--fa-pull-margin,.3em);width:auto}.svg-inline--fa.fa-border{height:1.5em}.svg-inline--fa.fa-li{width:2em;width:var(--fa-li-width,2em);top:.25em}.svg-inline--fa.fa-fw{width:1.25em;width:var(--fa-fw-width,1.25em)}.fa-layers svg.svg-inline--fa{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.fa-layers-counter,.fa-layers-text{display:inline-block;position:absolute;text-align:center}.fa-layers{display:inline-block;height:1em;position:relative;text-align:center;vertical-align:-.125em;width:1em}.fa-layers svg.svg-inline--fa{-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-text{left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter{background-color:#ff253a;background-color:var(--fa-counter-background-color,#ff253a);border-radius:1em;border-radius:var(--fa-counter-border-radius,1em);-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff;color:var(--fa-inverse,#fff);line-height:1;line-height:var(--fa-counter-line-height,1);max-width:5em;max-width:var(--fa-counter-max-width,5em);min-width:1.5em;min-width:var(--fa-counter-min-width,1.5em);overflow:hidden;padding:.25em .5em;padding:var(--fa-counter-padding,.25em .5em);right:0;right:var(--fa-right,0);text-overflow:ellipsis;top:0;top:var(--fa-top,0);-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform:scale(var(--fa-counter-scale,.25));transform:scale(var(--fa-counter-scale,.25));-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-bottom-right{bottom:0;bottom:var(--fa-bottom,0);right:0;right:var(--fa-right,0);top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform:scale(var(--fa-layers-scale,.25));transform:scale(var(--fa-layers-scale,.25));-webkit-transform-origin:bottom right;transform-origin:bottom right}.fa-layers-bottom-left{bottom:0;bottom:var(--fa-bottom,0);left:0;left:var(--fa-left,0);right:auto;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform:scale(var(--fa-layers-scale,.25));transform:scale(var(--fa-layers-scale,.25));-webkit-transform-origin:bottom left;transform-origin:bottom left}.fa-layers-top-right{top:0;top:var(--fa-top,0);right:0;right:var(--fa-right,0);-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform:scale(var(--fa-layers-scale,.25));transform:scale(var(--fa-layers-scale,.25));-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-top-left{left:0;left:var(--fa-left,0);right:auto;top:0;top:var(--fa-top,0);-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform:scale(var(--fa-layers-scale,.25));transform:scale(var(--fa-layers-scale,.25));-webkit-transform-origin:top left;transform-origin:top left}.fa-1x{font-size:1em}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-6x{font-size:6em}.fa-7x{font-size:7em}.fa-8x{font-size:8em}.fa-9x{font-size:9em}.fa-10x{font-size:10em}.fa-2xs{font-size:.625em;line-height:.1em;vertical-align:.225em}.fa-xs{font-size:.75em;line-height:.0833333333em;vertical-align:.125em}.fa-sm{font-size:.875em;line-height:.0714285714em;vertical-align:.0535714286em}.fa-lg{font-size:1.25em;line-height:.05em;vertical-align:-.075em}.fa-xl{font-size:1.5em;line-height:.0416666667em;vertical-align:-.125em}.fa-2xl{font-size:2em;line-height:.03125em;vertical-align:-.1875em}.fa-fw{text-align:center;width:1.25em}.fa-ul{list-style-type:none;margin-left:2.5em;margin-left:var(--fa-li-margin,2.5em);padding-left:0}.fa-ul>li{position:relative}.fa-li{left:calc(2em * -1);left:calc(var(--fa-li-width,2em) * -1);position:absolute;text-align:center;width:2em;width:var(--fa-li-width,2em);line-height:inherit}.fa-border{border-color:#eee;border-color:var(--fa-border-color,#eee);border-radius:.1em;border-radius:var(--fa-border-radius,.1em);border-style:solid;border-style:var(--fa-border-style,solid);border-width:.08em;border-width:var(--fa-border-width,.08em);padding:.2em .25em .15em;padding:var(--fa-border-padding,.2em .25em .15em)}.fa-pull-left{float:left;margin-right:.3em;margin-right:var(--fa-pull-margin,.3em)}.fa-pull-right{float:right;margin-left:.3em;margin-left:var(--fa-pull-margin,.3em)}.fa-beat{-webkit-animation-name:fa-beat;animation-name:fa-beat;-webkit-animation-delay:0;animation-delay:0;-webkit-animation-delay:var(--fa-animation-delay,0);animation-delay:var(--fa-animation-delay,0);-webkit-animation-direction:normal;animation-direction:normal;-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-duration:var(--fa-animation-duration,1s);animation-duration:var(--fa-animation-duration,1s);-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;-webkit-animation-timing-function:var(--fa-animation-timing,ease-in-out);animation-timing-function:var(--fa-animation-timing,ease-in-out)}.fa-fade{-webkit-animation-name:fa-fade;animation-name:fa-fade;-webkit-animation-delay:0;animation-delay:0;-webkit-animation-delay:var(--fa-animation-delay,0);animation-delay:var(--fa-animation-delay,0);-webkit-animation-direction:normal;animation-direction:normal;-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-duration:var(--fa-animation-duration,1s);animation-duration:var(--fa-animation-duration,1s);-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:cubic-bezier(.4,0,.6,1);animation-timing-function:cubic-bezier(.4,0,.6,1);-webkit-animation-timing-function:var(--fa-animation-timing,cubic-bezier(.4,0,.6,1));animation-timing-function:var(--fa-animation-timing,cubic-bezier(.4,0,.6,1))}.fa-flash{-webkit-animation-name:fa-flash;animation-name:fa-flash;-webkit-animation-delay:0;animation-delay:0;-webkit-animation-delay:var(--fa-animation-delay,0);animation-delay:var(--fa-animation-delay,0);-webkit-animation-direction:normal;animation-direction:normal;-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-duration:var(--fa-animation-duration,1s);animation-duration:var(--fa-animation-duration,1s);-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:cubic-bezier(.4,0,.6,1);animation-timing-function:cubic-bezier(.4,0,.6,1);-webkit-animation-timing-function:var(--fa-animation-timing,cubic-bezier(.4,0,.6,1));animation-timing-function:var(--fa-animation-timing,cubic-bezier(.4,0,.6,1))}.fa-flip{-webkit-animation-name:fa-flip;animation-name:fa-flip;-webkit-animation-delay:0;animation-delay:0;-webkit-animation-delay:var(--fa-animation-delay,0);animation-delay:var(--fa-animation-delay,0);-webkit-animation-direction:normal;animation-direction:normal;-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-duration:var(--fa-animation-duration,1s);animation-duration:var(--fa-animation-duration,1s);-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;-webkit-animation-timing-function:var(--fa-animation-timing,ease-in-out);animation-timing-function:var(--fa-animation-timing,ease-in-out)}.fa-spin{-webkit-animation-name:fa-spin;animation-name:fa-spin;-webkit-animation-delay:0;animation-delay:0;-webkit-animation-delay:var(--fa-animation-delay,0);animation-delay:var(--fa-animation-delay,0);-webkit-animation-direction:normal;animation-direction:normal;-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:2s;animation-duration:2s;-webkit-animation-duration:var(--fa-animation-duration,2s);animation-duration:var(--fa-animation-duration,2s);-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:linear;animation-timing-function:linear;-webkit-animation-timing-function:var(--fa-animation-timing,linear);animation-timing-function:var(--fa-animation-timing,linear)}.fa-spin-reverse{--fa-animation-direction:reverse}.fa-pulse,.fa-spin-pulse{-webkit-animation-name:fa-spin;animation-name:fa-spin;-webkit-animation-direction:normal;animation-direction:normal;-webkit-animation-direction:var(--fa-animation-direction,normal);animation-direction:var(--fa-animation-direction,normal);-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-duration:var(--fa-animation-duration,1s);animation-duration:var(--fa-animation-duration,1s);-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-iteration-count:var(--fa-animation-iteration-count,infinite);animation-iteration-count:var(--fa-animation-iteration-count,infinite);-webkit-animation-timing-function:steps(8);animation-timing-function:steps(8);-webkit-animation-timing-function:var(--fa-animation-timing,steps(8));animation-timing-function:var(--fa-animation-timing,steps(8))}@media (prefers-reduced-motion:reduce){.fa-beat,.fa-fade,.fa-flash,.fa-flip,.fa-pulse,.fa-spin,.fa-spin-pulse{-webkit-animation-delay:-1ms;animation-delay:-1ms;-webkit-animation-duration:1ms;animation-duration:1ms;-webkit-animation-iteration-count:1;animation-iteration-count:1;-webkit-transition-delay:0s;transition-delay:0s;-webkit-transition-duration:0s;transition-duration:0s}}@-webkit-keyframes fa-beat{0%,90%{-webkit-transform:scale(1);transform:scale(1)}45%{-webkit-transform:scale(1.25);transform:scale(1.25);-webkit-transform:scale(var(--fa-beat-scale,1.25));transform:scale(var(--fa-beat-scale,1.25))}}@keyframes fa-beat{0%,90%{-webkit-transform:scale(1);transform:scale(1)}45%{-webkit-transform:scale(1.25);transform:scale(1.25);-webkit-transform:scale(var(--fa-beat-scale,1.25));transform:scale(var(--fa-beat-scale,1.25))}}@-webkit-keyframes fa-fade{50%{opacity:.4;opacity:var(--fa-fade-opacity,.4)}}@keyframes fa-fade{50%{opacity:.4;opacity:var(--fa-fade-opacity,.4)}}@-webkit-keyframes fa-flash{0%,100%{opacity:.4;opacity:var(--fa-flash-opacity,.4);-webkit-transform:scale(1);transform:scale(1)}50%{opacity:1;-webkit-transform:scale(1.125);transform:scale(1.125);-webkit-transform:scale(var(--fa-flash-scale,1.125));transform:scale(var(--fa-flash-scale,1.125))}}@keyframes fa-flash{0%,100%{opacity:.4;opacity:var(--fa-flash-opacity,.4);-webkit-transform:scale(1);transform:scale(1)}50%{opacity:1;-webkit-transform:scale(1.125);transform:scale(1.125);-webkit-transform:scale(var(--fa-flash-scale,1.125));transform:scale(var(--fa-flash-scale,1.125))}}@-webkit-keyframes fa-flip{50%{-webkit-transform:rotate3d(0,1,0,-180deg);transform:rotate3d(0,1,0,-180deg);-webkit-transform:rotate3d(var(--fa-flip-x,0),var(--fa-flip-y,1),var(--fa-flip-z,0),var(--fa-flip-angle,-180deg));transform:rotate3d(var(--fa-flip-x,0),var(--fa-flip-y,1),var(--fa-flip-z,0),var(--fa-flip-angle,-180deg))}}@keyframes fa-flip{50%{-webkit-transform:rotate3d(0,1,0,-180deg);transform:rotate3d(0,1,0,-180deg);-webkit-transform:rotate3d(var(--fa-flip-x,0),var(--fa-flip-y,1),var(--fa-flip-z,0),var(--fa-flip-angle,-180deg));transform:rotate3d(var(--fa-flip-x,0),var(--fa-flip-y,1),var(--fa-flip-z,0),var(--fa-flip-angle,-180deg))}}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.fa-rotate-90{-webkit-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{-webkit-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{-webkit-transform:scale(-1,1);transform:scale(-1,1)}.fa-flip-vertical{-webkit-transform:scale(1,-1);transform:scale(1,-1)}.fa-flip-both,.fa-flip-horizontal.fa-flip-vertical{-webkit-transform:scale(-1,-1);transform:scale(-1,-1)}.fa-rotate-by{-webkit-transform:rotate(none);transform:rotate(none);-webkit-transform:rotate(var(--fa-rotate-angle,none));transform:rotate(var(--fa-rotate-angle,none))}.fa-stack{display:inline-block;vertical-align:middle;height:2em;position:relative;width:2.5em}.fa-stack-1x,.fa-stack-2x{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0;z-index:auto;z-index:var(--fa-stack-z-index,auto)}.svg-inline--fa.fa-stack-1x{height:1em;width:1.25em}.svg-inline--fa.fa-stack-2x{height:2em;width:2.5em}.fa-inverse{color:#fff;color:var(--fa-inverse,#fff)}.fa-sr-only,.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}.fa-sr-only-focusable:not(:focus),.sr-only-focusable:not(:focus){position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}.svg-inline--fa .fa-primary{fill:currentColor;fill:var(--fa-primary-color,currentColor);opacity:1;opacity:var(--fa-primary-opacity,1)}.svg-inline--fa .fa-secondary{fill:currentColor;fill:var(--fa-secondary-color,currentColor);opacity:.4;opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-primary{opacity:.4;opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-secondary{opacity:1;opacity:var(--fa-primary-opacity,1)}.svg-inline--fa mask .fa-primary,.svg-inline--fa mask .fa-secondary{fill:#000}.fa-duotone.fa-inverse,.fad.fa-inverse{color:#fff;color:var(--fa-inverse,#fff)}`
 
     function css() {
-        var dfp = DEFAULT_FAMILY_PREFIX
-        var drc = DEFAULT_REPLACEMENT_CLASS
-        var fp = config.familyPrefix
-        var rc = config.replacementClass
-        var s = baseStyles
+        let dfp = DEFAULT_FAMILY_PREFIX
+        let drc = DEFAULT_REPLACEMENT_CLASS
+        let fp = config.familyPrefix
+        let rc = config.replacementClass
+        let s = baseStyles
 
         if (fp !== dfp || rc !== drc) {
-            var dPatt = new RegExp('\\.'.concat(dfp, '\\-'), 'g')
-            var customPropPatt = new RegExp('\\--'.concat(dfp, '\\-'), 'g')
-            var rPatt = new RegExp('\\.'.concat(drc), 'g')
+            let dPatt = new RegExp(`\\.`.concat(dfp, `\\-`), `g`)
+            let customPropPatt = new RegExp(`\\--`.concat(dfp, `\\-`), `g`)
+            let rPatt = new RegExp(`\\.`.concat(drc), `g`)
             s = s
-                .replace(dPatt, '.'.concat(fp, '-'))
-                .replace(customPropPatt, '--'.concat(fp, '-'))
-                .replace(rPatt, '.'.concat(rc))
+                .replace(dPatt, `.`.concat(fp, `-`))
+                .replace(customPropPatt, `--`.concat(fp, `-`))
+                .replace(rPatt, `.`.concat(rc))
         }
 
         return s
     }
 
-    var _cssInserted = false
+    let _cssInserted = false
 
     function ensureCss() {
         if (config.autoAddCss && !_cssInserted) {
@@ -998,7 +1050,7 @@
         }
     }
 
-    var InjectCSS = {
+    let InjectCSS = {
         mixout: function mixout() {
             return {
                 dom: {
@@ -1019,17 +1071,25 @@
         },
     }
 
-    var w = WINDOW || {}
-    if (!w[NAMESPACE_IDENTIFIER]) w[NAMESPACE_IDENTIFIER] = {}
-    if (!w[NAMESPACE_IDENTIFIER].styles) w[NAMESPACE_IDENTIFIER].styles = {}
-    if (!w[NAMESPACE_IDENTIFIER].hooks) w[NAMESPACE_IDENTIFIER].hooks = {}
-    if (!w[NAMESPACE_IDENTIFIER].shims) w[NAMESPACE_IDENTIFIER].shims = []
-    var namespace = w[NAMESPACE_IDENTIFIER]
+    let w = WINDOW || {}
+    if (!w[NAMESPACE_IDENTIFIER]) {
+        w[NAMESPACE_IDENTIFIER] = {}
+    }
+    if (!w[NAMESPACE_IDENTIFIER].styles) {
+        w[NAMESPACE_IDENTIFIER].styles = {}
+    }
+    if (!w[NAMESPACE_IDENTIFIER].hooks) {
+        w[NAMESPACE_IDENTIFIER].hooks = {}
+    }
+    if (!w[NAMESPACE_IDENTIFIER].shims) {
+        w[NAMESPACE_IDENTIFIER].shims = []
+    }
+    let namespace = w[NAMESPACE_IDENTIFIER]
 
-    var functions = []
+    let functions = []
 
-    var listener = function listener() {
-        DOCUMENT.removeEventListener('DOMContentLoaded', listener)
+    let listener = function listener() {
+        DOCUMENT.removeEventListener(`DOMContentLoaded`, listener)
         loaded = 1
         functions.map(function (fn) {
             return fn()
@@ -1042,31 +1102,35 @@
         loaded = (
             DOCUMENT.documentElement.doScroll ? /^loaded|^c/ : /^loaded|^i|^c/
         ).test(DOCUMENT.readyState)
-        if (!loaded) DOCUMENT.addEventListener('DOMContentLoaded', listener)
+        if (!loaded) {
+            DOCUMENT.addEventListener(`DOMContentLoaded`, listener)
+        }
     }
 
     function domready(fn) {
-        if (!IS_DOM) return
+        if (!IS_DOM) {
+            return
+        }
         loaded ? setTimeout(fn, 0) : functions.push(fn)
     }
 
     function toHtml(abstractNodes) {
-        var tag = abstractNodes.tag,
-            _abstractNodes$attrib = abstractNodes.attributes,
-            attributes =
-                _abstractNodes$attrib === void 0 ? {} : _abstractNodes$attrib,
-            _abstractNodes$childr = abstractNodes.children,
-            children =
+        let tag = abstractNodes.tag
+        let _abstractNodes$attrib = abstractNodes.attributes
+        let attributes =
+                _abstractNodes$attrib === void 0 ? {} : _abstractNodes$attrib
+        let _abstractNodes$childr = abstractNodes.children
+        let children =
                 _abstractNodes$childr === void 0 ? [] : _abstractNodes$childr
 
-        if (typeof abstractNodes === 'string') {
+        if (typeof abstractNodes === `string`) {
             return htmlEscape(abstractNodes)
         } else {
-            return '<'
-                .concat(tag, ' ')
-                .concat(joinAttributes(attributes), '>')
-                .concat(children.map(toHtml).join(''), '</')
-                .concat(tag, '>')
+            return `<`
+                .concat(tag, ` `)
+                .concat(joinAttributes(attributes), `>`)
+                .concat(children.map(toHtml).join(``), `</`)
+                .concat(tag, `>`)
         }
     }
 
@@ -1075,7 +1139,7 @@
      * to a given context.
      */
 
-    var bindInternal4 = function bindInternal4(func, thisContext) {
+    let bindInternal4 = function bindInternal4(func, thisContext) {
         return function (a, b, c, d) {
             return func.call(thisContext, a, b, c, d)
         }
@@ -1093,19 +1157,19 @@
      * @return {mixed}                 The final result.
      */
 
-    var reduce = function fastReduceObject(
+    let reduce = function fastReduceObject(
         subject,
         fn,
         initialValue,
         thisContext
     ) {
-        var keys = Object.keys(subject),
-            length = keys.length,
-            iterator =
-                thisContext !== undefined ? bindInternal4(fn, thisContext) : fn,
-            i,
-            key,
-            result
+        let keys = Object.keys(subject)
+        let length = keys.length
+        let iterator =
+                thisContext !== undefined ? bindInternal4(fn, thisContext) : fn
+        let i
+        let key
+        let result
 
         if (initialValue === undefined) {
             i = 1
@@ -1124,11 +1188,11 @@
     }
 
     function toHex(unicode) {
-        var result = ''
+        let result = ``
 
-        for (var i = 0; i < unicode.length; i++) {
-            var hex = unicode.charCodeAt(i).toString(16)
-            result += ('000' + hex).slice(-4)
+        for (let i = 0; i < unicode.length; i++) {
+            let hex = unicode.charCodeAt(i).toString(16)
+            result += (`000` + hex).slice(-4)
         }
 
         return result
@@ -1136,8 +1200,8 @@
 
     function normalizeIcons(icons) {
         return Object.keys(icons).reduce(function (acc, iconName) {
-            var icon = icons[iconName]
-            var expanded = !!icon.icon
+            let icon = icons[iconName]
+            let expanded = !!icon.icon
 
             if (expanded) {
                 acc[icon.iconName] = icon.icon
@@ -1150,15 +1214,15 @@
     }
 
     function defineIcons(prefix, icons) {
-        var params =
+        let params =
             arguments.length > 2 && arguments[2] !== undefined
                 ? arguments[2]
                 : {}
-        var _params$skipHooks = params.skipHooks,
-            skipHooks = _params$skipHooks === void 0 ? false : _params$skipHooks
-        var normalized = normalizeIcons(icons)
+        let _params$skipHooks = params.skipHooks
+        let skipHooks = _params$skipHooks === void 0 ? false : _params$skipHooks
+        let normalized = normalizeIcons(icons)
 
-        if (typeof namespace.hooks.addPack === 'function' && !skipHooks) {
+        if (typeof namespace.hooks.addPack === `function` && !skipHooks) {
             namespace.hooks.addPack(prefix, normalizeIcons(icons))
         } else {
             namespace.styles[prefix] = _objectSpread(
@@ -1174,19 +1238,19 @@
          * this as well.
          */
 
-        if (prefix === 'fas') {
-            defineIcons('fa', icons)
+        if (prefix === `fas`) {
+            defineIcons(`fa`, icons)
         }
     }
 
-    var _plugins = []
-    var _hooks = {}
-    var providers = {
+    let _plugins = []
+    let _hooks = {}
+    let providers = {
         Promise: Promise,
     }
-    var defaultProviderKeys = Object.keys(providers)
+    let defaultProviderKeys = Object.keys(providers)
     function registerPlugins(nextPlugins, _ref) {
-        var obj = _ref.mixoutsTo
+        let obj = _ref.mixoutsTo
         _plugins = nextPlugins
         _hooks = {}
         Object.keys(providers).forEach(function (k) {
@@ -1196,13 +1260,13 @@
         })
 
         _plugins.forEach(function (plugin) {
-            var mixout = plugin.mixout ? plugin.mixout() : {}
+            let mixout = plugin.mixout ? plugin.mixout() : {}
             Object.keys(mixout).forEach(function (tk) {
-                if (typeof mixout[tk] === 'function') {
+                if (typeof mixout[tk] === `function`) {
                     obj[tk] = mixout[tk]
                 }
 
-                if (_typeof(mixout[tk]) === 'object') {
+                if (_typeof(mixout[tk]) === `object`) {
                     Object.keys(mixout[tk]).forEach(function (sk) {
                         if (!obj[tk]) {
                             obj[tk] = {}
@@ -1214,7 +1278,7 @@
             })
 
             if (plugin.hooks) {
-                var hooks = plugin.hooks()
+                let hooks = plugin.hooks()
                 Object.keys(hooks).forEach(function (hook) {
                     if (!_hooks[hook]) {
                         _hooks[hook] = []
@@ -1242,14 +1306,14 @@
             args[_key - 2] = arguments[_key]
         }
 
-        var hookFns = _hooks[hook] || []
+        let hookFns = _hooks[hook] || []
         hookFns.forEach(function (hookFn) {
             accumulator = hookFn.apply(null, [accumulator].concat(args)) // eslint-disable-line no-useless-call
         })
         return accumulator
     }
     function callHooks(hook) {
-        var hookFns = _hooks[hook] || []
+        let hookFns = _hooks[hook] || []
 
         for (
             var _len2 = arguments.length,
@@ -1261,9 +1325,9 @@
             args[_key2 - 1] = arguments[_key2]
         }
 
-        var _iteratorNormalCompletion = true
-        var _didIteratorError = false
-        var _iteratorError = undefined
+        let _iteratorNormalCompletion = true
+        let _didIteratorError = false
+        let _iteratorError = undefined
 
         try {
             for (
@@ -1271,7 +1335,7 @@
                 !(_iteratorNormalCompletion = (_step = _iterator.next()).done);
                 _iteratorNormalCompletion = true
             ) {
-                var hookFn = _step.value
+                let hookFn = _step.value
                 hookFn.apply(null, args)
             }
         } catch (err) {
@@ -1292,19 +1356,19 @@
         return undefined
     }
     function callProvided() {
-        var hook = arguments[0]
-        var args = Array.prototype.slice.call(arguments, 1)
+        let hook = arguments[0]
+        let args = Array.prototype.slice.call(arguments, 1)
         return providers[hook] ? providers[hook].apply(null, args) : undefined
     }
 
-    var styles = namespace.styles,
-        shims = namespace.shims
-    var _byUnicode = {}
-    var _byLigature = {}
-    var _byOldName = {}
-    var _byAlias = {}
-    var build = function build() {
-        var lookup = function lookup(reducer) {
+    let styles = namespace.styles
+    let shims = namespace.shims
+    let _byUnicode = {}
+    let _byLigature = {}
+    let _byOldName = {}
+    let _byAlias = {}
+    let build = function build() {
+        let lookup = function lookup(reducer) {
             return reduce(
                 styles,
                 function (o, style, prefix) {
@@ -1321,8 +1385,8 @@
             }
 
             if (icon[2]) {
-                var aliases = icon[2].filter(function (a) {
-                    return typeof a === 'number'
+                let aliases = icon[2].filter(function (a) {
+                    return typeof a === `number`
                 })
                 aliases.forEach(function (alias) {
                     acc[alias.toString(16)] = iconName
@@ -1335,8 +1399,8 @@
             acc[iconName] = iconName
 
             if (icon[2]) {
-                var aliases = icon[2].filter(function (a) {
-                    return typeof a === 'string'
+                let aliases = icon[2].filter(function (a) {
+                    return typeof a === `string`
                 })
                 aliases.forEach(function (alias) {
                     acc[alias] = iconName
@@ -1346,23 +1410,23 @@
             return acc
         })
         _byAlias = lookup(function (acc, icon, iconName) {
-            var aliases = icon[2]
+            let aliases = icon[2]
             acc[iconName] = iconName
             aliases.forEach(function (alias) {
                 acc[alias] = iconName
             })
             return acc
         })
-        var hasRegular = 'far' in styles
+        let hasRegular = `far` in styles
         _byOldName = reduce(
             shims,
             function (acc, shim) {
-                var oldName = shim[0]
-                var prefix = shim[1]
-                var iconName = shim[2]
+                let oldName = shim[0]
+                let prefix = shim[1]
+                let iconName = shim[2]
 
-                if (prefix === 'far' && !hasRegular) {
-                    prefix = 'fas'
+                if (prefix === `far` && !hasRegular) {
+                    prefix = `fas`
                 }
 
                 acc[oldName] = {
@@ -1393,8 +1457,8 @@
         )
     }
 
-    var styles$1 = namespace.styles
-    var emptyCanonicalIcon = function emptyCanonicalIcon() {
+    let styles$1 = namespace.styles
+    let emptyCanonicalIcon = function emptyCanonicalIcon() {
         return {
             prefix: null,
             iconName: null,
@@ -1402,15 +1466,15 @@
         }
     }
     function getCanonicalIcon(values) {
-        var params =
+        let params =
             arguments.length > 1 && arguments[1] !== undefined
                 ? arguments[1]
                 : {}
-        var _params$skipLookups = params.skipLookups,
-            skipLookups =
+        let _params$skipLookups = params.skipLookups
+        let skipLookups =
                 _params$skipLookups === void 0 ? false : _params$skipLookups
         return values.reduce(function (acc, cls) {
-            var iconName = getIconName(config.familyPrefix, cls)
+            let iconName = getIconName(config.familyPrefix, cls)
 
             if (styles$1[cls]) {
                 acc.prefix = cls
@@ -1423,14 +1487,14 @@
                 acc.iconName = iconName
             } else if (
                 cls !== config.replacementClass &&
-                cls.indexOf('fa-w-') !== 0
+                cls.indexOf(`fa-w-`) !== 0
             ) {
                 acc.rest.push(cls)
             }
 
             if (!skipLookups && acc.prefix && acc.iconName) {
-                var shim = acc.prefix === 'fa' ? byOldName(acc.iconName) : {}
-                var aliasIconName = byAlias(acc.prefix, acc.iconName)
+                let shim = acc.prefix === `fa` ? byOldName(acc.iconName) : {}
+                let aliasIconName = byAlias(acc.prefix, acc.iconName)
                 acc.iconName = shim.iconName || aliasIconName || acc.iconName
                 acc.prefix = shim.prefix || acc.prefix
             }
@@ -1448,7 +1512,7 @@
         }
     }
 
-    var Library =
+    let Library =
         /*#__PURE__*/
         (function () {
             function Library() {
@@ -1459,9 +1523,9 @@
 
             _createClass(Library, [
                 {
-                    key: 'add',
+                    key: `add`,
                     value: function add() {
-                        var _this = this
+                        let _this = this
 
                         for (
                             var _len = arguments.length,
@@ -1473,7 +1537,7 @@
                             definitions[_key] = arguments[_key]
                         }
 
-                        var additions = definitions.reduce(
+                        let additions = definitions.reduce(
                             this._pullDefinitions,
                             {}
                         )
@@ -1489,33 +1553,35 @@
                     },
                 },
                 {
-                    key: 'reset',
+                    key: `reset`,
                     value: function reset() {
                         this.definitions = {}
                     },
                 },
                 {
-                    key: '_pullDefinitions',
+                    key: `_pullDefinitions`,
                     value: function _pullDefinitions(additions, definition) {
-                        var normalized =
+                        let normalized =
                             definition.prefix &&
                             definition.iconName &&
                             definition.icon
                                 ? {
-                                      0: definition,
-                                  }
+                                    0: definition,
+                                }
                                 : definition
                         Object.keys(normalized).map(function (key) {
-                            var _normalized$key = normalized[key],
-                                prefix = _normalized$key.prefix,
-                                iconName = _normalized$key.iconName,
-                                icon = _normalized$key.icon
-                            var aliases = icon[2]
-                            if (!additions[prefix]) additions[prefix] = {}
+                            let _normalized$key = normalized[key]
+                            let prefix = _normalized$key.prefix
+                            let iconName = _normalized$key.iconName
+                            let icon = _normalized$key.icon
+                            let aliases = icon[2]
+                            if (!additions[prefix]) {
+                                additions[prefix] = {}
+                            }
 
                             if (aliases.length > 0) {
                                 aliases.forEach(function (alias) {
-                                    if (typeof alias === 'string') {
+                                    if (typeof alias === `string`) {
                                         additions[prefix][alias] = icon
                                     }
                                 })
@@ -1534,7 +1600,7 @@
     function getStyle(defaultStyle) {
         return defaultStyle in STYLE_TO_PREFIX
             ? defaultStyle
-            : PREFIX_TO_STYLE[defaultStyle] || 'solid'
+            : PREFIX_TO_STYLE[defaultStyle] || `solid`
     }
 
     function getPrefix(defaultStyle) {
@@ -1542,50 +1608,52 @@
     }
 
     function findIconDefinition(iconLookup) {
-        iconLookup.prefix === 'fa'
-            ? (iconLookup.prefix = 'fas')
+        iconLookup.prefix === `fa`
+            ? (iconLookup.prefix = `fas`)
             : iconLookup.prefix
-        var _iconLookup$prefix = iconLookup.prefix,
-            prefix =
+        let _iconLookup$prefix = iconLookup.prefix
+        let prefix =
                 _iconLookup$prefix === void 0
                     ? getPrefix(config.styleDefault)
-                    : _iconLookup$prefix,
-            iconName = iconLookup.iconName
-        if (!iconName) return
+                    : _iconLookup$prefix
+        let iconName = iconLookup.iconName
+        if (!iconName) {
+            return
+        }
         return (
             iconFromMapping(library.definitions, prefix, iconName) ||
             iconFromMapping(namespace.styles, prefix, iconName)
         )
     }
     var library = new Library()
-    var noAuto = function noAuto() {
+    let noAuto = function noAuto() {
         config.autoReplaceSvg = false
         config.observeMutations = false
-        callHooks('noAuto')
+        callHooks(`noAuto`)
     }
-    var dom = {
+    let dom = {
         i2svg: function i2svg() {
-            var params =
+            let params =
                 arguments.length > 0 && arguments[0] !== undefined
                     ? arguments[0]
                     : {}
 
             if (IS_DOM) {
-                callHooks('beforeI2svg', params)
-                callProvided('pseudoElements2svg', params)
-                return callProvided('i2svg', params)
+                callHooks(`beforeI2svg`, params)
+                callProvided(`pseudoElements2svg`, params)
+                return callProvided(`i2svg`, params)
             } else {
                 return providers.Promise.reject(
-                    'Operation requires a DOM of some kind.'
+                    `Operation requires a DOM of some kind.`
                 )
             }
         },
         watch: function watch() {
-            var params =
+            let params =
                 arguments.length > 0 && arguments[0] !== undefined
                     ? arguments[0]
                     : {}
-            var autoReplaceSvgRoot = params.autoReplaceSvgRoot
+            let autoReplaceSvgRoot = params.autoReplaceSvgRoot
 
             if (config.autoReplaceSvg === false) {
                 config.autoReplaceSvg = true
@@ -1596,17 +1664,17 @@
                 autoReplace({
                     autoReplaceSvgRoot: autoReplaceSvgRoot,
                 })
-                callHooks('watch', params)
+                callHooks(`watch`, params)
             })
         },
     }
-    var parse = {
+    let parse = {
         icon: function icon(_icon) {
             if (_icon === null) {
                 return null
             }
 
-            if (_typeof(_icon) === 'object' && _icon.prefix && _icon.iconName) {
+            if (_typeof(_icon) === `object` && _icon.prefix && _icon.iconName) {
                 return _icon
             }
 
@@ -1614,18 +1682,18 @@
                 return {
                     prefix: getPrefix(_icon[0]),
                     iconName:
-                        _icon[1].indexOf('fa-') === 0
+                        _icon[1].indexOf(`fa-`) === 0
                             ? _icon[1].slice(3)
                             : _icon[1],
                 }
             }
 
             if (
-                typeof _icon === 'string' &&
-                (_icon.indexOf(''.concat(config.familyPrefix, '-')) > -1 ||
+                typeof _icon === `string` &&
+                (_icon.indexOf(``.concat(config.familyPrefix, `-`)) > -1 ||
                     _icon.match(ICON_SELECTION_SYNTAX_PATTERN))
             ) {
-                var canonicalIcon = getCanonicalIcon(_icon.split(' '), {
+                let canonicalIcon = getCanonicalIcon(_icon.split(` `), {
                     skipLookups: true,
                 })
                 return {
@@ -1636,7 +1704,7 @@
                 }
             }
 
-            if (typeof _icon === 'string') {
+            if (typeof _icon === `string`) {
                 return {
                     prefix: getPrefix(config.styleDefault),
                     iconName: _icon,
@@ -1644,7 +1712,7 @@
             }
         },
     }
-    var api = {
+    let api = {
         noAuto: noAuto,
         config: config,
         dom: dom,
@@ -1655,12 +1723,12 @@
     }
 
     var autoReplace = function autoReplace() {
-        var params =
+        let params =
             arguments.length > 0 && arguments[0] !== undefined
                 ? arguments[0]
                 : {}
-        var _params$autoReplaceSv = params.autoReplaceSvgRoot,
-            autoReplaceSvgRoot =
+        let _params$autoReplaceSv = params.autoReplaceSvgRoot
+        let autoReplaceSvgRoot =
                 _params$autoReplaceSv === void 0
                     ? DOCUMENT
                     : _params$autoReplaceSv
@@ -1668,10 +1736,11 @@
             (Object.keys(namespace.styles).length > 0 || config.autoFetchSvg) &&
             IS_DOM &&
             config.autoReplaceSvg
-        )
+        ) {
             api.dom.i2svg({
                 node: autoReplaceSvgRoot,
             })
+        }
     }
 
     function bootstrap(plugins) {
@@ -1682,7 +1751,7 @@
 
             domready(function () {
                 autoReplace()
-                callHooks('bootstrap')
+                callHooks(`bootstrap`)
             })
         }
 
@@ -1698,9 +1767,9 @@
             },
             addPacks: function addPacks(packs) {
                 packs.forEach(function (_ref) {
-                    var _ref2 = _slicedToArray(_ref, 2),
-                        prefix = _ref2[0],
-                        icons = _ref2[1]
+                    let _ref2 = _slicedToArray(_ref, 2)
+                    let prefix = _ref2[0]
+                    let icons = _ref2[1]
 
                     namespace.styles[prefix] = _objectSpread(
                         {},
@@ -1712,9 +1781,8 @@
                 autoReplace()
             },
             addShims: function addShims(shims) {
-                var _namespace$shims
-
-                ;(_namespace$shims = namespace.shims).push.apply(
+                let _namespace$shims;
+                (_namespace$shims = namespace.shims).push.apply(
                     _namespace$shims,
                     _toConsumableArray(shims)
                 )
@@ -1726,20 +1794,22 @@
     }
 
     function domVariants(val, abstractCreator) {
-        Object.defineProperty(val, 'abstract', {
+        Object.defineProperty(val, `abstract`, {
             get: abstractCreator,
         })
-        Object.defineProperty(val, 'html', {
+        Object.defineProperty(val, `html`, {
             get: function get() {
                 return val.abstract.map(function (a) {
                     return toHtml(a)
                 })
             },
         })
-        Object.defineProperty(val, 'node', {
+        Object.defineProperty(val, `node`, {
             get: function get() {
-                if (!IS_DOM) return
-                var container = DOCUMENT.createElement('div')
+                if (!IS_DOM) {
+                    return
+                }
+                let container = DOCUMENT.createElement(`div`)
                 container.innerHTML = val.html
                 return container.children
             },
@@ -1748,32 +1818,32 @@
     }
 
     function asIcon(_ref) {
-        var children = _ref.children,
-            main = _ref.main,
-            mask = _ref.mask,
-            attributes = _ref.attributes,
-            styles = _ref.styles,
-            transform = _ref.transform
+        let children = _ref.children
+        let main = _ref.main
+        let mask = _ref.mask
+        let attributes = _ref.attributes
+        let styles = _ref.styles
+        let transform = _ref.transform
 
         if (transformIsMeaningful(transform) && main.found && !mask.found) {
-            var width = main.width,
-                height = main.height
-            var offset = {
+            let width = main.width
+            let height = main.height
+            let offset = {
                 x: width / height / 2,
                 y: 0.5,
             }
-            attributes['style'] = joinStyles(
+            attributes.style = joinStyles(
                 _objectSpread({}, styles, {
-                    'transform-origin': ''
-                        .concat(offset.x + transform.x / 16, 'em ')
-                        .concat(offset.y + transform.y / 16, 'em'),
+                    'transform-origin': ``
+                        .concat(offset.x + transform.x / 16, `em `)
+                        .concat(offset.y + transform.y / 16, `em`),
                 })
             )
         }
 
         return [
             {
-                tag: 'svg',
+                tag: `svg`,
                 attributes: attributes,
                 children: children,
             },
@@ -1781,27 +1851,27 @@
     }
 
     function asSymbol(_ref) {
-        var prefix = _ref.prefix,
-            iconName = _ref.iconName,
-            children = _ref.children,
-            attributes = _ref.attributes,
-            symbol = _ref.symbol
-        var id =
+        let prefix = _ref.prefix
+        let iconName = _ref.iconName
+        let children = _ref.children
+        let attributes = _ref.attributes
+        let symbol = _ref.symbol
+        let id =
             symbol === true
-                ? ''
-                      .concat(prefix, '-')
-                      .concat(config.familyPrefix, '-')
-                      .concat(iconName)
+                ? ``
+                    .concat(prefix, `-`)
+                    .concat(config.familyPrefix, `-`)
+                    .concat(iconName)
                 : symbol
         return [
             {
-                tag: 'svg',
+                tag: `svg`,
                 attributes: {
-                    style: 'display: none;',
+                    style: `display: none;`,
                 },
                 children: [
                     {
-                        tag: 'symbol',
+                        tag: `symbol`,
                         attributes: _objectSpread({}, attributes, {
                             id: id,
                         }),
@@ -1813,77 +1883,78 @@
     }
 
     function makeInlineSvgAbstract(params) {
-        var _params$icons = params.icons,
-            main = _params$icons.main,
-            mask = _params$icons.mask,
-            prefix = params.prefix,
-            iconName = params.iconName,
-            transform = params.transform,
-            symbol = params.symbol,
-            title = params.title,
-            maskId = params.maskId,
-            titleId = params.titleId,
-            extra = params.extra,
-            _params$watchable = params.watchable,
-            watchable = _params$watchable === void 0 ? false : _params$watchable
+        let _params$icons = params.icons
+        let main = _params$icons.main
+        let mask = _params$icons.mask
+        let prefix = params.prefix
+        let iconName = params.iconName
+        let transform = params.transform
+        let symbol = params.symbol
+        let title = params.title
+        let maskId = params.maskId
+        let titleId = params.titleId
+        let extra = params.extra
+        let _params$watchable = params.watchable
+        let watchable = _params$watchable === void 0 ? false : _params$watchable
 
-        var _ref = mask.found ? mask : main,
-            width = _ref.width,
-            height = _ref.height
+        let _ref = mask.found ? mask : main
+        let width = _ref.width
+        let height = _ref.height
 
-        var isUploadedIcon = prefix === 'fak'
-        var widthClass = isUploadedIcon
-            ? ''
-            : 'fa-w-'.concat(Math.ceil((width / height) * 16))
-        var attrClass = [
+        let isUploadedIcon = prefix === `fak`
+        let widthClass = isUploadedIcon
+            ? ``
+            : `fa-w-`.concat(Math.ceil((width / height) * 16))
+        let attrClass = [
             config.replacementClass,
             iconName
-                ? ''.concat(config.familyPrefix, '-').concat(iconName)
-                : '',
+                ? ``.concat(config.familyPrefix, `-`).concat(iconName)
+                : ``,
             widthClass,
         ]
             .filter(function (c) {
                 return extra.classes.indexOf(c) === -1
             })
             .filter(function (c) {
-                return c !== '' || !!c
+                return c !== `` || !!c
             })
             .concat(extra.classes)
-            .join(' ')
-        var content = {
+            .join(` `)
+        let content = {
             children: [],
             attributes: _objectSpread({}, extra.attributes, {
                 'data-prefix': prefix,
                 'data-icon': iconName,
                 class: attrClass,
-                role: extra.attributes.role || 'img',
-                xmlns: 'http://www.w3.org/2000/svg',
-                viewBox: '0 0 '.concat(width, ' ').concat(height),
+                role: extra.attributes.role || `img`,
+                xmlns: `http://www.w3.org/2000/svg`,
+                viewBox: `0 0 `.concat(width, ` `).concat(height),
             }),
         }
-        var uploadedIconWidthStyle =
-            isUploadedIcon && !~extra.classes.indexOf('fa-fw')
+        let uploadedIconWidthStyle =
+            isUploadedIcon && !~extra.classes.indexOf(`fa-fw`)
                 ? {
-                      width: ''.concat((width / height) * 16 * 0.0625, 'em'),
-                  }
+                    width: ``.concat((width / height) * 16 * 0.0625, `em`),
+                }
                 : {}
 
         if (watchable) {
-            content.attributes[DATA_FA_I2SVG] = ''
+            content.attributes[DATA_FA_I2SVG] = ``
         }
 
-        if (title)
+        if (title) {
             content.children.push({
-                tag: 'title',
+                tag: `title`,
                 attributes: {
                     id:
-                        content.attributes['aria-labelledby'] ||
-                        'title-'.concat(titleId || nextUniqueId()),
+                        content.attributes[`aria-labelledby`] ||
+                        `title-`.concat(titleId || nextUniqueId()),
                 },
                 children: [title],
             })
+        }
 
-        var args = _objectSpread({}, content, {
+        let args = _objectSpread({}, content, {
             prefix: prefix,
             iconName: iconName,
             main: main,
@@ -1894,18 +1965,18 @@
             styles: _objectSpread({}, uploadedIconWidthStyle, extra.styles),
         })
 
-        var _ref2 =
+        let _ref2 =
                 mask.found && main.found
-                    ? callProvided('generateAbstractMask', args) || {
-                          children: [],
-                          attributes: {},
-                      }
-                    : callProvided('generateAbstractIcon', args) || {
-                          children: [],
-                          attributes: {},
-                      },
-            children = _ref2.children,
-            attributes = _ref2.attributes
+                    ? callProvided(`generateAbstractMask`, args) || {
+                        children: [],
+                        attributes: {},
+                    }
+                    : callProvided(`generateAbstractIcon`, args) || {
+                        children: [],
+                        attributes: {},
+                    }
+        let children = _ref2.children
+        let attributes = _ref2.attributes
 
         args.children = children
         args.attributes = attributes
@@ -1917,63 +1988,63 @@
         }
     }
     function makeLayersTextAbstract(params) {
-        var content = params.content,
-            width = params.width,
-            height = params.height,
-            transform = params.transform,
-            title = params.title,
-            extra = params.extra,
-            _params$watchable2 = params.watchable,
-            watchable =
+        let content = params.content
+        let width = params.width
+        let height = params.height
+        let transform = params.transform
+        let title = params.title
+        let extra = params.extra
+        let _params$watchable2 = params.watchable
+        let watchable =
                 _params$watchable2 === void 0 ? false : _params$watchable2
 
-        var attributes = _objectSpread(
+        let attributes = _objectSpread(
             {},
             extra.attributes,
             title
                 ? {
-                      title: title,
-                  }
+                    title: title,
+                }
                 : {},
             {
-                class: extra.classes.join(' '),
+                class: extra.classes.join(` `),
             }
         )
 
         if (watchable) {
-            attributes[DATA_FA_I2SVG] = ''
+            attributes[DATA_FA_I2SVG] = ``
         }
 
-        var styles = _objectSpread({}, extra.styles)
+        let styles = _objectSpread({}, extra.styles)
 
         if (transformIsMeaningful(transform)) {
-            styles['transform'] = transformForCss({
+            styles.transform = transformForCss({
                 transform: transform,
                 startCentered: true,
                 width: width,
                 height: height,
             })
-            styles['-webkit-transform'] = styles['transform']
+            styles[`-webkit-transform`] = styles.transform
         }
 
-        var styleString = joinStyles(styles)
+        let styleString = joinStyles(styles)
 
         if (styleString.length > 0) {
-            attributes['style'] = styleString
+            attributes.style = styleString
         }
 
-        var val = []
+        let val = []
         val.push({
-            tag: 'span',
+            tag: `span`,
             attributes: attributes,
             children: [content],
         })
 
         if (title) {
             val.push({
-                tag: 'span',
+                tag: `span`,
                 attributes: {
-                    class: 'sr-only',
+                    class: `sr-only`,
                 },
                 children: [title],
             })
@@ -1982,41 +2053,41 @@
         return val
     }
     function makeLayersCounterAbstract(params) {
-        var content = params.content,
-            title = params.title,
-            extra = params.extra
+        let content = params.content
+        let title = params.title
+        let extra = params.extra
 
-        var attributes = _objectSpread(
+        let attributes = _objectSpread(
             {},
             extra.attributes,
             title
                 ? {
-                      title: title,
-                  }
+                    title: title,
+                }
                 : {},
             {
-                class: extra.classes.join(' '),
+                class: extra.classes.join(` `),
             }
         )
 
-        var styleString = joinStyles(extra.styles)
+        let styleString = joinStyles(extra.styles)
 
         if (styleString.length > 0) {
-            attributes['style'] = styleString
+            attributes.style = styleString
         }
 
-        var val = []
+        let val = []
         val.push({
-            tag: 'span',
+            tag: `span`,
             attributes: attributes,
             children: [content],
         })
 
         if (title) {
             val.push({
-                tag: 'span',
+                tag: `span`,
                 attributes: {
-                    class: 'sr-only',
+                    class: `sr-only`,
                 },
                 children: [title],
             })
@@ -2026,50 +2097,50 @@
     }
 
     function MissingIcon(error) {
-        this.name = 'MissingIcon'
-        this.message = error || 'Icon unavailable'
+        this.name = `MissingIcon`
+        this.message = error || `Icon unavailable`
         this.stack = new Error().stack
     }
     MissingIcon.prototype = Object.create(Error.prototype)
     MissingIcon.prototype.constructor = MissingIcon
 
-    var styles$2 = namespace.styles
+    let styles$2 = namespace.styles
     function asFoundIcon(icon) {
-        var width = icon[0]
-        var height = icon[1]
+        let width = icon[0]
+        let height = icon[1]
 
-        var _icon$slice = icon.slice(4),
-            _icon$slice2 = _slicedToArray(_icon$slice, 1),
-            vectorData = _icon$slice2[0]
+        let _icon$slice = icon.slice(4)
+        let _icon$slice2 = _slicedToArray(_icon$slice, 1)
+        let vectorData = _icon$slice2[0]
 
-        var element = null
+        let element = null
 
         if (Array.isArray(vectorData)) {
             element = {
-                tag: 'g',
+                tag: `g`,
                 attributes: {
-                    class: ''
-                        .concat(config.familyPrefix, '-')
+                    class: ``
+                        .concat(config.familyPrefix, `-`)
                         .concat(DUOTONE_CLASSES.GROUP),
                 },
                 children: [
                     {
-                        tag: 'path',
+                        tag: `path`,
                         attributes: {
-                            class: ''
-                                .concat(config.familyPrefix, '-')
+                            class: ``
+                                .concat(config.familyPrefix, `-`)
                                 .concat(DUOTONE_CLASSES.SECONDARY),
-                            fill: 'currentColor',
+                            fill: `currentColor`,
                             d: vectorData[0],
                         },
                     },
                     {
-                        tag: 'path',
+                        tag: `path`,
                         attributes: {
-                            class: ''
-                                .concat(config.familyPrefix, '-')
+                            class: ``
+                                .concat(config.familyPrefix, `-`)
                                 .concat(DUOTONE_CLASSES.PRIMARY),
-                            fill: 'currentColor',
+                            fill: `currentColor`,
                             d: vectorData[1],
                         },
                     },
@@ -2077,9 +2148,9 @@
             }
         } else {
             element = {
-                tag: 'path',
+                tag: `path`,
                 attributes: {
-                    fill: 'currentColor',
+                    fill: `currentColor`,
                     d: vectorData,
                 },
             }
@@ -2093,16 +2164,16 @@
         }
     }
     function findIcon(iconName, prefix) {
-        if (prefix === 'fa' && config.styleDefault !== null) {
+        if (prefix === `fa` && config.styleDefault !== null) {
             prefix = config.styleDefault
         }
 
         return new providers.Promise(function (resolve, reject) {
-            var val = {
+            let val = {
                 found: false,
                 width: 512,
                 height: 512,
-                icon: callProvided('missingIconAbstract') || {},
+                icon: callProvided(`missingIconAbstract`) || {},
             }
 
             if (
@@ -2111,15 +2182,15 @@
                 styles$2[prefix] &&
                 styles$2[prefix][iconName]
             ) {
-                var icon = styles$2[prefix][iconName]
+                let icon = styles$2[prefix][iconName]
                 return resolve(asFoundIcon(icon))
             }
 
             if (iconName && prefix && !config.showMissingIcons) {
                 reject(
                     new MissingIcon(
-                        'Icon is missing for prefix '
-                            .concat(prefix, ' with icon name ')
+                        `Icon is missing for prefix `
+                            .concat(prefix, ` with icon name `)
                             .concat(iconName)
                     )
                 )
@@ -2129,46 +2200,46 @@
         })
     }
 
-    var noop$1 = function noop() {}
+    let noop$1 = function noop() {}
 
-    var p =
+    let p =
         config.measurePerformance &&
         PERFORMANCE &&
         PERFORMANCE.mark &&
         PERFORMANCE.measure
             ? PERFORMANCE
             : {
-                  mark: noop$1,
-                  measure: noop$1,
-              }
-    var preamble = 'FA "6.0.0-alpha3"'
+                mark: noop$1,
+                measure: noop$1,
+            }
+    let preamble = `FA "6.0.0-alpha3"`
 
-    var begin = function begin(name) {
-        p.mark(''.concat(preamble, ' ').concat(name, ' begins'))
+    let begin = function begin(name) {
+        p.mark(``.concat(preamble, ` `).concat(name, ` begins`))
         return function () {
             return end(name)
         }
     }
 
     var end = function end(name) {
-        p.mark(''.concat(preamble, ' ').concat(name, ' ends'))
+        p.mark(``.concat(preamble, ` `).concat(name, ` ends`))
         p.measure(
-            ''.concat(preamble, ' ').concat(name),
-            ''.concat(preamble, ' ').concat(name, ' begins'),
-            ''.concat(preamble, ' ').concat(name, ' ends')
+            ``.concat(preamble, ` `).concat(name),
+            ``.concat(preamble, ` `).concat(name, ` begins`),
+            ``.concat(preamble, ` `).concat(name, ` ends`)
         )
     }
 
-    var perf = {
+    let perf = {
         begin: begin,
         end: end,
     }
 
-    var noop$2 = function noop() {}
+    let noop$2 = function noop() {}
 
     function isWatched(node) {
-        var i2svg = node.getAttribute ? node.getAttribute(DATA_FA_I2SVG) : null
-        return typeof i2svg === 'string'
+        let i2svg = node.getAttribute ? node.getAttribute(DATA_FA_I2SVG) : null
+        return typeof i2svg === `string`
     }
 
     function getMutator() {
@@ -2176,23 +2247,23 @@
             return mutators.replace
         }
 
-        var mutator = mutators[config.autoReplaceSvg]
+        let mutator = mutators[config.autoReplaceSvg]
         return mutator || mutators.replace
     }
 
     function convertSVG(abstractObj) {
-        if (typeof abstractObj === 'string') {
+        if (typeof abstractObj === `string`) {
             return DOCUMENT.createTextNode(abstractObj)
         }
 
-        var tag = DOCUMENT.createElementNS(
-            'http://www.w3.org/2000/svg',
+        let tag = DOCUMENT.createElementNS(
+            `http://www.w3.org/2000/svg`,
             abstractObj.tag
         )
         Object.keys(abstractObj.attributes || []).forEach(function (key) {
             tag.setAttribute(key, abstractObj.attributes[key])
         })
-        var children = abstractObj.children || []
+        let children = abstractObj.children || []
         children.forEach(function (child) {
             tag.appendChild(convertSVG(child))
         })
@@ -2200,40 +2271,40 @@
     }
 
     function nodeAsComment(node) {
-        return ' '.concat(node.outerHTML, ' Font Awesome fontawesome.com ')
+        return ` `.concat(node.outerHTML, ` Font Awesome fontawesome.com `)
     }
 
     var mutators = {
         replace: function replace(mutation) {
-            var node = mutation[0]
-            var nodeTagName = node.tagName.toLowerCase()
+            let node = mutation[0]
+            let nodeTagName = node.tagName.toLowerCase()
 
             if (node.parentNode) {
                 mutation[1].forEach(function (abstract) {
                     node.parentNode.insertBefore(convertSVG(abstract), node)
                 })
-                var comment = DOCUMENT.createComment(
+                let comment = DOCUMENT.createComment(
                     config.keepOriginalSource &&
-                        nodeTagName.toLowerCase() !== 'svg'
+                        nodeTagName.toLowerCase() !== `svg`
                         ? nodeAsComment(node)
-                        : ''
+                        : ``
                 )
                 node.parentNode.replaceChild(comment, node)
             }
         },
         nest: function nest(mutation) {
-            var node = mutation[0]
-            var abstract = mutation[1] // If we already have a replaced node we do not want to continue nesting within it.
+            let node = mutation[0]
+            let abstract = mutation[1] // If we already have a replaced node we do not want to continue nesting within it.
             // Short-circuit to the standard replacement
 
             if (~classArray(node).indexOf(config.replacementClass)) {
                 return mutators.replace(mutation)
             }
 
-            var forSvg = new RegExp(''.concat(config.familyPrefix, '-.*'))
+            let forSvg = new RegExp(``.concat(config.familyPrefix, `-.*`))
             delete abstract[0].attributes.style
             delete abstract[0].attributes.id
-            var splitClasses = abstract[0].attributes.class.split(' ').reduce(
+            let splitClasses = abstract[0].attributes.class.split(` `).reduce(
                 function (acc, cls) {
                     if (cls === config.replacementClass || cls.match(forSvg)) {
                         acc.toSvg.push(cls)
@@ -2248,14 +2319,14 @@
                     toSvg: [],
                 }
             )
-            abstract[0].attributes.class = splitClasses.toSvg.join(' ')
-            var newInnerHTML = abstract
+            abstract[0].attributes.class = splitClasses.toSvg.join(` `)
+            let newInnerHTML = abstract
                 .map(function (a) {
                     return toHtml(a)
                 })
-                .join('\n')
-            node.setAttribute('class', splitClasses.toNode.join(' '))
-            node.setAttribute(DATA_FA_I2SVG, '')
+                .join(`\n`)
+            node.setAttribute(`class`, splitClasses.toNode.join(` `))
+            node.setAttribute(DATA_FA_I2SVG, ``)
             node.innerHTML = newInnerHTML
         },
     }
@@ -2265,35 +2336,35 @@
     }
 
     function perform(mutations, callback) {
-        var callbackFunction =
-            typeof callback === 'function' ? callback : noop$2
+        let callbackFunction =
+            typeof callback === `function` ? callback : noop$2
 
         if (mutations.length === 0) {
             callbackFunction()
         } else {
-            var frame = performOperationSync
+            let frame = performOperationSync
 
             if (config.mutateApproach === MUTATION_APPROACH_ASYNC) {
                 frame = WINDOW.requestAnimationFrame || performOperationSync
             }
 
             frame(function () {
-                var mutator = getMutator()
-                var mark = perf.begin('mutate')
+                let mutator = getMutator()
+                let mark = perf.begin(`mutate`)
                 mutations.map(mutator)
                 mark()
                 callbackFunction()
             })
         }
     }
-    var disabled = false
+    let disabled = false
     function disableObservation() {
         disabled = true
     }
     function enableObservation() {
         disabled = false
     }
-    var mo = null
+    let mo = null
     function observe(options) {
         if (!MUTATION_OBSERVER) {
             return
@@ -2303,31 +2374,33 @@
             return
         }
 
-        var _options$treeCallback = options.treeCallback,
-            treeCallback =
+        let _options$treeCallback = options.treeCallback
+        let treeCallback =
                 _options$treeCallback === void 0
                     ? noop$2
-                    : _options$treeCallback,
-            _options$nodeCallback = options.nodeCallback,
-            nodeCallback =
+                    : _options$treeCallback
+        let _options$nodeCallback = options.nodeCallback
+        let nodeCallback =
                 _options$nodeCallback === void 0
                     ? noop$2
-                    : _options$nodeCallback,
-            _options$pseudoElemen = options.pseudoElementsCallback,
-            pseudoElementsCallback =
+                    : _options$nodeCallback
+        let _options$pseudoElemen = options.pseudoElementsCallback
+        let pseudoElementsCallback =
                 _options$pseudoElemen === void 0
                     ? noop$2
-                    : _options$pseudoElemen,
-            _options$observeMutat = options.observeMutationsRoot,
-            observeMutationsRoot =
+                    : _options$pseudoElemen
+        let _options$observeMutat = options.observeMutationsRoot
+        let observeMutationsRoot =
                 _options$observeMutat === void 0
                     ? DOCUMENT
                     : _options$observeMutat
         mo = new MUTATION_OBSERVER(function (objects) {
-            if (disabled) return
+            if (disabled) {
+                return
+            }
             toArray(objects).forEach(function (mutationRecord) {
                 if (
-                    mutationRecord.type === 'childList' &&
+                    mutationRecord.type === `childList` &&
                     mutationRecord.addedNodes.length > 0 &&
                     !isWatched(mutationRecord.addedNodes[0])
                 ) {
@@ -2339,7 +2412,7 @@
                 }
 
                 if (
-                    mutationRecord.type === 'attributes' &&
+                    mutationRecord.type === `attributes` &&
                     mutationRecord.target.parentNode &&
                     config.searchPseudoElements
                 ) {
@@ -2347,36 +2420,40 @@
                 }
 
                 if (
-                    mutationRecord.type === 'attributes' &&
+                    mutationRecord.type === `attributes` &&
                     isWatched(mutationRecord.target) &&
                     ~ATTRIBUTES_WATCHED_FOR_MUTATION.indexOf(
                         mutationRecord.attributeName
                     )
                 ) {
-                    if (mutationRecord.attributeName === 'class') {
-                        var _getCanonicalIcon = getCanonicalIcon(
-                                classArray(mutationRecord.target)
-                            ),
-                            prefix = _getCanonicalIcon.prefix,
-                            iconName = _getCanonicalIcon.iconName
+                    if (mutationRecord.attributeName === `class`) {
+                        let _getCanonicalIcon = getCanonicalIcon(
+                            classArray(mutationRecord.target)
+                        )
+                        let prefix = _getCanonicalIcon.prefix
+                        let iconName = _getCanonicalIcon.iconName
 
-                        if (prefix)
+                        if (prefix) {
                             mutationRecord.target.setAttribute(
-                                'data-prefix',
+                                `data-prefix`,
                                 prefix
                             )
-                        if (iconName)
+                        }
+                        if (iconName) {
                             mutationRecord.target.setAttribute(
-                                'data-icon',
+                                `data-icon`,
                                 iconName
                             )
+                        }
                     } else {
                         nodeCallback(mutationRecord.target)
                     }
                 }
             })
         })
-        if (!IS_DOM) return
+        if (!IS_DOM) {
+            return
+        }
         mo.observe(observeMutationsRoot, {
             childList: true,
             attributes: true,
@@ -2385,22 +2462,24 @@
         })
     }
     function disconnect() {
-        if (!mo) return
+        if (!mo) {
+            return
+        }
         mo.disconnect()
     }
 
     function styleParser(node) {
-        var style = node.getAttribute('style')
-        var val = []
+        let style = node.getAttribute(`style`)
+        let val = []
 
         if (style) {
-            val = style.split(';').reduce(function (acc, style) {
-                var styles = style.split(':')
-                var prop = styles[0]
-                var value = styles.slice(1)
+            val = style.split(`;`).reduce(function (acc, style) {
+                let styles = style.split(`:`)
+                let prop = styles[0]
+                let value = styles.slice(1)
 
                 if (prop && value.length > 0) {
-                    acc[prop] = value.join(':').trim()
+                    acc[prop] = value.join(`:`).trim()
                 }
 
                 return acc
@@ -2411,11 +2490,11 @@
     }
 
     function classParser(node) {
-        var existingPrefix = node.getAttribute('data-prefix')
-        var existingIconName = node.getAttribute('data-icon')
-        var innerText =
-            node.innerText !== undefined ? node.innerText.trim() : ''
-        var val = getCanonicalIcon(classArray(node))
+        let existingPrefix = node.getAttribute(`data-prefix`)
+        let existingIconName = node.getAttribute(`data-icon`)
+        let innerText =
+            node.innerText !== undefined ? node.innerText.trim() : ``
+        let val = getCanonicalIcon(classArray(node))
 
         if (existingPrefix && existingIconName) {
             val.prefix = existingPrefix
@@ -2432,28 +2511,28 @@
     }
 
     function attributesParser(node) {
-        var extraAttributes = toArray(node.attributes).reduce(function (
+        let extraAttributes = toArray(node.attributes).reduce(function (
             acc,
             attr
         ) {
-            if (acc.name !== 'class' && acc.name !== 'style') {
+            if (acc.name !== `class` && acc.name !== `style`) {
                 acc[attr.name] = attr.value
             }
 
             return acc
         },
         {})
-        var title = node.getAttribute('title')
-        var titleId = node.getAttribute('data-fa-title-id')
+        let title = node.getAttribute(`title`)
+        let titleId = node.getAttribute(`data-fa-title-id`)
 
         if (config.autoA11y) {
             if (title) {
-                extraAttributes['aria-labelledby'] = ''
-                    .concat(config.replacementClass, '-title-')
+                extraAttributes[`aria-labelledby`] = ``
+                    .concat(config.replacementClass, `-title-`)
                     .concat(titleId || nextUniqueId())
             } else {
-                extraAttributes['aria-hidden'] = 'true'
-                extraAttributes['focusable'] = 'false'
+                extraAttributes[`aria-hidden`] = `true`
+                extraAttributes.focusable = `false`
             }
         }
 
@@ -2482,19 +2561,19 @@
         }
     }
     function parseMeta(node) {
-        var _classParser = classParser(node),
-            iconName = _classParser.iconName,
-            prefix = _classParser.prefix,
-            extraClasses = _classParser.rest
+        let _classParser = classParser(node)
+        let iconName = _classParser.iconName
+        let prefix = _classParser.prefix
+        let extraClasses = _classParser.rest
 
-        var extraStyles = styleParser(node)
-        var extraAttributes = attributesParser(node)
-        var pluginMeta = chainHooks('parseNodeAttributes', {}, node)
+        let extraStyles = styleParser(node)
+        let extraAttributes = attributesParser(node)
+        let pluginMeta = chainHooks(`parseNodeAttributes`, {}, node)
         return _objectSpread(
             {
                 iconName: iconName,
-                title: node.getAttribute('title'),
-                titleId: node.getAttribute('data-fa-title-id'),
+                title: node.getAttribute(`title`),
+                titleId: node.getAttribute(`data-fa-title-id`),
                 prefix: prefix,
                 transform: meaninglessTransform,
                 mask: {
@@ -2514,16 +2593,16 @@
         )
     }
 
-    var styles$3 = namespace.styles
+    let styles$3 = namespace.styles
 
     function generateMutation(node) {
-        var nodeMeta = parseMeta(node)
+        let nodeMeta = parseMeta(node)
 
         if (~nodeMeta.extra.classes.indexOf(LAYERS_TEXT_CLASSNAME)) {
-            return callProvided('generateLayersText', node, nodeMeta)
+            return callProvided(`generateLayersText`, node, nodeMeta)
         } else {
             return callProvided(
-                'generateSvgReplacementMutation',
+                `generateSvgReplacementMutation`,
                 node,
                 nodeMeta
             )
@@ -2531,45 +2610,47 @@
     }
 
     function onTree(root) {
-        var callback =
+        let callback =
             arguments.length > 1 && arguments[1] !== undefined
                 ? arguments[1]
                 : null
-        if (!IS_DOM) return providers.Promise.resolve()
-        var htmlClassList = DOCUMENT.documentElement.classList
+        if (!IS_DOM) {
+            return providers.Promise.resolve()
+        }
+        let htmlClassList = DOCUMENT.documentElement.classList
 
-        var hclAdd = function hclAdd(suffix) {
+        let hclAdd = function hclAdd(suffix) {
             return htmlClassList.add(
-                ''.concat(HTML_CLASS_I2SVG_BASE_CLASS, '-').concat(suffix)
+                ``.concat(HTML_CLASS_I2SVG_BASE_CLASS, `-`).concat(suffix)
             )
         }
 
-        var hclRemove = function hclRemove(suffix) {
+        let hclRemove = function hclRemove(suffix) {
             return htmlClassList.remove(
-                ''.concat(HTML_CLASS_I2SVG_BASE_CLASS, '-').concat(suffix)
+                ``.concat(HTML_CLASS_I2SVG_BASE_CLASS, `-`).concat(suffix)
             )
         }
 
-        var prefixes = config.autoFetchSvg
+        let prefixes = config.autoFetchSvg
             ? Object.keys(PREFIX_TO_STYLE)
             : Object.keys(styles$3)
-        var prefixesDomQuery = [
-            '.'
-                .concat(LAYERS_TEXT_CLASSNAME, ':not([')
-                .concat(DATA_FA_I2SVG, '])'),
+        let prefixesDomQuery = [
+            `.`
+                .concat(LAYERS_TEXT_CLASSNAME, `:not([`)
+                .concat(DATA_FA_I2SVG, `])`),
         ]
             .concat(
                 prefixes.map(function (p) {
-                    return '.'.concat(p, ':not([').concat(DATA_FA_I2SVG, '])')
+                    return `.`.concat(p, `:not([`).concat(DATA_FA_I2SVG, `])`)
                 })
             )
-            .join(', ')
+            .join(`, `)
 
         if (prefixesDomQuery.length === 0) {
             return providers.Promise.resolve()
         }
 
-        var candidates = []
+        let candidates = []
 
         try {
             candidates = toArray(root.querySelectorAll(prefixesDomQuery))
@@ -2578,23 +2659,23 @@
         }
 
         if (candidates.length > 0) {
-            hclAdd('pending')
-            hclRemove('complete')
+            hclAdd(`pending`)
+            hclRemove(`complete`)
         } else {
             return providers.Promise.resolve()
         }
 
-        var mark = perf.begin('onTree')
-        var mutations = candidates.reduce(function (acc, node) {
+        let mark = perf.begin(`onTree`)
+        let mutations = candidates.reduce(function (acc, node) {
             try {
-                var mutation = generateMutation(node)
+                let mutation = generateMutation(node)
 
                 if (mutation) {
                     acc.push(mutation)
                 }
             } catch (e) {
                 if (!PRODUCTION) {
-                    if (e.name === 'MissingIcon') {
+                    if (e.name === `MissingIcon`) {
                         console.error(e)
                     }
                 }
@@ -2606,10 +2687,12 @@
             providers.Promise.all(mutations)
                 .then(function (resolvedMutations) {
                     perform(resolvedMutations, function () {
-                        hclAdd('active')
-                        hclAdd('complete')
-                        hclRemove('pending')
-                        if (typeof callback === 'function') callback()
+                        hclAdd(`active`)
+                        hclAdd(`complete`)
+                        hclRemove(`pending`)
+                        if (typeof callback === `function`) {
+                            callback()
+                        }
                         mark()
                         resolve()
                     })
@@ -2622,7 +2705,7 @@
     }
 
     function onNode(node) {
-        var callback =
+        let callback =
             arguments.length > 1 && arguments[1] !== undefined
                 ? arguments[1]
                 : null
@@ -2635,14 +2718,14 @@
 
     function resolveIcons(next) {
         return function (maybeIconDefinition) {
-            var params =
+            let params =
                 arguments.length > 1 && arguments[1] !== undefined
                     ? arguments[1]
                     : {}
-            var iconDefinition = (maybeIconDefinition || {}).icon
+            let iconDefinition = (maybeIconDefinition || {}).icon
                 ? maybeIconDefinition
                 : findIconDefinition(maybeIconDefinition || {})
-            var mask = params.mask
+            let mask = params.mask
 
             if (mask) {
                 mask = (mask || {}).icon ? mask : findIconDefinition(mask || {})
@@ -2657,58 +2740,60 @@
         }
     }
 
-    var render = function render(iconDefinition) {
-        var params =
+    let render = function render(iconDefinition) {
+        let params =
             arguments.length > 1 && arguments[1] !== undefined
                 ? arguments[1]
                 : {}
-        var _params$transform = params.transform,
-            transform =
+        let _params$transform = params.transform
+        let transform =
                 _params$transform === void 0
                     ? meaninglessTransform
-                    : _params$transform,
-            _params$symbol = params.symbol,
-            symbol = _params$symbol === void 0 ? false : _params$symbol,
-            _params$mask = params.mask,
-            mask = _params$mask === void 0 ? null : _params$mask,
-            _params$maskId = params.maskId,
-            maskId = _params$maskId === void 0 ? null : _params$maskId,
-            _params$title = params.title,
-            title = _params$title === void 0 ? null : _params$title,
-            _params$titleId = params.titleId,
-            titleId = _params$titleId === void 0 ? null : _params$titleId,
-            _params$classes = params.classes,
-            classes = _params$classes === void 0 ? [] : _params$classes,
-            _params$attributes = params.attributes,
-            attributes =
-                _params$attributes === void 0 ? {} : _params$attributes,
-            _params$styles = params.styles,
-            styles = _params$styles === void 0 ? {} : _params$styles
-        if (!iconDefinition) return
-        var prefix = iconDefinition.prefix,
-            iconName = iconDefinition.iconName,
-            icon = iconDefinition.icon
+                    : _params$transform
+        let _params$symbol = params.symbol
+        let symbol = _params$symbol === void 0 ? false : _params$symbol
+        let _params$mask = params.mask
+        let mask = _params$mask === void 0 ? null : _params$mask
+        let _params$maskId = params.maskId
+        let maskId = _params$maskId === void 0 ? null : _params$maskId
+        let _params$title = params.title
+        let title = _params$title === void 0 ? null : _params$title
+        let _params$titleId = params.titleId
+        let titleId = _params$titleId === void 0 ? null : _params$titleId
+        let _params$classes = params.classes
+        let classes = _params$classes === void 0 ? [] : _params$classes
+        let _params$attributes = params.attributes
+        let attributes =
+                _params$attributes === void 0 ? {} : _params$attributes
+        let _params$styles = params.styles
+        let styles = _params$styles === void 0 ? {} : _params$styles
+        if (!iconDefinition) {
+            return
+        }
+        let prefix = iconDefinition.prefix
+        let iconName = iconDefinition.iconName
+        let icon = iconDefinition.icon
         return domVariants(
             _objectSpread(
                 {
-                    type: 'icon',
+                    type: `icon`,
                 },
                 iconDefinition
             ),
             function () {
-                callHooks('beforeDOMElementCreation', {
+                callHooks(`beforeDOMElementCreation`, {
                     iconDefinition: iconDefinition,
                     params: params,
                 })
 
                 if (config.autoA11y) {
                     if (title) {
-                        attributes['aria-labelledby'] = ''
-                            .concat(config.replacementClass, '-title-')
+                        attributes[`aria-labelledby`] = ``
+                            .concat(config.replacementClass, `-title-`)
                             .concat(titleId || nextUniqueId())
                     } else {
-                        attributes['aria-hidden'] = 'true'
-                        attributes['focusable'] = 'false'
+                        attributes[`aria-hidden`] = `true`
+                        attributes.focusable = `false`
                     }
                 }
 
@@ -2718,11 +2803,11 @@
                         mask: mask
                             ? asFoundIcon(mask.icon)
                             : {
-                                  found: false,
-                                  width: null,
-                                  height: null,
-                                  icon: {},
-                              },
+                                found: false,
+                                width: null,
+                                height: null,
+                                icon: {},
+                            },
                     },
                     prefix: prefix,
                     iconName: iconName,
@@ -2744,7 +2829,7 @@
             }
         )
     }
-    var ReplaceElements = {
+    let ReplaceElements = {
         mixout: function mixout() {
             return {
                 icon: resolveIcons(render),
@@ -2763,10 +2848,10 @@
         },
         provides: function provides(providers$$1) {
             providers$$1.i2svg = function (params) {
-                var _params$node = params.node,
-                    node = _params$node === void 0 ? DOCUMENT : _params$node,
-                    _params$callback = params.callback,
-                    callback =
+                let _params$node = params.node
+                let node = _params$node === void 0 ? DOCUMENT : _params$node
+                let _params$callback = params.callback
+                let callback =
                         _params$callback === void 0
                             ? function () {}
                             : _params$callback
@@ -2777,23 +2862,23 @@
                 node,
                 nodeMeta
             ) {
-                var iconName = nodeMeta.iconName,
-                    title = nodeMeta.title,
-                    titleId = nodeMeta.titleId,
-                    prefix = nodeMeta.prefix,
-                    transform = nodeMeta.transform,
-                    symbol = nodeMeta.symbol,
-                    mask = nodeMeta.mask,
-                    maskId = nodeMeta.maskId,
-                    extra = nodeMeta.extra
+                let iconName = nodeMeta.iconName
+                let title = nodeMeta.title
+                let titleId = nodeMeta.titleId
+                let prefix = nodeMeta.prefix
+                let transform = nodeMeta.transform
+                let symbol = nodeMeta.symbol
+                let mask = nodeMeta.mask
+                let maskId = nodeMeta.maskId
+                let extra = nodeMeta.extra
                 return new providers$$1.Promise(function (resolve, reject) {
                     providers$$1.Promise.all([
                         findIcon(iconName, prefix),
                         findIcon(mask.iconName, mask.prefix),
                     ]).then(function (_ref) {
-                        var _ref2 = _slicedToArray(_ref, 2),
-                            main = _ref2[0],
-                            mask = _ref2[1]
+                        let _ref2 = _slicedToArray(_ref, 2)
+                        let main = _ref2[0]
+                        let mask = _ref2[1]
 
                         resolve([
                             node,
@@ -2819,22 +2904,22 @@
             }
 
             providers$$1.generateAbstractIcon = function (_ref3) {
-                var children = _ref3.children,
-                    attributes = _ref3.attributes,
-                    main = _ref3.main,
-                    transform = _ref3.transform,
-                    styles = _ref3.styles
-                var styleString = joinStyles(styles)
+                let children = _ref3.children
+                let attributes = _ref3.attributes
+                let main = _ref3.main
+                let transform = _ref3.transform
+                let styles = _ref3.styles
+                let styleString = joinStyles(styles)
 
                 if (styleString.length > 0) {
-                    attributes['style'] = styleString
+                    attributes.style = styleString
                 }
 
-                var nextChild
+                let nextChild
 
                 if (transformIsMeaningful(transform)) {
                     nextChild = callProvided(
-                        'generateAbstractTransformGrouping',
+                        `generateAbstractTransformGrouping`,
                         {
                             main: main,
                             transform: transform,
@@ -2853,48 +2938,48 @@
         },
     }
 
-    var Layers = {
+    let Layers = {
         mixout: function mixout() {
             return {
                 layer: function layer(assembler) {
-                    var params =
+                    let params =
                         arguments.length > 1 && arguments[1] !== undefined
                             ? arguments[1]
                             : {}
-                    var _params$classes = params.classes,
-                        classes =
+                    let _params$classes = params.classes
+                    let classes =
                             _params$classes === void 0 ? [] : _params$classes
                     return domVariants(
                         {
-                            type: 'layer',
+                            type: `layer`,
                         },
                         function () {
-                            callHooks('beforeDOMElementCreation', {
+                            callHooks(`beforeDOMElementCreation`, {
                                 assembler: assembler,
                                 params: params,
                             })
-                            var children = []
+                            let children = []
                             assembler(function (args) {
                                 Array.isArray(args)
                                     ? args.map(function (a) {
-                                          children = children.concat(a.abstract)
-                                      })
+                                        children = children.concat(a.abstract)
+                                    })
                                     : (children = children.concat(
-                                          args.abstract
-                                      ))
+                                        args.abstract
+                                    ))
                             })
                             return [
                                 {
-                                    tag: 'span',
+                                    tag: `span`,
                                     attributes: {
                                         class: [
-                                            ''.concat(
+                                            ``.concat(
                                                 config.familyPrefix,
-                                                '-layers'
+                                                `-layers`
                                             ),
                                         ]
                                             .concat(_toConsumableArray(classes))
-                                            .join(' '),
+                                            .join(` `),
                                     },
                                     children: children,
                                 },
@@ -2906,33 +2991,33 @@
         },
     }
 
-    var LayersCounter = {
+    let LayersCounter = {
         mixout: function mixout() {
             return {
                 counter: function counter(content) {
-                    var params =
+                    let params =
                         arguments.length > 1 && arguments[1] !== undefined
                             ? arguments[1]
                             : {}
-                    var _params$title = params.title,
-                        title = _params$title === void 0 ? null : _params$title,
-                        _params$classes = params.classes,
-                        classes =
-                            _params$classes === void 0 ? [] : _params$classes,
-                        _params$attributes = params.attributes,
-                        attributes =
+                    let _params$title = params.title
+                    let title = _params$title === void 0 ? null : _params$title
+                    let _params$classes = params.classes
+                    let classes =
+                            _params$classes === void 0 ? [] : _params$classes
+                    let _params$attributes = params.attributes
+                    let attributes =
                             _params$attributes === void 0
                                 ? {}
-                                : _params$attributes,
-                        _params$styles = params.styles,
-                        styles = _params$styles === void 0 ? {} : _params$styles
+                                : _params$attributes
+                    let _params$styles = params.styles
+                    let styles = _params$styles === void 0 ? {} : _params$styles
                     return domVariants(
                         {
-                            type: 'counter',
+                            type: `counter`,
                             content: content,
                         },
                         function () {
-                            callHooks('beforeDOMElementCreation', {
+                            callHooks(`beforeDOMElementCreation`, {
                                 content: content,
                                 params: params,
                             })
@@ -2943,9 +3028,9 @@
                                     attributes: attributes,
                                     styles: styles,
                                     classes: [
-                                        ''.concat(
+                                        ``.concat(
                                             config.familyPrefix,
-                                            '-layers-counter'
+                                            `-layers-counter`
                                         ),
                                     ].concat(_toConsumableArray(classes)),
                                 },
@@ -2957,38 +3042,38 @@
         },
     }
 
-    var LayersText = {
+    let LayersText = {
         mixout: function mixout() {
             return {
                 text: function text(content) {
-                    var params =
+                    let params =
                         arguments.length > 1 && arguments[1] !== undefined
                             ? arguments[1]
                             : {}
-                    var _params$transform = params.transform,
-                        transform =
+                    let _params$transform = params.transform
+                    let transform =
                             _params$transform === void 0
                                 ? meaninglessTransform
-                                : _params$transform,
-                        _params$title = params.title,
-                        title = _params$title === void 0 ? null : _params$title,
-                        _params$classes = params.classes,
-                        classes =
-                            _params$classes === void 0 ? [] : _params$classes,
-                        _params$attributes = params.attributes,
-                        attributes =
+                                : _params$transform
+                    let _params$title = params.title
+                    let title = _params$title === void 0 ? null : _params$title
+                    let _params$classes = params.classes
+                    let classes =
+                            _params$classes === void 0 ? [] : _params$classes
+                    let _params$attributes = params.attributes
+                    let attributes =
                             _params$attributes === void 0
                                 ? {}
-                                : _params$attributes,
-                        _params$styles = params.styles,
-                        styles = _params$styles === void 0 ? {} : _params$styles
+                                : _params$attributes
+                    let _params$styles = params.styles
+                    let styles = _params$styles === void 0 ? {} : _params$styles
                     return domVariants(
                         {
-                            type: 'text',
+                            type: `text`,
                             content: content,
                         },
                         function () {
-                            callHooks('beforeDOMElementCreation', {
+                            callHooks(`beforeDOMElementCreation`, {
                                 content: content,
                                 params: params,
                             })
@@ -3004,9 +3089,9 @@
                                     attributes: attributes,
                                     styles: styles,
                                     classes: [
-                                        ''.concat(
+                                        ``.concat(
                                             config.familyPrefix,
-                                            '-layers-text'
+                                            `-layers-text`
                                         ),
                                     ].concat(_toConsumableArray(classes)),
                                 },
@@ -3018,24 +3103,24 @@
         },
         provides: function provides(providers$$1) {
             providers$$1.generateLayersText = function (node, nodeMeta) {
-                var title = nodeMeta.title,
-                    transform = nodeMeta.transform,
-                    extra = nodeMeta.extra
-                var width = null
-                var height = null
+                let title = nodeMeta.title
+                let transform = nodeMeta.transform
+                let extra = nodeMeta.extra
+                let width = null
+                let height = null
 
                 if (IS_IE) {
-                    var computedFontSize = parseInt(
+                    let computedFontSize = parseInt(
                         getComputedStyle(node).fontSize,
                         10
                     )
-                    var boundingClientRect = node.getBoundingClientRect()
+                    let boundingClientRect = node.getBoundingClientRect()
                     width = boundingClientRect.width / computedFontSize
                     height = boundingClientRect.height / computedFontSize
                 }
 
                 if (config.autoA11y && !title) {
-                    extra.attributes['aria-hidden'] = 'true'
+                    extra.attributes[`aria-hidden`] = `true`
                 }
 
                 return providers.Promise.resolve([
@@ -3055,25 +3140,25 @@
     }
 
     function replaceForPosition(node, position) {
-        var pendingAttribute = ''
+        let pendingAttribute = ``
             .concat(DATA_FA_PSEUDO_ELEMENT_PENDING)
-            .concat(position.replace(':', '-'))
+            .concat(position.replace(`:`, `-`))
         return new providers.Promise(function (resolve, reject) {
             if (node.getAttribute(pendingAttribute) !== null) {
                 // This node is already being processed
                 return resolve()
             }
 
-            var children = toArray(node.children)
-            var alreadyProcessedPseudoElement = children.filter(function (c) {
+            let children = toArray(node.children)
+            let alreadyProcessedPseudoElement = children.filter(function (c) {
                 return c.getAttribute(DATA_FA_PSEUDO_ELEMENT) === position
             })[0]
-            var styles = WINDOW.getComputedStyle(node, position)
-            var fontFamily = styles
-                .getPropertyValue('font-family')
+            let styles = WINDOW.getComputedStyle(node, position)
+            let fontFamily = styles
+                .getPropertyValue(`font-family`)
                 .match(FONT_FAMILY_PATTERN)
-            var fontWeight = styles.getPropertyValue('font-weight')
-            var content = styles.getPropertyValue('content')
+            let fontWeight = styles.getPropertyValue(`font-weight`)
+            let content = styles.getPropertyValue(`content`)
 
             if (alreadyProcessedPseudoElement && !fontFamily) {
                 // If we've already processed it but the current computed style does not result in a font-family,
@@ -3081,25 +3166,25 @@
                 // removed. So we now should delete the icon.
                 node.removeChild(alreadyProcessedPseudoElement)
                 return resolve()
-            } else if (fontFamily && content !== 'none' && content !== '') {
-                var _content = styles.getPropertyValue('content')
+            } else if (fontFamily && content !== `none` && content !== ``) {
+                let _content = styles.getPropertyValue(`content`)
 
-                var prefix = ~[
-                    'Solid',
-                    'Regular',
-                    'Light',
-                    'Thin',
-                    'Duotone',
-                    'Brands',
-                    'Kit',
+                let prefix = ~[
+                    `Solid`,
+                    `Regular`,
+                    `Light`,
+                    `Thin`,
+                    `Duotone`,
+                    `Brands`,
+                    `Kit`,
                 ].indexOf(fontFamily[2])
                     ? STYLE_TO_PREFIX[fontFamily[2].toLowerCase()]
                     : FONT_WEIGHT_TO_PREFIX[fontWeight]
-                var hexValue = toHex(
+                let hexValue = toHex(
                     _content.length === 3 ? _content.substr(1, 1) : _content
                 )
-                var iconName = byUnicode(prefix, hexValue)
-                var iconIdentifier = iconName // Only convert the pseudo element in this ::before/::after position into an icon if we haven't
+                let iconName = byUnicode(prefix, hexValue)
+                let iconIdentifier = iconName // Only convert the pseudo element in this ::before/::after position into an icon if we haven't
                 // already done so with the same prefix and iconName
 
                 if (
@@ -3119,12 +3204,12 @@
                         node.removeChild(alreadyProcessedPseudoElement)
                     }
 
-                    var meta = blankMeta()
-                    var extra = meta.extra
+                    let meta = blankMeta()
+                    let extra = meta.extra
                     extra.attributes[DATA_FA_PSEUDO_ELEMENT] = position
                     findIcon(iconName, prefix)
                         .then(function (main) {
-                            var abstract = makeInlineSvgAbstract(
+                            let abstract = makeInlineSvgAbstract(
                                 _objectSpread({}, meta, {
                                     icons: {
                                         main: main,
@@ -3136,9 +3221,9 @@
                                     watchable: true,
                                 })
                             )
-                            var element = DOCUMENT.createElement('svg')
+                            let element = DOCUMENT.createElement(`svg`)
 
-                            if (position === '::before') {
+                            if (position === `::before`) {
                                 node.insertBefore(element, node.firstChild)
                             } else {
                                 node.appendChild(element)
@@ -3148,7 +3233,7 @@
                                 .map(function (a) {
                                     return toHtml(a)
                                 })
-                                .join('\n')
+                                .join(`\n`)
                             node.removeAttribute(pendingAttribute)
                             resolve()
                         })
@@ -3164,8 +3249,8 @@
 
     function replace(node) {
         return providers.Promise.all([
-            replaceForPosition(node, '::before'),
-            replaceForPosition(node, '::after'),
+            replaceForPosition(node, `::before`),
+            replaceForPosition(node, `::after`),
         ])
     }
 
@@ -3176,17 +3261,19 @@
                 node.tagName.toUpperCase()
             ) &&
             !node.getAttribute(DATA_FA_PSEUDO_ELEMENT) &&
-            (!node.parentNode || node.parentNode.tagName !== 'svg')
+            (!node.parentNode || node.parentNode.tagName !== `svg`)
         )
     }
 
     function searchPseudoElements(root) {
-        if (!IS_DOM) return
+        if (!IS_DOM) {
+            return
+        }
         return new providers.Promise(function (resolve, reject) {
-            var operations = toArray(root.querySelectorAll('*'))
+            let operations = toArray(root.querySelectorAll(`*`))
                 .filter(processable)
                 .map(replace)
-            var end = perf.begin('searchPseudoElements')
+            let end = perf.begin(`searchPseudoElements`)
             disableObservation()
             providers.Promise.all(operations)
                 .then(function () {
@@ -3202,7 +3289,7 @@
         })
     }
 
-    var PseudoElements = {
+    let PseudoElements = {
         hooks: function hooks() {
             return {
                 mutationObserverCallbacks: function mutationObserverCallbacks(
@@ -3215,8 +3302,8 @@
         },
         provides: function provides(providers$$1) {
             providers$$1.pseudoElements2svg = function (params) {
-                var _params$node = params.node,
-                    node = _params$node === void 0 ? DOCUMENT : _params$node
+                let _params$node = params.node
+                let node = _params$node === void 0 ? DOCUMENT : _params$node
 
                 if (config.searchPseudoElements) {
                     searchPseudoElements(node)
@@ -3225,8 +3312,8 @@
         },
     }
 
-    var _unwatched = false
-    var MutationObserver$1 = {
+    let _unwatched = false
+    let MutationObserver$1 = {
         mixout: function mixout() {
             return {
                 dom: {
@@ -3240,19 +3327,19 @@
         hooks: function hooks() {
             return {
                 bootstrap: function bootstrap() {
-                    observe(chainHooks('mutationObserverCallbacks', {}))
+                    observe(chainHooks(`mutationObserverCallbacks`, {}))
                 },
                 noAuto: function noAuto() {
                     disconnect()
                 },
                 watch: function watch(params) {
-                    var observeMutationsRoot = params.observeMutationsRoot
+                    let observeMutationsRoot = params.observeMutationsRoot
 
                     if (_unwatched) {
                         enableObservation()
                     } else {
                         observe(
-                            chainHooks('mutationObserverCallbacks', {
+                            chainHooks(`mutationObserverCallbacks`, {
                                 observeMutationsRoot: observeMutationsRoot,
                             })
                         )
@@ -3262,8 +3349,8 @@
         },
     }
 
-    var parseTransformString = function parseTransformString(transformString) {
-        var transform = {
+    let parseTransformString = function parseTransformString(transformString) {
+        let transform = {
             size: 16,
             x: 0,
             y: 0,
@@ -3273,18 +3360,18 @@
         }
         return transformString
             .toLowerCase()
-            .split(' ')
+            .split(` `)
             .reduce(function (acc, n) {
-                var parts = n.toLowerCase().split('-')
-                var first = parts[0]
-                var rest = parts.slice(1).join('-')
+                let parts = n.toLowerCase().split(`-`)
+                let first = parts[0]
+                let rest = parts.slice(1).join(`-`)
 
-                if (first && rest === 'h') {
+                if (first && rest === `h`) {
                     acc.flipX = true
                     return acc
                 }
 
-                if (first && rest === 'v') {
+                if (first && rest === `v`) {
                     acc.flipY = true
                     return acc
                 }
@@ -3296,39 +3383,39 @@
                 }
 
                 switch (first) {
-                    case 'grow':
-                        acc.size = acc.size + rest
-                        break
+                case `grow`:
+                    acc.size = acc.size + rest
+                    break
 
-                    case 'shrink':
-                        acc.size = acc.size - rest
-                        break
+                case `shrink`:
+                    acc.size = acc.size - rest
+                    break
 
-                    case 'left':
-                        acc.x = acc.x - rest
-                        break
+                case `left`:
+                    acc.x = acc.x - rest
+                    break
 
-                    case 'right':
-                        acc.x = acc.x + rest
-                        break
+                case `right`:
+                    acc.x = acc.x + rest
+                    break
 
-                    case 'up':
-                        acc.y = acc.y - rest
-                        break
+                case `up`:
+                    acc.y = acc.y - rest
+                    break
 
-                    case 'down':
-                        acc.y = acc.y + rest
-                        break
+                case `down`:
+                    acc.y = acc.y + rest
+                    break
 
-                    case 'rotate':
-                        acc.rotate = acc.rotate + rest
-                        break
+                case `rotate`:
+                    acc.rotate = acc.rotate + rest
+                    break
                 }
 
                 return acc
             }, transform)
     }
-    var PowerTransforms = {
+    let PowerTransforms = {
         mixout: function mixout() {
             return {
                 parse: {
@@ -3344,7 +3431,7 @@
                     accumulator,
                     node
                 ) {
-                    var transformString = node.getAttribute('data-fa-transform')
+                    let transformString = node.getAttribute(`data-fa-transform`)
 
                     if (transformString) {
                         accumulator.transform =
@@ -3357,49 +3444,49 @@
         },
         provides: function provides(providers) {
             providers.generateAbstractTransformGrouping = function (_ref) {
-                var main = _ref.main,
-                    transform = _ref.transform,
-                    containerWidth = _ref.containerWidth,
-                    iconWidth = _ref.iconWidth
-                var outer = {
-                    transform: 'translate('.concat(containerWidth / 2, ' 256)'),
+                let main = _ref.main
+                let transform = _ref.transform
+                let containerWidth = _ref.containerWidth
+                let iconWidth = _ref.iconWidth
+                let outer = {
+                    transform: `translate(`.concat(containerWidth / 2, ` 256)`),
                 }
-                var innerTranslate = 'translate('
-                    .concat(transform.x * 32, ', ')
-                    .concat(transform.y * 32, ') ')
-                var innerScale = 'scale('
+                let innerTranslate = `translate(`
+                    .concat(transform.x * 32, `, `)
+                    .concat(transform.y * 32, `) `)
+                let innerScale = `scale(`
                     .concat(
                         (transform.size / 16) * (transform.flipX ? -1 : 1),
-                        ', '
+                        `, `
                     )
                     .concat(
                         (transform.size / 16) * (transform.flipY ? -1 : 1),
-                        ') '
+                        `) `
                     )
-                var innerRotate = 'rotate('.concat(transform.rotate, ' 0 0)')
-                var inner = {
-                    transform: ''
-                        .concat(innerTranslate, ' ')
-                        .concat(innerScale, ' ')
+                let innerRotate = `rotate(`.concat(transform.rotate, ` 0 0)`)
+                let inner = {
+                    transform: ``
+                        .concat(innerTranslate, ` `)
+                        .concat(innerScale, ` `)
                         .concat(innerRotate),
                 }
-                var path = {
-                    transform: 'translate('.concat(
+                let path = {
+                    transform: `translate(`.concat(
                         (iconWidth / 2) * -1,
-                        ' -256)'
+                        ` -256)`
                     ),
                 }
-                var operations = {
+                let operations = {
                     outer: outer,
                     inner: inner,
                     path: path,
                 }
                 return {
-                    tag: 'g',
+                    tag: `g`,
                     attributes: _objectSpread({}, operations.outer),
                     children: [
                         {
-                            tag: 'g',
+                            tag: `g`,
                             attributes: _objectSpread({}, operations.inner),
                             children: [
                                 {
@@ -3419,85 +3506,85 @@
         },
     }
 
-    var ALL_SPACE = {
+    let ALL_SPACE = {
         x: 0,
         y: 0,
-        width: '100%',
-        height: '100%',
+        width: `100%`,
+        height: `100%`,
     }
 
     function fillBlack(abstract) {
-        var force =
+        let force =
             arguments.length > 1 && arguments[1] !== undefined
                 ? arguments[1]
                 : true
 
         if (abstract.attributes && (abstract.attributes.fill || force)) {
-            abstract.attributes.fill = 'black'
+            abstract.attributes.fill = `black`
         }
 
         return abstract
     }
 
     function deGroup(abstract) {
-        if (abstract.tag === 'g') {
+        if (abstract.tag === `g`) {
             return abstract.children
         } else {
             return [abstract]
         }
     }
 
-    var Masks = {
+    let Masks = {
         hooks: function hooks() {
             return {
                 parseNodeAttributes: function parseNodeAttributes(
                     accumulator,
                     node
                 ) {
-                    var maskData = node.getAttribute('data-fa-mask')
-                    var mask = !maskData
+                    let maskData = node.getAttribute(`data-fa-mask`)
+                    let mask = !maskData
                         ? emptyCanonicalIcon()
                         : getCanonicalIcon(
-                              maskData.split(' ').map(function (i) {
-                                  return i.trim()
-                              })
-                          )
+                            maskData.split(` `).map(function (i) {
+                                return i.trim()
+                            })
+                        )
                     accumulator.mask = mask
-                    accumulator.maskId = node.getAttribute('data-fa-mask-id')
+                    accumulator.maskId = node.getAttribute(`data-fa-mask-id`)
                     return accumulator
                 },
             }
         },
         provides: function provides(providers) {
             providers.generateAbstractMask = function (_ref) {
-                var children = _ref.children,
-                    attributes = _ref.attributes,
-                    main = _ref.main,
-                    mask = _ref.mask,
-                    explicitMaskId = _ref.maskId,
-                    transform = _ref.transform
-                var mainWidth = main.width,
-                    mainPath = main.icon
-                var maskWidth = mask.width,
-                    maskPath = mask.icon
-                var trans = transformForSvg({
+                let children = _ref.children
+                let attributes = _ref.attributes
+                let main = _ref.main
+                let mask = _ref.mask
+                let explicitMaskId = _ref.maskId
+                let transform = _ref.transform
+                let mainWidth = main.width
+                let mainPath = main.icon
+                let maskWidth = mask.width
+                let maskPath = mask.icon
+                let trans = transformForSvg({
                     transform: transform,
                     containerWidth: maskWidth,
                     iconWidth: mainWidth,
                 })
-                var maskRect = {
-                    tag: 'rect',
+                let maskRect = {
+                    tag: `rect`,
                     attributes: _objectSpread({}, ALL_SPACE, {
-                        fill: 'white',
+                        fill: `white`,
                     }),
                 }
-                var maskInnerGroupChildrenMixin = mainPath.children
+                let maskInnerGroupChildrenMixin = mainPath.children
                     ? {
-                          children: mainPath.children.map(fillBlack),
-                      }
+                        children: mainPath.children.map(fillBlack),
+                    }
                     : {}
-                var maskInnerGroup = {
-                    tag: 'g',
+                let maskInnerGroup = {
+                    tag: `g`,
                     attributes: _objectSpread({}, trans.inner),
                     children: [
                         fillBlack(
@@ -3515,27 +3602,27 @@
                         ),
                     ],
                 }
-                var maskOuterGroup = {
-                    tag: 'g',
+                let maskOuterGroup = {
+                    tag: `g`,
                     attributes: _objectSpread({}, trans.outer),
                     children: [maskInnerGroup],
                 }
-                var maskId = 'mask-'.concat(explicitMaskId || nextUniqueId())
-                var clipId = 'clip-'.concat(explicitMaskId || nextUniqueId())
-                var maskTag = {
-                    tag: 'mask',
+                let maskId = `mask-`.concat(explicitMaskId || nextUniqueId())
+                let clipId = `clip-`.concat(explicitMaskId || nextUniqueId())
+                let maskTag = {
+                    tag: `mask`,
                     attributes: _objectSpread({}, ALL_SPACE, {
                         id: maskId,
-                        maskUnits: 'userSpaceOnUse',
-                        maskContentUnits: 'userSpaceOnUse',
+                        maskUnits: `userSpaceOnUse`,
+                        maskContentUnits: `userSpaceOnUse`,
                     }),
                     children: [maskRect, maskOuterGroup],
                 }
-                var defs = {
-                    tag: 'defs',
+                let defs = {
+                    tag: `defs`,
                     children: [
                         {
-                            tag: 'clipPath',
+                            tag: `clipPath`,
                             attributes: {
                                 id: clipId,
                             },
@@ -3545,12 +3632,12 @@
                     ],
                 }
                 children.push(defs, {
-                    tag: 'rect',
+                    tag: `rect`,
                     attributes: _objectSpread(
                         {
-                            fill: 'currentColor',
-                            'clip-path': 'url(#'.concat(clipId, ')'),
-                            mask: 'url(#'.concat(maskId, ')'),
+                            fill: `currentColor`,
+                            'clip-path': `url(#`.concat(clipId, `)`),
+                            mask: `url(#`.concat(maskId, `)`),
                         },
                         ALL_SPACE
                     ),
@@ -3563,112 +3650,112 @@
         },
     }
 
-    var MissingIconIndicator = {
+    let MissingIconIndicator = {
         provides: function provides(providers) {
             providers.missingIconAbstract = function () {
-                var FILL = {
-                    fill: 'currentColor',
+                let FILL = {
+                    fill: `currentColor`,
                     test: 2,
                 }
-                var ANIMATION_BASE = {
-                    attributeType: 'XML',
-                    repeatCount: 'indefinite',
-                    dur: '2s',
+                let ANIMATION_BASE = {
+                    attributeType: `XML`,
+                    repeatCount: `indefinite`,
+                    dur: `2s`,
                 }
-                var RING = {
-                    tag: 'path',
+                let RING = {
+                    tag: `path`,
                     attributes: _objectSpread({}, FILL, {
-                        d: 'M156.5,447.7l-12.6,29.5c-18.7-9.5-35.9-21.2-51.5-34.9l22.7-22.7C127.6,430.5,141.5,440,156.5,447.7z M40.6,272H8.5 c1.4,21.2,5.4,41.7,11.7,61.1L50,321.2C45.1,305.5,41.8,289,40.6,272z M40.6,240c1.4-18.8,5.2-37,11.1-54.1l-29.5-12.6 C14.7,194.3,10,216.7,8.5,240H40.6z M64.3,156.5c7.8-14.9,17.2-28.8,28.1-41.5L69.7,92.3c-13.7,15.6-25.5,32.8-34.9,51.5 L64.3,156.5z M397,419.6c-13.9,12-29.4,22.3-46.1,30.4l11.9,29.8c20.7-9.9,39.8-22.6,56.9-37.6L397,419.6z M115,92.4 c13.9-12,29.4-22.3,46.1-30.4l-11.9-29.8c-20.7,9.9-39.8,22.6-56.8,37.6L115,92.4z M447.7,355.5c-7.8,14.9-17.2,28.8-28.1,41.5 l22.7,22.7c13.7-15.6,25.5-32.9,34.9-51.5L447.7,355.5z M471.4,272c-1.4,18.8-5.2,37-11.1,54.1l29.5,12.6 c7.5-21.1,12.2-43.5,13.6-66.8H471.4z M321.2,462c-15.7,5-32.2,8.2-49.2,9.4v32.1c21.2-1.4,41.7-5.4,61.1-11.7L321.2,462z M240,471.4c-18.8-1.4-37-5.2-54.1-11.1l-12.6,29.5c21.1,7.5,43.5,12.2,66.8,13.6V471.4z M462,190.8c5,15.7,8.2,32.2,9.4,49.2h32.1 c-1.4-21.2-5.4-41.7-11.7-61.1L462,190.8z M92.4,397c-12-13.9-22.3-29.4-30.4-46.1l-29.8,11.9c9.9,20.7,22.6,39.8,37.6,56.9 L92.4,397z M272,40.6c18.8,1.4,36.9,5.2,54.1,11.1l12.6-29.5C317.7,14.7,295.3,10,272,8.5V40.6z M190.8,50 c15.7-5,32.2-8.2,49.2-9.4V8.5c-21.2,1.4-41.7,5.4-61.1,11.7L190.8,50z M442.3,92.3L419.6,115c12,13.9,22.3,29.4,30.5,46.1 l29.8-11.9C470,128.5,457.3,109.4,442.3,92.3z M397,92.4l22.7-22.7c-15.6-13.7-32.8-25.5-51.5-34.9l-12.6,29.5 C370.4,72.1,384.4,81.5,397,92.4z',
+                        d: `M156.5,447.7l-12.6,29.5c-18.7-9.5-35.9-21.2-51.5-34.9l22.7-22.7C127.6,430.5,141.5,440,156.5,447.7z M40.6,272H8.5 c1.4,21.2,5.4,41.7,11.7,61.1L50,321.2C45.1,305.5,41.8,289,40.6,272z M40.6,240c1.4-18.8,5.2-37,11.1-54.1l-29.5-12.6 C14.7,194.3,10,216.7,8.5,240H40.6z M64.3,156.5c7.8-14.9,17.2-28.8,28.1-41.5L69.7,92.3c-13.7,15.6-25.5,32.8-34.9,51.5 L64.3,156.5z M397,419.6c-13.9,12-29.4,22.3-46.1,30.4l11.9,29.8c20.7-9.9,39.8-22.6,56.9-37.6L397,419.6z M115,92.4 c13.9-12,29.4-22.3,46.1-30.4l-11.9-29.8c-20.7,9.9-39.8,22.6-56.8,37.6L115,92.4z M447.7,355.5c-7.8,14.9-17.2,28.8-28.1,41.5 l22.7,22.7c13.7-15.6,25.5-32.9,34.9-51.5L447.7,355.5z M471.4,272c-1.4,18.8-5.2,37-11.1,54.1l29.5,12.6 c7.5-21.1,12.2-43.5,13.6-66.8H471.4z M321.2,462c-15.7,5-32.2,8.2-49.2,9.4v32.1c21.2-1.4,41.7-5.4,61.1-11.7L321.2,462z M240,471.4c-18.8-1.4-37-5.2-54.1-11.1l-12.6,29.5c21.1,7.5,43.5,12.2,66.8,13.6V471.4z M462,190.8c5,15.7,8.2,32.2,9.4,49.2h32.1 c-1.4-21.2-5.4-41.7-11.7-61.1L462,190.8z M92.4,397c-12-13.9-22.3-29.4-30.4-46.1l-29.8,11.9c9.9,20.7,22.6,39.8,37.6,56.9 L92.4,397z M272,40.6c18.8,1.4,36.9,5.2,54.1,11.1l12.6-29.5C317.7,14.7,295.3,10,272,8.5V40.6z M190.8,50 c15.7-5,32.2-8.2,49.2-9.4V8.5c-21.2,1.4-41.7,5.4-61.1,11.7L190.8,50z M442.3,92.3L419.6,115c12,13.9,22.3,29.4,30.5,46.1 l29.8-11.9C470,128.5,457.3,109.4,442.3,92.3z M397,92.4l22.7-22.7c-15.6-13.7-32.8-25.5-51.5-34.9l-12.6,29.5 C370.4,72.1,384.4,81.5,397,92.4z`,
                     }),
                 }
 
-                var OPACITY_ANIMATE = _objectSpread({}, ANIMATION_BASE, {
-                    attributeName: 'opacity',
+                let OPACITY_ANIMATE = _objectSpread({}, ANIMATION_BASE, {
+                    attributeName: `opacity`,
                 })
 
-                var DOT = {
-                    tag: 'circle',
+                let DOT = {
+                    tag: `circle`,
                     attributes: _objectSpread({}, FILL, {
-                        cx: '256',
-                        cy: '364',
-                        r: '28',
+                        cx: `256`,
+                        cy: `364`,
+                        r: `28`,
                     }),
                     children: [
                         {
-                            tag: 'animate',
+                            tag: `animate`,
                             attributes: _objectSpread({}, ANIMATION_BASE, {
-                                attributeName: 'r',
-                                values: '28;14;28;28;14;28;',
+                                attributeName: `r`,
+                                values: `28;14;28;28;14;28;`,
                             }),
                         },
                         {
-                            tag: 'animate',
+                            tag: `animate`,
                             attributes: _objectSpread({}, OPACITY_ANIMATE, {
-                                values: '1;0;1;1;0;1;',
-                            }),
-                        },
-                    ],
-                }
-                var QUESTION = {
-                    tag: 'path',
-                    attributes: _objectSpread({}, FILL, {
-                        opacity: '1',
-                        d: 'M263.7,312h-16c-6.6,0-12-5.4-12-12c0-71,77.4-63.9,77.4-107.8c0-20-17.8-40.2-57.4-40.2c-29.1,0-44.3,9.6-59.2,28.7 c-3.9,5-11.1,6-16.2,2.4l-13.1-9.2c-5.6-3.9-6.9-11.8-2.6-17.2c21.2-27.2,46.4-44.7,91.2-44.7c52.3,0,97.4,29.8,97.4,80.2 c0,67.6-77.4,63.5-77.4,107.8C275.7,306.6,270.3,312,263.7,312z',
-                    }),
-                    children: [
-                        {
-                            tag: 'animate',
-                            attributes: _objectSpread({}, OPACITY_ANIMATE, {
-                                values: '1;0;0;0;0;1;',
+                                values: `1;0;1;1;0;1;`,
                             }),
                         },
                     ],
                 }
-                var EXCLAMATION = {
-                    tag: 'path',
+                let QUESTION = {
+                    tag: `path`,
                     attributes: _objectSpread({}, FILL, {
-                        opacity: '0',
-                        d: 'M232.5,134.5l7,168c0.3,6.4,5.6,11.5,12,11.5h9c6.4,0,11.7-5.1,12-11.5l7-168c0.3-6.8-5.2-12.5-12-12.5h-23 C237.7,122,232.2,127.7,232.5,134.5z',
+                        opacity: `1`,
+                        d: `M263.7,312h-16c-6.6,0-12-5.4-12-12c0-71,77.4-63.9,77.4-107.8c0-20-17.8-40.2-57.4-40.2c-29.1,0-44.3,9.6-59.2,28.7 c-3.9,5-11.1,6-16.2,2.4l-13.1-9.2c-5.6-3.9-6.9-11.8-2.6-17.2c21.2-27.2,46.4-44.7,91.2-44.7c52.3,0,97.4,29.8,97.4,80.2 c0,67.6-77.4,63.5-77.4,107.8C275.7,306.6,270.3,312,263.7,312z`,
                     }),
                     children: [
                         {
-                            tag: 'animate',
+                            tag: `animate`,
                             attributes: _objectSpread({}, OPACITY_ANIMATE, {
-                                values: '0;0;1;1;0;0;',
+                                values: `1;0;0;0;0;1;`,
+                            }),
+                        },
+                    ],
+                }
+                let EXCLAMATION = {
+                    tag: `path`,
+                    attributes: _objectSpread({}, FILL, {
+                        opacity: `0`,
+                        d: `M232.5,134.5l7,168c0.3,6.4,5.6,11.5,12,11.5h9c6.4,0,11.7-5.1,12-11.5l7-168c0.3-6.8-5.2-12.5-12-12.5h-23 C237.7,122,232.2,127.7,232.5,134.5z`,
+                    }),
+                    children: [
+                        {
+                            tag: `animate`,
+                            attributes: _objectSpread({}, OPACITY_ANIMATE, {
+                                values: `0;0;1;1;0;0;`,
                             }),
                         },
                     ],
                 }
                 return {
-                    tag: 'g',
+                    tag: `g`,
                     children: [RING, DOT, QUESTION, EXCLAMATION],
                 }
             }
         },
     }
 
-    var SvgSymbols = {
+    let SvgSymbols = {
         hooks: function hooks() {
             return {
                 parseNodeAttributes: function parseNodeAttributes(
                     accumulator,
                     node
                 ) {
-                    var symbolData = node.getAttribute('data-fa-symbol')
-                    var symbol =
+                    let symbolData = node.getAttribute(`data-fa-symbol`)
+                    let symbol =
                         symbolData === null
                             ? false
-                            : symbolData === ''
-                            ? true
-                            : symbolData
-                    accumulator['symbol'] = symbol
+                            : symbolData === ``
+                                ? true
+                                : symbolData
+                    accumulator.symbol = symbol
                     return accumulator
                 },
             }
         },
     }
 
-    var plugins = [
+    let plugins = [
         PromisePonyfill,
         InjectCSS,
         ReplaceElements,

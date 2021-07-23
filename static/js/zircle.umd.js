@@ -1,528 +1,615 @@
 (function webpackUniversalModuleDefinition(root, factory) {
-	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("vue"));
-	else if(typeof define === 'function' && define.amd)
-		define([], factory);
-	else if(typeof exports === 'object')
-		exports["zircle"] = factory(require("vue"));
-	else
-		root["zircle"] = factory(root["Vue"]);
-})((typeof self !== 'undefined' ? self : this), function(__WEBPACK_EXTERNAL_MODULE__8bbf__) {
-return /******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "fb15");
-/******/ })
-/************************************************************************/
-/******/ ({
-
-/***/ "014b":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-// ECMAScript 6 symbols shim
-var global = __webpack_require__("e53d");
-var has = __webpack_require__("07e3");
-var DESCRIPTORS = __webpack_require__("8e60");
-var $export = __webpack_require__("63b6");
-var redefine = __webpack_require__("9138");
-var META = __webpack_require__("ebfd").KEY;
-var $fails = __webpack_require__("294c");
-var shared = __webpack_require__("dbdb");
-var setToStringTag = __webpack_require__("45f2");
-var uid = __webpack_require__("62a0");
-var wks = __webpack_require__("5168");
-var wksExt = __webpack_require__("ccb9");
-var wksDefine = __webpack_require__("6718");
-var enumKeys = __webpack_require__("47ee");
-var isArray = __webpack_require__("9003");
-var anObject = __webpack_require__("e4ae");
-var isObject = __webpack_require__("f772");
-var toIObject = __webpack_require__("36c3");
-var toPrimitive = __webpack_require__("1bc3");
-var createDesc = __webpack_require__("aebd");
-var _create = __webpack_require__("a159");
-var gOPNExt = __webpack_require__("0395");
-var $GOPD = __webpack_require__("bf0b");
-var $DP = __webpack_require__("d9f6");
-var $keys = __webpack_require__("c3a1");
-var gOPD = $GOPD.f;
-var dP = $DP.f;
-var gOPN = gOPNExt.f;
-var $Symbol = global.Symbol;
-var $JSON = global.JSON;
-var _stringify = $JSON && $JSON.stringify;
-var PROTOTYPE = 'prototype';
-var HIDDEN = wks('_hidden');
-var TO_PRIMITIVE = wks('toPrimitive');
-var isEnum = {}.propertyIsEnumerable;
-var SymbolRegistry = shared('symbol-registry');
-var AllSymbols = shared('symbols');
-var OPSymbols = shared('op-symbols');
-var ObjectProto = Object[PROTOTYPE];
-var USE_NATIVE = typeof $Symbol == 'function';
-var QObject = global.QObject;
-// Don't use setters in Qt Script, https://github.com/zloirock/core-js/issues/173
-var setter = !QObject || !QObject[PROTOTYPE] || !QObject[PROTOTYPE].findChild;
-
-// fallback for old Android, https://code.google.com/p/v8/issues/detail?id=687
-var setSymbolDesc = DESCRIPTORS && $fails(function () {
-  return _create(dP({}, 'a', {
-    get: function () { return dP(this, 'a', { value: 7 }).a; }
-  })).a != 7;
-}) ? function (it, key, D) {
-  var protoDesc = gOPD(ObjectProto, key);
-  if (protoDesc) delete ObjectProto[key];
-  dP(it, key, D);
-  if (protoDesc && it !== ObjectProto) dP(ObjectProto, key, protoDesc);
-} : dP;
-
-var wrap = function (tag) {
-  var sym = AllSymbols[tag] = _create($Symbol[PROTOTYPE]);
-  sym._k = tag;
-  return sym;
-};
-
-var isSymbol = USE_NATIVE && typeof $Symbol.iterator == 'symbol' ? function (it) {
-  return typeof it == 'symbol';
-} : function (it) {
-  return it instanceof $Symbol;
-};
-
-var $defineProperty = function defineProperty(it, key, D) {
-  if (it === ObjectProto) $defineProperty(OPSymbols, key, D);
-  anObject(it);
-  key = toPrimitive(key, true);
-  anObject(D);
-  if (has(AllSymbols, key)) {
-    if (!D.enumerable) {
-      if (!has(it, HIDDEN)) dP(it, HIDDEN, createDesc(1, {}));
-      it[HIDDEN][key] = true;
+    if (typeof exports === `object` && typeof module === `object`) {
+        module.exports = factory(require(`vue`))
+    } else if (typeof define === `function` && define.amd) {
+        define([], factory)
+    } else if (typeof exports === `object`) {
+        exports.zircle = factory(require(`vue`))
     } else {
-      if (has(it, HIDDEN) && it[HIDDEN][key]) it[HIDDEN][key] = false;
-      D = _create(D, { enumerable: createDesc(0, false) });
-    } return setSymbolDesc(it, key, D);
-  } return dP(it, key, D);
-};
-var $defineProperties = function defineProperties(it, P) {
-  anObject(it);
-  var keys = enumKeys(P = toIObject(P));
-  var i = 0;
-  var l = keys.length;
-  var key;
-  while (l > i) $defineProperty(it, key = keys[i++], P[key]);
-  return it;
-};
-var $create = function create(it, P) {
-  return P === undefined ? _create(it) : $defineProperties(_create(it), P);
-};
-var $propertyIsEnumerable = function propertyIsEnumerable(key) {
-  var E = isEnum.call(this, key = toPrimitive(key, true));
-  if (this === ObjectProto && has(AllSymbols, key) && !has(OPSymbols, key)) return false;
-  return E || !has(this, key) || !has(AllSymbols, key) || has(this, HIDDEN) && this[HIDDEN][key] ? E : true;
-};
-var $getOwnPropertyDescriptor = function getOwnPropertyDescriptor(it, key) {
-  it = toIObject(it);
-  key = toPrimitive(key, true);
-  if (it === ObjectProto && has(AllSymbols, key) && !has(OPSymbols, key)) return;
-  var D = gOPD(it, key);
-  if (D && has(AllSymbols, key) && !(has(it, HIDDEN) && it[HIDDEN][key])) D.enumerable = true;
-  return D;
-};
-var $getOwnPropertyNames = function getOwnPropertyNames(it) {
-  var names = gOPN(toIObject(it));
-  var result = [];
-  var i = 0;
-  var key;
-  while (names.length > i) {
-    if (!has(AllSymbols, key = names[i++]) && key != HIDDEN && key != META) result.push(key);
-  } return result;
-};
-var $getOwnPropertySymbols = function getOwnPropertySymbols(it) {
-  var IS_OP = it === ObjectProto;
-  var names = gOPN(IS_OP ? OPSymbols : toIObject(it));
-  var result = [];
-  var i = 0;
-  var key;
-  while (names.length > i) {
-    if (has(AllSymbols, key = names[i++]) && (IS_OP ? has(ObjectProto, key) : true)) result.push(AllSymbols[key]);
-  } return result;
-};
-
-// 19.4.1.1 Symbol([description])
-if (!USE_NATIVE) {
-  $Symbol = function Symbol() {
-    if (this instanceof $Symbol) throw TypeError('Symbol is not a constructor!');
-    var tag = uid(arguments.length > 0 ? arguments[0] : undefined);
-    var $set = function (value) {
-      if (this === ObjectProto) $set.call(OPSymbols, value);
-      if (has(this, HIDDEN) && has(this[HIDDEN], tag)) this[HIDDEN][tag] = false;
-      setSymbolDesc(this, tag, createDesc(1, value));
-    };
-    if (DESCRIPTORS && setter) setSymbolDesc(ObjectProto, tag, { configurable: true, set: $set });
-    return wrap(tag);
-  };
-  redefine($Symbol[PROTOTYPE], 'toString', function toString() {
-    return this._k;
-  });
-
-  $GOPD.f = $getOwnPropertyDescriptor;
-  $DP.f = $defineProperty;
-  __webpack_require__("6abf").f = gOPNExt.f = $getOwnPropertyNames;
-  __webpack_require__("355d").f = $propertyIsEnumerable;
-  __webpack_require__("9aa9").f = $getOwnPropertySymbols;
-
-  if (DESCRIPTORS && !__webpack_require__("b8e3")) {
-    redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
-  }
-
-  wksExt.f = function (name) {
-    return wrap(wks(name));
-  };
-}
-
-$export($export.G + $export.W + $export.F * !USE_NATIVE, { Symbol: $Symbol });
-
-for (var es6Symbols = (
-  // 19.4.2.2, 19.4.2.3, 19.4.2.4, 19.4.2.6, 19.4.2.8, 19.4.2.9, 19.4.2.10, 19.4.2.11, 19.4.2.12, 19.4.2.13, 19.4.2.14
-  'hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables'
-).split(','), j = 0; es6Symbols.length > j;)wks(es6Symbols[j++]);
-
-for (var wellKnownSymbols = $keys(wks.store), k = 0; wellKnownSymbols.length > k;) wksDefine(wellKnownSymbols[k++]);
-
-$export($export.S + $export.F * !USE_NATIVE, 'Symbol', {
-  // 19.4.2.1 Symbol.for(key)
-  'for': function (key) {
-    return has(SymbolRegistry, key += '')
-      ? SymbolRegistry[key]
-      : SymbolRegistry[key] = $Symbol(key);
-  },
-  // 19.4.2.5 Symbol.keyFor(sym)
-  keyFor: function keyFor(sym) {
-    if (!isSymbol(sym)) throw TypeError(sym + ' is not a symbol!');
-    for (var key in SymbolRegistry) if (SymbolRegistry[key] === sym) return key;
-  },
-  useSetter: function () { setter = true; },
-  useSimple: function () { setter = false; }
-});
-
-$export($export.S + $export.F * !USE_NATIVE, 'Object', {
-  // 19.1.2.2 Object.create(O [, Properties])
-  create: $create,
-  // 19.1.2.4 Object.defineProperty(O, P, Attributes)
-  defineProperty: $defineProperty,
-  // 19.1.2.3 Object.defineProperties(O, Properties)
-  defineProperties: $defineProperties,
-  // 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
-  getOwnPropertyDescriptor: $getOwnPropertyDescriptor,
-  // 19.1.2.7 Object.getOwnPropertyNames(O)
-  getOwnPropertyNames: $getOwnPropertyNames,
-  // 19.1.2.8 Object.getOwnPropertySymbols(O)
-  getOwnPropertySymbols: $getOwnPropertySymbols
-});
-
-// 24.3.2 JSON.stringify(value [, replacer [, space]])
-$JSON && $export($export.S + $export.F * (!USE_NATIVE || $fails(function () {
-  var S = $Symbol();
-  // MS Edge converts symbol values to JSON as {}
-  // WebKit converts symbol values to JSON as null
-  // V8 throws on boxed symbols
-  return _stringify([S]) != '[null]' || _stringify({ a: S }) != '{}' || _stringify(Object(S)) != '{}';
-})), 'JSON', {
-  stringify: function stringify(it) {
-    var args = [it];
-    var i = 1;
-    var replacer, $replacer;
-    while (arguments.length > i) args.push(arguments[i++]);
-    $replacer = replacer = args[1];
-    if (!isObject(replacer) && it === undefined || isSymbol(it)) return; // IE8 returns string on undefined
-    if (!isArray(replacer)) replacer = function (key, value) {
-      if (typeof $replacer == 'function') value = $replacer.call(this, key, value);
-      if (!isSymbol(value)) return value;
-    };
-    args[1] = replacer;
-    return _stringify.apply($JSON, args);
-  }
-});
-
-// 19.4.3.4 Symbol.prototype[@@toPrimitive](hint)
-$Symbol[PROTOTYPE][TO_PRIMITIVE] || __webpack_require__("35e8")($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf);
-// 19.4.3.5 Symbol.prototype[@@toStringTag]
-setToStringTag($Symbol, 'Symbol');
-// 20.2.1.9 Math[@@toStringTag]
-setToStringTag(Math, 'Math', true);
-// 24.3.3 JSON[@@toStringTag]
-setToStringTag(global.JSON, 'JSON', true);
-
-
-/***/ }),
-
-/***/ "01f9":
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var LIBRARY = __webpack_require__("2d00");
-var $export = __webpack_require__("5ca1");
-var redefine = __webpack_require__("2aba");
-var hide = __webpack_require__("32e9");
-var Iterators = __webpack_require__("84f2");
-var $iterCreate = __webpack_require__("41a0");
-var setToStringTag = __webpack_require__("7f20");
-var getPrototypeOf = __webpack_require__("38fd");
-var ITERATOR = __webpack_require__("2b4c")('iterator');
-var BUGGY = !([].keys && 'next' in [].keys()); // Safari has buggy iterators w/o `next`
-var FF_ITERATOR = '@@iterator';
-var KEYS = 'keys';
-var VALUES = 'values';
-
-var returnThis = function () { return this; };
-
-module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCED) {
-  $iterCreate(Constructor, NAME, next);
-  var getMethod = function (kind) {
-    if (!BUGGY && kind in proto) return proto[kind];
-    switch (kind) {
-      case KEYS: return function keys() { return new Constructor(this, kind); };
-      case VALUES: return function values() { return new Constructor(this, kind); };
-    } return function entries() { return new Constructor(this, kind); };
-  };
-  var TAG = NAME + ' Iterator';
-  var DEF_VALUES = DEFAULT == VALUES;
-  var VALUES_BUG = false;
-  var proto = Base.prototype;
-  var $native = proto[ITERATOR] || proto[FF_ITERATOR] || DEFAULT && proto[DEFAULT];
-  var $default = $native || getMethod(DEFAULT);
-  var $entries = DEFAULT ? !DEF_VALUES ? $default : getMethod('entries') : undefined;
-  var $anyNative = NAME == 'Array' ? proto.entries || $native : $native;
-  var methods, key, IteratorPrototype;
-  // Fix native
-  if ($anyNative) {
-    IteratorPrototype = getPrototypeOf($anyNative.call(new Base()));
-    if (IteratorPrototype !== Object.prototype && IteratorPrototype.next) {
-      // Set @@toStringTag to native iterators
-      setToStringTag(IteratorPrototype, TAG, true);
-      // fix for some old engines
-      if (!LIBRARY && typeof IteratorPrototype[ITERATOR] != 'function') hide(IteratorPrototype, ITERATOR, returnThis);
+        root.zircle = factory(root.Vue)
     }
-  }
-  // fix Array#{values, @@iterator}.name in V8 / FF
-  if (DEF_VALUES && $native && $native.name !== VALUES) {
-    VALUES_BUG = true;
-    $default = function values() { return $native.call(this); };
-  }
-  // Define iterator
-  if ((!LIBRARY || FORCED) && (BUGGY || VALUES_BUG || !proto[ITERATOR])) {
-    hide(proto, ITERATOR, $default);
-  }
-  // Plug for library
-  Iterators[NAME] = $default;
-  Iterators[TAG] = returnThis;
-  if (DEFAULT) {
-    methods = {
-      values: DEF_VALUES ? $default : getMethod(VALUES),
-      keys: IS_SET ? $default : getMethod(KEYS),
-      entries: $entries
-    };
-    if (FORCED) for (key in methods) {
-      if (!(key in proto)) redefine(proto, key, methods[key]);
-    } else $export($export.P + $export.F * (BUGGY || VALUES_BUG), NAME, methods);
-  }
-  return methods;
-};
+})((typeof self !== `undefined` ? self : this), function (__WEBPACK_EXTERNAL_MODULE__8bbf__) {
+    return /******/ (function (modules) { // webpackBootstrap
+        /******/ 	// The module cache
+        /******/ 	let installedModules = {}
+        /******/
+        /******/ 	// The require function
+        /******/ 	function __webpack_require__(moduleId) {
+            /******/
+            /******/ 		// Check if module is in cache
+            /******/ 		if (installedModules[moduleId]) {
+                /******/ 			return installedModules[moduleId].exports
+                /******/ 		}
+            /******/ 		// Create a new module (and put it into the cache)
+            /******/ 		let module = installedModules[moduleId] = {
+                /******/ 			i: moduleId,
+                /******/ 			l: false,
+                /******/ 			exports: {},
+                /******/ 		}
+            /******/
+            /******/ 		// Execute the module function
+            /******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__)
+            /******/
+            /******/ 		// Flag the module as loaded
+            /******/ 		module.l = true
+            /******/
+            /******/ 		// Return the exports of the module
+            /******/ 		return module.exports
+            /******/ 	}
+        /******/
+        /******/
+        /******/ 	// expose the modules object (__webpack_modules__)
+        /******/ 	__webpack_require__.m = modules
+        /******/
+        /******/ 	// expose the module cache
+        /******/ 	__webpack_require__.c = installedModules
+        /******/
+        /******/ 	// define getter function for harmony exports
+        /******/ 	__webpack_require__.d = function (exports, name, getter) {
+            /******/ 		if (!__webpack_require__.o(exports, name)) {
+                /******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter })
+                /******/ 		}
+            /******/ 	}
+        /******/
+        /******/ 	// define __esModule on exports
+        /******/ 	__webpack_require__.r = function (exports) {
+            /******/ 		if (typeof Symbol !== `undefined` && Symbol.toStringTag) {
+                /******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: `Module` })
+                /******/ 		}
+            /******/ 		Object.defineProperty(exports, `__esModule`, { value: true })
+            /******/ 	}
+        /******/
+        /******/ 	// create a fake namespace object
+        /******/ 	// mode & 1: value is a module id, require it
+        /******/ 	// mode & 2: merge all properties of value into the ns
+        /******/ 	// mode & 4: return value when already ns object
+        /******/ 	// mode & 8|1: behave like require
+        /******/ 	__webpack_require__.t = function (value, mode) {
+            /******/ 		if (mode & 1) {
+                value = __webpack_require__(value)
+            }
+            /******/ 		if (mode & 8) {
+                return value
+            }
+            /******/ 		if ((mode & 4) && typeof value === `object` && value && value.__esModule) {
+                return value
+            }
+            /******/ 		let ns = Object.create(null)
+            /******/ 		__webpack_require__.r(ns)
+            /******/ 		Object.defineProperty(ns, `default`, { enumerable: true, value: value })
+            /******/ 		if (mode & 2 && typeof value !== `string`) {
+                for (let key in value) {
+                    __webpack_require__.d(ns, key, function (key) {
+                        return value[key] 
+                    }.bind(null, key))
+                }
+            }
+            /******/ 		return ns
+            /******/ 	}
+        /******/
+        /******/ 	// getDefaultExport function for compatibility with non-harmony modules
+        /******/ 	__webpack_require__.n = function (module) {
+            /******/ 		let getter = module && module.__esModule ?
+            /******/ 			function getDefault() {
+                    return module.default 
+                } :
+            /******/ 			function getModuleExports() {
+                    return module 
+                }
+            /******/ 		__webpack_require__.d(getter, `a`, getter)
+            /******/ 		return getter
+            /******/ 	}
+        /******/
+        /******/ 	// Object.prototype.hasOwnProperty.call
+        /******/ 	__webpack_require__.o = function (object, property) {
+            return Object.prototype.hasOwnProperty.call(object, property) 
+        }
+        /******/
+        /******/ 	// __webpack_public_path__
+        /******/ 	__webpack_require__.p = ``
+        /******/
+        /******/
+        /******/ 	// Load entry module and return exports
+        /******/ 	return __webpack_require__(__webpack_require__.s = `fb15`)
+        /******/ })
+    /************************************************************************/
+    /******/ ({
 
+        /***/ "014b":
+        /***/ (function (module, exports, __webpack_require__) {
+            "use strict"
 
-/***/ }),
+            // ECMAScript 6 symbols shim
+            let global = __webpack_require__(`e53d`)
+            let has = __webpack_require__(`07e3`)
+            let DESCRIPTORS = __webpack_require__(`8e60`)
+            let $export = __webpack_require__(`63b6`)
+            let redefine = __webpack_require__(`9138`)
+            let META = __webpack_require__(`ebfd`).KEY
+            let $fails = __webpack_require__(`294c`)
+            let shared = __webpack_require__(`dbdb`)
+            let setToStringTag = __webpack_require__(`45f2`)
+            let uid = __webpack_require__(`62a0`)
+            let wks = __webpack_require__(`5168`)
+            let wksExt = __webpack_require__(`ccb9`)
+            let wksDefine = __webpack_require__(`6718`)
+            let enumKeys = __webpack_require__(`47ee`)
+            let isArray = __webpack_require__(`9003`)
+            let anObject = __webpack_require__(`e4ae`)
+            let isObject = __webpack_require__(`f772`)
+            let toIObject = __webpack_require__(`36c3`)
+            let toPrimitive = __webpack_require__(`1bc3`)
+            let createDesc = __webpack_require__(`aebd`)
+            let _create = __webpack_require__(`a159`)
+            let gOPNExt = __webpack_require__(`0395`)
+            let $GOPD = __webpack_require__(`bf0b`)
+            let $DP = __webpack_require__(`d9f6`)
+            let $keys = __webpack_require__(`c3a1`)
+            let gOPD = $GOPD.f
+            let dP = $DP.f
+            let gOPN = gOPNExt.f
+            let $Symbol = global.Symbol
+            let $JSON = global.JSON
+            let _stringify = $JSON && $JSON.stringify
+            let PROTOTYPE = `prototype`
+            let HIDDEN = wks(`_hidden`)
+            let TO_PRIMITIVE = wks(`toPrimitive`)
+            let isEnum = {}.propertyIsEnumerable
+            let SymbolRegistry = shared(`symbol-registry`)
+            let AllSymbols = shared(`symbols`)
+            let OPSymbols = shared(`op-symbols`)
+            let ObjectProto = Object[PROTOTYPE]
+            let USE_NATIVE = typeof $Symbol === `function`
+            let QObject = global.QObject
+            // Don't use setters in Qt Script, https://github.com/zloirock/core-js/issues/173
+            let setter = !QObject || !QObject[PROTOTYPE] || !QObject[PROTOTYPE].findChild
 
-/***/ "02f4":
-/***/ (function(module, exports, __webpack_require__) {
+            // fallback for old Android, https://code.google.com/p/v8/issues/detail?id=687
+            let setSymbolDesc = DESCRIPTORS && $fails(function () {
+                return _create(dP({}, `a`, {
+                    get: function () {
+                        return dP(this, `a`, { value: 7 }).a 
+                    },
+                })).a != 7
+            }) ? function (it, key, D) {
+                    let protoDesc = gOPD(ObjectProto, key)
+                    if (protoDesc) {
+                        delete ObjectProto[key]
+                    }
+                    dP(it, key, D)
+                    if (protoDesc && it !== ObjectProto) {
+                        dP(ObjectProto, key, protoDesc)
+                    }
+                } : dP
 
-var toInteger = __webpack_require__("4588");
-var defined = __webpack_require__("be13");
-// true  -> String#at
-// false -> String#codePointAt
-module.exports = function (TO_STRING) {
-  return function (that, pos) {
-    var s = String(defined(that));
-    var i = toInteger(pos);
-    var l = s.length;
-    var a, b;
-    if (i < 0 || i >= l) return TO_STRING ? '' : undefined;
-    a = s.charCodeAt(i);
-    return a < 0xd800 || a > 0xdbff || i + 1 === l || (b = s.charCodeAt(i + 1)) < 0xdc00 || b > 0xdfff
-      ? TO_STRING ? s.charAt(i) : a
-      : TO_STRING ? s.slice(i, i + 2) : (a - 0xd800 << 10) + (b - 0xdc00) + 0x10000;
-  };
-};
+            let wrap = function (tag) {
+                let sym = AllSymbols[tag] = _create($Symbol[PROTOTYPE])
+                sym._k = tag
+                return sym
+            }
 
+            let isSymbol = USE_NATIVE && typeof $Symbol.iterator === `symbol` ? function (it) {
+                return typeof it === `symbol`
+            } : function (it) {
+                return it instanceof $Symbol
+            }
 
-/***/ }),
+            var $defineProperty = function defineProperty(it, key, D) {
+                if (it === ObjectProto) {
+                    $defineProperty(OPSymbols, key, D)
+                }
+                anObject(it)
+                key = toPrimitive(key, true)
+                anObject(D)
+                if (has(AllSymbols, key)) {
+                    if (!D.enumerable) {
+                        if (!has(it, HIDDEN)) {
+                            dP(it, HIDDEN, createDesc(1, {}))
+                        }
+                        it[HIDDEN][key] = true
+                    } else {
+                        if (has(it, HIDDEN) && it[HIDDEN][key]) {
+                            it[HIDDEN][key] = false
+                        }
+                        D = _create(D, { enumerable: createDesc(0, false) })
+                    } return setSymbolDesc(it, key, D)
+                } return dP(it, key, D)
+            }
+            let $defineProperties = function defineProperties(it, P) {
+                anObject(it)
+                let keys = enumKeys(P = toIObject(P))
+                let i = 0
+                let l = keys.length
+                let key
+                while (l > i) {
+                    $defineProperty(it, key = keys[i++], P[key])
+                }
+                return it
+            }
+            let $create = function create(it, P) {
+                return P === undefined ? _create(it) : $defineProperties(_create(it), P)
+            }
+            let $propertyIsEnumerable = function propertyIsEnumerable(key) {
+                let E = isEnum.call(this, key = toPrimitive(key, true))
+                if (this === ObjectProto && has(AllSymbols, key) && !has(OPSymbols, key)) {
+                    return false
+                }
+                return E || !has(this, key) || !has(AllSymbols, key) || has(this, HIDDEN) && this[HIDDEN][key] ? E : true
+            }
+            let $getOwnPropertyDescriptor = function getOwnPropertyDescriptor(it, key) {
+                it = toIObject(it)
+                key = toPrimitive(key, true)
+                if (it === ObjectProto && has(AllSymbols, key) && !has(OPSymbols, key)) {
+                    return
+                }
+                let D = gOPD(it, key)
+                if (D && has(AllSymbols, key) && !(has(it, HIDDEN) && it[HIDDEN][key])) {
+                    D.enumerable = true
+                }
+                return D
+            }
+            let $getOwnPropertyNames = function getOwnPropertyNames(it) {
+                let names = gOPN(toIObject(it))
+                let result = []
+                let i = 0
+                let key
+                while (names.length > i) {
+                    if (!has(AllSymbols, key = names[i++]) && key != HIDDEN && key != META) {
+                        result.push(key)
+                    }
+                } return result
+            }
+            let $getOwnPropertySymbols = function getOwnPropertySymbols(it) {
+                let IS_OP = it === ObjectProto
+                let names = gOPN(IS_OP ? OPSymbols : toIObject(it))
+                let result = []
+                let i = 0
+                let key
+                while (names.length > i) {
+                    if (has(AllSymbols, key = names[i++]) && (IS_OP ? has(ObjectProto, key) : true)) {
+                        result.push(AllSymbols[key])
+                    }
+                } return result
+            }
 
-/***/ "0390":
-/***/ (function(module, exports, __webpack_require__) {
+            // 19.4.1.1 Symbol([description])
+            if (!USE_NATIVE) {
+                $Symbol = function Symbol() {
+                    if (this instanceof $Symbol) {
+                        throw TypeError(`Symbol is not a constructor!`)
+                    }
+                    let tag = uid(arguments.length > 0 ? arguments[0] : undefined)
+                    var $set = function (value) {
+                        if (this === ObjectProto) {
+                            $set.call(OPSymbols, value)
+                        }
+                        if (has(this, HIDDEN) && has(this[HIDDEN], tag)) {
+                            this[HIDDEN][tag] = false
+                        }
+                        setSymbolDesc(this, tag, createDesc(1, value))
+                    }
+                    if (DESCRIPTORS && setter) {
+                        setSymbolDesc(ObjectProto, tag, { configurable: true, set: $set })
+                    }
+                    return wrap(tag)
+                }
+                redefine($Symbol[PROTOTYPE], `toString`, function toString() {
+                    return this._k
+                })
 
-"use strict";
+                $GOPD.f = $getOwnPropertyDescriptor
+                $DP.f = $defineProperty
+                __webpack_require__(`6abf`).f = gOPNExt.f = $getOwnPropertyNames
+                __webpack_require__(`355d`).f = $propertyIsEnumerable
+                __webpack_require__(`9aa9`).f = $getOwnPropertySymbols
 
-var at = __webpack_require__("02f4")(true);
+                if (DESCRIPTORS && !__webpack_require__(`b8e3`)) {
+                    redefine(ObjectProto, `propertyIsEnumerable`, $propertyIsEnumerable, true)
+                }
 
- // `AdvanceStringIndex` abstract operation
-// https://tc39.github.io/ecma262/#sec-advancestringindex
-module.exports = function (S, index, unicode) {
-  return index + (unicode ? at(S, index).length : 1);
-};
+                wksExt.f = function (name) {
+                    return wrap(wks(name))
+                }
+            }
 
+            $export($export.G + $export.W + $export.F * !USE_NATIVE, { Symbol: $Symbol })
 
-/***/ }),
+            for (let es6Symbols = (
+                // 19.4.2.2, 19.4.2.3, 19.4.2.4, 19.4.2.6, 19.4.2.8, 19.4.2.9, 19.4.2.10, 19.4.2.11, 19.4.2.12, 19.4.2.13, 19.4.2.14
+                    `hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables`
+                ).split(`,`), j = 0; es6Symbols.length > j;){
+                wks(es6Symbols[j++])
+            }
 
-/***/ "0395":
-/***/ (function(module, exports, __webpack_require__) {
+            for (let wellKnownSymbols = $keys(wks.store), k = 0; wellKnownSymbols.length > k;) {
+                wksDefine(wellKnownSymbols[k++])
+            }
 
-// fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
-var toIObject = __webpack_require__("36c3");
-var gOPN = __webpack_require__("6abf").f;
-var toString = {}.toString;
+            $export($export.S + $export.F * !USE_NATIVE, `Symbol`, {
+                // 19.4.2.1 Symbol.for(key)
+                for: function (key) {
+                    return has(SymbolRegistry, key += ``)
+                        ? SymbolRegistry[key]
+                        : SymbolRegistry[key] = $Symbol(key)
+                },
+                // 19.4.2.5 Symbol.keyFor(sym)
+                keyFor: function keyFor(sym) {
+                    if (!isSymbol(sym)) {
+                        throw TypeError(sym + ` is not a symbol!`)
+                    }
+                    for (let key in SymbolRegistry) {
+                        if (SymbolRegistry[key] === sym) {
+                            return key
+                        }
+                    }
+                },
+                useSetter: function () {
+                    setter = true 
+                },
+                useSimple: function () {
+                    setter = false 
+                },
+            })
 
-var windowNames = typeof window == 'object' && window && Object.getOwnPropertyNames
-  ? Object.getOwnPropertyNames(window) : [];
+            $export($export.S + $export.F * !USE_NATIVE, `Object`, {
+                // 19.1.2.2 Object.create(O [, Properties])
+                create: $create,
+                // 19.1.2.4 Object.defineProperty(O, P, Attributes)
+                defineProperty: $defineProperty,
+                // 19.1.2.3 Object.defineProperties(O, Properties)
+                defineProperties: $defineProperties,
+                // 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
+                getOwnPropertyDescriptor: $getOwnPropertyDescriptor,
+                // 19.1.2.7 Object.getOwnPropertyNames(O)
+                getOwnPropertyNames: $getOwnPropertyNames,
+                // 19.1.2.8 Object.getOwnPropertySymbols(O)
+                getOwnPropertySymbols: $getOwnPropertySymbols,
+            })
 
-var getWindowNames = function (it) {
-  try {
-    return gOPN(it);
-  } catch (e) {
-    return windowNames.slice();
-  }
-};
+            // 24.3.2 JSON.stringify(value [, replacer [, space]])
+            $JSON && $export($export.S + $export.F * (!USE_NATIVE || $fails(function () {
+                let S = $Symbol()
+                // MS Edge converts symbol values to JSON as {}
+                // WebKit converts symbol values to JSON as null
+                // V8 throws on boxed symbols
+                return _stringify([S]) != `[null]` || _stringify({ a: S }) != `{}` || _stringify(Object(S)) != `{}`
+            })), `JSON`, {
+                stringify: function stringify(it) {
+                    let args = [it]
+                    let i = 1
+                    let replacer; let $replacer
+                    while (arguments.length > i) {
+                        args.push(arguments[i++])
+                    }
+                    $replacer = replacer = args[1]
+                    if (!isObject(replacer) && it === undefined || isSymbol(it)) {
+                        return
+                    } // IE8 returns string on undefined
+                    if (!isArray(replacer)) {
+                        replacer = function (key, value) {
+                            if (typeof $replacer === `function`) {
+                                value = $replacer.call(this, key, value)
+                            }
+                            if (!isSymbol(value)) {
+                                return value
+                            }
+                        }
+                    }
+                    args[1] = replacer
+                    return _stringify.apply($JSON, args)
+                },
+            })
 
-module.exports.f = function getOwnPropertyNames(it) {
-  return windowNames && toString.call(it) == '[object Window]' ? getWindowNames(it) : gOPN(toIObject(it));
-};
+            // 19.4.3.4 Symbol.prototype[@@toPrimitive](hint)
+            $Symbol[PROTOTYPE][TO_PRIMITIVE] || __webpack_require__(`35e8`)($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf)
+            // 19.4.3.5 Symbol.prototype[@@toStringTag]
+            setToStringTag($Symbol, `Symbol`)
+            // 20.2.1.9 Math[@@toStringTag]
+            setToStringTag(Math, `Math`, true)
+            // 24.3.3 JSON[@@toStringTag]
+            setToStringTag(global.JSON, `JSON`, true)
+            /***/ }),
 
+        /***/ "01f9":
+        /***/ (function (module, exports, __webpack_require__) {
+            "use strict"
 
-/***/ }),
+            let LIBRARY = __webpack_require__(`2d00`)
+            let $export = __webpack_require__(`5ca1`)
+            let redefine = __webpack_require__(`2aba`)
+            let hide = __webpack_require__(`32e9`)
+            let Iterators = __webpack_require__(`84f2`)
+            let $iterCreate = __webpack_require__(`41a0`)
+            let setToStringTag = __webpack_require__(`7f20`)
+            let getPrototypeOf = __webpack_require__(`38fd`)
+            let ITERATOR = __webpack_require__(`2b4c`)(`iterator`)
+            let BUGGY = !([].keys && `next` in [].keys()) // Safari has buggy iterators w/o `next`
+            let FF_ITERATOR = `@@iterator`
+            let KEYS = `keys`
+            let VALUES = `values`
 
-/***/ "03dd":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+            let returnThis = function () {
+                return this 
+            }
 
-"use strict";
+            module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCED) {
+                $iterCreate(Constructor, NAME, next)
+                let getMethod = function (kind) {
+                    if (!BUGGY && kind in proto) {
+                        return proto[kind]
+                    }
+                    switch (kind) {
+                    case KEYS: return function keys() {
+                        return new Constructor(this, kind) 
+                    }
+                    case VALUES: return function values() {
+                        return new Constructor(this, kind) 
+                    }
+                    } return function entries() {
+                        return new Constructor(this, kind) 
+                    }
+                }
+                let TAG = NAME + ` Iterator`
+                let DEF_VALUES = DEFAULT == VALUES
+                let VALUES_BUG = false
+                var proto = Base.prototype
+                let $native = proto[ITERATOR] || proto[FF_ITERATOR] || DEFAULT && proto[DEFAULT]
+                let $default = $native || getMethod(DEFAULT)
+                let $entries = DEFAULT ? !DEF_VALUES ? $default : getMethod(`entries`) : undefined
+                let $anyNative = NAME == `Array` ? proto.entries || $native : $native
+                let methods; let key; let IteratorPrototype
+                // Fix native
+                if ($anyNative) {
+                    IteratorPrototype = getPrototypeOf($anyNative.call(new Base()))
+                    if (IteratorPrototype !== Object.prototype && IteratorPrototype.next) {
+                        // Set @@toStringTag to native iterators
+                        setToStringTag(IteratorPrototype, TAG, true)
+                        // fix for some old engines
+                        if (!LIBRARY && typeof IteratorPrototype[ITERATOR] !== `function`) {
+                            hide(IteratorPrototype, ITERATOR, returnThis)
+                        }
+                    }
+                }
+                // fix Array#{values, @@iterator}.name in V8 / FF
+                if (DEF_VALUES && $native && $native.name !== VALUES) {
+                    VALUES_BUG = true
+                    $default = function values() {
+                        return $native.call(this) 
+                    }
+                }
+                // Define iterator
+                if ((!LIBRARY || FORCED) && (BUGGY || VALUES_BUG || !proto[ITERATOR])) {
+                    hide(proto, ITERATOR, $default)
+                }
+                // Plug for library
+                Iterators[NAME] = $default
+                Iterators[TAG] = returnThis
+                if (DEFAULT) {
+                    methods = {
+                        values: DEF_VALUES ? $default : getMethod(VALUES),
+                        keys: IS_SET ? $default : getMethod(KEYS),
+                        entries: $entries,
+                    }
+                    if (FORCED) {
+                        for (key in methods) {
+                            if (!(key in proto)) {
+                                redefine(proto, key, methods[key])
+                            }
+                        }
+                    } else {
+                        $export($export.P + $export.F * (BUGGY || VALUES_BUG), NAME, methods)
+                    }
+                }
+                return methods
+            }
+            /***/ }),
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"42fc28b8-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/z-canvas.vue?vue&type=template&id=7d151d6c&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"z-canvas",class:[_vm.classes, _vm.$zircle.getTheme(), _vm.$zircle.getThemeMode()],style:([_vm.$zircle.getPreviousViewName() !== '' ? {cursor: 'zoom-out'} : {}]),attrs:{"id":"z-container"},on:{"click":function($event){$event.stopPropagation();return _vm.goback($event)}}},[_c('div',{ref:"zoom",style:(_vm.zoom),attrs:{"id":"z-zoomable-layer"},on:{"transitionend":_vm.notify}},[_c('z-view-manager')],1)])}
-var staticRenderFns = []
+        /***/ "02f4":
+        /***/ (function (module, exports, __webpack_require__) {
+            let toInteger = __webpack_require__(`4588`)
+            let defined = __webpack_require__(`be13`)
+            // true  -> String#at
+            // false -> String#codePointAt
+            module.exports = function (TO_STRING) {
+                return function (that, pos) {
+                    let s = String(defined(that))
+                    let i = toInteger(pos)
+                    let l = s.length
+                    let a; let b
+                    if (i < 0 || i >= l) {
+                        return TO_STRING ? `` : undefined
+                    }
+                    a = s.charCodeAt(i)
+                    return a < 0xd800 || a > 0xdbff || i + 1 === l || (b = s.charCodeAt(i + 1)) < 0xdc00 || b > 0xdfff
+                        ? TO_STRING ? s.charAt(i) : a
+                        : TO_STRING ? s.slice(i, i + 2) : (a - 0xd800 << 10) + (b - 0xdc00) + 0x10000
+                }
+            }
+            /***/ }),
 
+        /***/ "0390":
+        /***/ (function (module, exports, __webpack_require__) {
+            "use strict"
 
-// CONCATENATED MODULE: ./src/components/z-canvas.vue?vue&type=template&id=7d151d6c&
+            let at = __webpack_require__(`02f4`)(true)
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"42fc28b8-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/child-components/z-view-manager.vue?vue&type=template&id=4d70a21d&
-var z_view_managervue_type_template_id_4d70a21d_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('transition-group',{attrs:{"name":_vm.$zircle.getNavigationMode() === 'forward' ? 'z-next' : 'z-prev',"tag":"section"}},[_vm._l((_vm.views),function(view){return _c(view.component,{key:view.name,tag:"component",class:{
-      'is-current-view': _vm.$zircle.getCurrentViewName() === view.name && _vm.$zircle.getRouterState() === false,
-      'is-previous-view': _vm.$zircle.getPreviousViewName() === view.name,
-      'is-past-view': _vm.$zircle.getPastViewName() === view.name
-    }})}),(_vm.$zircle.getRouterState() === true && _vm.$zircle.getHistoryLength() >= 1)?_c('router-view',{key:_vm.$zircle.getCurrentViewName(),staticClass:"is-current-view"}):_vm._e()],2)}
-var z_view_managervue_type_template_id_4d70a21d_staticRenderFns = []
+            // `AdvanceStringIndex` abstract operation
+            // https://tc39.github.io/ecma262/#sec-advancestringindex
+            module.exports = function (S, index, unicode) {
+                return index + (unicode ? at(S, index).length : 1)
+            }
+            /***/ }),
 
+        /***/ "0395":
+        /***/ (function (module, exports, __webpack_require__) {
+            // fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
+            let toIObject = __webpack_require__(`36c3`)
+            let gOPN = __webpack_require__(`6abf`).f
+            let toString = {}.toString
 
-// CONCATENATED MODULE: ./src/components/child-components/z-view-manager.vue?vue&type=template&id=4d70a21d&
+            let windowNames = typeof window === `object` && window && Object.getOwnPropertyNames
+                ? Object.getOwnPropertyNames(window) : []
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/child-components/z-view-manager.vue?vue&type=script&lang=js&
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+            let getWindowNames = function (it) {
+                try {
+                    return gOPN(it)
+                } catch (e) {
+                    return windowNames.slice()
+                }
+            }
+
+            module.exports.f = function getOwnPropertyNames(it) {
+                return windowNames && toString.call(it) == `[object Window]` ? getWindowNames(it) : gOPN(toIObject(it))
+            }
+            /***/ }),
+
+        /***/ "03dd":
+        /***/ (function (module, __webpack_exports__, __webpack_require__) {
+            "use strict"
+
+            // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"42fc28b8-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/z-canvas.vue?vue&type=template&id=7d151d6c&
+            let render = function () {
+                let _vm = this; let _h = _vm.$createElement; let _c = _vm._self._c || _h; return _c(`div`,{ staticClass: `z-canvas`,class: [_vm.classes, _vm.$zircle.getTheme(), _vm.$zircle.getThemeMode()],style: ([_vm.$zircle.getPreviousViewName() !== `` ? { cursor: `zoom-out` } : {}]),attrs: { id: `z-container` },on: { click: function ($event){
+                    $event.stopPropagation(); return _vm.goback($event)
+                } } },[_c(`div`,{ ref: `zoom`,style: (_vm.zoom),attrs: { id: `z-zoomable-layer` },on: { transitionend: _vm.notify } },[_c(`z-view-manager`)],1)])
+            }
+            let staticRenderFns = []
+
+            // CONCATENATED MODULE: ./src/components/z-canvas.vue?vue&type=template&id=7d151d6c&
+
+            // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"42fc28b8-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/child-components/z-view-manager.vue?vue&type=template&id=4d70a21d&
+            let z_view_managervue_type_template_id_4d70a21d_render = function () {
+                let _vm = this; let _h = _vm.$createElement; let _c = _vm._self._c || _h; return _c(`transition-group`,{ attrs: { name: _vm.$zircle.getNavigationMode() === `forward` ? `z-next` : `z-prev`,tag: `section` } },[_vm._l((_vm.views),function (view){
+                    return _c(view.component,{ key: view.name,tag: `component`,class: {
+                        'is-current-view': _vm.$zircle.getCurrentViewName() === view.name && _vm.$zircle.getRouterState() === false,
+                        'is-previous-view': _vm.$zircle.getPreviousViewName() === view.name,
+                        'is-past-view': _vm.$zircle.getPastViewName() === view.name,
+                    } })
+                }),(_vm.$zircle.getRouterState() === true && _vm.$zircle.getHistoryLength() >= 1) ? _c(`router-view`,{ key: _vm.$zircle.getCurrentViewName(),staticClass: `is-current-view` }) : _vm._e()],2)
+            }
+            let z_view_managervue_type_template_id_4d70a21d_staticRenderFns = []
+
+            // CONCATENATED MODULE: ./src/components/child-components/z-view-manager.vue?vue&type=template&id=4d70a21d&
+
+            // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/child-components/z-view-manager.vue?vue&type=script&lang=js&
+            //
+            //
+            //
+            //
+            //
+            //
+            //
+            //
+            //
+            //
+            //
+            //
+            //
+            //
+            //
+            //
+            //
+            //
 
 /* eslint-disable */
 /* harmony default export */ var z_view_managervue_type_script_lang_js_ = ({
