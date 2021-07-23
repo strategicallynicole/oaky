@@ -94,7 +94,7 @@ module.exports = {
         /**
          *  Utility Plugins
          */
-        {
+         {
             resolve: `gatsby-plugin-ghost-manifest`,
             options: {
                 short_name: config.shortTitle,
@@ -102,7 +102,6 @@ module.exports = {
                 background_color: config.backgroundColor,
                 theme_color: config.themeColor,
                 display: `minimal-ui`,
-                getform_url: `#`,
                 icon: `static/${config.siteIcon}`,
                 legacy: true,
                 query: `
@@ -117,6 +116,26 @@ module.exports = {
                     }
                 }
               `,
+            },
+        },
+        {
+            resolve: `gatsby-plugin-feed`,
+            options: {
+                query: `
+                {
+                    allGhostSettings {
+                        edges {
+                            node {
+                                title
+                                description
+                            }
+                        }
+                    }
+                }
+              `,
+                feeds: [
+                    generateRSSFeed(config),
+                ],
             },
         },
      /*    {
