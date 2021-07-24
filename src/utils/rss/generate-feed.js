@@ -1,11 +1,17 @@
-const cheerio = require(`cheerio`)
 const tagsHelper = require(`@tryghost/helpers`).tags
 const _ = require(`lodash`)
+const { tokenize, constructTree } = require('hyntax')
+const utilyfunc = require('util')
+
 
 const generateItem = function generateItem(siteUrl, post) {
     const itemUrl = post.canonical_url || `${siteUrl}/${post.slug}/`
     const html = post.html
-    const htmlContent = cheerio.load(post.html, { decodeEntities: false, xmlMode: true })
+    const { tokens } = tokenize(html)
+    const { ast } = constructTree(tokens)
+
+    const htmlContent = utilyfunc.inspect(ast, { decodeEntities: false, xmlMode: true })
+
     const item = {
         title: post.title,
         description: post.excerpt,
@@ -31,14 +37,12 @@ const generateItem = function generateItem(siteUrl, post) {
             },
         })
 
-        // Also add the image to the content, because not all readers support media:content
-        htmlContent(`p`).first().before(`<img src="` + imageUrl + `" />`)
-        htmlContent(`img`).attr(`alt`, post.title)
+
     }
 
     item.custom_elements.push({
         'content:encoded': {
-            _cdata: htmlContent.html(),
+            _cdata: html,
         },
     })
     return item
