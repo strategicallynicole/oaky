@@ -2,7 +2,6 @@
 @import './tw/mixins.css';
 @import './tw/linkstyles.css';
 @import './tw/type.css';
-@import './plugins/animate.css';
 
 @tailwind base;
 @tailwind components;

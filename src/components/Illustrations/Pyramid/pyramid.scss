@@ -7,4 +7,5 @@
     position: absolute;
     width: 400px;
     z-index: -20;
+    @apply md:hidden sm:hidden;
 }

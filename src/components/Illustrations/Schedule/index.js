@@ -12,8 +12,7 @@
  **/
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
-import * as animations from 'animate.css'
-
+import "./schedule.component.scss"
 export default function Alarmed() {
     return (
         <>
