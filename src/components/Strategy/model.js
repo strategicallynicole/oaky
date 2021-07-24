@@ -3,8 +3,20 @@
 import React from 'react'
 import Iframe from "./iframe"
 import Title from '../Titles/h2.js'
+import { useRef, useState } from 'react'
+import IframeResizer from 'iframe-resizer-react'
 
 const Model = () => {
+    const iframeRef = useRef(null)
+  const [messageData, setMessageData] = useState()
+
+  const onResized = data => setMessageData(data)
+
+  const onMessage = data => {
+    setMessageData(data)
+    iframeRef.current.sendMessage('Hello back from the parent page')
+  }
+
 return (
 
         <section className="mx-10 -mb-60 mt-50">
@@ -23,7 +35,17 @@ return (
                 data-wow-delay="100ms"
                 data-wow-duration="1000ms"
             >
-                <Iframe />
+      <IframeResizer
+        forwardRef={iframeRef}
+        heightCalculationMethod="lowestElement"
+        inPageLinks
+        log
+        onMessage="On"
+        onResized="resized"
+        src="/demo.html"
+        style={{ width: '1px', minWidth: '100%'}}
+      />
+
 
             </div>
 

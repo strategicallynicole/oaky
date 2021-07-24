@@ -19,7 +19,6 @@ import './hovers.scss'
 import Linky from '../Effects/Linky'
 import MobileButton from '../Buttons/Mobile/button'
 import { Link } from 'gatsby';
-import Services from './serviceslink';
 
 /* This example requires Tailwind CSS v2.0+ */
 import { Disclosure, Menu, Transition } from '@headlessui/react'

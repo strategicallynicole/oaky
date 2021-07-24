@@ -1,6 +1,6 @@
 import React from 'react'
-import BaffleText from 'components/baffle-text'
-import AnimationContainer from 'components/animation-container'
+import BaffleText from '../baffle-text'
+import AnimationContainer from '../animation-container'
 import styled, { keyframes } from 'styled-components'
 
 class PageRevealer extends React.Component {
@@ -17,9 +17,9 @@ class PageRevealer extends React.Component {
     reveal() {
         if (!this.state.complete) {
             this.setState({ animation: true, complete: true })
-            setTimeout(() => { 
+            setTimeout(() => {
                 document.getElementById(`reveal_container`).style.backgroundColor = `transparent`
-                setTimeout(() => { 
+                setTimeout(() => {
                     this.setState({ animation: false, hide: true })
                 }, 500)
             }, 400)
