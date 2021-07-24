@@ -425,6 +425,5 @@ module.exports = {
                     `Bitter 100`,
                     `Bitter 100i`
                 ],
-        },}
-    ],
+        },
 }
