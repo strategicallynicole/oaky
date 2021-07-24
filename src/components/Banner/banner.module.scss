@@ -11,18 +11,18 @@ Banner Area Style
 
 .bannerContent {
 position: relative;
-	  .bannerSubtext {
+
             margin-bottom: 12px;
-            font-size: 15px;
+            font-size: 1.4em;
             line-height: 2.1;
             letter-spacing: .8px;
-            font-weight: 400;
+            font-weight: 400 !important;
             color: #bbbbbb;
             padding-right: 14%;
-            font-family: 'Mulish', sans-serif;
+            font-family: 'Mulish', sans-serif !important;
             @media #{$sm-layout} {
                 padding-right: 0;
-            }
+
         }
 
         ul {
