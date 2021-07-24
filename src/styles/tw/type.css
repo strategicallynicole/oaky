@@ -1,4 +1,3 @@
-@import url("https://use.typekit.net/aek5xfr.css");
 
 
 .prose a {
@@ -16,17 +15,13 @@
 }
 
 .prose blockquote {
-    font-family: Esteban, Georgia, 'Times New Roman', serif;
-    font-weight: 400;
+    font-family: 'Bitter', Georgia, 'Times New Roman', serif;
+    font-weight: 100;
     font-style: italic;
     color: #ffffff !important;
 
   }
-.esteban {
-  font-family: Esteban, Georgia, 'Times New Roman', serif;
-font-style: normal;
-font-weight: normal;
-}
+
 .figcaption {
     @apply esteban text-sm text-center bg-gray-300;
 }
