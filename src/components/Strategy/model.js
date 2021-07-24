@@ -14,7 +14,8 @@ const Model = () => (
                 <Title
                     bgtext="Strategy"
                     titletext="Our Strategic Model"
-                /></div>
+                />
+            </div>
             <div
                 className="title wow fadeInRight"
                 data-wow-delay="100ms"
@@ -27,5 +28,5 @@ const Model = () => (
         </section> </>
 )
 
-export default Model
+export default Model;
 

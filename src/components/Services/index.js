@@ -3,11 +3,11 @@ import './index.scss'
 import Pointing from '../Illustrations/Pointing/index'
 import Title from '../Titles/h2.js'
 
-function Services() {
-    return (
+const Services = () => {
+
         <>
-            <a name="services" id="services"></a>
-            <section className="pt-40 c-section"><div className="mt-40 mb-60">
+            <section className="pt-40 c-section">      <a name="services" id="services"></a><div className="mt-40 mb-60">
+
 
                 <div className="flex flex-wrap -mx-1 overflow-hidden sm:-mx-1 md:-mx-1 lg:-mx-1 xl:-mx-1">
 
@@ -60,7 +60,8 @@ function Services() {
            The base of your marketing efforts and the epicenter of your marketing effectiveness gauge. We assess, rethink, and offer tactical steps to lift impact of the homebase of your efforts.</em></p>
                 </li>
             </ul>
-            </section></>)
+            </section>
+            </>
 }
 
 export default Services

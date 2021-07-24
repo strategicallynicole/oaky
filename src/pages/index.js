@@ -25,7 +25,6 @@ const IndexPage = () => (
             <section id="Banner" className="w-full px-10 py-10"><Banner /></section>
 
             <section id="About" className="w-full px-10 py-10 pt-60 pb-60"><About /></section>
-            <section id="Model" className="w-full px-10 py-10"><Model /></section>
             <section id="Services" className="w-full px-10 py-10"><Services /></section>
             <section id="Partners" className="w-full px-10 py-10"><PartnerLogos /></section>
             <section id="Blogs" className="w-full px-10 py-10"><Blogs /></section>
