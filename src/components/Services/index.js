@@ -4,7 +4,7 @@ import Pointing from '../Illustrations/Pointing/index'
 import Title from '../Titles/h2.js'
 
 const Services = () => {
-
+return (
         <>
             <section className="pt-40 c-section">      <a name="services" id="services"></a><div className="mt-40 mb-60">
 
@@ -61,7 +61,7 @@ const Services = () => {
                 </li>
             </ul>
             </section>
-            </>
+            </>)
 }
 
 export default Services
