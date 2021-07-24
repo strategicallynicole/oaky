@@ -23,7 +23,7 @@
   }
 
 .figcaption {
-    @apply esteban text-sm text-center bg-gray-300;
+    @apply bitter text-sm text-center bg-gray-300;
 }
 
   .prose blockquote::first-letter {
@@ -31,6 +31,9 @@
     -webkit-initial-letter: 4;
   }
 
+  .bitter {
+    font-family:  "Bitter", sans-serif;
+    }
 
   .mulish {
   font-family:  "Mulish", sans-serif;

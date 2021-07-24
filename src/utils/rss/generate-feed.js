@@ -5,7 +5,7 @@ const _ = require(`lodash`)
 const generateItem = function generateItem(siteUrl, post) {
     const itemUrl = post.canonical_url || `${siteUrl}/${post.slug}/`
     const html = post.html
-    const htmlContent = cheerio.load(html, { decodeEntities: false, xmlMode: true })
+    const htmlContent = cheerio.load(post.html, { decodeEntities: false, xmlMode: true })
     const item = {
         title: post.title,
         description: post.excerpt,
