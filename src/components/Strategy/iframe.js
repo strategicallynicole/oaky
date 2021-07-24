@@ -3,7 +3,7 @@ import './model.scss'
 
 const Iframe = () => {
 return (
-            <div dangerouslySetInnerHTML={{ __html: `<iframe id='iframe1' scrolling='no' src='/demo.html' />` }}></div>
+            <div dangerouslySetInnerHTML={{ __html: `<iframe id='iframe1' scrolling='no' src='/demo.html'></iframe>` }}></div>
 )
 };
 

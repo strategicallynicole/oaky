@@ -2,8 +2,7 @@ import React from 'react'
 import Iframe from "./iframe"
 import Title from '../Titles/h2.js'
 
-const Model = () => (
-    return (
+const Model = () => {
     <>
 
         <section className="mx-10 -mb-60 mt-50">
@@ -26,8 +25,10 @@ const Model = () => (
 
             </div>
 
-        </section> </>
-))
+        </section>
+    </>
+
+}
 
 export default Model;
 
