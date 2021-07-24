@@ -18,7 +18,8 @@ import Logo from '../Logo/logo.js'
 import './hovers.scss'
 import Linky from '../Effects/Linky'
 import MobileButton from '../Buttons/Mobile/button'
-import { Link } from 'gatsby'
+import { Link } from 'gatsby';
+import Services from './serviceslink';
 
 /* This example requires Tailwind CSS v2.0+ */
 import { Disclosure, Menu, Transition } from '@headlessui/react'
@@ -77,7 +78,7 @@ export default function Example() {
                                     <Link href="/" className="text-base font-medium"> <span><Linky text="Home" /></span></Link>
 
                                     <Link href="/about" className="text-base font-medium"> <span><Linky text="About Us" /></span></Link>
-                                    <Link href="/#services" className="text-base font-medium"> <span><Linky text="Services" /></span></Link>
+                                 <Link href="/#services" className="text-base font-medium"> <span><Linky text="Services" /></span></Link>
                                     <Link href="/contact" className="text-base font-medium"> <span><Linky text="Contact" /></span></Link>
 
                                 </div>
