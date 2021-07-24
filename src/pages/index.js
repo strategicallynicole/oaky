@@ -18,9 +18,6 @@ import PartnerLogos from "../components/PartnerLogos"
 import Blogs from "../components/blogPost"
 import Services from "../components/Services"
 import Model from "../components/Strategy/model"
-//import Project from "../components/homedefault/project";
-//import Testimonial from "../components/homedefault/testimonial";
-import Service from "../components/ServicesV2"
 
 const IndexPage = () => (
     <>

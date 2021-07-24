@@ -1,11 +1,5 @@
 import React from 'react'
 import './index.scss'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-    faChess,
-    faBullhorn,
-    faPaintbrushPencil,
-} from '@fortawesome/pro-thin-svg-icons'
 import Pointing from '../Illustrations/Pointing/index'
 import Title from '../Titles/h2.js'
 
