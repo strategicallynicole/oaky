@@ -17,13 +17,11 @@ import Nav from "./header/nav"
 import Footer from "./footer/temporary"
 import '../scss/style.scss'
 import '../styles/base.css'
-import PageRevealer from './page-revealer'
 
 
 const Layout = ({ children }) => (
 
     <>
-                    <PageRevealer />
 
         <div className="relative z-0 main-wrapper active-dark bg-black-gradient">
 
