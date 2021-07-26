@@ -32,18 +32,19 @@ import Counter from '../components/counter'
 */
 `use strict`
 const About = ({ location }) => (
+
     <>
 
         <Layout>
             <MetaData location={location} />
 
-            <section className="w-full px-30 mx-28">
-                <Title
-                    className="pt-10 wow slideInRight"
+            <section className="w-full lg:px-30 lg:mx-28">
+               <div className="ml-10"> <Title
+                    className="pt-10 lg:px-10 wow slideInRight"
                     data-wow-delay="0s"
                     bgtext="Do You Like Us? Yes/No (circle one)"
                     titletext="About Us"
-                />
+                /></div>
                 <div className="flex flex-wrap overflow-hidden">
 
                     <div className="w-full gap-1 pt-20 ml-20 mr-20 overflow-hidden wow sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 slideInRight"
@@ -52,7 +53,7 @@ const About = ({ location }) => (
 
                     </div>
 
-                    <div className="w-full gap-1 ml-20 mr-20 overflow-hidden pt-60 sm:w-full md:w-1/2 lg:w-1/3 xl:w-1/3 wow slideInRight"
+                    <div className="w-full pt-10 overflow-hidden lg:gap-1 lg:ml-20 lg:mr-20 sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 wow slideInRight"
                         data-wow-delay="1s">
                         <BusinessMan />
 
@@ -63,10 +64,10 @@ const About = ({ location }) => (
 
             </section>
 
-            <section className="w-full px-28 wow slideInRight"
+            <section className="w-full px-10 lg:px-28 wow slideInRight"
                 data-wow-delay="1s">
                 <Quiz /></section>
-            <section className="w-full px-28 wow slideInRight"
+            <section className="w-full lg:px-28 wow slideInRight"
                 data-wow-delay="1s"><Counter />
             </section>
 

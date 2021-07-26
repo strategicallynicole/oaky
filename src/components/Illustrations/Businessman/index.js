@@ -22,7 +22,7 @@ export default function BusinessMan() {
                 src={businessman}
                 alt="Business Man"
                 layout="fullWidth"
-                className="overflow-visible businessman"
+                className="z-50 overflow-visible businessman"
             />
         </>
     )

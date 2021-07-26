@@ -25,13 +25,13 @@ class Layout extends React.Component {
         return (
 
             {loading = false ? (
-                <div id="main">
+                <section id="main">
                 <Navbar scroll={this.props.isHome ? true : false} sections={this.props.sections} />
-                <div>
+
                     {children}
-                </div>
+
                 <Footer />
-            </div>                    ) : (
+            </section>                    ) : (
                       <LoadingScreen />
                     )}
 

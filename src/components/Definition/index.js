@@ -7,10 +7,10 @@ function Definition() {
 
             <section className="table w-full">
                 <div className="table-cell text-white align-middle google-definition">
-                    <h2 className="font-bold text-white text-9xl">OAKwave</h2>
-                    <em className="text-white"><h5 className="text-5xl text-white">oak - wayv <br />/ ōk / - / weɪv /</h5></em>
-                    <p className="italic text-white "><em>brand and marketing consultants</em></p>
-                    <p><ol className="text-white list-decimal  ml-30"><li className="ml-20 text-white list-decimal"> the juxtaposition of tried-and-true practices/wisdom and a new wave of innovative, unconventional methods.
+                    <h2 className="text-5xl font-bold text-white lg:text-9xl md:text-5xl">OAKwave</h2>
+                    <em className="text-white"><h5 className="text-3xl text-white lg:text-5xl">oak - wayv <br />/ ōk / - / weɪv /</h5></em>
+                    <p className="italic text-white text-md lg:text-xl "><em>brand and marketing consultants</em></p>
+                    <p><ol className="text-xl text-white list-decimal lg:text-2xl ml-30"><li className="ml-20 text-white list-decimal"> the juxtaposition of tried-and-true practices/wisdom and a new wave of innovative, unconventional methods.
                     </li>
 
                     <li className="ml-20 text-white list-decimal"> where tradition and creativity meet</li>

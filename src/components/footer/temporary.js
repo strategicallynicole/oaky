@@ -76,7 +76,7 @@ const Footer = ({ showBelow }) => {
                     <ul className="social-share ft-info"
                         data-wow-delay="200ms"
                         data-wow-duration="1000ms">
-                        <li><a href="https://www.facebook.com/oakwave"><FontAwesomeIcon className="text-gray-50" icon="fa-brands fa-facebook-f" /></a></li>
+                        <li><a href="https://www.facebook.com/oakwave"><FontAwesomeIcon className="text-gray-50" icon={faFacebook} /></a></li>
                         <li><a href="https://linkedin.com/company/oakwave"><FontAwesomeIcon className="text-gray-50" icon={faLinkedin}
                         /></a></li>
                         {/*   <li><a href="#link"><FontAwesomeIcon icon={faQuora}

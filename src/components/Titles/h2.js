@@ -24,7 +24,7 @@ const Title = (props) => {
     return (
         <>
             <div className="section-title mb--40">
-                <h2 className="title" data-wow-delay="100ms" data-wow-duration="1000ms">
+                <h2 className="text-2xl title lg:text-5xl md:text-3xl" data-wow-delay="100ms" data-wow-duration="1000ms">
                     {titletext}
                     <span data-wow-delay="100ms" data-wow-duration="1000ms" className="bgtext">
                         {bgtext}

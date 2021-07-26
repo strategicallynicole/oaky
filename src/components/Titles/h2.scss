@@ -19,7 +19,7 @@
 
 }
 .bgtext {
-    max-width: 100%;
+    max-width: 200%;
 
         position: absolute;
         opacity: 0.4;
@@ -37,22 +37,14 @@
     animation-duration: 1000ms;
  display: inline-block;
 white-space: nowrap;
-        left: 10px;
+        left: 0px !important;
         margin-top: -20px !important;
         color: transparent;
     -webkit-text-stroke: 1px #fff;
-max-width:100%; word-wrap:nowrap;
-overflow: hidden;
+max-width:200%; word-wrap:nowrap;
+overflow: visible;
     }
-@media only screen and (max-width: 992px){
-.title {
-    font-size: 2rem;
-}
 
-.bgtext {
-font-size: 5rem;
-}
-}
 
 @keyframes fadeInLeft {
   from {

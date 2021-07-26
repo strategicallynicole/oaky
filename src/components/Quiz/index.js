@@ -93,20 +93,20 @@ function Quiz() {
     return (
         <>
 
-            <section className="w-full my-40 mx-30 px-30">
+            <section className="w-full my-10 lg:mx-30 lg:px-30">
                 <Title
                     bgtext="Compatibility"
                     titletext="Matchmaker"
                 />
 
-                <p className="text-xl text-white px-28 mulish">With our patented  (by patented, we mean, not patented) eliminate-the-BS client->agency compatibility quiz, you can save so much time and energy.</p>
+                <p className="text-xl text-white lg:px-28 mulish">With our patented  (by patented, we mean, not patented) eliminate-the-BS client->agency compatibility quiz, you can save so much time and energy.</p>
                 <div className="app">
                     {showScore ? (
-                        <div className="score-section">
-            According to the all-seeing-eye, we are {scorePercent}% compatible!
+                        <div className="score-section"> <div className="italic text-white bg-transparent font-heavy mulish">
+            <p className="text-3xl text-white font-heavy">According to the all-seeing-eye, we are {scorePercent}% compatible</p>
                             <br />
                             <br />
-                            <ScoreMe score={scorePercent} />
+                            <ScoreMe score={scorePercent} /></div>
                         </div>
                     ) : (
                         <>
@@ -120,7 +120,7 @@ function Quiz() {
                                         onClick={() => handleAnswerButtonClick(answerOptions.isCorrect)
                                         }
                                     >
-                                        {answerOptions.answerText}
+                                      {answerOptions.answerText}
                                     </button>
                                 ))}
                             </div>

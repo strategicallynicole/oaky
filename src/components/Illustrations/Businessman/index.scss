@@ -1,4 +1,6 @@
 .businessman {
     max-width: 1400px;
     min-width: 300px;
+    overflow: visible !important;
+    z-index:99999;
 }

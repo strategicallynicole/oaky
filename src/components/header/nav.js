@@ -45,6 +45,7 @@ import {
     faChevrondown,
 
 } from '@fortawesome/pro-thin-svg-icons'
+import siteConfig from '../../utils/siteConfig'
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(` `)
@@ -55,7 +56,7 @@ export default function Example() {
         <Disclosure as="nav" className="bg-transparent">
             {({ open }) => (
                 <>
-                    <div className="h-40 max-w-full px-10 mx-auto sm:px-6 lg:px-8 sm:py-6 lg:py-8">
+                    <div className="h-40 max-w-full px-10 mx-auto sm:px-10 lg:px-10 sm:py-10 lg:py-8">
                         <div className="flex justify-between h-40">
                             <div className="flex h402">
                                 <div className="flex items-center h-40 mr-2 -ml-2 md:hidden">
@@ -70,7 +71,7 @@ export default function Example() {
                                     </Disclosure.Button>
                                 </div>
                                 <div className="flex items-center flex-shrink-0">
-                                    <Logo type="abbreviation" classes=" inline-block lg:hidden xl:hidden md:hidden h-auto w-auto" />
+                                    <Logo type="abbreviation" classes="mt-10 inline-block lg:hidden xl:hidden md:hidden h-auto w-auto" />
                                     <Logo type="standard" classes="hidden lg:inline-block xl:inline-block md:inline-block h-auto w-auto" />
                                 </div>
                                 <div className="hidden ml-10 md:ml-6 md:flex md:items-center md:space-x-4">
@@ -94,13 +95,13 @@ export default function Example() {
                     </div>
 
                     <Disclosure.Panel className=" md:hidden">
-                        <div className="h-full px-2 pt-2 pb-3 space-y-1 border border-white rounded-4xl sm:px-3 bg-black-gradient">
-                            <ul><li>        <Link href="/" className="text-base font-medium"> <span><Linky text="Home" /></span></Link>
+                        <div className="h-full px-2 pt-2 pb-3 ml-10 space-y-1 rounded-4xl sm:px-3 bg-black-gradient">
+                            <ul><li>        <Link href="/" className="text-base font-heaviest"> <span><Linky text="Home" /></span></Link>
                             </li>
-                            <li>            <Link href="/about" className="text-base font-medium"> <span><Linky text="About Us" /></span></Link>
-                            </li><li>        <Link href="#services" className="text-base font-medium"> <span><Linky text="Services" /></span></Link>
-                            </li><li>              <Link href="/contact" className="text-base font-medium"> <span><Linky text="Contact" /></span></Link>
-                            </li><li>              <Link href="/schedule" className="text-base font-medium"> <span><Linky text="Schedule" /></span></Link>
+                            <li>            <Link href="/about" className="text-base font-heaviest"> <span><Linky text="About Us" /></span></Link>
+                            </li><li>        <Link href="/#services" className="text-base font-heaviest"> <span><Linky text="Services" /></span></Link>
+                            </li><li>              <Link href="/contact" className="text-base font-heaviest"> <span><Linky text="Contact" /></span></Link>
+                            </li><li>              <Link href="/schedule" className="text-base font-heaviest3r11"> <span><Linky text="Schedule" /></span></Link>
                             </li></ul>
 
                         </div>
