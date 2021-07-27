@@ -43,6 +43,7 @@ return (
         onMessage="On"
         onResized="resized"
         src="/demo.html"
+        className="xl:h-1000 2xl:h-1000 lg:h-1000 md:h-1000 sm:h-500"
         style={{ width: '1px', minWidth: '100%'}}
       />
 

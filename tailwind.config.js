@@ -10,10 +10,9 @@
  * - Author          :
  * - Modification    :
  **/
-'use strict';
+'use strict'
 
 module.exports = {
-
     purge: [`./public/**/*.{js,jsx,ts,tsx}`],
     darkMode: `media`,
     theme: {
@@ -25,6 +24,17 @@ module.exports = {
             indigo: `#3366FF`,
             purple: `#6633FF`,
         },
+        padding: {
+            30: '30px',
+            10: '10px',
+            20: '20px',
+            25: '25px',
+            40: '40px',
+            50: '50px',
+            16: '16px',
+            8: '8px',
+            6: '6px',
+        },
         borderColor: (theme) => {
             return {
                 DEFAULT: theme(`colors.indigo.500`, `currentColor`),
@@ -33,11 +43,12 @@ module.exports = {
                 gray: theme(`colors.gray.500`),
                 indigo: theme(`colors.indigo.500`),
                 pink: theme(`colors.pink.500`),
-            };
+            }
         },
         borderRadius: {
             DEFAULT: `20px`,
             '4xl': `2.5rem`,
+            '3xl': `2rem`,
         },
         fontSize: {
             tiny: `0.9rem`,
@@ -55,13 +66,15 @@ module.exports = {
             '7xl': `5rem`,
             '8xl': `6rem`,
             '9xl': `7rem`,
+            '15xl': `15rem`,
+            '20xl': `20rem`,
         },
         boxShadow: {
-            default:
-                `2px 2px 1px #171040, 3px 3px 1px #171040, 4px 4px 1px #171040, 5px 5px 1px #171040, 6px 6px 1px #171040`,
+            default: `2px 2px 1px #171040, 3px 3px 1px #171040, 4px 4px 1px #171040, 5px 5px 1px #171040, 6px 6px 1px #171040`,
             purple: `3px 5px 1px #21076E`,
             lightblue: `3px 5px 1px #0B4C78`,
             blue: `3px 5px 1px #162F7C`,
+            lg: `3px 5px 1px #000000`,
             orange: `3px 5px 1px #A65512`,
         },
         filter: {
@@ -73,6 +86,15 @@ module.exports = {
         backdropFilter: {
             none: `none`,
             blur: `blur(20px)`,
+        },
+        minHeight: {
+            fit: 'fit-content',
+            200: '200px',
+            '1/4': '25%',
+            '1/2': '50%',
+            '3/4': '75%',
+            full: '100%',
+            screen: 'screen',
         },
         extend: {
             typography: {
@@ -90,20 +112,21 @@ module.exports = {
                 return {
                     DEFAULT: theme(`colors.white.500`, `currentColor`),
                     indigo: theme(`colors.indigo.500`),
+                    'gray-200': theme(`colors.gray.200`),
                 }
             },
             borderRadius: {
                 DEFAULT: `2.5rem`,
+                lg: `1.5rem`,
                 '4xl': `2.5rem`,
             },
             backgroundImage: (theme) => {
                 return {
                     waves: `url('../images/waves.svg')`,
-                    gradient:
-                    `linear-gradient(90deg, #6633FF 40.47%, #3366FF 78.75%, #0099FF 105%)`,
+                    blurred: `linear-gradient(90deg, rgba(41, 41, 41, .3) 2.11%, rgba(0, 0, 0, .3) 104.85%)`,
+                    gradient: `linear-gradient(90deg, #6633FF 40.47%, #3366FF 78.75%, #0099FF 105%)`,
                     wallpaper: `url('../images/wallpaper.svg')`,
-                    'black-gradient':
-                    `linear-gradient(90deg, #292929 2.11%, #000000 104.85%)`,
+                    'black-gradient': `linear-gradient(90deg, #292929 2.11%, #000000 104.85%)`,
                     glass: `rgba( 0, 0, 0, 0.60 )`,
                 }
             },
@@ -207,15 +230,14 @@ module.exports = {
             },
         },
     },
-    variants: {
-    },
+    variants: {},
     plugins: [
         require(`@tailwindcss/typography`),
         require(`tailwind-bootstrap-grid`),
         require(`@tailwindcss/forms`),
         require(`@tailwindcss/line-clamp`),
         require(`@tailwindcss/aspect-ratio`),
+        require(`tailwindcss-filters`),
         require(`tailwindcss-text-fill-stroke`), // no options to configure
-
     ],
 }

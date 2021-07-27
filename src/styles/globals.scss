@@ -1,43 +1,43 @@
-$border-color: linear-gradient(90deg, #6633FF 18.59%, #3366FF 68.36%, #0099FF 105%);
+$border-color: linear-gradient(90deg, #6633ff 18.59%, #3366ff 68.36%, #0099ff 105%);
 
 @import "./core/grid.scss";
 @import "./core/_mixins.scss";
 
-@import './core/variables';
-@import './core/mixins.scss';
-@import './core/reset';
-@import './core/typography';
-@import './core/extend';
-@import './core/animations';
-@import './core/animation-text';
-@import './core/shortcode';
-@import './core/spacing';
-@import './plugins/zircle.scss';
+@import "./core/variables";
+@import "./core/mixins.scss";
+@import "./core/reset";
+@import "./core/typography";
+@import "./core/extend";
+@import "./core/animations";
+@import "./core/animation-text";
+@import "./core/shortcode";
+@import "./core/spacing";
+@import "./plugins/zircle.scss";
 /*-- Variables --*/
-
-$border-color: linear-gradient(90deg, #6633FF 18.59%, #3366FF 68.36%, #0099FF 105%);
+$border-color: linear-gradient(90deg, #6633ff 18.59%, #3366ff 68.36%, #0099ff 105%);
 
 $shadow: #171040;
-$transition: .6s all ease-in-out;
+$transition: 0.6s all ease-in-out;
 $main-color: #121212;
 $white-color: #fefefe;
 $black-color: #121212;
 $border-radius: 20px;
 $heading-color: #ffffff;
 $heading-font-family: "stolzl";
-$gradient: linear-gradient(90deg, #6633FF 18.59%, #3366FF 68.36%, #0099FF 105%);
-$purple-gradient: linear-gradient(180deg, #32255B 0%, #2B2A36 100%);
+$gradient: linear-gradient(90deg, #6633ff 18.59%, #3366ff 68.36%, #0099ff 105%);
+$purple-gradient: linear-gradient(180deg, #32255b 0%, #2b2a36 100%);
 $black-gradient: linear-gradient(90deg, #292929 2.11%, #000000 104.85%);
 $white: #ffffff;
-$purple: #6633FF;
-$blue: #3366FF;
-$lightblue: #0099FF;
-$gray: #B2B2B2;
+$purple: #6633ff;
+$blue: #3366ff;
+$lightblue: #0099ff;
+$gray: #b2b2b2;
+$theme-color: $purple;
 
-$body-font-family: 'Montserrat', sans-serif;
-$heading-font-family: 'Mulish', sans-serif;
+$body-font-family: "Montserrat", sans-serif;
+$heading-font-family: "Mulish", sans-serif;
 
-$main-color: #8F6AFA;
+$main-color: #8f6afa;
 $body-color: #ffffff;
 $heading-color: #ffffff;
 $white-color: #ffffff;
@@ -56,41 +56,37 @@ $border-radius: 4px;
     --color-body: #333333;
 
     // Gery Colors
-    --color-gray: #65676B;
-    --color-midgray: #9F9F9F;
+    --color-gray: #65676b;
+    --color-midgray: #9f9f9f;
     --color-light: #eee;
-    --color-lighter: #CED0D4;
-    --color-lightest: #F0F2F5;
+    --color-lighter: #ced0d4;
+    --color-lightest: #f0f2f5;
 
-    --color-border: #E6E6E6;
+    --color-border: #e6e6e6;
     --color-white: #ffffff;
 
     // Notify Colors
-    --color-success: #3EB75E;
-    --color-danger: #FF0003;
-    --color-warning: #FF8F3C;
-    --color-info: #1BA2DB;
-
+    --color-success: #3eb75e;
+    --color-danger: #ff0003;
+    --color-warning: #ff8f3c;
+    --color-info: #1ba2db;
 
     //Social icon colors
-    --color-facebook: #3B5997;
-    --color-twitter: #1BA1F2;
-    --color-youtube: #ED4141;
-    --color-linkedin: #0077B5;
-    --color-pinterest: #E60022;
-    --color-instagram: #C231A1;
-    --color-vimeo: #00ADEF;
-    --color-twitch: #6441A3;
-
+    --color-facebook: #3b5997;
+    --color-twitter: #1ba1f2;
+    --color-youtube: #ed4141;
+    --color-linkedin: #0077b5;
+    --color-pinterest: #e60022;
+    --color-instagram: #c231a1;
+    --color-vimeo: #00adef;
+    --color-twitch: #6441a3;
 
     // Extra Color
     --color-extra01: #ffedeb;
     --color-extra02: #bbbbbb;
     --color-extra03: #041230;
-    --color-extra04: #F1F1F1;
+    --color-extra04: #f1f1f1;
     --color-extra05: #14131b;
-
-
 
     //Border-radius
     --radius: 3px;
@@ -115,7 +111,6 @@ $border-radius: 4px;
     --s-bold: 700;
     --s-black: 900;
 
-
     //Shadows
     --shadow-light: 0 2px 6px 0 rgba(0, 0, 0, 0.05);
     --shadow-dark: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
@@ -123,22 +118,19 @@ $border-radius: 4px;
     //transition easing
     --transition: 0.3s;
 
-
     //Font Family
-    --font-primary: 'Mulish', sans-serif;
-    --font-secondary: 'Montserrat', sans-serif;
-    --font-tertiary: 'Kaushan Script', cursive;
-    --font-extra1: 'Rubik', sans-serif;
-    --font-extra2: 'Lora', serif;
-    --font-awesome: 'Font Awesome 5 Pro';
-
+    --font-primary: "Mulish", sans-serif;
+    --font-secondary: "Montserrat", sans-serif;
+    --font-tertiary: "Kaushan Script", cursive;
+    --font-extra1: "Rubik", sans-serif;
+    --font-extra2: "Lora", serif;
+    --font-awesome: "Font Awesome 5 Pro";
 
     //Fonts Size
     --font-size-b1: 18px;
     --font-size-b2: 15px;
     --font-size-b3: 14px;
     --font-size-b4: 12px;
-
 
     //Line Height
     --line-height-b1: 1.6; //28px
@@ -153,32 +145,28 @@ $border-radius: 4px;
     --h4: 24px; //30px  1.25
     --h5: 18px; //22px 1.24
     --h6: 16px; //20px 1.25
-
 }
 
-
 // Layouts Variation
-$smlg-device: 'only screen and (max-width: 1199px)';
-$extra-device: 'only screen and (min-width: 1600px) and (max-width: 1919px)';
-$laptop-device: 'only screen and (min-width: 1200px) and (max-width: 1599px)';
-$lg-layout: 'only screen and (min-width: 992px) and (max-width: 1199px)';
-$md-layout:'only screen and (min-width: 768px) and (max-width: 991px)';
-$sm-layout:'only screen and (max-width: 767px)';
-$large-mobile: 'only screen and (max-width: 575px)';
-$small-mobile: 'only screen and (max-width: 479px)';
-
-
+$smlg-device: "only screen and (max-width: 1199px)";
+$extra-device: "only screen and (min-width: 1600px) and (max-width: 1919px)";
+$laptop-device: "only screen and (min-width: 1200px) and (max-width: 1599px)";
+$lg-layout: "only screen and (min-width: 992px) and (max-width: 1199px)";
+$md-layout: "only screen and (min-width: 768px) and (max-width: 991px)";
+$sm-layout: "only screen and (max-width: 767px)";
+$large-mobile: "only screen and (max-width: 575px)";
+$small-mobile: "only screen and (max-width: 479px)";
 
 .holderbox {
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
-  }
+}
 
-  .childbox {
+.childbox {
     flex: 0 1 30%;
     margin: 5px;
-    }
+}
 .pagination a {
     color: #ffffff !important;
 }

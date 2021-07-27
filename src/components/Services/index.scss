@@ -80,7 +80,6 @@ ul {
   &__title {
     padding: var(--s2) var(--s3) calc(var(--s6) * 1.8); @include bp-sm {
     padding: var(--s2) var(--s3)  var(--s4); }
-    margin: 0 calc(var(--s3) * -1);
     color: #fff;
     font-size: var(--s4);
     font-weight: 700;
@@ -149,11 +148,9 @@ ul {
 .c-services {
 
   @include bp-sm {
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: minmax(100px, 1fr);
+
   }
 
-  display: grid;
   grid-gap: var(--s2);
   padding: var(--s6) var(--s3); @include bp-sm {
   padding: 0 var(--s3); }

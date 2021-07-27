@@ -1,4 +1,6 @@
-
+.gradienttext {
+    @apply font-extrabold text-transparent bg-clip-text bg-gradient;
+}
 
 .prose a {
     @apply link link--iocaste;

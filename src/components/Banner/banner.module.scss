@@ -230,11 +230,10 @@ position: relative;
 
                 .title {
                     line-height: 1.4;
-                    -webkit-text-stroke: 1px #ffffff;
+                    -webkit-text-stroke: 1px #bbbbbb;
                     color: transparent;
                     font-size: 120px;
                     font-weight: 900;
-                    text-transform: uppercase;
                     margin: 0;
                     padding: 0;
                     line-height: 1.1;
@@ -256,10 +255,9 @@ position: relative;
                     }
 
                     span {
-                        color: #ffffff;
-                        font-size: 120px;
-                        font-weight: 900;
-                        text-transform: uppercase;
+                        color: #bbbbbb;
+                        font-size: 2em;
+                        text-transform: normal;
                         margin: 0;
                         padding: 0;
                         line-height: 1.1;

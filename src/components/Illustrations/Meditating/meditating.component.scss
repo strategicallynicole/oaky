@@ -5,7 +5,6 @@
 
   .animate-enter {
   animation: animate-enter-frames 0.10s ease-in-out 0.00s 1 normal forwards;
-  display: block;
 opacity: 0;
 transform: translate(-25px, 0);
 }
@@ -29,15 +28,12 @@ transform: translate(-25px, 0);
 }
 
 .meditate img {
-    max-height: 900px;
-    min-height: 400px;
-    max-width: 1500px;
-    min-width: 200px;
+
 }
 
 .floater img {
 
-  overflow: visible !important;
+
   z-index: 1000;
     transform: translatey(0px);
     -webkit-animation: float 6s ease-in-out infinite;

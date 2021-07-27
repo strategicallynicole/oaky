@@ -36,8 +36,10 @@ const About = ({ location }) => (
     <>
 
         <Layout>
-            <MetaData location={location} />
-
+        <MetaData
+                location={location}
+                type="page"
+            />
             <section className="w-full lg:px-30 lg:mx-28">
                <div className="ml-10"> <Title
                     className="pt-10 lg:px-10 wow slideInRight"

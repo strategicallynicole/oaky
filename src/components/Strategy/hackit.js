@@ -17,7 +17,7 @@ const Iframe = () => {
     // const { iframesrc } = props.iframesrc
     return (
         <>
-            <div dangerouslySetInnerHTML={{ __html: `<iframe id='iframe1' scrolling='no' src='/demo.html' width='2600px' />` }} />
+            <div dangerouslySetInnerHTML={{ __html: `<iframe id='iframe1' scrolling='no' className="xl:h-1000 2xl:h-1000 lg:h-1000 md:h-1000 sm:h-500" src='/demo.html' width='2600px' />` }} />
         </>
     )
 }

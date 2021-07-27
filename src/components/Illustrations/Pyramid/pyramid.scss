@@ -7,5 +7,13 @@
     position: absolute;
     width: 400px;
     z-index: -20;
+
     @apply md:hidden sm:hidden;
+}
+@media only screen and (max-width: 600px) {
+    .pyramid {
+        display: hidden;
+        width: 0px;
+        height: 0px;
+    }
 }

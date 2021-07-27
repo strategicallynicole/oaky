@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import { Tags } from '@tryghost/helpers-gatsby'
+import { Tags } from '@tryghost/helpers'
 import { readingTime as readingTimeHelper } from '@tryghost/helpers'
 import Linky from "../Effects/Linky/index"
 import './postcard.scss'
@@ -22,7 +22,8 @@ const PostCard = ({ post }) => {
             <section className="post-card-excerpt">{post.excerpt}</section>
             <div className="post-card-footer">
                 <div className="post-card-footer-left">
-                    <div className="post-card-tags"> <Tags post={post} visibility="public" autolink={false} /></div>
+                {post.tags && <div className="post-card-tags"> <Tags post={post} visibility="public" autolink={true} /></div>}
+
 
                 </div>
                 <div className="post-card-footer-right">

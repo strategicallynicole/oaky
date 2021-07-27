@@ -16,29 +16,28 @@ import Title from '../Titles/home.js'
 import * as style from './banner.module.scss'
 const Banner = () => (
 
-    <div className="container flex flex-wrap overflow-hidden ">
 
-        <div className="w-full px-10 py-20 my-1 overflow-hidden sm:order-last xs:order-last sm:my-1 sm:px-1 sm:w-full md:my-1 md:px-1 md:w-1/2 lg:my-1 lg:px-1 lg:w-1/2 xl:my-1 xl:px-1 xl:w-1/2">
-            <div className="lg:mt-20 title wow fadeInLeft"
-                data-wow-delay="300ms"
-                data-wow-duration="1000ms"
-            >   <Title titletext="We Need To Talk." bgtext="Hi." /></div>
-            <h4
-                className="subtitle wow fadeInLeft"
+    <div class="flex flex-wrap overflow-visible px-10">
+
+  <div class="w-full lg:mt-20 px-6 xl:mt-20 2xl:mt-20 mb-0 md:mb-10 lg:mb-10 xl:mb-20 2xl:mb-20 mt-0 overflow-hidden order-last sm:order-first md:w-1/2 lg:w-1/2 xl:w-1/2">
+  <Title titletext="We Need To Talk." bgtext="Hi." />
+  <h4
+                className="wow fadeInLeft"
                 data-wow-delay="600ms"
                 data-wow-duration="1000ms"
 
-            ><span className={style.bannerContent}>It's about your branding and creative again...  it's been frightening.</span></h4>
+            ><span className="text-xl font-normal mulish">It's about your branding and creative again...  it's been frightening.</span></h4>
+    </div>
 
-        </div>
-
-        <div className="w-full px-1 my-1 overflow-hidden sm:my-1 sm:px-1 sm:w-full md:my-1 md:px-1 md:w-1/2 lg:my-1 lg:px-1 lg:w-1/2 xl:my-1 xl:px-1 xl:w-1/2">
-            <div className="wow fadeInLeft story-image"
+  <div class="w-full overflow-visible order-first sm:ml---25 sm:order-last md:w-1/2 lg:w-1/2 xl:w-1/2 mb-12 md:mb-0 lg:mb-0 xl:mb-0 2xl:mb-0">
+  <div className="wow fadeInLeft story-image"
                 data-wow-delay="300ms"
                 data-wow-duration="1000ms">
                 <RunAwayLittleGirl className="banner" />
             </div>
-        </div>
+</div>
 
-    </div>)
+</div>
+
+)
 export default Banner

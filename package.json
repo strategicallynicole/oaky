@@ -144,6 +144,7 @@
         "styled-components": "^5.3.0",
         "tailwind-bootstrap-grid": "^4.0.0",
         "tailwindcss": "^2.2.7",
+        "tailwindcss-filters": "^3.0.0",
         "util": "^0.12.4",
         "web-component-essentials": "^0.0.4",
         "wowjs": "^1.1.3"

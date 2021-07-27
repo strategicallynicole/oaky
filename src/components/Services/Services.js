@@ -1,90 +1,74 @@
-/**
-    * @description      :
-    * @author           :
-    * @group            :
-    * @created          : 15/06/2021 - 20:36:56
-    *
-    * MODIFICATION LOG
-    * - Version         : 1.0.0
-    * - Date            : 15/06/2021
-    * - Author          :
-    * - Modification    :
-**/
-import React, { Component } from 'react'
-import SectionTitle from "../Titles/h2.js"
-import "./Services.comp.scss"
+import React from "react"
+/* This example requires Tailwind CSS v2.0+ */
 
-const subtitle = `<div>What Makes Us The <span className='text-2xl text-center text-gradient grotesk text-bold'>Best</span></div>`
+  import Arrow from "../Illustrations/Icons/arrow.svg";
+  import Book from "../Illustrations/Icons/book.svg";
+  import Bulb from "../Illustrations/Icons/bulb.js";
+  import Brand from "../Illustrations/Icons/brand.svg";
+  import Brain from "../Illustrations/Icons/brain.js";
+  import Compass from "../Illustrations/Icons/compass.js";
+  import Cow from "../Illustrations/Icons/cow.svg";
+  import Dart from "../Illustrations/Icons/dart.js";
+  import Dial from "../Illustrations/Icons/dial.js";
+  import Earth from "../Illustrations/Icons/earth.svg";
+  import Mirror from "../Illustrations/Icons/mirror.js";
+  import Pencil from "../Illustrations/Icons/pencil.js";
+  import Poison from "../Illustrations/Icons/poison.svg";
+  import Surprised from "../Illustrations/Icons/surprised.svg";
+  import Telescope from "../Illustrations/Icons/telescope.svg";
 
-class ProblemsWeSolve extends Component {
-    render() {
-        return (
+ import { StaticImage } from 'gatsby-plugin-image'
 
-            <section className="problems-we-solve-area ">
 
-                <div className="container">
 
-                    <SectionTitle subtitle="What is it like" title="Problems We Solve" body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nisi rem quo itaque minus dolorem ratione vero, quisquam reiciendis quia atque eos aspernatur."/>
+import Title from "../Titles/h2"
+import Pointing from '../Illustrations/Pointing/index'
 
-                    <div className="flex flex-wrap -mx-1 overflow-hidden sm:-mx-1 md:-mx-1 lg:-mx-1 xl:-mx-1">
+  const features = [
+    { name: 'Marketing Strategy', icon: Compass, description: 'Do you know how parents always say, "I wish there was a manual on parenting?" That\'s kind of what our strategies are, except for business growth.  ' },
+    { name: 'Branding', icon: Mirror, description: 'Unifying your organization behind a single voice, position, slogan, and value proposition is critical to your success. We make this process painless and actually fun.' },
+    { name: 'Creative', icon: Bulb, description: 'Whether your creative needs a complete overhaul or just a bit of an infusion, we got you covered without upsetting your current relationships.  We are on a mission to change the world, one idea at a time.  ' },
+    { name: 'Content', icon: Pencil, description: 'This is not your intern\'s SEO-packed, boring Wikipedia entry! Your content needs to grab the attention of your target market and hold it. This takes a special blend of sales, marketing, and wordsmithing. We believe a hundred amazing words will change the world for your business, not a hundred mediocre articles.' },
+    { name: 'Website & Martech', icon: Dial, description: 'The base of your marketing efforts and the epicenter of your marketing effectiveness gauge. We assess, rethink, and offer tactical steps to lift impact of the homebase of your efforts.' },
+    { name: 'Branding, Strategy, Creative+', icon: Dart, description: 'We also offer: CMO-on-demand/marketing decision services, design, campaign execution, sales strategy, sales enablement via asset production, pitch development, martech stack design, salestech stack design, and website strategy.' },
+  ]
 
-                        <div className="my-1 px-1 w-full overflow-hidden sm:my-1 sm:px-1 md:my-1 md:px-1 md:w-1/2 lg:my-1 lg:px-1 lg:w-1/2 xl:my-1 xl:px-1 xl:w-1/2">
-                            <div className="problems-we-solve-content ">
+  export default function Services() {
+    return (
+        <>
+        <section className="pt-20 bg-fixed bg-top bg-no-repeat bg-cover bg-wallpaper">
+        <div className="px-16"><Title bgtext="Services" titletext="What We Do" /></div>
+        <div className="w-full px-2 place-content-center place-items-center"><Pointing /></div>
 
-                                <ul>
-                                    <li className="problems">
-                                        <span>01 <i className="flaticon-technical-support"></i></span>
-                                        <h3>Safe Security</h3>
-                                        <p>Lorem ipsum dolor sit labore amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                                    </li>
-                                    <li className="ml">
-                                        <span>02 <i className="flaticon-shield"></i></span>
-                                        <h3>Technical Support</h3>
-                                        <p>Lorem ipsum dolor sit labore amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                                    </li>
+      <div className="relative py-16 sm:py-24 lg:py-32">
 
-                                    <li className="problems ml-25">
-                                        <span>03 <i className="flaticon-support"></i></span>
-                                        <h3>Live Support</h3>
-                                        <p>Lorem ipsum dolor sit labore amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                                    </li>
-                                </ul>
 
-                            </div>
-                        </div>
-                        <div className="my-1 px-2 w-full overflow-hidden sm:my-1 sm:px-2 md:my-1 md:px-2 md:w-1/2 lg:my-1 lg:px-2 lg:w-1/2 xl:my-1 xl:px-2 xl:w-1/2">
+        <div className="max-w-md px-6 mx-auto text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
 
-                            <div className="problems-we-solve-content">
-                                <ul>
 
-                                    <li className="problems">
-                                        <span>04 <i className="flaticon-technical-support"></i></span>
-                                        <h3>Free Try </h3>
-                                        <p>Lorem ipsum dolor sit labore amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                                    </li>
-
-                                    <li className="ml">
-                                        <span>05 <i className="flaticon-shield"></i></span>
-                                        <h3>Advanced Tchnology</h3>
-                                        <p>Lorem ipsum dolor sit labore amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                                    </li>
-
-                                    <li className="problems ml-25">
-                                        <span>06 <i className="flaticon-support"></i></span>
-                                        <h3>Competitive Pricing</h3>
-                                        <p>Lorem ipsum dolor sit labore amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                                    </li>
-
-                                </ul>
-                            </div>
-
-                        </div>
-
+          <div className="mt-12">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 min-h-fit">
+              {features.map((feature) => (
+                <div key={feature.name} className="pt-6">
+                  <div className="flow-root px-10 pb-8 border border-gray-200 rounded-lg shadow-lg py-30 bg-blurred sm:rounded-3xl sm:p-16 bg-clip-padding backdrop-filter backdrop-blur-xl backdrop-filter-blur">
+                    <div className="-mt-6">
+                      <div>
+                        <span className="inline-flex items-center justify-center p-3 shadow-lg rounded-xl">
+                       <div>{feature.icon}</div>
+                        </span>
+                      </div>
+                      <h3 className="mt-8 text-lg font-medium tracking-tight text-white">{feature.name}</h3>
+                      <p className="mt-5 text-base text-gray-50">
+                      {feature.description}                      </p>
                     </div>
+                  </div>
                 </div>
-            </section>
-        )
-    }
-}
-
-export default ProblemsWeSolve
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+      </>
+    )
+  }

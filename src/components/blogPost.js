@@ -14,6 +14,7 @@ import React from 'react'
 import { Layout, PostCard, Pagination } from '../components/common'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from "gatsby"
+import Title from './Titles/h2.js';
 
 const BlogPost = ({ pageQuery, location, pageContext }) => {
     const data = useStaticQuery(graphql`
@@ -67,16 +68,10 @@ const BlogPost = ({ pageQuery, location, pageContext }) => {
 
     const blogs = data.allGhostPost.edges
     return (
-        <div className="bg-transparent rn-post-area rn-section-gapBottom pt--200" id="news">
-            <div className="px-20">
-                <div className="row">
-                    <div className="col-lg-12">
-                        <div className="section-title mb--40">
-                            <h2 className="title">Latest News <span className="bg">News</span></h2>
-                        </div>
-                    </div>
-                </div>
-                <section className="post-feed">
+        <>
+        <div className="px-16 bg-transparent rn-post-area rn-section-gapBottom" id="news">
+               <Title bgtext="Blogs" titletext="Latest Posts" />
+                <section className="px-16 post-feed">
 
                     {blogs.map(blog => (
                         <div className="row row--45 holderbox">
@@ -94,7 +89,7 @@ const BlogPost = ({ pageQuery, location, pageContext }) => {
                 </section>
 
             </div>
-        </div>
+        </>
     )
 }
 

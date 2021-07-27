@@ -1,4 +1,4 @@
-.title {
+.h1title {
     color: #fff;
     font-weight: 900;
     text-transform: uppercase;
@@ -10,8 +10,7 @@
     word-break: break-word;
     text-rendering: optimizeLegibility;
     font-family: Montserrat,sans-serif;
-    padding-top: 10px;
-    line-height: 1.3;
+    line-height: 1;
     font-size: 10rem;
     -webkit-text-stroke-color: #000 !important;
     -webkit-text-stroke-width: 1px;
@@ -30,17 +29,17 @@ margin-top: 5rem;
     text-transform: uppercase;
       -webkit-animation-name: fadeInLeft;
     animation-name: fadeInLeft;
-    word-break: nowrap;
+    word-break: wrap;
     text-rendering: optimizeLegibility;
     font-family: Montserrat,sans-serif;
     visibility: visible;
     animation-duration: 1000ms;
  display: inline-block;
-white-space: nowrap;
+white-space: wrap;
         left: 0;
         color: transparent;
     -webkit-text-stroke: 1px #fff;
-max-width:130%; word-wrap:nowrap;
+max-width:100%; word-wrap:normal;
 overflow: hidden;
     }
 @media only screen and (max-width: 992px){
@@ -49,7 +48,7 @@ overflow: hidden;
 }
 
 .bgtext {
-font-size: 8rem;
+font-size: 20rem;
 }
 }
 

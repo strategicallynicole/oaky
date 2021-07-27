@@ -26,7 +26,7 @@ button {
         text-decoration: none;
         background-color: white;
         display: inline-block;
-        padding: 5px 20px;
+        padding: 10px 20px;
         overflow: hidden;
         position: relative;
         z-index: 1;
@@ -37,8 +37,9 @@ button {
         line-height: 1em;
         border-radius: 2em !important;
         color: black;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 1em;
+        margin: 4px;
         font-family: 'Montserrat', sans-serif;
 transform: 2s all water;
 

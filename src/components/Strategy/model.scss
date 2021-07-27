@@ -1,6 +1,23 @@
 iframe {
     width: 100% !important;
     scrollbar-width: 0;
-    height: 950px;
     scroll-behavior: unset;
+    height: 1000PX;
+}
+
+@media only screen and (max-width: 600px) {
+    iframe {
+        height: 500px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    iframe {
+        height: 800px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    iframe {
+        height: 1000px;
+    }
 }

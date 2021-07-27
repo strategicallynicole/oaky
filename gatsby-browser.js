@@ -28,6 +28,12 @@ var trustAllScripts = function () {
     }
 }
 
+exports.onInitialClientRender = function () {
+    setTimeout(function() {
+        document.getElementById("loading").style.display = "none"
+    }, 1000)
+}
+
 exports.onRouteUpdate = function () {
     trustAllScripts()
 }
