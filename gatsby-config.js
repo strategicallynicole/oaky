@@ -313,11 +313,11 @@ module.exports = {
                     `Mulish 500`,
                     `Mulish 600`,
                     `Mulish 700`,
-                    `Bitter ital`,
-                    `Bitter:100i`,
-                    `Bitter:100`,
-                    `Bitter 100`,
-                    `Bitter 100i`
+                    `Merriweather ital`,
+                    `Merriweather:100i`,
+                    `Merriweather:100`,
+                    `Merriweather 100`,
+                    `Merriweather 100i`
                 ],
         },}
     ],

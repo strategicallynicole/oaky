@@ -5733,7 +5733,7 @@ var plugins = [{
   plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-google-fonts/gatsby-ssr */ "./node_modules/gatsby-plugin-google-fonts/gatsby-ssr.js"),
   options: {
     "plugins": [],
-    "fonts": ["Montserrat ital", "sans-serif:300", "Montserrat 300i", "Montserrat 400", "Montserrat 400i", "Montserrat500", "Montserrat 600", "Montserrat 700", "Montserrat 900", "Mulish ital", "Mulish sans-serif:300", "Mulish:400", "Mulish 400", "Mulish 500", "Mulish 600", "Mulish 700", "Bitter ital", "Bitter:100i", "Bitter:100", "Bitter 100", "Bitter 100i"]
+    "fonts": ["Montserrat ital", "sans-serif:300", "Montserrat 300i", "Montserrat 400", "Montserrat 400i", "Montserrat500", "Montserrat 600", "Montserrat 700", "Montserrat 900", "Mulish ital", "Mulish sans-serif:300", "Mulish:400", "Mulish 400", "Mulish 500", "Mulish 600", "Mulish 700", "Merriweather ital", "Merriweather:100i", "Merriweather:100", "Merriweather 100", "Merriweather 100i"]
   }
 }];
 /* global plugins */
