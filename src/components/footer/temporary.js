@@ -2,6 +2,8 @@ import React, { useState , useEffect } from 'react'
 import './index.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import HubspotForm from 'react-hubspot-form'
+import Pointing from '../Illustrations/Pointing/index'
+
 import {
     faPhone, faHome
 } from '@fortawesome/pro-thin-svg-icons'
@@ -41,7 +43,7 @@ const Footer = ({ showBelow }) => {
 
 
 <div class="flex flex-wrap overflow-hidden md:-mx-1 lg:-mx-1 xl:-mx-1 px-16 w-full">
-
+<Pointing />
 <div class="w-full overflow-hidden md:my-1 md:px-1 md:w-1/3 lg:my-1 lg:px-1 lg:w-1/3 xl:my-1 xl:px-1 xl:w-1/3">
 <div className="ml-16 text-gray-50 mulish ft-info wow fadeInLeft place-content-right place-items-left"
                             data-wow-delay="0ms"

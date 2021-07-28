@@ -31,7 +31,6 @@ class CounterOne extends Component{
 
         return(
             <Fragment>
-<Pointing />
 
 
 <div class="flex flex-wrap overflow-hidden md:-mx-2 lg:-mx-2 xl:-mx-2">

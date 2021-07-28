@@ -56,8 +56,8 @@ export default function Example() {
         <Disclosure as="nav" className="bg-transparent">
             {({ open }) => (
                 <>
-                    <div className="h-40 max-w-full px-10 mx-auto sm:px-10 lg:px-10 sm:py-10 lg:py-8">
-                        <div className="flex justify-between h-40">
+                    <div className="h-40 max-w-full px-16 mx-auto sm:px-10 lg:px-10 sm:py-10 lg:py-8">
+                        <div className="flex justify-between h-40 px-16">
                             <div className="flex h402">
                                 <div className="flex items-center h-40 mr-2 -ml-2 md:hidden">
                                     {/* Mobile menu button */}

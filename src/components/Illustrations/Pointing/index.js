@@ -18,10 +18,9 @@ import img from './pointing.svg'
 export default function Pointing() {
     return (
         <>
-            <StaticImage
-                src="./pointing.svg"
+           <img src={img}
                 alt="Pointing"
-                className="overflow-visible point banner animate-enter md:relative lg:absolute"
+                className="overflow-visible point md:relative lg:absolute"
             />
         </>
     )

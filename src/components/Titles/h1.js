@@ -21,10 +21,10 @@ const Title = (props) => {
 
     return (
         <>
-            <div className="z-0 text-9xl bgtext lg:text-15xl">{bgtext}</div>
+        <div className="w-full h-1/3">
+            <div className="z-0 hidden text-4xl md:hidden sm:hidden xl:visible lg:visible 2xl:text-9xl bgtext2 lg:text-15xl">{bgtext}</div>
             <h1 className="text-8xl h1title text-stroke-black lg:text-10xl" data-wow-delay="100ms" data-wow-duration="1000ms">
-                {titletext}</h1>
-
+                {titletext}</h1></div>
         </>
     )
 }
