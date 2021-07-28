@@ -1,0 +1,16 @@
+  .post-card-footer {
+      display: table;
+  width: 100%;
+  margin: 0;}
+.post-card-footer-left {
+    text-align: left;
+    display: table-cell;
+}.post-card-footer-right {
+    text-align: right;
+    display: table-cell;
+}
+
+.card {
+    max-width: 50rem;
+    min-width: 20rem;
+}

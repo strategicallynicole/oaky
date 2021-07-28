@@ -64,11 +64,11 @@ const Post = ({ data, location }) => {
                                 placeItems: `center`,
                                 display: `grid`,
                             }}
-                            className="z-50 px-16 leading-3"
+                            className="z-0 px-16 py-16 leading-3"
                         ><div>      <Title bgtext={ title } titletext={ titletext } /></div>
 
                         </div></div>
-                    <div className="relative mx-auto text-lg max-w-prose" aria-hidden="true">
+                    <div className="relative w-full mx-auto text-lg" aria-hidden="true">
                         <svg
                             className="absolute transform translate-x-32 top-12 left-full"
                             width={404}
@@ -135,7 +135,7 @@ const Post = ({ data, location }) => {
                     </div>
                 </div>
                 <div className="relative min-h-full px-16 lg:px-8">
-                    <div className="mx-auto text-lg max-w-prose">
+                    <div className="mx-auto text-lg prose max-w-none">
                         {/*  <h1>
             <span className="block text-base font-semibold tracking-wide text-center text-indigo-600 uppercase">
               Introducing
@@ -145,7 +145,7 @@ const Post = ({ data, location }) => {
             </span>
         </h1>*/}
                         <article
-                            className="min-h-screen mx-auto prose prose-xl text-gray-50 hmt-6 prose-indigo load-external-scripts mb-30"
+                            className="min-h-screen mx-auto prose prose-2xl max-w-none text-gray-50 hmt-6 prose-indigo load-external-scripts mb-30"
                             dangerouslySetInnerHTML={{ __html: post.html }}>
 
                         </article><p></p>

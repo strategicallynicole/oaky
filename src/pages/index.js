@@ -17,7 +17,7 @@ import { MetaData } from '../components/common/meta'
 import Banner from "../components/Banner"
 import About from "../components/About"
 import PartnerLogos from "../components/PartnerLogos"
-import Blogs from "../components/blogPost"
+import News from "../components/common/News"
 import Services from "../components/Services/Services"
 import Model from "../components/Strategy/model"
 import CountUp from "../components/Counter"
@@ -37,7 +37,7 @@ const IndexPage = () => (
             <section id="Counter" className="w-full px-0 py-10 xl:px-10 lg:px-10 md:px-10"><CountUp /></section>
             <section id="Services" className="w-full px-0 py-10 xl:px-10 lg:px-10 md:px-10"><Services /></section>
             <section id="Partners" className="w-full px-0 py-10 xl:px-10 lg:px-10 md:px-10"><PartnerLogos /></section>
-            <section id="Blogs" className="w-full px-0 py-10 xl:px-10 lg:px-10 md:px-10"><Blogs /></section>
+            <section id="Blogs" className="w-full px-0 py-10 xl:px-10 lg:px-10 md:px-10"><News /></section>
         </Layout>
     </>
 )

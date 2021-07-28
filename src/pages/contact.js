@@ -40,8 +40,11 @@ const ContactPage = ({ location }) => (
     <>
 
         <Layout>
-            <MetaData location={location} />
-
+        <MetaData
+                data={data}
+                location={location}
+                type="article"
+            />
 
         {/* Header */}
         <div className="bg-transparent">

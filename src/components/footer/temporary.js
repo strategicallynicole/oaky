@@ -1,6 +1,10 @@
 import React, { useState , useEffect } from 'react'
 import './index.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import HubspotForm from 'react-hubspot-form'
+import {
+    faPhone, faHome
+} from '@fortawesome/pro-thin-svg-icons'
 import {
     faFacebook,
     faLinkedin, faQuora, faTwitter,
@@ -32,44 +36,60 @@ const Footer = ({ showBelow }) => {
         window.scrollTo({ top: 0, behavior: `smooth` })
     }
     return (
-        <footer className="text-gray-50 rn-footer-area bg-color-black text-md pt--90 pb-60">
-            <div className="w-full footer-wrapper">
-                <div className="flex w-full pl-20 pr-20 overflow-hidden">
+        <footer className="bg-transparent text-gray-50 rn-footer-area text-md pt--90 pb-60">
 
-                    <div className="flex-grow w-1/2 overflow-hidden sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3">
-                        <div className="text-gray-50 ft-info wow fadeInLeft"
+
+
+<div class="flex flex-wrap overflow-hidden md:-mx-1 lg:-mx-1 xl:-mx-1 px-16 w-full">
+
+<div class="w-full overflow-hidden md:my-1 md:px-1 md:w-1/3 lg:my-1 lg:px-1 lg:w-1/3 xl:my-1 xl:px-1 xl:w-1/3">
+<div className="ml-16 text-gray-50 mulish ft-info wow fadeInLeft place-content-right place-items-left"
                             data-wow-delay="0ms"
                             data-wow-duration="1000ms">
-                            <p className="text-gray-50">OAKwave LLC</p>
-                        </div></div>
-
-                    <div className="flex-grow hidden w-1/3 overflow-hidden lg:visible xl:visible sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3">
-                        <div className="hidden lg:visible xl:visible ft-info wow fadeInLeft"
-                            data-wow-delay="300ms"
-                            data-wow-duration="1000ms">
-                            <p className="text-gray-50">3420 Archdale Drive<br />Raleigh, NC 27614</p>
+                            <p className=""><span className="text-2xl font-black stroke-1 text-stroke-1 text-stroke-white stroke-white gradienttext montserrat">OAKwave LLC</span><br /><FontAwesomeIcon className="text-gray-50 mulish" icon={faHome} /><span className="ml-10 mulish">PO Box 80612</span><br /><span className="pl-5 ml-10 mulish">Raleigh, NC 27675</span><br /><a className="text-gray-50" href="tel:9198234333"><FontAwesomeIcon className="text-gray-50" icon={faPhone} /><span className="ml-10 mulish hover:text-white">919.823.4333</span></a></p>
                         </div>
 
-                    </div>
-                    <div className="flex-grow w-1/2 overflow-hidden lg:hidden xl:hidden sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3">
 
-                        <div className="text-gray-50 lg:hidden xl:hidden ft-info wow fadeInLeft place-content-right place-items-right"
+</div>
+
+
+<div class="w-full overflow-hidden md:my-1 md:px-1 md:w-1/3 lg:my-1 lg:px-1 lg:w-1/3 xl:my-1 xl:px-1 xl:w-1/3">
+<div className="text-gray-50 mulish ft-info wow fadeInLeft place-content-right place-items-right"
                             data-wow-delay="300ms"
                             data-wow-duration="1000ms">
-                            <p><a className="text-gray-50" href="tel:9198234333">919.823.4333</a></p>
-                        </div>
 
-                    </div>
 
-                    <div className="flex-grow w-1/3 overflow-hidden text-gray-50 sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/3">
-                        <div className="hidden text-gray-50 lg:inline xl:inline ft-info wow fadeInLeft"
+                            <div className="text-gray-50 mulish lg:inline xl:inline ft-info wow fadeInLeft"
                             data-wow-delay="600ms"
                             data-wow-duration="1000ms">
-                            <p className="text-gray-50"> hi@oakwave.com<br />919.823.4333</p>
-                        </div>
+                               <div className="mt-8 xl:mt-0">
+                        <h3 className="font-bold tracking-wider text-gray-200 text-md mulish">
+                Subscribe to our newsletter
+                        </h3>
+
+                        <HubspotForm
+                            portalId="8988772"
+                            formId="9ad7037d-3e57-4d91-8874-fd9af54dbc27"
+                            onSubmit={() => console.log(`Submit!`)}
+                            onReady={form => console.log(`Form ready!`)}
+                            loading={<div>Loading...</div>}
+                        />
                     </div>
 
-                </div>
+
+
+                        </div>
+
+
+                        </div>
+
+</div>
+
+
+
+
+
+
 
                 <div className="w-full pl-20 pr-20 overflow-hidden text-gray-50">
 
@@ -79,8 +99,8 @@ const Footer = ({ showBelow }) => {
                         <li><a href="https://www.facebook.com/oakwave"><FontAwesomeIcon className="text-gray-50" icon={faFacebook} /></a></li>
                         <li><a href="https://linkedin.com/company/oakwave"><FontAwesomeIcon className="text-gray-50" icon={faLinkedin}
                         /></a></li>
-                        {/*   <li><a href="#link"><FontAwesomeIcon icon={faQuora}
-                    /></a></li> */}
+                     <li><a href="#link"><FontAwesomeIcon   className="text-gray-50" icon={faQuora}
+                    /></a></li>
                         <li><a href="https://www.twitter.com/oakwave"><FontAwesomeIcon className="text-gray-50" icon={faTwitter}
                         /></a></li>
 

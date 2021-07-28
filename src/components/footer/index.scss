@@ -10,13 +10,6 @@ main {
     /* But also accounting for potential margin-bottom of last child */
     padding-bottom: 2.5rem;    /* Footer height */
 }
-  footer, .rn-footer-area
-  .push {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;   }
-
 
     /*===========================
     Start Footer Area

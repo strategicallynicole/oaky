@@ -14,10 +14,11 @@ import React from 'react'
 import { Layout, PostCard, Pagination } from '../components/common'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from "gatsby"
-import Title from './Titles/h2.js';
+<Title bgtext="Blogs" titletext="Latest Posts" />
 
 const BlogPost = ({ pageQuery, location, pageContext }) => {
-    const data = useStaticQuery(graphql`
+
+const data = useStaticQuery(graphql`
     {
       allGhostPost(sort: {fields: published_at, order: DESC}, skip: 0, limit: 3) {
         edges {
@@ -66,25 +67,31 @@ const BlogPost = ({ pageQuery, location, pageContext }) => {
     }
   `)
 
-    const blogs = data.allGhostPost.edges
+const posts = data.allGhostPost.edges
+
     return (
         <>
-        <div className="px-16 bg-transparent rn-post-area rn-section-gapBottom" id="news">
+        <div className="px-16 py-10 my-20 bg-wallpaper" id="news">
                <Title bgtext="Blogs" titletext="Latest Posts" />
-                <section className="px-16 post-feed">
+                <section className="px-16">
 
-                    {blogs.map(blog => (
-                        <div className="row row--45 holderbox">
 
-                            <div className="wow fadeInDown" data-wow-delay="200ms" data-wow-duration="0.8s" key={blog.node.slug}>
-                                {[blog].map(({ node }) => (
-                                    <PostCard key={node.id} post={node} />
-                                ))}
 
-                            </div>
+      <div className="relative w-full mx-auto">
 
-                        </div>
-                    ))}
+        <div className="grid mx-auto mt-12 lg:grid-cols-3 lg:max-w-none">
+
+
+        {posts.map(({ node }) => (
+   <div className="mx-4 my-4 wow fadeInDown" data-wow-delay="200ms" data-wow-duration="0.8s" key={node.slug}>
+
+   <PostCard key={node.id} post={node} />
+   </div>
+                        ))}
+              </div>
+      </div>
+
+
 
                 </section>
 
