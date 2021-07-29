@@ -20,7 +20,7 @@ import PartnerLogos from "../components/PartnerLogos"
 import News from "../components/common/News"
 import Services from "../components/Services/Services"
 import Model from "../components/Strategy/model"
-import CountUp from "../components/Counter"
+import CountUp from "../components/Counter/index.js"
 
 const IndexPage = ({ location }) => (
     <>

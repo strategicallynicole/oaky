@@ -23,7 +23,6 @@ import Quiz from '../components/Quiz'
 import Definition from '../components/Definition'
 import BusinessMan from '../components/Illustrations/Businessman'
 import Title from '../components/Titles/h1.js'
-import CountUp from "../components/Counter"
 /**
 * Single page (/:slug)
 *
@@ -70,7 +69,7 @@ const About = ({ location }) => (
                 data-wow-delay="1s">
                 <Quiz /></section>
             <section className="w-full lg:px-28 wow slideInRight"
-                data-wow-delay="1s"><Counter />
+                data-wow-delay="1s">
             </section>
 
         </Layout>
