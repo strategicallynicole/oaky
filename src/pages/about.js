@@ -23,7 +23,7 @@ import Quiz from '../components/Quiz'
 import Definition from '../components/Definition'
 import BusinessMan from '../components/Illustrations/Businessman'
 import Title from '../components/Titles/h1.js'
-import Counter from '../components/counter'
+import CountUp from "../components/Counter"
 /**
 * Single page (/:slug)
 *
