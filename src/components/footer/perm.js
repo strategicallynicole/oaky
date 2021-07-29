@@ -51,24 +51,24 @@ function Footer( { showBelow } ) {
                         <div className="justify-between lg:w-1/2 lg:flex">
                             <div className="flex flex-col mt-4 lg:mt-0 ">
 
-                                    <div>  <Logo type="abbreviation" className=""></Logo>
+                                    <div className="mt-20">  <Logo type="abbreviation" className=""></Logo>
                                     </div>
                            <span className="text-white">   <br />&copy; 2021 OAKwave, LLC.  All Rights Reserved.</span>
                             </div>
                             <div className="flex flex-col mt-4 lg:mt-0">
                                 <ul>
                                     <li>
-                                        <p href className="text-lg font-semibold tracking-wide text-white">
+                                        <p href className="text-sm font-semibold tracking-wide text-white">
                                             About Us
                                         </p>
                                     </li>
                                     <li className="mt-6">
-                                        <a href className="text-base tracking-wide text-white">
+                                        <a href className="text-sm tracking-wide text-white">
                                             Our team
                                         </a>
                                     </li>
                                     <li className="mt-2">
-                                        <a href className="text-base tracking-wide text-white">
+                                        <a href className="text-sm tracking-wide text-white">
                                             Career
                                         </a>
                                     </li>
@@ -84,34 +84,34 @@ function Footer( { showBelow } ) {
                             <dl className="inline-block mt-8 text-xl text-gray-50 montserrat">
               <div>
                 <dt className="sr-only">Postal address</dt>
-                <dd className="flex">
-                <FontAwesomeIcon className="flex-shrink-0 inline-block w-10 h-10 text-gray-50" icon={faHome} /><span className="pl-10">
+                <dd className="flex text-sm">
+                <FontAwesomeIcon className="flex-shrink-0 inline-block w-5 h-5 text-gray-50" icon={faHome} /><span className="pl-10">
                  Raleigh, NC</span>
                 </dd>
               </div>
               <div className="mt-6">
                 <dt className="sr-only">Phone number</dt>
-                <dd className="flex">
-                <FontAwesomeIcon className="flex-shrink-0 inline-block w-10 h-10 text-gray-50" icon={faPhone} /><span className="pl-10"><a href="tel:9198234333"><span className="text-white hover:text-white">+1 (919) 823-4333</span></a></span>
+                <dd className="flex text-sm">
+                <FontAwesomeIcon className="flex-shrink-0 inline-block w-5 h-5 text-gray-50" icon={faPhone} /><span className="pl-10"><a href="tel:9198234333"><span className="text-white hover:text-white">+1 (919) 823-4333</span></a></span>
                 </dd>
               </div>
               <div className="mt-3">
                 <dt className="sr-only">Email</dt>
                 <dd className="flex">
-                <FontAwesomeIcon className="flex-shrink-0 inline-block w-10 h-10 text-gray-50" icon={faEnvelope} />
-                  <span className="ml-3">hello@oakwave.com</span>
+                <FontAwesomeIcon className="flex-shrink-0 inline-block w-5 h-5 text-gray-50" icon={faEnvelope} />
+                  <span className="ml-3 text-sm ">hello@oakwave.com</span>
                 </dd>
               </div>
-              <div className="mt-3"><dt className="sr-only">Social</dt>
+              <div className=""><dt className="sr-only">Social</dt>
               <div className="social-share"
                         data-wow-delay="200ms"
                         data-wow-duration="1000ms">
-                      <a href="https://www.facebook.com/oakwave"><FontAwesomeIcon className="inline-block w-10 h-10 mx-10 text-gray-50 fa-pull-left" icon={faFacebookF} /></a>
-                        <a href="https://linkedin.com/company/oakwave"><FontAwesomeIcon className="inline-block w-10 h-10 mx-10 text-gray-50" icon={faLinkedinIn}
+                      <a href="https://www.facebook.com/oakwave"><FontAwesomeIcon className="inline-block w-5 h-5 mx-10 text-gray-50 fa-pull-left" icon={faFacebookF} /></a>
+                        <a href="https://linkedin.com/company/oakwave"><FontAwesomeIcon className="inline-block w-5 h-5 mx-10 text-gray-50" icon={faLinkedinIn}
                         /></a>
-                  <a href="#link"><FontAwesomeIcon className="inline-block w-10 h-10 mx-10 text-gray-50" icon={faQuora}
+                  <a href="#link"><FontAwesomeIcon className="inline-block w-10 h-5 mx-5 text-gray-50" icon={faQuora}
                     /></a>
-                     <a href="https://www.twitter.com/oakwave"><FontAwesomeIcon className="inline-block w-10 h-10 mx-10 text-gray-50" icon={faTwitter}
+                     <a href="https://www.twitter.com/oakwave"><FontAwesomeIcon className="inline-block w-5 h-5 mx-10 text-gray-50" icon={faTwitter}
                         /></a>
      </div></div>
             </dl>
