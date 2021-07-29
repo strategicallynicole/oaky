@@ -12,7 +12,6 @@ import {
 import HubspotForm from 'react-hubspot-form'
 import mail from '../components/Illustrations/Mail/youvegotmail.svg'
 import Layout from '../components/layout'
-import { MetaData } from '../components/common/meta'
 import Title from '../components/Titles/h1'
 
 
@@ -33,14 +32,9 @@ import Title from '../components/Titles/h1'
   }
   ```
 */
-export default function Contact(data) {
+export default function Contact() {
     return (
         <Layout>
-        <MetaData
-                data={data}
-                location={location}
-                type="article"
-            />
       <div className="relative bg-fixed bg-wallpaper">
      <div className="w-full pt-20 pl-16"> <Title
                     className="z-50 pt-20 pl-20 ml-20 wow slideInRight"

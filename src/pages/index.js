@@ -22,7 +22,7 @@ import Services from "../components/Services/Services"
 import Model from "../components/Strategy/model"
 import CountUp from "../components/Counter"
 
-const IndexPage = () => (
+const IndexPage = ({ location }) => (
     <>
 
 <MetaData
