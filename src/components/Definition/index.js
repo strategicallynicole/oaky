@@ -7,8 +7,8 @@ function Definition() {
 
             <section className="table w-full">
                 <div className="table-cell text-white align-middle google-definition ">
-                    <h2 className="text-5xl font-bold text-white lg:text-9xl md:text-5xl textgradient gradienttext montserrat">OAKwave</h2>
-                    <em className="text-white mulish"><h5 className="text-3xl text-white lg:text-5xl">oak - wayv <br />/ ōk / - / weɪv /</h5></em>
+                    <h2 className="text-3xl font-bold text-white lg:text-5xl md:text-3xl textgradient gradienttext montserrat">OAKwave</h2>
+                    <em className="text-white mulish"><h5 className="text-xl text-white lg:text-3xl">oak - wayv <br />/ ōk / - / weɪv /</h5></em>
                     <p className="italic text-white text-md mulish lg:text-xl "><em>brand and marketing consultants</em></p>
                     <p><ol className="text-xl text-white list-decimal mulish lg:text-2xl ml-30"><li className="ml-20 text-white list-decimal"> the juxtaposition of tried-and-true practices/wisdom and a new wave of innovative, unconventional methods.
                     </li>
