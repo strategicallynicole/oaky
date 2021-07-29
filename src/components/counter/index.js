@@ -1,5 +1,5 @@
 import React from "react";
-import Counter from "./counter";
+import CounterOne from './counter.js';
 import * as styles from "./counter.module.scss";
 import Title from '../Titles/h2';
 
@@ -10,7 +10,7 @@ export default function CountUp() {
     <Title titletext="By The Numbers" bgtext="Braggadocio"></Title>
 <div className={styles.counterholder}>
   <div className={styles.counteruparea}>
-      <Counter />
+      <CounterOne />
       </div></div></div>
 </>
 )}

@@ -4,6 +4,8 @@ import VisibilitySensor from 'react-visibility-sensor';
 import * as styles from "./counter.module.scss";
 import Title from  "../Titles/h2.scss";
 import Pointing from '../Illustrations/Pointing/index'
+
+
 class CounterOne extends Component{
     state = {
         didViewCountUp: false
