@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { keyframes, css, jsx } from '@emotion/core'
+import { jsx } from '@emotion/react'
 import onlyUpdateForKeys from 'recompose/onlyUpdateForKeys'
 import * as styles from './pacman.module.scss'
 
