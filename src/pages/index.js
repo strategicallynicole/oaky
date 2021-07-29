@@ -20,7 +20,6 @@ import PartnerLogos from "../components/PartnerLogos"
 import News from "../components/common/News"
 import Services from "../components/Services/Services"
 import Model from "../components/Strategy/model"
-import CountUp from "../components/Counter/index.js"
 
 const IndexPage = ({ location }) => (
     <>
@@ -34,7 +33,6 @@ const IndexPage = ({ location }) => (
 
             <section id="About" className="w-full px-0 py-10 xl:px-10 lg:px-10 md:px-10"><About /></section>
             <section id="Model" className="w-full px-0 py-10 xl:px-10 lg:px-10 md:px-10"><Model /></section>
-            <section id="Counter" className="w-full px-0 py-10 xl:px-10 lg:px-10 md:px-10"><CountUp /></section>
             <section id="Services" className="w-full px-0 py-10 xl:px-10 lg:px-10 md:px-10"><Services /></section>
             <section id="Partners" className="w-full px-0 py-10 xl:px-10 lg:px-10 md:px-10"><PartnerLogos /></section>
             <section id="Blogs" className="w-full px-0 py-10 xl:px-10 lg:px-10 md:px-10"><News /></section>
