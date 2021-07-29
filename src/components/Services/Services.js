@@ -36,6 +36,7 @@ import Title from "../Titles/h2"
     return (
         <>
         <section className="pt-20 bg-fixed bg-top bg-no-repeat bg-cover bg-wallpaper">
+            <a name="services" id="services"></a>
         <div className="w-full px-16"><Title bgtext="Services" titletext="What We Do" />
      </div>
 
