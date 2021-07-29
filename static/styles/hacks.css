@@ -49,12 +49,14 @@
     height: 98%;
     line-height: 1em;
     font-size: 1em;
-    padding: 30px;
 }
 .z-outer-circle {
     border-width: 0px !important;
     border-style: transparent;
     opacity: 0;
+}
+.z-content.maincontent {
+    padding: 20px;
 }
 
 .maincontent {

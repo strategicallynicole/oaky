@@ -32,7 +32,6 @@ const IndexPage = ({ location }) => (
             <section id="Banner" className="w-full px-0 py-10 xl:px-10 lg:px-10 md:px-10"><Banner /></section>
 
             <section id="About" className="w-full px-0 py-10 xl:px-10 lg:px-10 md:px-10"><About /></section>
-            <section id="Model" className="w-full px-0 py-10 xl:px-10 lg:px-10 md:px-10"><Model /></section>
             <section id="Services" className="w-full px-0 py-10 xl:px-10 lg:px-10 md:px-10"><Services /></section>
             <section id="Partners" className="w-full px-0 py-10 xl:px-10 lg:px-10 md:px-10"><PartnerLogos /></section>
             <section id="Blogs" className="w-full px-0 py-10 xl:px-10 lg:px-10 md:px-10"><News /></section>

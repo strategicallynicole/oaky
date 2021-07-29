@@ -71,8 +71,8 @@ export default function Example() {
                                     </Disclosure.Button>
                                 </div>
                                 <div className="flex items-center flex-shrink-0">
-                                  <Link href="/">  <Logo type="abbreviation" classes="sm:inline-block sm:visible disp hidden lg:hidden xl:hidden md:hidden h-auto w-auto" />
-                                  </Link>   <Link href="/">  <Logo type="standard" classes="hidden lg:inline-block xl:inline-block md:inline-block h-auto w-auto" />
+                                  <Link href="/">  <Logo type="abbreviation" classes="hidden sm:inline-block sm:visible hidden lg:hidden xl:hidden md:hidden h-auto w-auto" />
+                                  </Link>   <Link href="/">  <Logo type="standard" classes="hidden sm:hidden lg:inline-block xl:inline-block md:inline-block h-auto w-auto" />
                                   </Link>    </div>
                                 <div className="hidden ml-10 md:ml-6 md:flex md:items-center md:space-x-4">
                                     <Link href="/" className="text-base font-medium"> <span><Linky text="Home" /></span></Link>

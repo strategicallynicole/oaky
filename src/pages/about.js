@@ -23,6 +23,8 @@ import Quiz from '../components/Quiz'
 import Definition from '../components/Definition'
 import BusinessMan from '../components/Illustrations/Businessman'
 import Title from '../components/Titles/h1.js'
+import Model from "../components/Strategy/model"
+
 /**
 * Single page (/:slug)
 *
@@ -64,6 +66,7 @@ const About = ({ location }) => (
                 {/* The main page content */}
 
             </section>
+            <section id="Model" className="w-full px-0 py-10 xl:px-10 lg:px-10 md:px-10"><Model /></section>
 
             <section className="w-full px-10 lg:px-28 wow slideInRight"
                 data-wow-delay="1s">
