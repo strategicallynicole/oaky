@@ -91,7 +91,8 @@ function LogoComponent(props) {
                     alt="Abbreviation"
                     placeholder="blurred"
                     layout="constrained"
-                    width={75} className={classes}
+                    width={100}
+                    className={classes}
                 />
             </>
         )

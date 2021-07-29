@@ -1,0 +1,69 @@
+
+
+
+
+
+  .animate-enter {
+  animation: animate-enter-frames 0.10s ease-in-out 0.00s 1 normal forwards;
+opacity: 0;
+transform: translate(-25px, 0);
+}
+@keyframes animate-enter-frames {
+
+  from{opacity: 0;
+  transform: translate(-25px, 0);}
+  to{opacity: 1;
+  transform: translate(0,0);}
+  }
+.meditateimg {
+  opacity: 1 !important;
+}
+
+
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.youvegotmail img {
+min-height: 300px;
+max-height: 1000px;
+min-width: 300px;
+max-width: 100%;
+}
+
+.floater img {
+
+
+  z-index: 1000;
+    transform: translatey(0px);
+    -webkit-animation: float 6s ease-in-out infinite;
+            animation: float 6s ease-in-out infinite;
+
+}
+
+@-webkit-keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}

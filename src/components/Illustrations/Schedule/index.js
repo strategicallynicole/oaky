@@ -13,14 +13,16 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import "./schedule.component.scss"
+import img from "./alarmed.svg"
+
 export default function Alarmed() {
     return (
         <>
-            <StaticImage
-                src="./alarmed.svg"
+            <img
+                src={img}
                 alt="Alarmed"
                 layout="fullWidth"
-                className="overflow-visible animate__jackInTheBox animate__animated"
+                className="overflow-visible jello animated"
             />
         </>
     )

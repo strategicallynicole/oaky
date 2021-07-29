@@ -18,7 +18,7 @@ import Layout from '../components/layout'
 import { MetaData } from '../components/common/meta'
 import Title from '../components/Titles/h1'
 import Schedule from '../components/Meeting/schedule'
-import Alarmed from '../components/Illustrations/Schedule'
+import Alarmed from '../components/Illustrations/Schedule/index.js'
 
 /**
 * Single page (/:slug)
@@ -34,23 +34,26 @@ const Page = ({ location }) => (
             <MetaData location={location} />
 
 
-            <section className="ml-20 mr-20">
-                <Title titletext="Schedule A Consultation" bgtext="Schedule" />
+            <section className="mx-16">
 
-                <div className="flex flex-wrap overflow-hidden">
+            <div class="flex flex-wrap -mx-4 overflow-hidden sm:-mx-4 md:-mx-4 lg:-mx-3 xl:-mx-4">
+            <Title titletext="Schedule A Consultation" bgtext="Schedule" />
 
-                    <div className="w-full gap-1 pt-20 ml-1 mr-1 overflow-hidden xl:ml-20 xl:mr-20 sm:w-full lg:w-1/2 xl:w-1/2">
 
-                      <Schedule />
+<div className="w-1/2 px-4 my-4 overflow-hidden sm:my-4 sm:px-4 sm:w-1/2 md:my-4 md:px-4 md:w-1/2 lg:my-3 lg:px-3 lg:w-1/2 xl:my-4 xl:px-4 xl:w-1/2">
+<Schedule />
 
-                    </div>
+</div>
 
-                    <div className="w-full gap-1 ml-20 mr-20 overflow-hidden pt-60 sm:w-full md:w-1/2 lg:w-1/3 xl:w-1/3">
-                        <Alarmed />
+<div className="w-1/2 px-4 my-4 overflow-hidden sm:my-4 sm:px-4 sm:w-1/2 md:my-4 md:px-4 md:w-1/2 lg:my-3 lg:px-3 lg:w-1/2 xl:my-4 xl:px-4 xl:w-1/2">
+<Alarmed />
 
-                    </div>
 
-                </div>
+</div>
+
+</div>
+
+
                 {/* The main page content */}
 
             </section>          </Layout>
