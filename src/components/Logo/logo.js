@@ -26,7 +26,8 @@ function LogoComponent(props) {
                     alt="White Logo"
                     placeholder="blurred"
                     layout="constrained"
-                    width={200} className={classes}
+                    width={200}
+                    className={`logostandard ${classes}`}
                 />
             </>
         )
@@ -39,7 +40,7 @@ function LogoComponent(props) {
                     placeholder="blurred"
                     layout="constrained"
                     width={200}
-                    className={classes}
+                    className={`logostandard ${classes}`}
 
                 />
             </>
@@ -53,7 +54,8 @@ function LogoComponent(props) {
                     alt="White Logo"
                     placeholder="blurred"
                     layout="constrained"
-                    width={100} className={classes}
+                    width={100}
+                    className={`logostacked ${classes}`}
                 />
             </>
         )
@@ -66,7 +68,7 @@ function LogoComponent(props) {
                     placeholder="blurred"
                     layout="constrained"
                     width={200}
-                    className={classes}
+                    className={`logostacked ${classes}`}
                 />
             </>
         )
@@ -79,7 +81,7 @@ function LogoComponent(props) {
                     placeholder="blurred"
                     layout="constrained"
                     width={200}
-                    className={classes}
+                    className={`logosymbol ${classes}`}
                 />
             </>
         )
@@ -92,7 +94,7 @@ function LogoComponent(props) {
                     placeholder="blurred"
                     layout="constrained"
                     width={100}
-                    className={classes}
+                    className={`logoabbreviation ${classes}`}
                 />
             </>
         )
@@ -105,7 +107,7 @@ function LogoComponent(props) {
                     placeholder="blurred"
                     layout="constrained"
                     width={400}
-                    className={classes}
+                    className={`logostacked ${classes}`}
                 />
             </>
         )
