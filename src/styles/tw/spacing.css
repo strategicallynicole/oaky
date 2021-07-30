@@ -1,0 +1,63 @@
+.py-24 {
+    padding-y: 24px;
+}
+.ml---25 {
+    margin-left: -25px;
+}
+.ml---50 {
+    margin-left: -50px;
+}
+.mr---25 {
+    margin-right: -25px;
+}
+.mt---25 {
+    margin-top: -25px;
+}
+.mb---25 {
+    margin-bottom: -25px;
+}
+.logoholder {
+    display: grid;
+    place-items: center;
+    margin-top: 20px;
+}
+.parentaligner {
+    height: auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+.place-items-center {
+    display: grid;
+    place-items: center;
+}
+.parentbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.childbox {
+    flex: 0 1 30%; /*  No stretching: */
+    margin: 5px;
+}
+
+.gatsby-image-wrapper {
+    overflow: visible;
+}
+.centerparent {
+    display: grid;
+    place-items: center;
+}
+.relative.z-0.main-wrapper.active-dark.bg-black-gradient {
+    min-height: 100vh;
+}
+.h-1000 {
+    height: 1000px;
+}
+.h-500 {
+    height: 500px;
+}
+main {
+    max-width: 100%;
+}

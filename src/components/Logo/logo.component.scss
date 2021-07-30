@@ -2,9 +2,11 @@
 @media only screen and (max-width: 600px) {
     .logostandard {
         display: none;
+        visibility: hidden;
     }
     .logoabbreviation {
         display: inline-block;
+        width: 50px !important;
     }
 }
 
@@ -12,18 +14,20 @@
 @media only screen and (min-width: 600px) {
     .logostandard {
         display: none;
+        visibility: hidden;
     }
     .logoabbreviation {
         display: inline-block;
     }
 }
 
-}
+
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .logostandard {
         display: none;
+        visibility: hidden;
     }
     .logoabbreviation {
         display: inline-block;
@@ -38,6 +42,7 @@
     }
     .logoabbreviation {
         display: none;
+        visibility: hidden;
     }
 }
 
@@ -50,5 +55,6 @@
     }
     .logoabbreviation {
         display: none;
+        visibility: hidden
     }
 }

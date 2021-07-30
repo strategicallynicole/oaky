@@ -24,6 +24,41 @@ module.exports = {
             indigo: `#3366FF`,
             purple: `#6633FF`,
         },
+        screens: {
+            xs: { max: '543px' },
+            sm: '544px',
+            md: '766px',
+            lg: '1023px',
+            xl: '1440px'
+          },
+          mainColWidths: {
+            xs: 'auto',
+            sm: 'auto',
+            md: 'auto',
+            lg: 'auto',
+            xl: '1376px'
+          },
+          outerGutters: {
+            xs: '16px',
+            sm: '16px',
+            md: '32px',
+            lg: '32px',
+            xl: 'auto'
+          },
+          innerGutters: {
+            xs: '16px',
+            sm: '16px',
+            md: '24px',
+            lg: '24px',
+            xl: '24px'
+          },
+          columnCount: {
+            xs: 4,
+            sm: 4,
+            md: 8,
+            lg: 12,
+            xl: 12
+          },
         padding: {
             30: '30px',
             10: '10px',

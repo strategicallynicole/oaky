@@ -13,7 +13,8 @@
 import React, { Component } from 'react';
 import dynamic from 'next/dynamic';
 import PartnerSlider from '../Slider';
-import SectionTitle from "../../Titles/SectionTitle";
+import
+Title from "../../Titles/h2";
 import "./testimonials.comp.scss";
 const OwlCarousel = dynamic(import('react-owl-carousel3'));
 
@@ -65,7 +66,7 @@ class Testimonials extends Component {
         return (
 <>
 <div className="testimonials-area">
-  <SectionTitle title="Who We Work With" subtitle="The Greatest Folks Ever" body="This is who we work with." />
+  <Title title="Who We Work With" subtitle="The Greatest Folks Ever" body="This is who we work with." />
                     {this.state.display ? <OwlCarousel
                     className="client-wrap owl-carousel owl-theme"
                         {...options}

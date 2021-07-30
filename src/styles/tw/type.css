@@ -6,6 +6,27 @@
     @apply link link--iocaste;
 }
 
+
+.prose {
+    max-width: 125ch;
+    color: #ffffff;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.prose strong {
+    color: #ffffff;
+}
+
+.prose-indigo a {
+    color: $purple;
+    transition: 2s all ease-in-out;
+    transform: 2s all ease-in-out;
+
+    &:hover {
+        color: $blue;
+    }
+}
 .bold {
     font-weight: 700;
 }

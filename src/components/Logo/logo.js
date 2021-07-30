@@ -13,7 +13,7 @@
 import React, { Component } from 'react'
 import { array, oneOf, PropTypes } from 'prop-types'
 import { StaticImage } from 'gatsby-plugin-image'
-
+import "./logo.component.scss";
 function LogoComponent(props) {
     const { type } = props
     const { classes } = props
@@ -27,7 +27,7 @@ function LogoComponent(props) {
                     placeholder="blurred"
                     layout="constrained"
                     width={200}
-                    className={`logostandard ${classes}`}
+                    className={`logostandard  ${classes}`}
                 />
             </>
         )
@@ -93,8 +93,8 @@ function LogoComponent(props) {
                     alt="Abbreviation"
                     placeholder="blurred"
                     layout="constrained"
-                    width={100}
-                    className={`logoabbreviation ${classes}`}
+                    width={70}
+                    className={`logoab ${classes}`}
                 />
             </>
         )

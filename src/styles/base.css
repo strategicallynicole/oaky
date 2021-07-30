@@ -2,7 +2,7 @@
 @import './tw/mixins.css';
 @import './tw/linkstyles.css';
 @import './tw/type.css';
-
+@import './tw/spacing.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,49 +10,7 @@
 .glass {
     @apply px-10 pb-8 border border-gray-200 rounded-lg shadow-lg py-30 bg-blurred sm:rounded-3xl sm:p-20 bg-clip-padding backdrop-filter backdrop-blur-xl;
 }
-main {
-    max-width: 100%;
-}
-.ml---25 {
-    margin-left: -25px;
-}
-.ml---50 {
-    margin-left: -50px;
-}
-.mr---25 {
-    margin-right: -25px;
-}
-.mt---25 {
-    margin-top: -25px;
-}
-.mb---25 {
-    margin-bottom: -25px;
-}
-.logoholder {
-    display: grid;
-    place-items: center;
-    margin-top: 20px;
-}
-.parentaligner {
-    height: auto;
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(2, 1fr);
-}
-.place-items-center {
-    display: grid;
-    place-items: center;
-}
-.parentbox {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
 
-.childbox {
-    flex: 0 1 30%; /*  No stretching: */
-    margin: 5px;
-}
 :root {
     --azure-radiance: rgba(0, 153, 255, 1);
     --licorice: rgba(18, 18, 18, 1);
@@ -93,47 +51,4 @@ main {
     --font-size-xxxl: 30px;
     --font-size-xxxxxxl: 180px;
     --font-size-xxxxxxxl: 260px;
-
-    --font-family-stolzl-bold: 'DINCondensed-Bold';
-    --font-family-roboto: 'Roboto';
-    --font-family-roboto-bold: 'Roboto-Bold';
-    --font-family-roboto-regular: 'Roboto-Regular';
-}
-
-.gatsby-image-wrapper {
-    overflow: visible;
-}
-
-.prose {
-    max-width: 125ch;
-    color: #ffffff;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.prose strong {
-    color: #ffffff;
-}
-
-.prose-indigo a {
-    color: $purple;
-    transition: 2s all ease-in-out;
-    transform: 2s all ease-in-out;
-
-    &:hover {
-        color: $blue;
-    }
-}
-.centerparent {
-    display: grid;
-    place-items: center;
-}
-.relative.z-0.main-wrapper.active-dark.bg-black-gradient {
-    min-height: 100vh;
-}
-.h-1000 {
-    height: 1000px;
-}
-.h-500 {
-    height: 500px;
 }

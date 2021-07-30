@@ -1,13 +1,11 @@
 @layer base {
 
     @font-face {
-    font-family: 'DIN Condensed';
+    font-family: 'Montserrat';
   }
   @font-face {
-   font-family: 'Roboto';
+   font-family: 'Mulish';
   }
-  @font-face {
-  font-family: neue-haas-grotesk-display, sans-serif;
-  }
+
 
 }
