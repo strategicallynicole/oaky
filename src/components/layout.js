@@ -23,7 +23,7 @@ const Layout = ({ children }) => (
 
     <>
 
-        <div className="relative z-0 main-wrapper active-dark bg-black-gradient">
+        <div className="relative z-0 c-container main-wrapper active-dark bg-black-gradient">
 
             <Nav />
 

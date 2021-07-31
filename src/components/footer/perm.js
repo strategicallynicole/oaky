@@ -52,7 +52,7 @@ function Footer( { showBelow } ) {
                         <div className="justify-between lg:w-1/2 lg:flex">
                             <div className="flex flex-col mt-4 lg:mt-0 ">
 
-                                    <div className="mt-20">  <Logo type="abbreviation" className=""></Logo>
+                                    <div className="mt-20">  <Logo type="abbreviationfooter" className=""></Logo>
                                     </div>
                             </div>
                             <div className="flex flex-col mt-4 lg:mt-0">

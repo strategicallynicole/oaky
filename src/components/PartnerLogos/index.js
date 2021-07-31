@@ -7,16 +7,7 @@ export default function PartnerLogos() {
     return (
         <div className="bg-transparent">
             <div className="max-w-full px-4 py-12 mx-20 sm:px-6 lg:py-16 lg:px-8">
-                <div
-                    className="mt-20 mb-30 title wow fadeInLeft"
-                    data-wow-delay="100ms"
-                    data-wow-duration="1000ms"
-                >
-                    <Title
-                        bgtext="Clients"
-                        titletext="Just A Few Of Our Favorite People"
-                    />
-                </div>
+
 
                 <div className="mt-6 grid grid-cols-1 gap-0.5 md:grid-cols-3 lg:mt-8">
                     <div className="flex justify-center col-span-1 px-8 py-8 grayscale ">

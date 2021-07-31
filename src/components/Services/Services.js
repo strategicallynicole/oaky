@@ -16,9 +16,8 @@ import React from "react"
   import Poison from "../Illustrations/Icons/poison.svg";
   import Surprised from "../Illustrations/Icons/surprised.svg";
   import Telescope from "../Illustrations/Icons/telescope.svg";
-
  import { StaticImage } from 'gatsby-plugin-image'
-
+import './iconclasses.css';
 
 
 import Title from "../Titles/h2"
@@ -26,9 +25,9 @@ import Title from "../Titles/h2"
   const features = [
     { name: 'Marketing Strategy', class: '', icon: Compass, description: 'Do you know how parents always say, "I wish there was a manual on parenting?" That\'s kind of what our strategies are, except for business growth.  ' },
     { name: 'Branding', icon: Mirror, class: '', description: 'Unifying your organization behind a single voice, position, slogan, and value proposition is critical to your success. We make this process painless and actually fun.' },
-    { name: 'Creative', icon: Bulb, class: '', description: 'Whether your creative needs a complete overhaul or just a bit of an infusion, we got you covered without upsetting your current relationships.  We are on a mission to change the world, one idea at a time.  ' },
+    { name: 'Creative', icon: Bulb, class: 'w-full bulb', description: 'Whether your creative needs a complete overhaul or just a bit of an infusion, we got you covered without upsetting your current relationships.  We are on a mission to change the world, one idea at a time.  ' },
     { name: 'Content', icon: Pencil, class: '', description: 'This is not your intern\'s SEO-packed, boring Wikipedia entry! Your content needs to grab the attention of your target market and hold it. This takes a special blend of sales, marketing, and wordsmithing. We believe a hundred amazing words will change the world for your business, not a hundred mediocre articles.' },
-    { name: 'Website & Martech', class: '', icon: Dial, description: 'The base of your marketing efforts and the epicenter of your marketing effectiveness gauge. We assess, rethink, and offer tactical steps to lift impact of the homebase of your efforts.' },
+    { name: 'Website & Martech', class: 'w-full bulb', icon: Dial, description: 'The base of your marketing efforts and the epicenter of your marketing effectiveness gauge. We assess, rethink, and offer tactical steps to lift impact of the homebase of your efforts.' },
     { name: 'Branding, Strategy, Creative+', class: '', icon: Dart, description: 'We also offer: CMO-on-demand/marketing decision services, design, campaign execution, sales strategy, sales enablement via asset production, pitch development, martech stack design, salestech stack design, and website strategy.' },
   ]
 
@@ -54,7 +53,7 @@ import Title from "../Titles/h2"
                     <div className="-mt-6">
                       <div>
                         <span className="inline-flex items-center justify-center p-3 shadow-lg rounded-xl">
-                       <div className={`p-10 ${feature.class}`}>{feature.icon}</div>
+                       <div className={`w-full ${feature.class}`}>{feature.icon}</div>
                         </span>
                       </div>
                       <h3 className="mt-8 text-xl tracking-tight text-white font-heaviest montserrat">{feature.name}</h3>

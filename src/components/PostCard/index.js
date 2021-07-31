@@ -17,7 +17,7 @@ const PostCard = ({ post }) => {
     const readingTime = readingTimeHelper(post)
 
     return (
-        <div className="flex-auto px-3 my-3 card wow fadeInLeft"  data-wow-delay="300ms"
+        <div className="flex-auto p-10 m-10 card wow fadeInLeft"  data-wow-delay="300ms"
         data-wow-duration="1000ms">
         <div className="glass">
         <Link to={url} className="post-card">

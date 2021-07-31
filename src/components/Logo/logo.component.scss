@@ -4,9 +4,11 @@
         display: none;
         visibility: hidden;
     }
-    .logoabbreviation {
+    .logoab {
         display: inline-block;
         width: 50px !important;
+        visibility: visible;
+
     }
 }
 
@@ -16,21 +18,25 @@
         display: none;
         visibility: hidden;
     }
-    .logoabbreviation {
+    .logoab {
         display: inline-block;
+        visibility: visible;
+
     }
 }
 
 
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px)  {
     .logostandard {
         display: none;
         visibility: hidden;
     }
-    .logoabbreviation {
+    .logoab {
         display: inline-block;
+        visibility: visible;
+
     }
 }
 
@@ -39,8 +45,10 @@
 @media only screen and (min-width: 992px) {
     .logostandard {
         display: inline-block;
+        visibility: visible;
+
     }
-    .logoabbreviation {
+    .logoab {
         display: none;
         visibility: hidden;
     }
@@ -52,8 +60,10 @@
 @media only screen and (min-width: 1200px) {
     .logostandard {
         display: inline-block;
+        visibility: visible;
+
     }
-    .logoabbreviation {
+    .logoab {
         display: none;
         visibility: hidden
     }

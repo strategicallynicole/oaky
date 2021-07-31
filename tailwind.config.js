@@ -11,11 +11,27 @@
  * - Modification    :
  **/
 'use strict'
+const { Container, Spacing, Typography, RatioBox, Layout, Keyline, PseudoElements, GridGap, GridLine } = require('@area17/a17-tailwind-plugins');
+
+
 
 module.exports = {
     purge: [`./public/**/*.{js,jsx,ts,tsx}`],
     darkMode: `media`,
+    corePlugins: {
+        container: false
+      },
+
     theme: {
+
+            fluidContainer: {
+              'default': {
+                maxWidth: null, // defaults to null (no max width)
+                padding: '15px', // defaults to '15px'
+              },
+            },
+
+
         colors: {
             transparent: `transparent`,
             current: `currentColor`,
@@ -69,16 +85,6 @@ module.exports = {
             16: '16px',
             8: '8px',
             6: '6px',
-        },
-        borderColor: (theme) => {
-            return {
-                DEFAULT: theme(`colors.indigo.500`, `currentColor`),
-                purple: theme(`colors.purple.500`),
-                blue: theme(`colors.blue.500`),
-                gray: theme(`colors.gray.500`),
-                indigo: theme(`colors.indigo.500`),
-                pink: theme(`colors.pink.500`),
-            }
         },
         borderRadius: {
             DEFAULT: `20px`,
@@ -143,6 +149,34 @@ module.exports = {
                     },
                 },
             },
+            borderColor: (theme) => {
+                return {
+                    DEFAULT: theme(`colors.indigo.500`, `currentColor`),
+                    purple: theme(`colors.purple.500`),
+                    blue: theme(`colors.blue.500`),
+                    gray: theme(`colors.gray.500`),
+                    indigo: theme(`colors.indigo.500`),
+                    pink: theme(`colors.pink.500`),
+                }
+            },
+            spacingGroups: (theme) => ({
+                'inner-gutter': theme('innerGutters'),
+                'outer-gutter': theme('outerGutters'),
+                'outer-1': {
+                  xs: theme('spacing.16'),
+                  lg: theme('spacing.24')
+                },
+                'inner-1': {
+                  xs: theme('spacing.6'),
+                  md: theme('spacing.10'),
+                  lg: theme('spacing.16')
+                },
+                'inner-2': {
+                  xs: theme('spacing.4'),
+                  md: theme('spacing.6'),
+                  lg: theme('spacing.8')
+                },
+              }),
             borderColor: (theme) => {
                 return {
                     DEFAULT: theme(`colors.white.500`, `currentColor`),
@@ -265,8 +299,12 @@ module.exports = {
             },
         },
     },
-    variants: {},
+    variants: {
+
+      fluidContainer: ['responsive'], // defaults to ['responsive']
+    },
     plugins: [
+
         require(`@tailwindcss/typography`),
         require(`tailwind-bootstrap-grid`),
         require(`@tailwindcss/forms`),
@@ -274,5 +312,7 @@ module.exports = {
         require(`@tailwindcss/aspect-ratio`),
         require(`tailwindcss-filters`),
         require(`tailwindcss-text-fill-stroke`), // no options to configure
+        require('tailwindcss-fluid-container'),
+
     ],
 }

@@ -16,6 +16,14 @@ import PartnerSlider from '../Slider';
 import
 Title from "../../Titles/h2";
 import "./testimonials.comp.scss";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+    faQuoteLeft
+} from '@fortawesome/pro-thin-svg-icons'
+
+
+
+
 const OwlCarousel = dynamic(import('react-owl-carousel3'));
 
 const options = {
@@ -71,8 +79,8 @@ class Testimonials extends Component {
                     className="client-wrap owl-carousel owl-theme"
                         {...options}
                     >
-                        <div className="single-client">
-                            <i className="quotes flaticon-left-quotes-sign"></i>
+                        <div className="single-client"><div className="quotes">
+                        <FontAwesomeIcon className="flex-shrink-0 w-20 h-20 pl-3 mt-2 ml-6" icon={faQuoteLeft} /></div>
                             <p>In an insanely short time, you conceptualized and delivered upon an idea 100x better than we had brought to the table. You even saw opportunity we had entirely overlooked.</p>
 
                             <ul>
@@ -90,8 +98,8 @@ class Testimonials extends Component {
                         </div>
 
                         <div className="single-client">
-                            <i className="quotes flaticon-left-quotes-sign"></i>
-                            <p>For eight years, we haven't been able to boil down our offering and make it palatable. In a highly complex industry and business, you did just that.</p>
+                        <div className="quotes">
+                        <FontAwesomeIcon className="flex-shrink-0 w-20 h-20 pl-3 mt-2 ml-6" icon={faQuoteLeft} /></div>                            <p>For eight years, we haven't been able to boil down our offering and make it palatable. In a highly complex industry and business, you did just that.</p>
 
                             <ul>
                                 <li><i className="bx bxs-star"></i></li>
@@ -108,8 +116,8 @@ class Testimonials extends Component {
                         </div>
 
                         <div className="single-client">
-                            <i className="quotes flaticon-left-quotes-sign"></i>
-                            <p>Your strategy put meat and merit on the bone! I am so pumped full of ideas.</p>
+                        <div className="quotes">
+                        <FontAwesomeIcon className="flex-shrink-0 w-20 h-20 pl-3 mt-2 ml-6" icon={faQuoteLeft} /></div>                            <p>Your strategy put meat and merit on the bone! I am so pumped full of ideas.</p>
 
                             <ul>
                                 <li><i className="bx bxs-star"></i></li>

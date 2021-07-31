@@ -36,6 +36,7 @@
         "tailwindcss-text-fill-stroke": "^1.1.2"
     },
     "dependencies": {
+        "@area17/a17-tailwind-plugins": "^2.0.4",
         "@babel/core": "^7.14.8",
         "@babel/helpers": "^7.14.8",
         "@babel/preset-typescript": "^7.14.5",
@@ -153,6 +154,7 @@
         "tailwind-bootstrap-grid": "^4.0.0",
         "tailwindcss": "^2.2.7",
         "tailwindcss-filters": "^3.0.0",
+        "tailwindcss-fluid-container": "^4.0.0",
         "util": "^0.12.4",
         "web-component-essentials": "^0.0.4",
         "wowjs": "^1.1.3"

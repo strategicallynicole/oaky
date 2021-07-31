@@ -12,24 +12,27 @@
 **/
 import React, { Component } from 'react';
 import "./Testimonials";
-import PartnerSlider from "./Slider";
 import Testimonials from "./Testimonials";
+import Title from "../Titles/h2.js"
+import PartnerLogos from "../PartnerLogos/index"
 
 class Clients extends Component {
     render() {
         return (            <>
-            <section className="px-10 rounded client-area ptb-100">
-           <div className="container">
-
+            <section className="px-10 rounded client-area">
+            <div
+                    className="mt-20 mb-30 title wow fadeInLeft"
+                    data-wow-delay="100ms"
+                    data-wow-duration="1000ms"
+                >
+                    <Title
+                        bgtext="Clients"
+                        titletext="Just A Few Of Our Favorite People"
+                    />
+                </div>
 
 <Testimonials />
-
-<div className="my-10"></div>
-
-        <PartnerSlider />
-
- </div>
-</section>
+<PartnerLogos /></section>
    </>
         );
     }

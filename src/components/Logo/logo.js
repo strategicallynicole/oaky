@@ -98,6 +98,19 @@ function LogoComponent(props) {
                 />
             </>
         )
+        case `abbreviationfooter`:
+            return (
+                <>
+                    <StaticImage
+                        src="../../images/logo/abbreviation.webp"
+                        alt="Abbreviation"
+                        placeholder="blurred"
+                        layout="constrained"
+                        width={70}
+                        className={`${classes}`}
+                    />
+                </>
+            )
     default:
         return (
             <>
