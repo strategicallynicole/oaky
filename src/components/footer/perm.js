@@ -52,8 +52,20 @@ function Footer( { showBelow } ) {
                         <div className="justify-between lg:w-1/2 lg:flex">
                             <div className="flex flex-col mt-4 lg:mt-0 ">
 
-                                    <div className="mt-20">  <Logo type="abbreviationfooter" className=""></Logo>
+                                    <div className="mt-20 mb-20 ml--25 mt--25">  <Logo type="abbreviationfooter" className=""></Logo>
                                     </div>
+                                    <div className=""><dt className="sr-only">Social</dt>
+              <div className="social-share"
+                        data-wow-delay="200ms"
+                        data-wow-duration="1000ms">
+                      <a href="https://www.facebook.com/oakwave"><FontAwesomeIcon className="inline-block w-5 h-5 mx-10 text-gray-50 " icon={faFacebookF} /></a>
+                        <a href="https://linkedin.com/company/oakwave"><FontAwesomeIcon className="inline-block w-5 h-5 mx-10 text-gray-50" icon={faLinkedinIn}
+                        /></a>
+                  <a href="#link"><FontAwesomeIcon className="inline-block w-10 h-5 mx-5 text-gray-50" icon={faQuora}
+                    /></a>
+                     <a href="https://www.twitter.com/oakwave"><FontAwesomeIcon className="inline-block w-5 h-5 mx-10 text-gray-50" icon={faTwitter}
+                        /></a>
+     </div></div>
                             </div>
                             <div className="flex flex-col mt-4 lg:mt-0">
 
@@ -85,18 +97,7 @@ function Footer( { showBelow } ) {
                   <span className="ml-3 text-sm ">hello@oakwave.com</span>
                 </dd>
               </div>
-              <div className=""><dt className="sr-only">Social</dt>
-              <div className="social-share"
-                        data-wow-delay="200ms"
-                        data-wow-duration="1000ms">
-                      <a href="https://www.facebook.com/oakwave"><FontAwesomeIcon className="inline-block w-5 h-5 mx-10 text-gray-50 " icon={faFacebookF} /></a>
-                        <a href="https://linkedin.com/company/oakwave"><FontAwesomeIcon className="inline-block w-5 h-5 mx-10 text-gray-50" icon={faLinkedinIn}
-                        /></a>
-                  <a href="#link"><FontAwesomeIcon className="inline-block w-10 h-5 mx-5 text-gray-50" icon={faQuora}
-                    /></a>
-                     <a href="https://www.twitter.com/oakwave"><FontAwesomeIcon className="inline-block w-5 h-5 mx-10 text-gray-50" icon={faTwitter}
-                        /></a>
-     </div></div>
+
             </dl>
 </div>
    </div>
