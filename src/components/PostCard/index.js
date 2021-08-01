@@ -17,30 +17,48 @@ const PostCard = ({ post }) => {
     const readingTime = readingTimeHelper(post)
 
     return (
-        <div className="flex-auto p-10 m-10 card wow fadeInLeft"  data-wow-delay="300ms"
-        data-wow-duration="1000ms">
-        <div className="glass">
-        <Link to={url} className="post-card">
-            <header className="post-card-header">
-                {post.feature_image &&
-                    <img className="w-full h-full post-card-image" src={post.feature_image}></img>}
-                {post.tags && <div className="text-white mulish"> <Tags post={post} visibility="public" autolink={false} /></div>}
-                {post.featured && <span>Featured</span>}
-                <h4 className="post-card-title montserrat">{post.title}</h4>
-            </header>
-            <section className="text-white mulish post-card-excerpt">{post.excerpt}</section>
-            <footer className="post-card-footer mulish">
-                <div className="post-card-footer-left">
 
-                    <span>Posted <ReactTimeAgo date={post.published_at} locale="en-US"/></span>
-                </div>
-                <div className="post-card-footer-right">
-                    <div>{readingTime}</div>
-                </div>
-            </footer>
-        </Link></div></div>
+
+
+
+    <div className="max-w-2xl mx-auto overflow-hidden rounded-lg shadow-md wow fadeInLeft glass"  data-wow-delay="300ms"
+    data-wow-duration="1000ms">
+    <img className="object-cover w-full h-64" src={post.feature_image} alt={post.title}/>
+
+    <div className="p-6">
+        <div>
+            <span className="text-xs font-medium text-white mulish">                <Tags post={post} visibility="public" autolink={false} />
+</span>
+            <a href="#" className="block mt-2 text-2xl font-semibold text-white montserrat white-text dark:text-white hover:text-blue "><span className="leading-4 tracking-tighter white-text">{post.title}</span></a>
+            <p className="mt-2 text-sm text-white dark:text-white mulish">{post.excerpt}</p>
+        </div>
+
+        <div className="mt-4">
+
+
+        <div className="flex flex-wrap -mx-6 overflow-hidden sm:-mx-6 md:-mx-6 lg:-mx-6 xl:-mx-6">
+
+<div className="w-1/2 px-6 overflow-hidden sm:px-6 sm:w-1/2 md:px-6 md:w-1/2 lg:px-6 lg:w-1/2 xl:px-6 xl:w-1/2">
+
+<div className="flex items-start justify-start place-items-start justify-items-start items-left">
+
+<div className="flex items-start justify-start my-3 text-xs text-white place-items-start justify-items-start items-left text-gray-50 dark:text-gray-50">{readingTime}</div>
+</div></div>
+
+<div className="w-1/2 px-6 overflow-hidden sm:px-6 sm:w-1/2 md:px-6 md:w-1/2 lg:px-6 lg:w-1/2 xl:px-6 xl:w-1/2">
+<span className="items-end mx-1 text-xs text-right text-white items-right place-items-end text-gray-50 dark:text-gray-50">  Posted <ReactTimeAgo date={post.published_at} locale="en-US"/></span>
+            </div>
+
+</div>
+
+
+
+        </div>
+    </div>
+</div>
+
     )
-}
+};
 
 PostCard.propTypes = {
     post: PropTypes.shape({

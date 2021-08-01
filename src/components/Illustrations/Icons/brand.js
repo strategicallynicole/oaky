@@ -17,7 +17,7 @@
 
 const Mirror = (
              <StaticImage
-                 src="./mirroe.svg"
+                 src="./brand.svg"
                  alt="Branding"
                  layout="constrained"
                  className="w-full animate-enter icon"
