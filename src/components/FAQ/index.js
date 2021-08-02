@@ -6,10 +6,18 @@ import Title from "../Titles/h2"
 
 const faqs = [
   {
-    question: "What's the best thing about Switzerland?",
+    question: "What's it like to work with OAKwave?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "Our typical process kicks-off when a client approaches us with a growth challenge or problem. They may not fully understand that problem, but they know they have one. After we get to know each other a bit, we typically engage one of two ways. With a strategy, we do a full audit and deep-dive into the challenge and create a roadmap for marketing success for the next three years. The alternative path is a fixed block of hours to be depleted at the client's leisure. We find that most of our clients are most successful by starting with a strategy and following-up with a block of hours to assist with strategic implementation. We even publish our pricing information here, in a very un-agency like move.",
   },
+  {
+      question: "What industries does OAKwave service?",
+      answer: "We service all industries, but we specialize in B2B (though we have had MANY B2C clients as well, it’s just not our core strength). We have a penchant for franchise sales, SaaS, medical, and manufacturing. But, only because we’ve had clusters of clients in each of those areas. As long as the nature of the challenge is marketing, sales, or business, we’re specialized there. This requires a lot more work on our part, but we know your industry like our own by the end of our process.",
+  },
+  {
+      question: "Why don't you have a more traditional agency website?  What is the deal here?",
+      answer:  "If you wanted a more 'traditional' agency, you wouldn't be here.  You've had traditional before.  You learned it sucks.  It's time for something different."
+  }
   // More questions...
 ]
 

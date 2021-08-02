@@ -45,19 +45,18 @@ const About = ({ location }) => (
             <section className="w-full lg:px-30 lg:mx-28">
                <div className="ml-10"> <Title
                     className="pt-10 lg:px-10 wow slideInLeft"
-                    data-wow-delay="0s"
                     bgtext="Do You Like Us? Yes/No (circle one)"
                     titletext="About Us"
                 /></div>
                 <div className="flex flex-wrap overflow-hidden">
 
-                    <div className="w-full gap-1 mt-10 overflow-hidden wow sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/3 slideInLeft"
-                        data-wow-delay="2s">
+                    <div className="w-full gap-1 mt-10 overflow-hidden sm:w-full md:w-1/3 lg:w-1/3 xl:w-1/3 "
+                        >
                         <Definition />
 
                     </div>
 
-                    <div className="z-10 w-full overflow-hidden lg:gap-1 lg:ml-20 lg:mr-20 sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
+                    <div className="z-10 w-full overflow-hidden lg:gap-1 lg:ml-20 lg:mr-20 sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 " >
                         <BusinessMan />
 
                     </div>
