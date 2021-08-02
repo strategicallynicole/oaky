@@ -10,6 +10,10 @@
 .glass {
     @apply px-10 pb-8 border border-gray-200 rounded-lg shadow-lg py-30 bg-blurred sm:rounded-3xl sm:p-20 bg-clip-padding backdrop-filter backdrop-blur-xl;
 }
+.bg-glass {
+    @apply bg-blurred bg-clip-padding backdrop-filter backdrop-blur-xl;
+
+}
 
 :root {
     --azure-radiance: rgba(0, 153, 255, 1);

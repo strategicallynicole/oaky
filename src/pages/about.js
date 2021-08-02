@@ -24,6 +24,7 @@ import Definition from '../components/Definition'
 import BusinessMan from '../components/Illustrations/Businessman'
 import Title from '../components/Titles/h1.js'
 import Model from "../components/Strategy/model"
+import FAQ from "../components/FAQ"
 
 /**
 * Single page (/:slug)
@@ -56,8 +57,7 @@ const About = ({ location }) => (
 
                     </div>
 
-                    <div className="z-10 w-full overflow-hidden lg:gap-1 lg:ml-20 lg:mr-20 sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 wow slideInLeft"
-                        data-wow-delay="1s">
+                    <div className="z-10 w-full overflow-hidden lg:gap-1 lg:ml-20 lg:mr-20 sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
                         <BusinessMan />
 
                     </div>
@@ -67,7 +67,9 @@ const About = ({ location }) => (
 
             </section>
             <section id="Model" className="w-full px-0 py-10 xl:px-10 lg:px-10 md:px-10"><Model /></section>
-
+            <section id="FAQ" className="w-full px-10 lg:px-28 wow slideInRight"
+                data-wow-delay="1s">
+                <FAQ /></section>
             <section className="w-full px-10 lg:px-28 wow slideInRight"
                 data-wow-delay="1s">
                 <Quiz /></section>

@@ -3141,6 +3141,11 @@ animate.css@^4.1.1, animate.css@latest:
   resolved "https://registry.yarnpkg.com/animate.css/-/animate.css-4.1.1.tgz#614ec5a81131d7e4dc362a58143f7406abd68075"
   integrity sha512-+mRmCTv6SbCmtYJCN4faJMNFVNN5EuCTTprDTAo7YzIGji2KADmakjVA3+8mVDkZ2Bf09vayB35lSQIex2+QaQ==
 
+animejs@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/animejs/-/animejs-3.2.1.tgz#de9fe2e792f44a777a7fdf6ae160e26604b0cdda"
+  integrity sha512-sWno3ugFryK5nhiDm/2BKeFCpZv7vzerWUcUPyAZLDhMek3+S/p418ldZJbJXo5ZUOpfm2kP2XRO4NJcULMy9A==
+
 anser@1.4.9:
   version "1.4.9"
   resolved "https://registry.yarnpkg.com/anser/-/anser-1.4.9.tgz#1f85423a5dcf8da4631a341665ff675b96845760"
@@ -15640,6 +15645,14 @@ rc@^1.2.7, rc@^1.2.8:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-animejs-wrapper@^1.0.35:
+  version "1.0.35"
+  resolved "https://registry.yarnpkg.com/react-animejs-wrapper/-/react-animejs-wrapper-1.0.35.tgz#dc3c3aa2a744ec7d753a3fd009419c16705b3516"
+  integrity sha512-Fd1ZNxbLhZhrUSsXLJHrm5vwu4Bl56vze97hBbgdOc/Z/2PutyzVS6GIkrounU//3TtbA3W2IftvJVfTbfYAhA==
+  dependencies:
+    animejs "^3.2.1"
+    uuid "^8.3.2"
+
 react-bootstrap@^1.6.1:
   version "1.6.1"
   resolved "https://registry.npmjs.org/react-bootstrap/-/react-bootstrap-1.6.1.tgz"
@@ -15662,6 +15675,13 @@ react-bootstrap@^1.6.1:
     react-transition-group "^4.4.1"
     uncontrollable "^7.2.1"
     warning "^4.0.3"
+
+react-charming@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-charming/-/react-charming-2.0.0.tgz#2498d5b7c7822c47a8ba138507ccd182d8ed2099"
+  integrity sha512-LlR1gZNzpOGEYlvpUfrjbdUh0ZUWbifK87nqKlvnclNQUOJdMX/87bpvhnoDzcIOtvawGq8pJ+roTUywPSl81w==
+  dependencies:
+    runes "^0.4.3"
 
 react-countup@^4.4.0:
   version "4.4.0"
@@ -16803,6 +16823,11 @@ run-parallel@^1.1.9:
   integrity sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==
   dependencies:
     queue-microtask "^1.2.2"
+
+runes@^0.4.3:
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/runes/-/runes-0.4.3.tgz#32f7738844bc767b65cc68171528e3373c7bb355"
+  integrity sha512-K6p9y4ZyL9wPzA+PMDloNQPfoDGTiFYDvdlXznyGKgD10BJpcAosvATKrExRKOrNLgD8E7Um7WGW0lxsnOuNLg==
 
 rxjs@^6.6.0:
   version "6.6.7"
@@ -19319,6 +19344,11 @@ uuid@3.4.0, uuid@^3.0.0, uuid@^3.0.1, uuid@^3.3.2, uuid@^3.4.0:
   version "3.4.0"
   resolved "https://registry.npmjs.org/uuid/-/uuid-3.4.0.tgz"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
+
+uuid@^8.3.2:
+  version "8.3.2"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
+  integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
 
 uuid@~1.4.0:
   version "1.4.2"

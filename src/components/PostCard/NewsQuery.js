@@ -1,15 +1,3 @@
-/**
-    * @description      :
-    * @author           :
-    * @group            :
-    * @created          : 15/06/2021 - 13:47:09
-    *
-    * MODIFICATION LOG
-    * - Version         : 1.0.0
-    * - Date            : 15/06/2021
-    * - Author          :
-    * - Modification    :
-**/
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 

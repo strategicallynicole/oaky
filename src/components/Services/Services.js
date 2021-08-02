@@ -28,7 +28,7 @@ import Title from "../Titles/h2"
     { name: 'Content', icon: Pencil, class: '', description: 'This is not your intern\'s SEO-packed, boring Wikipedia entry! Your content needs to grab the attention of your target market and hold it. This takes a special blend of sales, marketing, and wordsmithing. We believe a hundred amazing words will change the world for your business, not a hundred mediocre articles.' },
     { name: 'Website & Martech', class: '', icon: Dial, description: 'The base of your marketing efforts and the epicenter of your marketing effectiveness gauge. We assess, rethink, and offer tactical steps to lift impact of the homebase of your efforts.' },
     { name: 'Branding, Strategy, Creative+', class: '', icon: Dart, description: 'We also offer: CMO-on-demand/marketing decision services, design, campaign execution, sales strategy, sales enablement via asset production, pitch development, martech stack design, salestech stack design, and website strategy.' },
-  ]
+  ];
 
   export default function Services() {
     return (
@@ -49,13 +49,13 @@ import Title from "../Titles/h2"
               {features.map((feature) => (
                 <div key={feature.name} className="pt-6">
                   <div className="flow-root px-10 pb-8 border-gray-200 rounded-lg shadow-lg py-30 bg-blurred sm:rounded-3xl sm:p-16 bg-clip-padding backdrop-filter backdrop-blur-xl backdrop-filter-blur">
-                    <div className="-mt-6">
+                    <div className="p-10 -mt-6">
                       <div>
                         <span className="inline-flex items-center justify-center p-3 shadow-lg rounded-xl">
-                       <div className={`w-full ${feature.class}`}>{feature.icon}</div>
+                       <div className={`w-full p-50 ${feature.class}`}>{feature.icon}</div>
                         </span>
                       </div>
-                      <h3 className="mt-8 text-3xl tracking-tight text-white font-heaviest montserrat">{feature.name}</h3>
+                      <h3 className="mt-8 text-5xl tracking-tight text-white font-heaviest montserrat">{feature.name}</h3>
                       <p className="mt-5 text-base text-gray-50 mulish">
                       {feature.description}                      </p>
                     </div>

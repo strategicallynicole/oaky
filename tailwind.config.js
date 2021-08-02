@@ -196,7 +196,6 @@ module.exports = {
                     gradient: `linear-gradient(90deg, #6633FF 40.47%, #3366FF 78.75%, #0099FF 105%)`,
                     wallpaper: `url('../images/wallpaper.svg')`,
                     'black-gradient': `linear-gradient(90deg, #292929 2.11%, #000000 104.85%)`,
-                    glass: `rgba( 0, 0, 0, 0.60 )`,
                 }
             },
             colors: {

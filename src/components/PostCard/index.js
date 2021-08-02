@@ -29,7 +29,7 @@ const PostCard = ({ post }) => {
         <div>
             <span className="text-xs font-medium text-white mulish">                <Tags post={post} visibility="public" autolink={false} />
 </span>
-            <a href="#" className="block mt-2 text-2xl font-semibold text-white montserrat white-text dark:text-white hover:text-blue "><span className="leading-4 tracking-tighter white-text">{post.title}</span></a>
+            <Link to={url} className="block mt-2 text-2xl font-semibold text-white montserrat white-text dark:text-white hover:text-blue "><span className="leading-4 tracking-tighter white-text">{post.title}</span></Link>
             <p className="mt-2 text-sm text-white dark:text-white mulish">{post.excerpt}</p>
         </div>
 

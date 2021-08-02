@@ -1,6 +1,55 @@
 @import "../../../styles/globals.scss";
 
 
+
+@mixin centre($axis: "both") {
+	@if $axis == "y" {
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+	@if $axis == "x" {
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+	@if $axis == "both" {
+
+		-webkit-transform: translate(-51%, -50%);
+		-moz-transform: translate(-51%, -50%);
+		-ms-transform: translate(-51%, -50%);
+		-o-transform: translate(-51%, -50%);
+		transform: translate(-51%, -50%);
+	}
+}
+@mixin font-size($sizeValue: 1.6, $lineHeight: 2.4) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+  line-height: ($lineHeight * 10) + px;
+}
+@mixin fontawesome {
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+@keyframes loadBounce {
+    0%{transform:translate(-50%, -50%) scale(0);}
+	40%{transform:translate(-50%, -50%) scale(1.2);}
+	60%{transform:translate(-50%, -50%) scale(1);}
+	80%{transform:translate(-50%, -50%) scale(1.1);}
+	100%{transform:translate(-50%, -50%) scale(1);}
+}
+
+
+
 @keyframes water {
     from {
       clip-path: polygon(0% 95%, 100% 95%, 100% 100%, 0% 100%)
@@ -22,10 +71,14 @@
   }
 a ,
 button {
+
     &.rn-button {
+        margin-top: 2em;
+        @include centre();
+        transform-origin:center;
+        animation: loadBounce 0.5s ease-in-out forwards;
         text-decoration: none;
-        background-color: white;
-        color: #000000 !important;
+        color: #ffffff !important;
         display: inline-block;
         padding: 10px 20px;
         overflow: hidden;
@@ -33,31 +86,33 @@ button {
         z-index: 1;
         outline: none;
         max-width: 300px;
-        min-width: 30px;
+        min-width: 1;
         border: 2px solid #ffffff;
         line-height: 1em;
         border-radius: 2em !important;
         color: black;
-        font-weight: 500;
+        font-weight: 700;
         font-size: 1em;
         margin: 4px;
         font-family: 'Montserrat', sans-serif;
-transform: 2s all water;
+		transition:all 1s linear;
 
+        background: $gradient;
+		background-size:0px 10px;
+		background-repeat: no-repeat;
+		background-position:left 85%;
+		text-shadow:0;
 
-
-
-
-
-
-
-
-
-
-        &:hover {
+		&:hover{
             color: #ffffff !important;
-            background-color: transparent;
-         }
+
+			background-size:100% 200px;
+		}
+
+
+
+
+
 
         }
 }
@@ -118,6 +173,76 @@ transform: 2s all water;
     font-size: 22px;
 
   }
+
+
+
+@mixin centre($axis: "both") {
+	@if $axis == "y" {
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+	@if $axis == "x" {
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+	@if $axis == "both" {
+
+		-webkit-transform: translate(-51%, -50%);
+		-moz-transform: translate(-51%, -50%);
+		-ms-transform: translate(-51%, -50%);
+		-o-transform: translate(-51%, -50%);
+		transform: translate(-51%, -50%);
+	}
+}
+@mixin font-size($sizeValue: 1.6, $lineHeight: 2.4) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+  line-height: ($lineHeight * 10) + px;
+}
+@mixin fontawesome {
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+@keyframes loadBounce {
+    0%{transform:translate(-50%, -50%) scale(0);}
+	40%{transform:translate(-50%, -50%) scale(1.2);}
+	60%{transform:translate(-50%, -50%) scale(1);}
+	80%{transform:translate(-50%, -50%) scale(1.1);}
+	100%{transform:translate(-50%, -50%) scale(1);}
+}
+
+
+
+@keyframes water {
+    from {
+      clip-path: polygon(0% 95%, 100% 95%, 100% 100%, 0% 100%)
+    }
+
+    to {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+  }
+
+  @keyframes draining {
+    from {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    to {
+       clip-path: polygon(0% 95%, 100% 95%, 100% 100%, 0% 100%);
+    }
+}
   .buttonspray .particles-circle {
     position: absolute;
     background: $gradient;
@@ -287,6 +412,8 @@ transform: 2s all water;
       visibility: hidden;
     }
   }
+
+
   .active .buttonspray .particles-circle:nth-of-type(10) {
     animation: particles-10 1.5s 0.25s;
   }

@@ -11,7 +11,8 @@
     * - Modification    :
 **/
 import React from 'react'
-import { Layout, PostCard, Pagination } from '../components/common'
+import { Layout, Pagination } from '../components/common'
+import PostCard from '../components/PostCard'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from "gatsby"
 <Title bgtext="Blogs" titletext="Latest Posts" />

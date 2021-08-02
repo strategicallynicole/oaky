@@ -40,12 +40,12 @@ const Page = ({ location }) => (
             <Title titletext="Schedule A Consultation" bgtext="Schedule" />
 
 
-<div className="w-1/2 px-4 my-4 overflow-hidden sm:my-4 sm:px-4 sm:w-1/2 md:my-4 md:px-4 md:w-1/2 lg:my-3 lg:px-3 lg:w-1/2 xl:my-4 xl:px-4 xl:w-1/2">
+<div className="w-full px-4 my-4 overflow-hidden sm:my-4 sm:px-4 sm:w-full md:my-4 md:px-4 md:w-full lg:my-3 lg:px-3 lg:w-1/2 xl:my-4 xl:px-4 xl:w-1/2">
 <Schedule />
 
 </div>
 
-<div className="w-1/2 px-4 my-4 overflow-hidden sm:my-4 sm:px-4 sm:w-1/2 md:my-4 md:px-4 md:w-1/2 lg:my-3 lg:px-3 lg:w-1/2 xl:my-4 xl:px-4 xl:w-1/2">
+<div className="w-full px-4 my-4 overflow-hidden sm:my-4 sm:px-4 sm:w-full md:my-4 md:px-4 md:w-full lg:my-3 lg:px-3 lg:w-1/2 xl:my-4 xl:px-4 xl:w-1/2">
 <Alarmed />
 
 
