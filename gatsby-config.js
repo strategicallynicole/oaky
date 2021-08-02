@@ -87,7 +87,7 @@ module.exports = {
         {
             resolve: `gatsby-source-ghost`,
             options:
-                process.env.NODE_ENV === `development`
+                process.env.NODE_ENV === `production`
                     ? ghostConfig.development
                     : ghostConfig.production,
         },
@@ -118,6 +118,7 @@ module.exports = {
               `,
             },
         },
+
         {
             resolve: `gatsby-plugin-feed`,
             options: {
