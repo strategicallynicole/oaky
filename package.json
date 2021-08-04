@@ -124,6 +124,7 @@
         "react": "17.0.2",
         "react-animejs-wrapper": "^1.0.35",
         "react-bootstrap": "^1.6.1",
+        "react-burger-menu": "^3.0.6",
         "react-charming": "^2.0.0",
         "react-countup": "^4.4.0",
         "react-dom": "17.0.2",
@@ -138,6 +139,7 @@
         "react-is": "^17.0.2",
         "react-owl-carousel3": "^2.2.5",
         "react-planet": "^1.0.1",
+        "react-responsive": "^9.0.0-beta.3",
         "react-script-tag": "^1.1.2",
         "react-scroll": "^1.8.3",
         "react-scrollmagic": "^2.3.0",
@@ -157,6 +159,7 @@
         "tailwindcss": "^2.2.7",
         "tailwindcss-filters": "^3.0.0",
         "tailwindcss-fluid-container": "^4.0.0",
+        "twin.macro": "^2.6.2",
         "util": "^0.12.4",
         "web-component-essentials": "^0.0.4",
         "wowjs": "^1.1.3"

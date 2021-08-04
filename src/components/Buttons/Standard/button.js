@@ -17,11 +17,10 @@ function Button(props) {
     const btnlink = props.btnlink
     const btntext = props.btntext
     return (
-        <div className="button-group">
 
             <a
 
-                className="rn-button wow fadeInLeft"
+                className="inline-block text-white rn-button wow fadeInLeft font-heavy lg:font-heaviest xl:font-heaviest 2xl:font-heaviest md:font-heavy sm:font-heavy lg:text-3xl xl:text-3xl 2xl:text-3xl md:text-lg sm:text-lg montserrat"
                 data-wow-delay="100ms"
                 data-wow-duration="1000ms"
                 href={btnlink}
@@ -29,7 +28,6 @@ function Button(props) {
                 <span>{btntext}</span>
             </a>
 
-        </div>
 
     )
 }

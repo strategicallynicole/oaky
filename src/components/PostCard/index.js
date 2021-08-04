@@ -40,16 +40,15 @@ const PostCard = ({ post }) => {
 
 <div className="w-1/2 px-6 overflow-hidden sm:px-6 sm:w-1/2 md:px-6 md:w-1/2 lg:px-6 lg:w-1/2 xl:px-6 xl:w-1/2">
 
-<div className="flex items-start justify-start place-items-start justify-items-start items-left">
+<div className="flex items-start justify-start px-6 py-6 place-items-start justify-items-start items-left">
 
-<div className="flex items-start justify-start my-3 text-xs text-white place-items-start justify-items-start items-left text-gray-50 dark:text-gray-50">{readingTime}</div>
+<div className="flex items-start justify-start pl-6 my-3 text-xs text-white place-items-start justify-items-start items-left text-gray-50 dark:text-gray-50">{readingTime}</div>
 </div></div>
 
-<div className="w-1/2 px-6 overflow-hidden sm:px-6 sm:w-1/2 md:px-6 md:w-1/2 lg:px-6 lg:w-1/2 xl:px-6 xl:w-1/2">
-<span className="items-end mx-1 text-xs text-right text-white items-right place-items-end text-gray-50 dark:text-gray-50">  Posted <ReactTimeAgo date={post.published_at} locale="en-US"/></span>
-            </div>
+<div className="flex items-end justify-end px-6 py-6 place-items-end justify-items-end items-right">
 
-</div>
+<div className="flex items-end justify-end pl-6 my-3 text-xs text-white place-items-end justify-items-end items-right text-gray-50 dark:text-gray-50"> Posted &nbsp; <ReactTimeAgo date={post.published_at} locale="en-US"/></div>
+</div></div>
 
 
 

@@ -12,7 +12,7 @@ const faqs = [
   },
   {
       question: "What industries does OAKwave service?",
-      answer: "We service all industries, but we specialize in B2B (though we have had MANY B2C clients as well, it’s just not our core strength). We have a penchant for franchise sales, SaaS, medical, and manufacturing. But, only because we’ve had clusters of clients in each of those areas. As long as the nature of the challenge is marketing, sales, or business, we’re specialized there. This requires a lot more work on our part, but we know your industry like our own by the end of our process.",
+      answer: "We service all industries, but we specialize in B2B (though we have had MANY B2C clients as well, it’s just not our core strength). We have a penchant for agency marketing (the cobbler's children have no shoes), franchise sales, SaaS, medical, and manufacturing. But, only because we’ve had clusters of clients in each of those areas. As long as the nature of the challenge is marketing, sales, or business, we’re specialized there. This requires a lot more work on our part, but we know your industry like our own by the end of our process.",
   },
   {
       question: "Why don't you have a more traditional agency website?  What is the deal here?",

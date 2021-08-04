@@ -47,7 +47,7 @@ function Footer( { showBelow } ) {
         <>
         <footer>
             <div>
-                <div className=" bg-black-gradient lg:px-0">
+                <div className="p-16 bg-black-gradient lg:px-0">
                     <div className="container justify-between w-full mx-auto lg:flex">
                         <div className="justify-between lg:w-1/2 lg:flex">
                             <div className="flex flex-col mt-4 lg:mt-0 ">
@@ -101,8 +101,8 @@ function Footer( { showBelow } ) {
             </dl>
 </div>
    </div>
-                        <div className="flex w-full pb-4 justify-top lg:w-1/2 lg:mt-0 lg:justify-end lg:pb-0">
-                            <div className="w-10/12 lg:w-1/2">
+                        <div className="flex w-full p-20 pb-4 justify-top lg:w-1/2 lg:mt-0 lg:justify-end lg:pb-0">
+                            <div className="w-full lg:w-1/2">
                                 <h5 className="text-white">Subscribe to our Newsletter</h5>
                             <HubspotForm
                             portalId="8988772"
@@ -115,7 +115,7 @@ function Footer( { showBelow } ) {
                         </div>
                     </div>
                 </div>
-                <div className="py-5 ">
+                <div className="w-full p-20 py-5">
                 <span className="text-white">  &copy; 2021 OAKwave, LLC.  All Rights Reserved.</span>
                 </div>
             </div>

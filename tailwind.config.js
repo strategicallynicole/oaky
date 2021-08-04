@@ -12,6 +12,7 @@
  **/
 'use strict'
 const { Container, Spacing, Typography, RatioBox, Layout, Keyline, PseudoElements, GridGap, GridLine } = require('@area17/a17-tailwind-plugins');
+const colors = require('tailwindcss/colors');
 
 
 
@@ -310,6 +311,7 @@ module.exports = {
         require(`@tailwindcss/line-clamp`),
         require(`@tailwindcss/aspect-ratio`),
         require(`tailwindcss-filters`),
+        require('@tailwindcss/aspect-ratio'),
         require(`tailwindcss-text-fill-stroke`), // no options to configure
         require('tailwindcss-fluid-container'),
 

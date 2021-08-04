@@ -13,7 +13,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Client from "./client"
-import Nav from "./header/nav"
+import Nav from "./header/tw"
 import Footer from "./footer/perm"
 import '../scss/style.scss'
 import '../styles/base.css'
@@ -24,13 +24,15 @@ const Layout = ({ children }) => (
     <>
 
 
-            <Nav></Nav>
+            <Nav>
+
 
 
             <Client />
 
             <main>{children}</main>
             <Footer />
+            </Nav>
     </>
 )
 
