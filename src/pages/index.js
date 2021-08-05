@@ -11,11 +11,11 @@
     * - Modification    :
 **/
 import React from "react"
-import Layout from "../components/Structure/"
+import Layout from "../components/layout"
 import { MetaData } from '../components/common/meta'
 
-import Banner from "../components/Banner/v2"
-import About from "../components/Banner/about"
+import Banner from "../components/Banner"
+import About from "../components/About"
 import PartnerLogos from "../components/PartnerLogos"
 import News from "../components/PostCard/feed"
 import Services from "../components/Services/Services"
@@ -29,7 +29,7 @@ const IndexPage = ({ location }) => (
                 type="site"
             />
         <Layout>
-            <section id="Banner" className="w-full px-10 py-10 xl:px-10 lg:px-10 md:px-10"><Banner /></section>
+            <section id="Banner" className="w-full px-0 py-10 xl:px-10 lg:px-10 md:px-10"><Banner /></section>
 
             <section id="About" className="w-full px-0 py-10 xl:px-10 lg:px-10 md:px-10"><About /></section>
             <section id="Services" className="w-full px-0 py-10 xl:px-10 lg:px-10 md:px-10"><Services /></section>

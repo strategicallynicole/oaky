@@ -14,7 +14,7 @@ import React from 'react';
 import { Tags } from '@tryghost/helpers-gatsby'
 import NewsQuery from './NewsQuery'
 import { MetaData } from '../common/meta'
-import  PostCard  from './index'
+import  PostCard  from '../PostCard'
 import { useStaticQuery, graphql } from 'gatsby'
 import Title from '../Titles/h2';
 import'../PostCard/postcard.scss';
@@ -74,9 +74,10 @@ const News = () => {
 
          {posts.map(({ node, index }) => (
               <>
-  <div className="w-full min-h-full px-6 my-6 overflow-hidden cardo sm:my-6 sm:px-6 sm:w-full md:my-6 md:px-6 md:w-full lg:my-6 lg:px-6 lg:w-1/3 xl:my-6 xl:px-6 xl:w-1/3">
+  <div className="w-full px-6 my-6 overflow-hidden sm:my-6 sm:px-6 sm:w-full md:my-6 md:px-6 md:w-full lg:my-6 lg:px-6 lg:w-1/3 xl:my-6 xl:px-6 xl:w-1/3">
+
             <PostCard key={node.id} index={index+1} post={node} />
-          </div>
+            </div>
             </>
                             ))}
 </div>

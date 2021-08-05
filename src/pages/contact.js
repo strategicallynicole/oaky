@@ -11,7 +11,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import HubspotForm from 'react-hubspot-form'
 import mail from '../components/Illustrations/Mail/youvegotmail.svg'
-import Layout from "../components/Structure/"
+import Layout from '../components/layout'
 import Title from '../components/Titles/h1'
 
 

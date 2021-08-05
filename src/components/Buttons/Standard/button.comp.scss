@@ -8,8 +8,6 @@ a ,
 button {
 
     &.rn-button {
-        transition:all 1s linear;
-
         text-decoration: none;
         color: #ffffff !important;
         padding: 10px 10px;
@@ -22,16 +20,145 @@ button {
         line-height: 1em;
         border-radius: 2em !important;
         color: black;
-font-weight:700;
-font-family: 'Montserrat';
-font-size: 1.1em;
-  cursor: pointer;
-  background-image: $gradient;
-  background-repeat: no-repeat;
-  background-size: 130% 0.2em;
-  background-position: 0 125%;
-  transition: background-size 0.25s ease-in;
-  &:hover {
-    background-size: 100% 100%;
-}}
+font-weight:900;
+        background: $gradient;
+		background-size:0px 10px;
+		background-repeat: no-repeat;
+		background-position:left 85%;
+		text-shadow:0;
+
+		&:hover{
+            color: #ffffff !important;
+
+			background-size:100% 200px;
+		}
+
+
+
+
+
+
+        }
+}
+.v-align {
+    position: absolute;
+    text-align: center;
+    left: 0;
+    width: 100%;
+    max-height: 90vh;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+.buttonspray {
+    position: relative;
+    width: 200px;
+    margin: auto;
+    height: 66px;
+  }
+  .buttonspray .rn-button {
+    border: none;
+    outline: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-transform: perspective(600px) rotateX(0deg) scale(1);
+    -ms-transform: perspective(600px) rotateX(0deg) scale(1);
+    -webkit-transform: perspective(600px) rotateX(0deg) scale(1);
+    transform: perspective(600px) rotateX(0deg) scale(1);
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+
+  .buttonspray .rn-button:active {
+    -moz-transform: perspective(600px) rotateX(15deg) scale(0.9);
+    -ms-transform: perspective(600px) rotateX(15deg) scale(0.9);
+    -webkit-transform: perspective(600px) rotateX(15deg) scale(0.9);
+    transform: perspective(600px) rotateX(15deg) scale(0.9);
+
+  }
+  .active .buttonspray .rn-button:active {
+    -moz-transform: perspective(600px) rotateX(0deg) scale(1);
+    -ms-transform: perspective(600px) rotateX(0deg) scale(1);
+    -webkit-transform: perspective(600px) rotateX(0deg) scale(1);
+    transform: perspective(600px) rotateX(0deg) scale(1);
+    font-size: 22px;
+
+  }
+
+
+
+@mixin centre($axis: "both") {
+	@if $axis == "y" {
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+	@if $axis == "x" {
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+	@if $axis == "both" {
+
+		-webkit-transform: translate(-51%, -50%);
+		-moz-transform: translate(-51%, -50%);
+		-ms-transform: translate(-51%, -50%);
+		-o-transform: translate(-51%, -50%);
+		transform: translate(-51%, -50%);
+	}
+}
+@mixin font-size($sizeValue: 1.6, $lineHeight: 2.4) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+  line-height: ($lineHeight * 10) + px;
+}
+@mixin fontawesome {
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+@keyframes loadBounce {
+    0%{transform:translate(-50%, -50%) scale(0);}
+	40%{transform:translate(-50%, -50%) scale(1.2);}
+	60%{transform:translate(-50%, -50%) scale(1);}
+	80%{transform:translate(-50%, -50%) scale(1.1);}
+	100%{transform:translate(-50%, -50%) scale(1);}
+}
+
+
+
+@keyframes water {
+    from {
+      clip-path: polygon(0% 95%, 100% 95%, 100% 100%, 0% 100%)
+    }
+
+    to {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+  }
+
+  @keyframes draining {
+    from {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    to {
+       clip-path: polygon(0% 95%, 100% 95%, 100% 100%, 0% 100%);
+    }
 }
