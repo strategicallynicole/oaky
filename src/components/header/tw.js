@@ -98,15 +98,15 @@ export default function Nav({children}) {
                     </div>
                     <div className="z-50 hidden space-x-8 md:flex md:ml-10">
                       {navigation.map((item) => (
-                      <div className="flex items-center w-full py-2 pl-2 group">  <Link
+                      <div className="flex items-center w-full py-2 pl-2 text-white group hover:text-white">  <Link
                         key={item.name}
                         href={item.href}
-                        activeClassName="bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+                        activeClassName=""
                         className=""
                     >
                         <FontAwesomeIcon
                             icon={item.icon}
-                            className="flex-grow w-6 h-6 mr-3"
+                            className="flex-grow w-6 h-6 mr-3 text-white hover:text-white"
                             aria-hidden="true"
                         />   </Link>
 
@@ -192,15 +192,15 @@ export default function Nav({children}) {
                     <div className="z-50 p-10 pt-5 pb-6">
                       <div className="z-50 px-2 space-y-1">
                         {navigation.map((item) => (
-                               <div className="z-50 inline-block w-full py-2 pl-2 text-white group">  <Link
+                               <div className="z-50 inline-block w-full py-2 pl-2 text-white group hover:text-white">  <Link
                         key={item.name}
                         href={item.href}
-                        activeClassName="z-50 text-white hover:text-gray-50"
+                        activeClassName="z-50 text-white hover:text-white"
                         className=""
                     >
                         <FontAwesomeIcon
                             icon={item.icon}
-                            className="inline-block w-12 h-12 mr-3"
+                            className="inline-block w-12 h-12 mr-3 text-white hover:text-white"
                             aria-hidden="true"
                         />   </Link>
 
