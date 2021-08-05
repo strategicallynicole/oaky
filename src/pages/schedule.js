@@ -14,7 +14,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
-import Layout from '../components/layout'
+import Layout from "../components/Structure/"
 import { MetaData } from '../components/common/meta'
 import Title from '../components/Titles/h1'
 import Schedule from '../components/Meeting/schedule'
