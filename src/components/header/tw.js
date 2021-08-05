@@ -98,39 +98,19 @@ export default function Nav({children}) {
                     </div>
                     <div className="z-50 hidden space-x-8 md:flex md:ml-10">
                       {navigation.map((item) => (
-                      <div className="flex items-center w-full py-2 pl-2 text-white group hover:text-white">  <Link
-                        key={item.name}
-                        href={item.href}
-                        activeClassName=""
-                        className=""
-                    >
-                        <FontAwesomeIcon
-                            icon={item.icon}
-                            className="flex-grow w-6 h-6 mr-3 text-white hover:text-white"
-                            aria-hidden="true"
-                        />   </Link>
-
-                      <Linky text={item.name} link={item.href} />
+                      <div className="flex items-center w-full py-2 pl-2 text-white group hover:text-white"> <Linky text={item.name} link={item.href} />
                  </div>
 
                       ))}
-                    </div>
-                  </div>
+                  </div> </div>
                   <div className="flex-shrink hidden md:flex md:items-center md:space-x-6">
-                  <Button
-                                              btnlink="/schedule"
-                                              btntext="Schedule A Call"
-                                              class=" h-12 px-6 mb-20 flex-shrink"
-                                              aria-label="Schedule"
-                                              title="Schedule A Call"
-                                        >
+                  <Button btnlink="/schedule" btntext="Schedule A Call" class=" h-12 px-6  mb-20 flex-shrink" aria-label="Schedule" title="Schedule A Call">
                                             Schedule A Call
                                         </Button>
 
 
+                  </div> </nav>
                   </div>
-                </nav>
-              </div>
 
               <Transition
                 show={open}
@@ -173,21 +153,10 @@ export default function Nav({children}) {
 
                       </div>
                       <div className="m-5 -mr-2 hover:bg-gradient">
-                        <Popover.Button className="z-50 inline-flex items-center justify-center w-20 h-20 bg-sizer hover:bg-gradient">
-                          <span className="sr-only">Close menu</span>
-                          <button
-                                        className="flex items-center justify-center w-20 h-20 hover:bg-transparent"
-                                        onClick={() => Fragment(open)}
-                                    >
-                                        <span className="sr-only">
-                                            Close sidebar
-                                        </span>
-                                        <FontAwesomeIcon
-                                            icon={faXmark}
-                                            className="w-20 h-20"
-                                            aria-hidden="true"
-                                        />{' '}
-                                    </button>                        </Popover.Button>
+                      <Popover.Button className="inline-flex items-center justify-center p-2">
+                          <span className="sr-only">Close main menu</span>
+                          <XIcon className="z-50 w-12 h-12 p-4 m-4 text-white focus:bg-contain focus:bg-gradient hover:bg-gradient" aria-hidden="true" />
+                        </Popover.Button>
                     </div></div>
                     <div className="z-50 p-10 pt-5 pb-6">
                       <div className="z-50 px-2 space-y-1">
