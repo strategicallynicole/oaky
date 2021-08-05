@@ -17,7 +17,7 @@ import Nav from "./header/tw"
 import Footer from "./footer/perm"
 import '../scss/style.scss'
 import '../styles/base.css'
-
+import ProspectIO from './tracking'
 
 const Layout = ({ children }) => (
 
@@ -33,6 +33,7 @@ const Layout = ({ children }) => (
             <main>{children}</main>
             <Footer />
             </Nav>
+            <ProspectIO />
     </>
 )
 
