@@ -14,11 +14,10 @@ import React from 'react'
 import RunAwayLittleGirl from '../Illustrations/RunAwayLittleGirl'
 import Title from '../Titles/home.js'
 import * as style from './banner.module.scss'
-const Banner = () => (
 
-
-    <div class="flex flex-wrap overflow-visible px-10">
-
+const Banner = () => {
+  <>
+    <div class="flex flex-wrap overflow-visible">
   <div class="w-full lg:mt-20 px-6 xl:mt-20 2xl:mt-20 mb-0 md:mb-10 lg:mb-10 xl:mb-20 2xl:mb-20 mt-0 overflow-hidden order-last sm:order-first md:w-1/2 lg:w-1/2 xl:w-1/2">
   <Title titletext="We Need To Talk." bgtext="Hi." />
   <h4
@@ -38,6 +37,6 @@ const Banner = () => (
 </div>
 
 </div>
-
-)
+</>
+}
 export default Banner
