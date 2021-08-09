@@ -79,6 +79,7 @@ const News = () => {
             <PostCard key={node.id} index={index+1} post={node} />
     </div>
                             ))}
+                            
 </div>
 </div>
 </section>

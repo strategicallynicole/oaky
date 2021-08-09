@@ -34,12 +34,8 @@ const IndexPage = ({ location }) => (
             <section id="About" className="w-full px-0 py-10 xl:px-10 lg:px-10 md:px-10"><About /></section>
             <section id="Services" className="w-full px-0 py-10 xl:px-10 lg:px-10 md:px-10"><Services /></section>
             <section id="Clients" className="w-full px-0 py-10 xl:px-10 lg:px-10 md:px-10"><Clients /></section>
-
-<<<<<<< HEAD
             <section id="Blogs" className="w-full px-10 py-10 mx-10"><News /></section>
-=======
-            <section id="Blogs" className="w-full "><News /></section>
->>>>>>> parent of 14231123 (jjj)
+
         </Layout>
     </>
 )
