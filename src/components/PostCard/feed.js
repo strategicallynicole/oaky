@@ -68,18 +68,18 @@ const News = () => {
 
 <section>
 <Title bgtext="Blogs" titletext="Latest Posts" />
-
+<div className="px-10">
 
 <div className="flex flex-wrap -mx-6 overflow-hidden sm:-mx-6 md:-mx-6 lg:-mx-6 xl:-mx-6">
 
          {posts.map(({ node, index }) => (
-              <>
+     
   <div className="w-full px-6 my-6 overflow-hidden sm:my-6 sm:px-6 sm:w-full md:my-6 md:px-6 md:w-full lg:my-6 lg:px-6 lg:w-1/3 xl:my-6 xl:px-6 xl:w-1/3">
 
             <PostCard key={node.id} index={index+1} post={node} />
-            </div>
-            </>
+    </div>
                             ))}
+</div>
 </div>
 </section>
 
