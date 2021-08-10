@@ -74,7 +74,7 @@ const News = () => {
 
          {posts.map(({ node, index }) => (
      
-  <div className="w-full px-6 my-6 overflow-hidden sm:my-6 sm:px-6 sm:w-full md:my-6 md:px-6 md:w-full lg:my-6 lg:px-6 lg:w-1/3 xl:my-6 xl:px-6 xl:w-1/3">
+  <div className="w-5/6 px-6 my-6 overflow-hidden sm:my-6 sm:px-6 sm:w-5/6 md:my-6 md:px-6 md:w-5/6 lg:my-6 lg:px-6 lg:w-1/3 xl:my-6 xl:px-6 xl:w-1/3">
 
             <PostCard key={node.id} index={index+1} post={node} />
     </div>
