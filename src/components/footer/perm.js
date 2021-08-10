@@ -115,7 +115,7 @@ function Footer( { showBelow } ) {
                         </div>
                     </div>
                 </div>
-                <div className="w-full p-20 py-5">
+                <div className="w-full p-20 py-5 m-20">
                 <span className="text-white">  &copy; 2021 OAKwave, LLC.  All Rights Reserved.</span>
                 </div>
             </div>
