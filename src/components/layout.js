@@ -18,6 +18,7 @@ import Footer from "./footer/perm"
 import '../scss/style.scss'
 import '../styles/base.css'
 import ProspectIO from './tracking'
+import GoogleAnalytics from './tracking'
 
 const Layout = ({ children }) => (
 
