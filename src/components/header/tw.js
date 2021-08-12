@@ -45,7 +45,7 @@ const navigation = [
     { name: 'About', href: '/about', icon: faBullhorn, current: false },
     { name: 'Services', href: '/#services', icon: faNarwhal, current: false },
     { name: 'Blog', href: '/blog', icon: faPen, current: false },
-    { name: 'Conact', href: '/contact', icon: faPhone, current: false },
+    { name: 'Contact', href: '/contact', icon: faPhone, current: false },
     {
         /*name: 'Resources', href: '#', icon: ChartBarIcon, current: false */
     },
