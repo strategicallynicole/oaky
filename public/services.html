@@ -4,67 +4,58 @@
     border-color: #375CDC; border-width: 1px;   background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%); font-size: 13px; color: white;}
     </style>
 <script>
-  const one = {
+  const home = {
     template: `
     <z-view style="border-color: #8F6AFA; font-family: 'Montserrat', sans-serif; font-weight: bold; color: #ffffff; border-width: 1px; background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%)">
-    OAKwave Strategic Growth Model
+    OAKwave Services Model
         <z-spot
           slot="extension"
           :angle="0"
-          size="medium"
-          to-view="context"
+          size="large"
+          to-view="strategy"
           class="zview">
-    Context      </z-spot>
+    Strategy      </z-spot>
 
     <z-spot
           slot="extension"
           :angle="50"
-          size="medium"
-          to-view="market"
+          size="large"
+          to-view="branding"
         class="zview">
-    Market      </z-spot>
+    Branding      </z-spot>
 
 
     <z-spot
           slot="extension"
           :angle="100"
-          size="medium"
-          to-view="brand"
+          size="large"
+          to-view="creative"
           class="zview">
-    Brand      </z-spot>
+    Creative      </z-spot>
 
 
     <z-spot
           slot="extension"
           :angle="150"
-          size="medium"
-          to-view="techstack"
+          size="large"
+          to-view="cmo"
           class="zview">
-    Tech Stack      </z-spot>
+   CMO-in-a-box     </z-spot>
 
 
     <z-spot
           slot="extension"
           :angle="200"
           size="medium"
-          to-view="growth"
+          to-view="digitalandtechstack"
           class="zview">
-    Growth      </z-spot>
-
-
-    <z-spot
-          slot="extension"
-          :angle="250"
-          size="medium"
-          to-view="action"
-          class="zview">
-    Action      </z-spot>
+    Digital & Tech Stack    </z-spot>
 
 
 
     </z-view>`,
   };
-  const context = {
+  const strategy = {
     template: `
     <z-view style="border: 1px #0099EE solid;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%); font-size: 32px; color: white;">
      Context
@@ -127,7 +118,7 @@
     </z-view>`,
   };
 
-  const market = {
+  const branding = {
     template: `
     <z-view style="border: 1px #0099EE solid;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%); font-size: 32px; color: white;">
      Market
@@ -173,7 +164,7 @@
     `,
   };
 
-  const brand = {
+  const creative = {
     template: `
     <z-view style="border: 1px #0099EE solid;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%); font-size: 32px; color: white;">
      Brand
@@ -218,7 +209,7 @@
     `,
   };
 
-  const growth = {
+  const cmo = {
     template: `
     <z-view style="border: 1px #0099EE solid;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%); font-size: 32px; color: white;">
      Growth
@@ -244,7 +235,7 @@
     `,
   };
 
-  const techstack = {
+  const digitalandtechstack = {
     template: `
     <z-view style="border: 1px #0099EE solid;  background-image: linear-gradient(90deg, #292929 2.11%, #000000 104.85%); font-size: 32px; color: white;">
      Tech Stack
@@ -369,11 +360,11 @@
   new Vue({
     el: "#app",
     components: {
-      one,
-      context,
-      vision,
-      mission,
-      history,
+      home,
+      strategy,
+      branding,
+      creative,
+      cmo,
       constraints,
       roots,
       roadblocks,
@@ -393,7 +384,7 @@
           theme: "black",
         },
       });
-      this.$zircle.setView("one");
+      this.$zircle.setView("home");
     },
   });
 </script>

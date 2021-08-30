@@ -23,7 +23,7 @@ const About = () => (
 
 <section>
 
-<div className="flex flex-wrap px-10 overflow-visible md:-mx-2 lg:-mx-2 xl:-mx-2">
+<div className="flex flex-wrap px-10 overflow-visible">
 
   <div className="w-full overflow-visible sm:w-full md:my-2 md:px-2 md:w-1/2 lg:my-2 lg:px-2 lg:w-1/2 xl:my-2 xl:px-2 xl:w-1/2">
   <div className="md:pr-0 lg:pr-0 xl:pr-0 2xl:pr-0"><Meditating /></div>

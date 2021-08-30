@@ -20,7 +20,7 @@ export default function Pointing() {
         <>
            <img src={img}
                 alt="Pointing"
-                className="overflow-visible point md:relative lg:absolute"
+                className="overflow-visible point"
             />
         </>
     )

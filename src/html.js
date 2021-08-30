@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Loading from './components/Loader/pacman';
+import Loading from './components/Loader/pacman.js';
 
 export default function HTML(props) {
   return (

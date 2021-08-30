@@ -48,7 +48,7 @@ import Title from "../Titles/h2"
             <div className="grid w-full grid-cols-1 gap-5 min-h-48 sm:grid-cols-1 lg:grid-cols-3">
               {features.map((feature) => (
                 <div key={feature.name} className="pt-6">
-                  <div className="flow-root px-10 pb-8 border-gray-200 rounded-lg shadow-lg py-30 bg-blurred sm:rounded-3xl sm:p-16 bg-clip-padding backdrop-filter backdrop-blur-xl backdrop-filter-blur">
+                  <div className="flow-root px-10 pb-8 border-gray-200 rounded-lg shadow-lg min-h-fit py-30 bg-blurred sm:rounded-3xl sm:p-16 bg-clip-padding backdrop-filter backdrop-blur-xl backdrop-filter-blur">
                     <div className="p-10 -mt-6">
                       <div>
                         <span className="inline-flex items-center justify-center p-3 shadow-lg rounded-xl">

@@ -43,7 +43,6 @@ const Footer = ({ showBelow }) => {
 
 
 <div class="flex flex-wrap overflow-hidden md:-mx-1 lg:-mx-1 xl:-mx-1 px-16 w-full place-content-center xl:place-content-right lg:place-content-right sm:place-items-center sm:place-content-center md:place-content-center lg:place-items-right xl:place-items-right">
-<Pointing />
 <div class="w-full sm:w-full flex-grow overflow-hidden md:my-1 md:px-1 md:w-full lg:my-1 lg:px-1 lg:w-1/3 xl:my-1 xl:px-1 xl:w-1/ place-content-center xl:place-content-right lg:place-content-right sm:place-items-center sm:place-content-center md:place-content-center lg:place-items-right xl:place-items-right">
 <div className="ml-16 text-gray-50 mulish wow fadeInLeft place-content-right place-items-left sm:place-items-center"
                             data-wow-delay="0ms"
@@ -68,6 +67,7 @@ const Footer = ({ showBelow }) => {
                         <h3 className="font-bold tracking-wider text-gray-200 text-md mulish">
                 Subscribe to our newsletter
                         </h3>
+                        <Pointing />
 
                         <HubspotForm
                             portalId="8988772"

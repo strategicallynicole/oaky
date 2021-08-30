@@ -101,22 +101,25 @@ function Footer( { showBelow } ) {
             </dl>
 </div>
    </div>
-                        <div className="flex w-full p-20 pb-4 justify-top lg:w-1/2 lg:mt-0 lg:justify-end lg:pb-0">
-                            <div className="w-full lg:w-1/2">
-                                <h5 className="text-white">Subscribe to our Newsletter</h5>
-                            <HubspotForm
+        <div className="flex w-full p-20 pb-4 justify-top lg:w-1/2 lg:mt-0 lg:justify-end lg:pb-0">
+    
+
+                            <div className="z-10 w-full lg:w-1/2"> <div className="relative w-full max-w-full lg:w-1/6 xl:w-1/6 md:w-full sm:w-full lg:bottom-0 lg:right-0 xl:bottom-0 xl:right-0 z-0100 lg:absolute xl:absolute 2xl:absolute sm:relative md:relative">   <Pointing /></div>
+                            <div className="w-full p-10 glass">        <h5 className="z-10 text-white">Subscribe to our Newsletter</h5>
+                          <HubspotForm
                             portalId="8988772"
                             formId="9ad7037d-3e57-4d91-8874-fd9af54dbc27"
                             onSubmit={() => console.log(`Submit!`)}
                             onReady={form => console.log(`Form ready!`)}
+                            className="z-10"
                             loading={<div>Loading...</div>}
-                        />
+                        /></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="w-full p-20 py-5 m-20">
-                <span className="text-white">  &copy; 2021 OAKwave, LLC.  All Rights Reserved.</span>
+                <div className="w-full py-5 mb-20 ml-10 lg:ml-40 sm:ml-10 md:ml-10 xl:ml-40">
+                <div className="text-white sm:ml-10 md:ml-10">  &copy; 2021 OAKwave, LLC.  All Rights Reserved.</div>
                 </div>
             </div>
 
