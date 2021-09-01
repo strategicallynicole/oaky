@@ -13,11 +13,10 @@ const GA = `<script async src="https://www.googletagmanager.com/gtag/js?id=UA-15
 
 
 const iframesrc = `<iframe src="https://app.prospect.io/companies/d749a87c-13af-410a-a09a-6d8dd6825938/tracker?u='+encodeURI(document.location.href)+'&t='+encodeURI(document.title)+'" width="0" height="0" style="display:none;"></iframe>`;
-const Hubspot = '<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/8988772.js"></script>';
 
 const Tracking = () => {return ( <> 
 <div dangerouslySetInnerHTML={{ __html: iframesrc }}></div>
-<Hubspot />
+
 </>) };
 
 export default  Tracking ;
